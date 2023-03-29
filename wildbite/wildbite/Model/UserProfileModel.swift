@@ -1,26 +1,43 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  LoginModel.swift
-//  wildbite
-//
-//  Created by Yunus Gunduz on 29.03.2023.
-//
-
-
-//   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
+//   let profileModel = try? JSONDecoder().decode(ProfileModel.self, from: jsonData)
 
 import Foundation
 
-// MARK: - Login
-struct LoginModel: Codable {
-    let user: UserLogin
-    let message, token: String
+// MARK: - ProfileModel
+struct ProfileModel: Codable {
+    let user: UserProfile
+    let race: Race
+    let item: [Item]
+}
+
+// MARK: - Item
+struct Item: Codable {
+    let itemName, level, price, itemImage: String
+
+    enum CodingKeys: String, CodingKey {
+        case itemName = "item_name"
+        case level, price
+        case itemImage = "item_image"
+    }
+}
+
+// MARK: - Race
+struct Race: Codable {
+    let raceName, raceImage: String
+
+    enum CodingKeys: String, CodingKey {
+        case raceName = "race_name"
+        case raceImage = "race_image"
+    }
 }
 
 // MARK: - User
-struct UserLogin: Codable {
+struct UserProfile: Codable {
     let id: Int
     let name, email: String
-    let emailVerifiedAt: JSONNullLogin?
+    let emailVerifiedAt: JSONNullProfile?
     let exp, level, warTotal, warTotalWin: String
     let warTotalLose, warTotalGold, gold, diamond: String
     let totalDamage, power, defense, speed: String
@@ -54,9 +71,9 @@ struct UserLogin: Codable {
 
 // MARK: - Encode/decode helpers
 
-class JSONNullLogin: Codable, Hashable {
+class JSONNullProfile: Codable, Hashable {
 
-    public static func == (lhs: JSONNullLogin, rhs: JSONNullLogin) -> Bool {
+    public static func == (lhs: JSONNullProfile, rhs: JSONNullProfile) -> Bool {
         return true
     }
 
@@ -69,7 +86,7 @@ class JSONNullLogin: Codable, Hashable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNullLogin.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+            throw DecodingError.typeMismatch(JSONNullProfile.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
         }
     }
 

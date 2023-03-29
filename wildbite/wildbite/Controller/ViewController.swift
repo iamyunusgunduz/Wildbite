@@ -25,6 +25,7 @@ class ViewController: UIViewController {
             
         ]
  */
+        
         let login = Login(email: "ahmet@gmail.com", password: "12345")
 
         AF.request("http://yunusgunduz.site/wildbite/public/api/login",
