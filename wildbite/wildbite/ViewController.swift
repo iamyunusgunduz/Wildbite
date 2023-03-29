@@ -15,14 +15,25 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+/*
+        var token = ""
         
+        let headers: HTTPHeaders = [
+        
+            .authorization(bearerToken: token),
+            .accept("application/json")
+            
+        ]
+ */
         let login = Login(email: "ahmet@gmail.com", password: "12345")
 
         AF.request("http://yunusgunduz.site/wildbite/public/api/login",
                    method: .post,
                    parameters: login,
-                   encoder: JSONParameterEncoder.default).response { response in
+                   encoder: JSONParameterEncoder.default
+                 //  headers: headers
+        
+        ).response { response in
             
             let logingelencevap = try? JSONDecoder().decode(LoginModel.self, from: response.data!)
             debugPrint(logingelencevap!)
