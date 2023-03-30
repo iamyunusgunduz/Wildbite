@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ADMIN-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Admin" title="ADMIN" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AdminViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Admin" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMl-My-fzl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="78"/>
+                                <items>
+                                    <navigationItem title="ADMIN PANEL" prompt="Yetkili : UserName" id="vPb-fj-48U"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tb-Hye">
+                                <rect key="frame" x="64" y="169" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person" catalog="system" title="USER OPERATIONS">
+                                    <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ea-6q-ae5">
+                                <rect key="frame" x="64" y="220" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="selection.pin.in.out" catalog="system" title="SHOP OPERATIONS">
+                                    <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pam-cT-aX6">
+                                <rect key="frame" x="64" y="271" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="book.circle" catalog="system" title="RACE OPERATIONS">
+                                    <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npg-2c-6Ri">
+                                <rect key="frame" x="64" y="322" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.split.diagonal" catalog="system" title="ITEM OPERATIONS">
+                                    <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="npg-2c-6Ri" firstAttribute="top" secondItem="pam-cT-aX6" secondAttribute="bottom" constant="16" id="122-tp-O2m"/>
+                            <constraint firstItem="pam-cT-aX6" firstAttribute="top" secondItem="4Ea-6q-ae5" secondAttribute="bottom" constant="16" id="13d-6o-wUl"/>
+                            <constraint firstItem="bMl-My-fzl" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="2iG-Wm-453"/>
+                            <constraint firstItem="npg-2c-6Ri" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="6Ti-HW-IT5"/>
+                            <constraint firstItem="bMl-My-fzl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DOA-JF-mIZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Ea-6q-ae5" secondAttribute="trailing" constant="64" id="OZx-SB-8u1"/>
+                            <constraint firstItem="pam-cT-aX6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="Od1-fN-Vlx"/>
+                            <constraint firstItem="4Ea-6q-ae5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="Ykz-Zd-2J6"/>
+                            <constraint firstItem="O3T-tb-Hye" firstAttribute="top" secondItem="bMl-My-fzl" secondAttribute="bottom" constant="32" id="a5Q-3F-1c2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pam-cT-aX6" secondAttribute="trailing" constant="64" id="cOQ-Hw-zwR"/>
+                            <constraint firstItem="O3T-tb-Hye" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="efO-1q-UZ8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O3T-tb-Hye" secondAttribute="trailing" constant="64" id="h9B-0f-U5e"/>
+                            <constraint firstItem="4Ea-6q-ae5" firstAttribute="top" secondItem="O3T-tb-Hye" secondAttribute="bottom" constant="16" id="jz5-aW-Vsu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="npg-2c-6Ri" secondAttribute="trailing" constant="64" id="wJs-L2-V3l"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bMl-My-fzl" secondAttribute="trailing" id="x98-ty-yWH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myNavigationBar" destination="bMl-My-fzl" id="OHv-k9-QLO"/>
+                        <outlet property="myNavigationItem" destination="vPb-fj-48U" id="TYg-g7-fCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.circle" catalog="system" width="128" height="123"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="selection.pin.in.out" catalog="system" width="95" height="128"/>
+        <image name="square.split.diagonal" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

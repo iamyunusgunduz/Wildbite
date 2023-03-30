@@ -10,11 +10,23 @@ import Alamofire
 
 class UserProfileViewController: UIViewController {
 
+     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let myUserID = UserDefaults.standard.value(forKey: "userID")
+        let myUserName = UserDefaults.standard.value(forKey: "userName")
+        let myUserToken = UserDefaults.standard.value(forKey: "userToken")
+        print("User Id: \(myUserID!)")
+        print("User Name: \(myUserName!)")
+        print("User Token: \(myUserToken!)")
         
-                let token = "6|lF1lTwKvrRKgzMzDYUM9ONk31Jog8r35E1Kbusof"
+                let token = "\(myUserToken!)"
                 
                 let headers: HTTPHeaders = [
                 
@@ -25,7 +37,7 @@ class UserProfileViewController: UIViewController {
         
      
       
-        AF.request("http://yunusgunduz.site/wildbite/public/api/user/3" , headers: headers )
+        AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseData { response in
@@ -38,16 +50,21 @@ class UserProfileViewController: UIViewController {
                     let profileModelresponse = try? JSONDecoder().decode(ProfileModel.self, from: response.data!)
                     debugPrint(profileModelresponse!)
                     print(profileModelresponse!.user.name)
+                    print("Race: \(profileModelresponse!.race.raceName)")
+                    
+                    profileModelresponse!.item.forEach { Item in
+                        print("Item Name: \(Item.itemName) Level")
+                        print(Item.itemName)
+                      
+                    }
+                    
                     
                 case let .failure(error):
                     print(error.errorDescription!)
                     print("hata")
                 }
             }
-
     }
-    
-
     
 
 }

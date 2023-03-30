@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
+		889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B87C129D646FD00E3DF4E /* AdminViewController.swift */; };
+		88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DAF76829D62E40009B85C6 /* Login.storyboard */; };
+		88DAF76B29D62E4D009B85C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DAF76A29D62E4D009B85C6 /* LoginViewController.swift */; };
 		88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508C429D481E400E9E557 /* AppDelegate.swift */; };
 		88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508C629D481E400E9E557 /* SceneDelegate.swift */; };
 		88E508C929D481E400E9E557 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508C829D481E400E9E557 /* ViewController.swift */; };
@@ -19,11 +23,14 @@
 		88E508E929D4913200E9E557 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508E829D4913200E9E557 /* RegisterViewController.swift */; };
 		88E508EB29D4914300E9E557 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E508EA29D4914300E9E557 /* Register.storyboard */; };
 		88E508ED29D4916C00E9E557 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508EC29D4916C00E9E557 /* UserProfileModel.swift */; };
-		88E508EF29D4917600E9E557 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E508EE29D4917600E9E557 /* UserProfile.storyboard */; };
 		88E508F129D4918100E9E557 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508F029D4918100E9E557 /* UserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
+		889B87C129D646FD00E3DF4E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		88DAF76829D62E40009B85C6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		88DAF76A29D62E4D009B85C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		88E508C129D481E300E9E557 /* wildbite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wildbite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E508C429D481E400E9E557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E508C629D481E400E9E557 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +44,6 @@
 		88E508E829D4913200E9E557 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		88E508EA29D4914300E9E557 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		88E508EC29D4916C00E9E557 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
-		88E508EE29D4917600E9E557 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		88E508F029D4918100E9E557 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +59,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		889B87B629D6463200E3DF4E /* USER */ = {
+			isa = PBXGroup;
+			children = (
+				88E508F029D4918100E9E557 /* UserProfileViewController.swift */,
+			);
+			path = USER;
+			sourceTree = "<group>";
+		};
+		889B87B729D6464900E3DF4E /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				88DAF76A29D62E4D009B85C6 /* LoginViewController.swift */,
+			);
+			path = LOGIN;
+			sourceTree = "<group>";
+		};
+		889B87B829D6465E00E3DF4E /* REGISTER */ = {
+			isa = PBXGroup;
+			children = (
+				88E508E829D4913200E9E557 /* RegisterViewController.swift */,
+			);
+			path = REGISTER;
+			sourceTree = "<group>";
+		};
+		889B87B929D6467600E3DF4E /* MAIN */ = {
+			isa = PBXGroup;
+			children = (
+				88E508C829D481E400E9E557 /* ViewController.swift */,
+			);
+			path = MAIN;
+			sourceTree = "<group>";
+		};
+		889B87BA29D6468600E3DF4E /* ADMIN */ = {
+			isa = PBXGroup;
+			children = (
+				889B87C129D646FD00E3DF4E /* AdminViewController.swift */,
+			);
+			path = ADMIN;
+			sourceTree = "<group>";
+		};
+		889B87BB29D646A800E3DF4E /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				88DAF76829D62E40009B85C6 /* Login.storyboard */,
+			);
+			path = LOGIN;
+			sourceTree = "<group>";
+		};
+		889B87BC29D646AD00E3DF4E /* REGISTER */ = {
+			isa = PBXGroup;
+			children = (
+				88E508EA29D4914300E9E557 /* Register.storyboard */,
+			);
+			path = REGISTER;
+			sourceTree = "<group>";
+		};
+		889B87BD29D646B500E3DF4E /* MAIN */ = {
+			isa = PBXGroup;
+			children = (
+				88E508CA29D481E400E9E557 /* Main.storyboard */,
+			);
+			path = MAIN;
+			sourceTree = "<group>";
+		};
+		889B87BE29D646BC00E3DF4E /* ADMIN */ = {
+			isa = PBXGroup;
+			children = (
+				889B87BF29D646E600E3DF4E /* Admin.storyboard */,
+			);
+			path = ADMIN;
+			sourceTree = "<group>";
+		};
 		88E508B829D481E300E9E557 = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +175,10 @@
 		88E508DC29D4853800E9E557 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				88E508CA29D481E400E9E557 /* Main.storyboard */,
-				88E508EA29D4914300E9E557 /* Register.storyboard */,
-				88E508EE29D4917600E9E557 /* UserProfile.storyboard */,
+				889B87BD29D646B500E3DF4E /* MAIN */,
+				889B87BE29D646BC00E3DF4E /* ADMIN */,
+				889B87BC29D646AD00E3DF4E /* REGISTER */,
+				889B87BB29D646A800E3DF4E /* LOGIN */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,9 +186,11 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				88E508C829D481E400E9E557 /* ViewController.swift */,
-				88E508E829D4913200E9E557 /* RegisterViewController.swift */,
-				88E508F029D4918100E9E557 /* UserProfileViewController.swift */,
+				889B87B929D6467600E3DF4E /* MAIN */,
+				889B87B629D6463200E3DF4E /* USER */,
+				889B87BA29D6468600E3DF4E /* ADMIN */,
+				889B87B829D6465E00E3DF4E /* REGISTER */,
+				889B87B729D6464900E3DF4E /* LOGIN */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,9 +261,10 @@
 			files = (
 				88E508D129D481E600E9E557 /* LaunchScreen.storyboard in Resources */,
 				88E508CE29D481E600E9E557 /* Assets.xcassets in Resources */,
+				88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */,
 				88E508CC29D481E400E9E557 /* Main.storyboard in Resources */,
+				889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */,
 				88E508EB29D4914300E9E557 /* Register.storyboard in Resources */,
-				88E508EF29D4917600E9E557 /* UserProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88DAF76B29D62E4D009B85C6 /* LoginViewController.swift in Sources */,
 				88E508C929D481E400E9E557 /* ViewController.swift in Sources */,
 				88E508F129D4918100E9E557 /* UserProfileViewController.swift in Sources */,
 				88E508E529D490F900E9E557 /* RegisterModel.swift in Sources */,
@@ -200,6 +283,7 @@
 				88E508DF29D4855100E9E557 /* LoginModel.swift in Sources */,
 				88E508E929D4913200E9E557 /* RegisterViewController.swift in Sources */,
 				88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */,
+				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
