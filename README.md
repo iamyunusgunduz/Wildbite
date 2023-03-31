@@ -1,2 +1,2 @@
 # wildbite
-battle of  between vampire and werewolf
+battle of  between legendary things
