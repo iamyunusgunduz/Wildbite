@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Main" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -34,7 +34,7 @@
                                             <color key="tintColor" red="0.19779887800000001" green="0.2220200896" blue="0.38666868209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="panel:" destination="BYZ-38-t0r" id="mrH-au-gBX"/>
-                                                <segue destination="7tn-fz-4Wb" kind="presentation" modalPresentationStyle="pageSheet" id="2mB-gy-KSL"/>
+                                                <segue destination="7tn-fz-4Wb" kind="presentation" modalPresentationStyle="fullScreen" id="2mB-gy-KSL"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="781"/>
+            <point key="canvasLocation" x="-540" y="994"/>
         </scene>
         <!--Admin-->
         <scene sceneID="Zw2-M6-iBL">
@@ -67,7 +67,7 @@
                 <viewControllerPlaceholder storyboardName="Admin" referencedIdentifier="Admin" id="7tn-fz-4Wb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEn-4e-HfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="590"/>
+            <point key="canvasLocation" x="-15" y="768"/>
         </scene>
         <!--Profile-->
         <scene sceneID="6oW-fr-B9Z">
@@ -100,7 +100,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="VBy-cC-6mF">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1Ml-Uu-CKT" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Ml-Uu-CKT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lem-TD-OBW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -114,7 +114,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hm9-Ld-VR2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="184" y="0.0"/>
         </scene>
     </scenes>
     <resources>

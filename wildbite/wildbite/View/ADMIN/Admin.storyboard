@@ -20,7 +20,14 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMl-My-fzl">
                                 <rect key="frame" x="0.0" y="59" width="393" height="78"/>
                                 <items>
-                                    <navigationItem title="ADMIN PANEL" prompt="Yetkili : UserName" id="vPb-fj-48U"/>
+                                    <navigationItem title="ADMIN PANEL" prompt="Yetkili : UserName" id="vPb-fj-48U">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="5Y8-mY-7Rh">
+                                            <color key="tintColor" red="0.68745338919999999" green="0.80783742670000003" blue="0.80392342809999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <segue destination="wQc-ue-MYu" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Fff-Tk-n00"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tb-Hye">
@@ -50,6 +57,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="square.split.diagonal" catalog="system" title="ITEM OPERATIONS">
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="bHW-Wq-Ux2" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="umT-I9-kyE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -59,7 +69,6 @@
                             <constraint firstItem="pam-cT-aX6" firstAttribute="top" secondItem="4Ea-6q-ae5" secondAttribute="bottom" constant="16" id="13d-6o-wUl"/>
                             <constraint firstItem="bMl-My-fzl" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="2iG-Wm-453"/>
                             <constraint firstItem="npg-2c-6Ri" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="6Ti-HW-IT5"/>
-                            <constraint firstItem="bMl-My-fzl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DOA-JF-mIZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Ea-6q-ae5" secondAttribute="trailing" constant="64" id="OZx-SB-8u1"/>
                             <constraint firstItem="pam-cT-aX6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="Od1-fN-Vlx"/>
                             <constraint firstItem="4Ea-6q-ae5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="Ykz-Zd-2J6"/>
@@ -68,10 +77,12 @@
                             <constraint firstItem="O3T-tb-Hye" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="efO-1q-UZ8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O3T-tb-Hye" secondAttribute="trailing" constant="64" id="h9B-0f-U5e"/>
                             <constraint firstItem="4Ea-6q-ae5" firstAttribute="top" secondItem="O3T-tb-Hye" secondAttribute="bottom" constant="16" id="jz5-aW-Vsu"/>
+                            <constraint firstItem="bMl-My-fzl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="wIg-gr-fKT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="npg-2c-6Ri" secondAttribute="trailing" constant="64" id="wJs-L2-V3l"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bMl-My-fzl" secondAttribute="trailing" id="x98-ty-yWH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nZg-Mt-ic1"/>
                     <connections>
                         <outlet property="myNavigationBar" destination="bMl-My-fzl" id="OHv-k9-QLO"/>
                         <outlet property="myNavigationItem" destination="vPb-fj-48U" id="TYg-g7-fCM"/>
@@ -79,11 +90,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104" y="-34"/>
+            <point key="canvasLocation" x="1029.7709923664122" y="-34.507042253521128"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="jxg-hP-5Tg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Item" id="bHW-Wq-Ux2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8n-rB-mYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1483" y="-7"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="B90-lW-L6B">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" id="wQc-ue-MYu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IdT-Qa-i3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712" y="-230"/>
         </scene>
     </scenes>
     <resources>
         <image name="book.circle" catalog="system" width="128" height="123"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="selection.pin.in.out" catalog="system" width="95" height="128"/>
         <image name="square.split.diagonal" catalog="system" width="128" height="114"/>
