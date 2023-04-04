@@ -21,7 +21,7 @@ struct UserLogin: Codable {
     let id: Int
     let name, email: String
     let emailVerifiedAt: JSONNullLogin?
-    let exp, level, warTotal, warTotalWin: String
+    let role,exp, level, warTotal, warTotalWin: String
     let warTotalLose, warTotalGold, gold, diamond: String
     let totalDamage, power, defense, speed: String
     let totalHunt, totalSuccessHunt, currentHealth, maximumHealth: String
@@ -31,7 +31,7 @@ struct UserLogin: Codable {
     enum CodingKeys: String, CodingKey {
         case id, name, email
         case emailVerifiedAt = "email_verified_at"
-        case exp, level
+        case exp, level, role
         case warTotal = "war_total"
         case warTotalWin = "war_total_win"
         case warTotalLose = "war_total_lose"
@@ -78,3 +78,4 @@ class JSONNullLogin: Codable, Hashable {
         try container.encodeNil()
     }
 }
+
