@@ -1,33 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login-->
+        <scene sceneID="jgg-K6-dMX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="7M6-Eh-TDb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIq-xV-AUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-168"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="RegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ust" translatesAutoresizingMaskIntoConstraints="NO" id="TYB-eF-wQg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alt" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-EO-nrB">
+                                <rect key="frame" x="0.0" y="512" width="320" height="56"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY5-0P-iUa">
+                                <rect key="frame" x="20" y="64" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XRq-LD-SEa"/>
+                                    <constraint firstAttribute="width" constant="50" id="qZ6-5I-fX6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="left"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="7M6-Eh-TDb" kind="presentation" modalPresentationStyle="fullScreen" id="arx-S8-eg0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfK-jY-Btc">
+                                <rect key="frame" x="120" y="74" width="139.5" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TYB-eF-wQg" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="0s6-79-Gev"/>
+                            <constraint firstItem="TYB-eF-wQg" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="1zY-dU-TZm"/>
+                            <constraint firstItem="TfK-jY-Btc" firstAttribute="leading" secondItem="sY5-0P-iUa" secondAttribute="trailing" constant="50" id="Dlx-DY-erf"/>
+                            <constraint firstItem="sY5-0P-iUa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="QyA-bd-iAb"/>
+                            <constraint firstItem="TfK-jY-Btc" firstAttribute="top" secondItem="TYB-eF-wQg" secondAttribute="bottom" constant="20" id="TZp-0f-LCf"/>
+                            <constraint firstAttribute="trailing" secondItem="TYB-eF-wQg" secondAttribute="trailing" id="bzd-iZ-fpc"/>
+                            <constraint firstItem="sY5-0P-iUa" firstAttribute="top" secondItem="TYB-eF-wQg" secondAttribute="bottom" constant="10" id="c5w-p1-CZB"/>
+                            <constraint firstAttribute="bottom" secondItem="NeQ-EO-nrB" secondAttribute="bottom" id="fAh-eF-lqS"/>
+                            <constraint firstItem="NeQ-EO-nrB" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="j0E-dJ-nnh"/>
+                            <constraint firstAttribute="trailing" secondItem="NeQ-EO-nrB" secondAttribute="trailing" id="ohn-Ku-TLP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="-2"/>
+            <point key="canvasLocation" x="63.75" y="-2.112676056338028"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="alt" width="271" height="56"/>
+        <image name="left" width="133" height="132"/>
+        <image name="ust" width="259" height="54"/>
     </resources>
 </document>

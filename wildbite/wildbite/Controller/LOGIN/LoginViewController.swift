@@ -23,14 +23,26 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        userLoggined()
+        
     }
-    
-
+   
+    func userLoggined(){
+        if(UserDefaults.standard.value(forKey: "userName") != nil){
+            DispatchQueue.main.async(){
+               self.performSegue(withIdentifier: "loginToMain", sender: self)
+                print("Debug: Login To Main")
+            }
+       
+  
+        }
+    }
      func userLogin() {
         
-       
+         if(mailTextField.text == "" || passwordTextField.text == "" || !mailTextField.text!.contains("@")){
+             
+             return
+         }
          let login = Login(email: mailTextField.text!, password: passwordTextField.text!)
 
         AF.request("http://yunusgunduz.site/wildbite/public/api/login",
@@ -40,14 +52,20 @@ class LoginViewController: UIViewController {
         .validate(statusCode: 200..<300)
         .validate(contentType: ["application/json"])
         .responseData { response in
-            
+            debugPrint(response)
             
             switch response.result {
             case .success:  
                 print("Login Successful")
                 
                 let loginResponse = try? JSONDecoder().decode(LoginModel.self, from: response.data!)
-                debugPrint(loginResponse ?? "")
+                debugPrint(loginResponse ?? "ne oldi")
+                if(loginResponse?.message == nil || self.mailTextField.text == "" || self.passwordTextField.text == ""){
+                    print("Debug: Message:  \(loginResponse?.message ?? "bisey oldu")")
+                    return
+                }
+              
+                
                print("Debug: endpoint response")
                 print("User name: \(loginResponse!.user.name)")
                 print("User Role: \(loginResponse!.user.role)")
@@ -69,9 +87,10 @@ class LoginViewController: UIViewController {
                 switch loginResponse!.user.role{
                 case "0":
                     print("Debug: Banlanmis user")
-                    
+                    self.performSegue(withIdentifier: "loginToMain", sender: nil)
                 case "1":
                     print("Debug: Standart user")
+                   
                     
                 case "2":
                     print("Debug: Editor Hesabi")
