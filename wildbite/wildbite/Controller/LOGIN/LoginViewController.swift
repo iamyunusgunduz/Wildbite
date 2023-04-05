@@ -24,13 +24,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userLoggined()
-        
+       
     }
-   
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func userLoggined(){
         if(UserDefaults.standard.value(forKey: "userName") != nil){
             DispatchQueue.main.async(){
-               self.performSegue(withIdentifier: "loginToMain", sender: self)
+              // self.performSegue(withIdentifier: "loginToMain", sender: self)
                 print("Debug: Login To Main")
             }
        
@@ -71,18 +73,22 @@ class LoginViewController: UIViewController {
                 print("User Role: \(loginResponse!.user.role)")
                 print("User ID: \(loginResponse!.user.id)")
                 print("User email: \(loginResponse!.user.email)")
+                 
               
                 UserDefaults.standard.set(loginResponse!.user.id, forKey: "userID")
                 UserDefaults.standard.set(loginResponse!.token, forKey: "userToken")
                 UserDefaults.standard.set(loginResponse!.user.name, forKey: "userName")
+                UserDefaults.standard.set(loginResponse!.user.role, forKey: "userRole")
                 
                 let myUserID = UserDefaults.standard.value(forKey: "userID")
                 let myUserName = UserDefaults.standard.value(forKey: "userName")
                 let myUserToken = UserDefaults.standard.value(forKey: "userToken")
+                let myUserRole = UserDefaults.standard.value(forKey: "userRole")
                 print("Debug: userdefaults response")
                 print("User Id: \(myUserID!)")
                 print("User Name: \(myUserName!)")
                 print("User Token: \(myUserToken!)")
+                print("User Role: \(myUserRole!)")
                 
                 switch loginResponse!.user.role{
                 case "0":

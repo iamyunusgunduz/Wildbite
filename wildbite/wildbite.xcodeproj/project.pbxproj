@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881F3A8B29DDEDB3005579CE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F3A8A29DDEDB3005579CE /* SettingsViewController.swift */; };
 		889A838429D729B8005A1C6C /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889A838329D729B8005A1C6C /* Item.storyboard */; };
 		889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A838629D729ED005A1C6C /* ItemViewController.swift */; };
 		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		881F3A8A29DDEDB3005579CE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		889A838329D729B8005A1C6C /* Item.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
 		889A838629D729ED005A1C6C /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		881F3A8929DDEDA7005579CE /* SETTINGS */ = {
+			isa = PBXGroup;
+			children = (
+				881F3A8A29DDEDB3005579CE /* SettingsViewController.swift */,
+			);
+			path = SETTINGS;
+			sourceTree = "<group>";
+		};
 		889A838229D729A4005A1C6C /* ITEM */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +210,7 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				881F3A8929DDEDA7005579CE /* SETTINGS */,
 				88F488D429DCA4AB0067834F /* LOGIN */,
 				889B87B929D6467600E3DF4E /* MAIN */,
 				889B87B629D6463200E3DF4E /* USER */,
@@ -309,6 +320,7 @@
 				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
 				88F488D629DCA4BB0067834F /* LoginViewController.swift in Sources */,
+				881F3A8B29DDEDB3005579CE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

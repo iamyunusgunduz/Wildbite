@@ -27,7 +27,7 @@ class ViewController: UIViewController {
      
         let myUserID = UserDefaults.standard.value(forKey: "userID")
         let myUserName = UserDefaults.standard.value(forKey: "userName")
-        myNavigationItem.title = (myUserName as! String)
+      
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
         print("User Id: \(myUserID!)")
         print("User Name: \(myUserName!)")
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
-            .responseData { [self] response in
+            .responseData {  response in
                 
                 
                 switch response.result {
@@ -61,20 +61,24 @@ class ViewController: UIViewController {
                     
                     switch profileModelresponse!.race.raceName{
                     case "1":
-                        myNavigationItem.prompt = "\(profileModelresponse!.user.level) Level Vampir"
-                   
+                    //    myNavigationItem.prompt = "\(profileModelresponse!.user.level) Level Vampir"
+                        break
                     case "2":
-                        myNavigationItem.prompt = "\(profileModelresponse!.user.level) Level KurtAdam"
-                        
+                     //   myNavigationItem.prompt = "\(profileModelresponse!.user.level) Level KurtAdam"
+                        break
+                    
                     case "3":
-                        myNavigationItem.prompt = "\(profileModelresponse!.user.level) Level Avcı"
+                      //  myNavigationItem.prompt = "\(profileModelresponse!.user.level) Level Avcı"
+                        break
                         
                     case "99":
-                        myNavigationItem.prompt = "\(profileModelresponse!.user.level) Level Admin"
+                      //  myNavigationItem.prompt = "\(profileModelresponse!.user.level) Level Admin"
+                        break
                    
                         
                     default:
-                        myNavigationItem.prompt = ""
+                       // myNavigationItem.prompt = ""
+                        break
                     }
                 
                     
