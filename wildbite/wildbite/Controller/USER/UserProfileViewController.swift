@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-
+import Kingfisher
 
 
 class ItemFetch {
@@ -21,6 +21,7 @@ class ItemFetch {
 
 class UserProfileViewController: UIViewController {
   
+    @IBOutlet weak var userProfileImageView: UIImageView!
     
 
     
@@ -84,7 +85,10 @@ class UserProfileViewController: UIViewController {
                     userCanLabel.text = "Can: \(profileModelresponse?.user.currentHealth ?? "none")/\(profileModelresponse?.user.maximumHealth ?? "none")"
                     userGoldLabel.text = "Gold: \(profileModelresponse?.user.gold ?? "none")"
                     
-                    
+                    let url = URL(string: "\(profileModelresponse!.user.image)")
+                   
+                    print("Image url : \(url!)")
+                    userProfileImageView.kf.setImage(with: url!)
                     
                     profileModelresponse!.item.forEach { Item in
                         print("Item Name: \(Item.itemName) Level")

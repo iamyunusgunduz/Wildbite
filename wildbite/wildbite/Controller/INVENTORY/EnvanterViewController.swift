@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-
+import Kingfisher
 
 
 class ItemFetchCity {
@@ -109,7 +109,34 @@ extension EnvanterViewController: UICollectionViewDataSource, UICollectionViewDe
         return itemListesi.count
         
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("\(itemListesi[indexPath.row].itemname)  ")
+        
+        
+        let alert = UIAlertController(title: "\n\n\n\n\n \(itemListesi[indexPath.row].itemname)  ", message: "\nLevel : \(itemListesi[indexPath.row].itemlevel)\nPrice: \(itemListesi[indexPath.row].itemprice) Gold \n", preferredStyle: .alert)
+               let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
+                   print("ok was clicked")
+               }
+        
+        let imageView = UIImageView(frame: CGRect(x: 90, y: 10, width: 90, height: 90))
+        let url = URL(string: "\(itemListesi[indexPath.row].itemimage)")
+       
+        imageView.kf.setImage(with: url)
+       // imageView.image = yourImage
+
+        alert.view.addSubview(imageView)
+             //  let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+             //      print("cancel was clicked")
+             //  }
+               alert.addAction(okButton)
+              // alert.addAction(cancelButton)
+               present(alert, animated: true) {
+                   print("alert is done")
+               }
+                  
+              
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = itemListesi[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EnvanterCell", for: indexPath) as! InventoryCollectionViewCell
@@ -117,7 +144,9 @@ extension EnvanterViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.itemNameLabel.text = " \(item.itemname)"
         cell.itemLevel.text = "Level: \(item.itemlevel)"
         cell.itemPrice.text = "Price: \(item.itemprice)"
-        
+        let url = URL(string: "\(item.itemimage)")
+       
+        cell.itemImage.kf.setImage(with: url)
         print( "Debug : Item: \(item.itemname)")
         
         return cell
@@ -125,10 +154,10 @@ extension EnvanterViewController: UICollectionViewDataSource, UICollectionViewDe
     
     
     override func viewDidLayoutSubviews() {
-        flowLayout.scrollDirection = .vertical
-                flowLayout.minimumLineSpacing = 15
-                flowLayout.minimumInteritemSpacing = 3
-        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 3, bottom: 5, right: 3)
-    }
+            flowLayout.scrollDirection = .vertical
+                    flowLayout.minimumLineSpacing = 10
+                    flowLayout.minimumInteritemSpacing = 1
+            flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 1, bottom: 1, right: 1)
+        }
     
 }
