@@ -1,5 +1,5 @@
 //
-//  CityCollectionViewCell.swift
+//  InventoryCollectionViewCell.swift
 //  wildbite
 //
 //  Created by Yunus Gunduz on 6.04.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CityCollectionViewCell: UICollectionViewCell {
+class InventoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var itemNameLabel: UILabel!
     
     @IBOutlet weak var itemImage: UIImageView!

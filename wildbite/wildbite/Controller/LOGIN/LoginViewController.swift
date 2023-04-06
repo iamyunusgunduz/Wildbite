@@ -93,7 +93,7 @@ class LoginViewController: UIViewController {
                 switch loginResponse!.user.role{
                 case "0":
                     print("Debug: Banlanmis user")
-                    self.performSegue(withIdentifier: "loginToMain", sender: nil)
+                  self.performSegue(withIdentifier: "loginToMain", sender: nil)
                 case "1":
                     print("Debug: Standart user")
                    

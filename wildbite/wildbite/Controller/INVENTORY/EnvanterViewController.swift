@@ -18,14 +18,16 @@ class ItemFetchCity {
 
 }
 
-class CityViewController: UIViewController {
+class EnvanterViewController: UIViewController {
     var itemListesi = [ItemFetchCity]()
 
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var myCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+            
+         
+           
     }
     override func viewWillAppear(_ animated: Bool) {
         let myUserID = UserDefaults.standard.value(forKey: "userID")
@@ -97,7 +99,7 @@ class CityViewController: UIViewController {
 
 }
 
-extension CityViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+extension EnvanterViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -110,16 +112,23 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = itemListesi[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityEnvanterCell", for: indexPath) as! CityCollectionViewCell
-      
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EnvanterCell", for: indexPath) as! InventoryCollectionViewCell
+        
         cell.itemNameLabel.text = " \(item.itemname)"
         cell.itemLevel.text = "Level: \(item.itemlevel)"
         cell.itemPrice.text = "Price: \(item.itemprice)"
-      
+        
         print( "Debug : Item: \(item.itemname)")
         
         return cell
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        flowLayout.scrollDirection = .vertical
+                flowLayout.minimumLineSpacing = 15
+                flowLayout.minimumInteritemSpacing = 3
+        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 3, bottom: 5, right: 3)
+    }
+    
 }
-
