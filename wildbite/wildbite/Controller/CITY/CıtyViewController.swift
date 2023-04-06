@@ -112,7 +112,9 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
         let item = itemListesi[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityEnvanterCell", for: indexPath) as! CityCollectionViewCell
       
-        cell.itemNameLabel.text = "Item: \(item.itemname)"
+        cell.itemNameLabel.text = " \(item.itemname)"
+        cell.itemLevel.text = "Level: \(item.itemlevel)"
+        cell.itemPrice.text = "Price: \(item.itemprice)"
       
         print( "Debug : Item: \(item.itemname)")
         
