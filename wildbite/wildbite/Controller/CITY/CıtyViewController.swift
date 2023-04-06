@@ -1,8 +1,8 @@
 //
-//  UserProfileViewController.swift
+//  CityViewController.swift
 //  wildbite
 //
-//  Created by Yunus Gunduz on 29.03.2023.
+//  Created by Yunus Gunduz on 6.04.2023.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import Alamofire
 
 
 
-class ItemFetch {
+class ItemFetchCity {
     var itemimage = ""
     var itemname = ""
     var itemprice = ""
@@ -18,31 +18,15 @@ class ItemFetch {
 
 }
 
+class CityViewController: UIViewController {
+    var itemListesi = [ItemFetchCity]()
 
-class UserProfileViewController: UIViewController {
-  
-    
-
-    
-    
-    @IBOutlet weak var usernameLabel: UILabel!
-    
-    
-    @IBOutlet weak var userlevelLabel: UILabel!
-    
-    @IBOutlet weak var usertecrubeLabel: UILabel!
-    
-    @IBOutlet weak var userEnerjiLabel: UILabel!
-    
-    @IBOutlet weak var userCanLabel: UILabel!
-    
-    @IBOutlet weak var userGoldLabel: UILabel!
+    @IBOutlet weak var myCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
 
+        // Do any additional setup after loading the view.
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         let myUserID = UserDefaults.standard.value(forKey: "userID")
         let myUserName = UserDefaults.standard.value(forKey: "userName")
@@ -77,28 +61,30 @@ class UserProfileViewController: UIViewController {
                     
                     print(profileModelresponse!.user.name)
                     print("Race: \(profileModelresponse!.race.raceName)")
-                    usernameLabel.text = "Name: \(profileModelresponse?.user.name ?? "none")"
-                    userlevelLabel.text = "Level: \(profileModelresponse?.user.level ?? "none")"
-                    usertecrubeLabel.text = "Exp: \(profileModelresponse?.user.exp  ?? "none")"
-                    userEnerjiLabel.text = "Energy: \(profileModelresponse?.user.currentEnergy ?? "none")/\(profileModelresponse?.user.maximumEnergy ?? "none")"
-                    userCanLabel.text = "Can: \(profileModelresponse?.user.currentHealth ?? "none")/\(profileModelresponse?.user.maximumHealth ?? "none")"
-                    userGoldLabel.text = "Gold: \(profileModelresponse?.user.gold ?? "none")"
-                    
+                
                     
                     
                     profileModelresponse!.item.forEach { Item in
                         print("Item Name: \(Item.itemName) Level")
                         print(Item.itemName)
                       
+                        let itemler = ItemFetchCity()
+                        
+                        itemler.itemname = Item.itemName
+                        itemler.itemimage = Item.itemImage
+                        itemler.itemlevel = Item.level
+                        itemler.itemprice = Item.price
+                        
+                        
+                        itemListesi.append(itemler)
                       
                         
-                     
-                     
+                       
                         
                         
                     }
-              
-                   
+                    myCollectionView.delegate = self
+                    myCollectionView.dataSource = self
                     
                 case let .failure(error):
                     print(error.errorDescription!)
@@ -106,7 +92,32 @@ class UserProfileViewController: UIViewController {
                 }
             }
     }
-    
 
+   
+
+}
+
+extension CityViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print( "Debug : Return: \(itemListesi.count)")
+        return itemListesi.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = itemListesi[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityEnvanterCell", for: indexPath) as! CityCollectionViewCell
+      
+        cell.itemNameLabel.text = "Item: \(item.itemname)"
+      
+        print( "Debug : Item: \(item.itemname)")
+        
+        return cell
+    }
+    
 }
 

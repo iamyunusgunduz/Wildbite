@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		881F3A8B29DDEDB3005579CE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F3A8A29DDEDB3005579CE /* SettingsViewController.swift */; };
+		8853CE1529DE3F1400A3EE09 /* CıtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853CE1429DE3F1400A3EE09 /* CıtyViewController.swift */; };
+		8853CE1729DE44E800A3EE09 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853CE1629DE44E800A3EE09 /* CityCollectionViewCell.swift */; };
 		889A838429D729B8005A1C6C /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889A838329D729B8005A1C6C /* Item.storyboard */; };
 		889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A838629D729ED005A1C6C /* ItemViewController.swift */; };
 		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
 		889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B87C129D646FD00E3DF4E /* AdminViewController.swift */; };
+		88A4BCFD29DE18D7006378BB /* EnvanterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4BCFC29DE18D7006378BB /* EnvanterCollectionViewCell.swift */; };
 		88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DAF76829D62E40009B85C6 /* Login.storyboard */; };
 		88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508C429D481E400E9E557 /* AppDelegate.swift */; };
 		88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508C629D481E400E9E557 /* SceneDelegate.swift */; };
@@ -31,10 +34,13 @@
 
 /* Begin PBXFileReference section */
 		881F3A8A29DDEDB3005579CE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8853CE1429DE3F1400A3EE09 /* CıtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CıtyViewController.swift"; sourceTree = "<group>"; };
+		8853CE1629DE44E800A3EE09 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
 		889A838329D729B8005A1C6C /* Item.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
 		889A838629D729ED005A1C6C /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		889B87C129D646FD00E3DF4E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		88A4BCFC29DE18D7006378BB /* EnvanterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvanterCollectionViewCell.swift; sourceTree = "<group>"; };
 		88DAF76829D62E40009B85C6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		88E508C129D481E300E9E557 /* wildbite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wildbite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E508C429D481E400E9E557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				88E508F029D4918100E9E557 /* UserProfileViewController.swift */,
+				88A4BCFC29DE18D7006378BB /* EnvanterCollectionViewCell.swift */,
 			);
 			path = USER;
 			sourceTree = "<group>";
@@ -155,6 +162,15 @@
 			path = ADMIN;
 			sourceTree = "<group>";
 		};
+		88A4BCFE29DE2D1E006378BB /* CITY */ = {
+			isa = PBXGroup;
+			children = (
+				8853CE1429DE3F1400A3EE09 /* CıtyViewController.swift */,
+				8853CE1629DE44E800A3EE09 /* CityCollectionViewCell.swift */,
+			);
+			path = CITY;
+			sourceTree = "<group>";
+		};
 		88E508B829D481E300E9E557 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +226,7 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88A4BCFE29DE2D1E006378BB /* CITY */,
 				881F3A8929DDEDA7005579CE /* SETTINGS */,
 				88F488D429DCA4AB0067834F /* LOGIN */,
 				889B87B929D6467600E3DF4E /* MAIN */,
@@ -312,14 +329,17 @@
 				889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */,
 				88E508C929D481E400E9E557 /* ViewController.swift in Sources */,
 				88E508F129D4918100E9E557 /* UserProfileViewController.swift in Sources */,
+				88A4BCFD29DE18D7006378BB /* EnvanterCollectionViewCell.swift in Sources */,
 				88E508E529D490F900E9E557 /* RegisterModel.swift in Sources */,
 				88E508ED29D4916C00E9E557 /* UserProfileModel.swift in Sources */,
 				88E508DF29D4855100E9E557 /* LoginModel.swift in Sources */,
+				8853CE1529DE3F1400A3EE09 /* CıtyViewController.swift in Sources */,
 				88E508E929D4913200E9E557 /* RegisterViewController.swift in Sources */,
 				88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */,
 				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
 				88F488D629DCA4BB0067834F /* LoginViewController.swift in Sources */,
+				8853CE1729DE44E800A3EE09 /* CityCollectionViewCell.swift in Sources */,
 				881F3A8B29DDEDB3005579CE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
