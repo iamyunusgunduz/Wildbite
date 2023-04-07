@@ -106,7 +106,20 @@ class ProfileSettViewController: UIViewController {
                         
                         
                         userNameLabel.text = "Username: \(profileModelresponse!.user.name)"
+                        
                         userRaceLabel.text = "Race: \(profileModelresponse!.race.raceName)"
+                        switch profileModelresponse!.race.raceName {
+                        case "0":
+                            userRaceLabel.text = "Race: Werewolf"
+                        case "1":
+                            userRaceLabel.text = "Race: Vampire"
+                        case "2":
+                            userRaceLabel.text = "Race: Hunter"
+                        
+                        default:
+                            userRaceLabel.text = "Race: None"
+                        }
+                        
                         userLevelLabel.text = "Level: \(profileModelresponse!.user.level)"
                         userEmailLabel.text = "Email: \(profileModelresponse!.user.email)"
                         userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)"

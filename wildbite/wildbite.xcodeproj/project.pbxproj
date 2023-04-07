@@ -15,6 +15,10 @@
 		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
 		889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B87C129D646FD00E3DF4E /* AdminViewController.swift */; };
 		88B3D4B629DF1CAE0083838C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 88B3D4B529DF1CAE0083838C /* Kingfisher */; };
+		88CCB2AA29DF895B00C9F1D8 /* War.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CCB2A929DF895B00C9F1D8 /* War.storyboard */; };
+		88CCB2AC29DF898100C9F1D8 /* Hunt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CCB2AB29DF898100C9F1D8 /* Hunt.storyboard */; };
+		88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCB2AE29DF91C900C9F1D8 /* HuntViewController.swift */; };
+		88CCB2B129DF93C700C9F1D8 /* HuntCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCB2B029DF93C700C9F1D8 /* HuntCaseViewController.swift */; };
 		88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DAF76829D62E40009B85C6 /* Login.storyboard */; };
 		88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508C429D481E400E9E557 /* AppDelegate.swift */; };
 		88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508C629D481E400E9E557 /* SceneDelegate.swift */; };
@@ -40,6 +44,10 @@
 		889A838629D729ED005A1C6C /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		889B87C129D646FD00E3DF4E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		88CCB2A929DF895B00C9F1D8 /* War.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = War.storyboard; sourceTree = "<group>"; };
+		88CCB2AB29DF898100C9F1D8 /* Hunt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hunt.storyboard; sourceTree = "<group>"; };
+		88CCB2AE29DF91C900C9F1D8 /* HuntViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntViewController.swift; sourceTree = "<group>"; };
+		88CCB2B029DF93C700C9F1D8 /* HuntCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntCaseViewController.swift; sourceTree = "<group>"; };
 		88DAF76829D62E40009B85C6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		88E508C129D481E300E9E557 /* wildbite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wildbite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E508C429D481E400E9E557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +178,31 @@
 			path = INVENTORY;
 			sourceTree = "<group>";
 		};
+		88CCB2A729DF891300C9F1D8 /* WAR */ = {
+			isa = PBXGroup;
+			children = (
+				88CCB2A929DF895B00C9F1D8 /* War.storyboard */,
+			);
+			path = WAR;
+			sourceTree = "<group>";
+		};
+		88CCB2A829DF894600C9F1D8 /* HUNT */ = {
+			isa = PBXGroup;
+			children = (
+				88CCB2AB29DF898100C9F1D8 /* Hunt.storyboard */,
+			);
+			path = HUNT;
+			sourceTree = "<group>";
+		};
+		88CCB2AD29DF91B100C9F1D8 /* HUNT */ = {
+			isa = PBXGroup;
+			children = (
+				88CCB2AE29DF91C900C9F1D8 /* HuntViewController.swift */,
+				88CCB2B029DF93C700C9F1D8 /* HuntCaseViewController.swift */,
+			);
+			path = HUNT;
+			sourceTree = "<group>";
+		};
 		88E508B829D481E300E9E557 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +247,8 @@
 		88E508DC29D4853800E9E557 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88CCB2A829DF894600C9F1D8 /* HUNT */,
+				88CCB2A729DF891300C9F1D8 /* WAR */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,
 				889B87BC29D646AD00E3DF4E /* REGISTER */,
@@ -225,6 +260,7 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88CCB2AD29DF91B100C9F1D8 /* HUNT */,
 				88A4BCFE29DE2D1E006378BB /* INVENTORY */,
 				881F3A8929DDEDA7005579CE /* PROFILE SETTINGS */,
 				88F488D429DCA4AB0067834F /* LOGIN */,
@@ -310,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CCB2AC29DF898100C9F1D8 /* Hunt.storyboard in Resources */,
 				88E508D129D481E600E9E557 /* LaunchScreen.storyboard in Resources */,
 				88E508CE29D481E600E9E557 /* Assets.xcassets in Resources */,
 				889A838429D729B8005A1C6C /* Item.storyboard in Resources */,
@@ -317,6 +354,7 @@
 				88E508CC29D481E400E9E557 /* Main.storyboard in Resources */,
 				889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */,
 				88E508EB29D4914300E9E557 /* Register.storyboard in Resources */,
+				88CCB2AA29DF895B00C9F1D8 /* War.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */,
+				88CCB2B129DF93C700C9F1D8 /* HuntCaseViewController.swift in Sources */,
 				88E508C929D481E400E9E557 /* ViewController.swift in Sources */,
 				88E508F129D4918100E9E557 /* UserProfileViewController.swift in Sources */,
 				880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */,
@@ -338,6 +377,7 @@
 				88E508E929D4913200E9E557 /* RegisterViewController.swift in Sources */,
 				88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */,
 				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
+				88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
 				88F488D629DCA4BB0067834F /* LoginViewController.swift in Sources */,
 				881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */,

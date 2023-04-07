@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="q7N-8Z-xav">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="82i-Ae-zrh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSm-eW-lZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-611" y="-227"/>
+        </scene>
+        <!--HUNT-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController title="HUNT" id="Y6W-OH-hqX" customClass="HuntViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJY-7w-njZ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                <color key="barTintColor" systemColor="systemPinkColor"/>
+                                <items>
+                                    <navigationItem title="HUNTING" id="WDp-30-Af9">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward.square" catalog="system" id="L4G-66-JTO">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="82i-Ae-zrh" kind="presentation" modalPresentationStyle="fullScreen" id="mNV-jY-zZ3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="grS-kr-Tf2">
+                                <rect key="frame" x="20" y="64" width="353" height="738"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCN-Tq-sR1">
+                                        <rect key="frame" x="20" y="0.0" width="313" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="vtz-wT-gcY"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="EASY HUNT ( 5 ENERGY) "/>
+                                        <connections>
+                                            <action selector="easyHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CET-Ez-NKr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pae-01-GTM">
+                                        <rect key="frame" x="20" y="212.66666666666669" width="313" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="W6h-a5-5Ui"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="MEDIUM HUNT ( 10 ENERGY) " titleAlignment="center"/>
+                                        <connections>
+                                            <action selector="mediumHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mHp-fr-2mz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hh-NT-Hyc">
+                                        <rect key="frame" x="20" y="425.33333333333331" width="313" height="99.999999999999943"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="paN-ft-e7M"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="HARD HUNT ( 20 ENERGY)  "/>
+                                        <connections>
+                                            <action selector="hardHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xc2-oR-1fz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdN-YA-Mer">
+                                        <rect key="frame" x="20" y="638" width="313" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="GY1-fc-hNm"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="VERY HARD HUNT ( 30 ENERGY)  "/>
+                                        <connections>
+                                            <action selector="veryHardHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZP8-gR-4Jf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qdN-YA-Mer" secondAttribute="trailing" constant="20" id="6PM-oL-67I"/>
+                                    <constraint firstAttribute="trailing" secondItem="OCN-Tq-sR1" secondAttribute="trailing" constant="20" id="DwG-Mz-fJn"/>
+                                    <constraint firstItem="OCN-Tq-sR1" firstAttribute="leading" secondItem="grS-kr-Tf2" secondAttribute="leading" constant="20" id="Paf-Eb-9At"/>
+                                    <constraint firstItem="Pae-01-GTM" firstAttribute="leading" secondItem="grS-kr-Tf2" secondAttribute="leading" constant="20" id="ThZ-L3-5RZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pae-01-GTM" secondAttribute="trailing" constant="20" id="Vyg-zH-b0j"/>
+                                    <constraint firstItem="qdN-YA-Mer" firstAttribute="leading" secondItem="grS-kr-Tf2" secondAttribute="leading" constant="20" id="YbR-3V-cY8"/>
+                                    <constraint firstItem="3hh-NT-Hyc" firstAttribute="leading" secondItem="grS-kr-Tf2" secondAttribute="leading" constant="20" id="aop-Aa-exC"/>
+                                    <constraint firstAttribute="trailing" secondItem="3hh-NT-Hyc" secondAttribute="trailing" constant="20" id="jq9-eC-Uvx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="grS-kr-Tf2" secondAttribute="trailing" constant="20" id="5mK-bg-yhj"/>
+                            <constraint firstItem="lJY-7w-njZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Z7c-rz-e7y"/>
+                            <constraint firstItem="lJY-7w-njZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Z9S-8D-oPG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="grS-kr-Tf2" secondAttribute="bottom" constant="50" id="bdS-nO-ujJ"/>
+                            <constraint firstItem="grS-kr-Tf2" firstAttribute="top" secondItem="lJY-7w-njZ" secondAttribute="bottom" constant="20" id="cJJ-xu-idm"/>
+                            <constraint firstItem="grS-kr-Tf2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hYJ-dc-xlx"/>
+                            <constraint firstItem="lJY-7w-njZ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="maK-U9-ON2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="NxQ-Zx-JxR" kind="presentation" identifier="huntToCase" modalPresentationStyle="fullScreen" id="MQO-t3-NaH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111" y="-28"/>
+        </scene>
+        <!--HUNTCASE-->
+        <scene sceneID="Q2M-kg-1Zb">
+            <objects>
+                <viewController title="HUNTCASE" id="NxQ-Zx-JxR" customClass="HuntCaseViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49x-XQ-Jxe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-mG-QCX">
+                                <rect key="frame" x="20" y="40" width="353" height="20.333333333333329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK8-TZ-kPM">
+                                        <rect key="frame" x="0.0" y="0.0" width="33.666666666666664" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="energy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgg-yf-s9o">
+                                        <rect key="frame" x="143.66666666666666" y="0.0" width="52.666666666666657" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="health" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ss-UK-UW9">
+                                        <rect key="frame" x="306" y="0.0" width="47" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oco-Yu-4Ad">
+                                <rect key="frame" x="20" y="120.33333333333333" width="353" height="20.333333333333329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REQUIRED : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDu-u6-15s">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENERGY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9t-eX-ePV">
+                                        <rect key="frame" x="160" y="0.0" width="65" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKP-LM-8P5">
+                                        <rect key="frame" x="289.66666666666669" y="0.0" width="63.333333333333314" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7US-Ar-ylV">
+                                <rect key="frame" x="0.0" y="808" width="393" height="44"/>
+                                <color key="barTintColor" systemColor="systemPinkColor"/>
+                                <items>
+                                    <navigationItem title="HUNT CASE" id="4su-1s-ifI">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward.square" catalog="system" id="y82-SY-cYR">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="Y6W-OH-hqX" kind="presentation" modalPresentationStyle="fullScreen" id="BeT-RG-u6y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU1-md-6gn">
+                                <rect key="frame" x="20" y="240.66666666666663" width="353" height="100"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bFe-RQ-WnP"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="HUNT"/>
+                                <connections>
+                                    <action selector="huntingButton:" destination="NxQ-Zx-JxR" eventType="touchUpInside" id="9Kf-oi-uXo"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5Y1-sc-fHQ">
+                                <rect key="frame" x="146.66666666666666" y="360.66666666666669" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="355-8Y-GFd"/>
+                                    <constraint firstAttribute="height" constant="100" id="4Uy-G4-cJz"/>
+                                </constraints>
+                                <color key="color" systemColor="systemGreenColor"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="409-bH-BaD">
+                                <rect key="frame" x="20" y="480.66666666666669" width="353" height="20.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIZE : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1I-XH-WjR">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOLD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11I-8s-Vl8">
+                                        <rect key="frame" x="87.333333333333329" y="0.0" width="46.333333333333329" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPERIENCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4h-mv-vUz">
+                                        <rect key="frame" x="162.33333333333334" y="0.0" width="99.000000000000028" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e57-q5-Jb2">
+                                        <rect key="frame" x="289.66666666666669" y="0.0" width="63.333333333333314" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nl5-nN-zHQ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="409-bH-BaD" firstAttribute="top" secondItem="5Y1-sc-fHQ" secondAttribute="bottom" constant="20" id="26F-j9-eih"/>
+                            <constraint firstItem="4l9-mG-QCX" firstAttribute="top" secondItem="nl5-nN-zHQ" secondAttribute="top" constant="40" id="3Da-6U-Q8r"/>
+                            <constraint firstItem="409-bH-BaD" firstAttribute="leading" secondItem="nl5-nN-zHQ" secondAttribute="leading" constant="20" id="61S-Aw-CfD"/>
+                            <constraint firstItem="nl5-nN-zHQ" firstAttribute="bottom" secondItem="7US-Ar-ylV" secondAttribute="bottom" id="NYy-fL-PW9"/>
+                            <constraint firstItem="nl5-nN-zHQ" firstAttribute="trailing" secondItem="4l9-mG-QCX" secondAttribute="trailing" constant="20" id="PXf-DF-r0b"/>
+                            <constraint firstItem="qU1-md-6gn" firstAttribute="leading" secondItem="nl5-nN-zHQ" secondAttribute="leading" constant="20" id="Qap-39-HQt"/>
+                            <constraint firstItem="5Y1-sc-fHQ" firstAttribute="top" secondItem="qU1-md-6gn" secondAttribute="bottom" constant="20" id="TA5-KA-wbe"/>
+                            <constraint firstItem="nl5-nN-zHQ" firstAttribute="trailing" secondItem="qU1-md-6gn" secondAttribute="trailing" constant="20" id="ZDG-ht-6HP"/>
+                            <constraint firstAttribute="trailing" secondItem="7US-Ar-ylV" secondAttribute="trailing" id="ZLK-p3-tIS"/>
+                            <constraint firstItem="4l9-mG-QCX" firstAttribute="leading" secondItem="nl5-nN-zHQ" secondAttribute="leading" constant="20" id="dSu-9S-IrC"/>
+                            <constraint firstItem="oco-Yu-4Ad" firstAttribute="leading" secondItem="nl5-nN-zHQ" secondAttribute="leading" constant="20" id="eAE-Hw-NWX"/>
+                            <constraint firstItem="oco-Yu-4Ad" firstAttribute="top" secondItem="4l9-mG-QCX" secondAttribute="bottom" constant="60" id="eHu-zL-i2b"/>
+                            <constraint firstItem="qU1-md-6gn" firstAttribute="top" secondItem="oco-Yu-4Ad" secondAttribute="bottom" constant="100" id="jYk-Oj-3ae"/>
+                            <constraint firstItem="7US-Ar-ylV" firstAttribute="leading" secondItem="nl5-nN-zHQ" secondAttribute="leading" id="kh4-Iy-fQt"/>
+                            <constraint firstItem="nl5-nN-zHQ" firstAttribute="trailing" secondItem="409-bH-BaD" secondAttribute="trailing" constant="20" id="sCR-O1-8Vn"/>
+                            <constraint firstItem="nl5-nN-zHQ" firstAttribute="trailing" secondItem="oco-Yu-4Ad" secondAttribute="trailing" constant="20" id="t0E-so-jQv"/>
+                            <constraint firstItem="5Y1-sc-fHQ" firstAttribute="centerX" secondItem="49x-XQ-Jxe" secondAttribute="centerX" id="xzX-ma-VQ2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="HuntingButtonLabel" destination="qU1-md-6gn" id="bFM-7J-mLS"/>
+                        <outlet property="myActivityIndicator" destination="5Y1-sc-fHQ" id="C4q-8q-3Pg"/>
+                        <outlet property="myNavigationItem" destination="4su-1s-ifI" id="0IV-sw-7PS"/>
+                        <outlet property="prizeExp" destination="t4h-mv-vUz" id="HG1-v8-ZdG"/>
+                        <outlet property="prizeGold" destination="11I-8s-Vl8" id="nNj-XA-5cM"/>
+                        <outlet property="prizeHealth" destination="e57-q5-Jb2" id="Cch-9C-GfE"/>
+                        <outlet property="prizeLabel" destination="O1I-XH-WjR" id="1UL-CG-ItH"/>
+                        <outlet property="reqEnergy" destination="A9t-eX-ePV" id="ydI-o7-nCL"/>
+                        <outlet property="reqHealth" destination="cKP-LM-8P5" id="E5D-Bf-t58"/>
+                        <outlet property="userEnergy" destination="Fgg-yf-s9o" id="Whc-qQ-RIl"/>
+                        <outlet property="userGold" destination="tK8-TZ-kPM" id="KiC-Ib-7WO"/>
+                        <outlet property="userHealth" destination="7ss-UK-UW9" id="nGc-fI-P7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3C-GH-lVc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward.square" catalog="system" width="128" height="114"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
