@@ -140,31 +140,88 @@ class HuntCaseViewController: UIViewController {
         HuntingButtonLabel.isEnabled = false
         myActivityIndicator.startAnimating()
         HuntingButtonLabel.backgroundColor = UIColor.systemGray
+        HuntingButtonLabel.titleLabel?.text = "HUNTING"
         DispatchQueue.main.asyncAfter(deadline: .now() + 3)
         { [self] in
+           
+            
+           
                 myActivityIndicator.stopAnimating()
             HuntingButtonLabel.backgroundColor = UIColor.systemPink
+            HuntingButtonLabel.titleLabel?.text = "HUNT"
             HuntingButtonLabel.isEnabled = true
                 let huntType = UserDefaults.standard.value(forKey: "HuntType") as! Int
+                var randomNumber = Int.random(in: 1...10)
+            
                 switch huntType{
-                case 5:
-                    prizeGold.text = "GOLD +10"
-                    prizeExp.text = "EXP +5"
-                    prizeHealth.text = "HEALTH + 15"
-                case 10:
-                    prizeGold.text = "GOLD +20"
-                    prizeExp.text = "EXP +10"
-                    prizeHealth.text = "HEALTH + 30"
-                case 20:
-                    prizeGold.text = "GOLD +40"
-                    prizeExp.text = "EXP +20"
-                    prizeHealth.text = "HEALTH + 60"
-                case 30:
-                    prizeGold.text = "GOLD +60"
-                    prizeExp.text = "EXP +30"
-                    prizeHealth.text = "HEALTH + 90"
                     
+                case 5:
+                    print("Debug Random Number : \(randomNumber)")
+                    if(randomNumber < 9){
+                        prizeGold.text = "GOLD +10"
+                        prizeExp.text = "EXP +5"
+                        prizeHealth.text = "HEALTH + 15"
+                        prizeLabel.text = "ENERGY -5"
+                    }else {
+                        prizeGold.text = ""
+                        prizeExp.text = ""
+                        prizeHealth.text = ""
+                        prizeLabel.text = "ENERGY -5"
+                        break
+                    }
+                    
+                    
+                case 10:
+                    print("Debug Random Number : \(randomNumber)")
+                    if(randomNumber < 7){
+                        prizeGold.text = "GOLD +20"
+                        prizeExp.text = "EXP +10"
+                        prizeHealth.text = "HEALTH + 30"
+                        prizeLabel.text = "ENERGY -10"
+                }else {
+                    prizeGold.text = ""
+                    prizeExp.text = ""
+                    prizeHealth.text = ""
+                    prizeLabel.text = "ENERGY -10"
+                    break
+                }
+            
+            
+                case 20:
+                    print("Debug Random Number : \(randomNumber)")
+                    
+                    if(randomNumber < 5){
+                        prizeGold.text = "GOLD +40"
+                        prizeExp.text = "EXP +20"
+                        prizeHealth.text = "HEALTH + 60"
+                        prizeLabel.text = "ENERGY -20"
+                }else {
+                    prizeGold.text = ""
+                    prizeExp.text = ""
+                    prizeHealth.text = ""
+                    prizeLabel.text = "ENERGY -20"
+                    break
+                }
+                    
+                case 30:
+                    print("Debug Random Number : \(randomNumber)")
+               
+                    if(randomNumber < 3){
+                        prizeGold.text = "GOLD +60"
+                        prizeExp.text = "EXP +30"
+                        prizeHealth.text = "HEALTH + 90"
+                        prizeLabel.text = "ENERGY -30"
+                }else {
+                    prizeGold.text = ""
+                    prizeExp.text = ""
+                    prizeHealth.text = ""
+                    prizeLabel.text = "ENERGY -30"
+                    break
+                }
+                    
+                   
                 default:
+                    print("Debug Random Number : \(randomNumber)")
                     prizeGold.text = "GOLD +0"
                     prizeExp.text = "EXP +0"
                     prizeHealth.text = "HEALTH + 0"

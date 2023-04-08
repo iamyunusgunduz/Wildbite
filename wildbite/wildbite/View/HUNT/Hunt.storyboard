@@ -50,7 +50,7 @@
                                         </constraints>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="EASY HUNT ( 5 ENERGY) "/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="EASY HUNT ( 5 ENERGY) " subtitle="Succes 80%"/>
                                         <connections>
                                             <action selector="easyHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CET-Ez-NKr"/>
                                         </connections>
@@ -63,7 +63,7 @@
                                         </constraints>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="MEDIUM HUNT ( 10 ENERGY) " titleAlignment="center"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="MEDIUM HUNT ( 10 ENERGY)" subtitle="Succes 60%" titleAlignment="trailing"/>
                                         <connections>
                                             <action selector="mediumHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mHp-fr-2mz"/>
                                         </connections>
@@ -76,7 +76,7 @@
                                         </constraints>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="HARD HUNT ( 20 ENERGY)  "/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="HARD HUNT ( 20 ENERGY)  " subtitle="Succes 40%"/>
                                         <connections>
                                             <action selector="hardHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xc2-oR-1fz"/>
                                         </connections>
@@ -89,7 +89,7 @@
                                         </constraints>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="VERY HARD HUNT ( 30 ENERGY)  "/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="VERY HARD HUNT ( 30 ENERGY)  " subtitle="Succes 20%"/>
                                         <connections>
                                             <action selector="veryHardHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZP8-gR-4Jf"/>
                                         </connections>
@@ -158,7 +158,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oco-Yu-4Ad">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oco-Yu-4Ad">
                                 <rect key="frame" x="20" y="120.33333333333333" width="353" height="20.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REQUIRED : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDu-u6-15s">
@@ -222,7 +222,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIZE : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1I-XH-WjR">
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOLD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11I-8s-Vl8">
