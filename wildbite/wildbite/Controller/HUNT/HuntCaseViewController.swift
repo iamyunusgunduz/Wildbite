@@ -151,7 +151,7 @@ class HuntCaseViewController: UIViewController {
             HuntingButtonLabel.titleLabel?.text = "HUNT"
             HuntingButtonLabel.isEnabled = true
                 let huntType = UserDefaults.standard.value(forKey: "HuntType") as! Int
-                var randomNumber = Int.random(in: 1...10)
+                let randomNumber = Int.random(in: 1...10)
             
                 switch huntType{
                     

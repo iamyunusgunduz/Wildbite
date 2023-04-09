@@ -10,6 +10,10 @@
 		880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */; };
 		881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */; };
 		8853CE1529DE3F1400A3EE09 /* EnvanterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853CE1429DE3F1400A3EE09 /* EnvanterViewController.swift */; };
+		8873B36C29E2D1D900F4FB89 /* PaperOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 8873B36B29E2D1D900F4FB89 /* PaperOnboarding */; };
+		8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B36E29E2D20700F4FB89 /* PaperViewController.swift */; };
+		8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8873B37029E2D20F00F4FB89 /* Paper.storyboard */; };
+		8873B37529E2D4BB00F4FB89 /* myOnBoardign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */; };
 		889A838429D729B8005A1C6C /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889A838329D729B8005A1C6C /* Item.storyboard */; };
 		889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A838629D729ED005A1C6C /* ItemViewController.swift */; };
 		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
@@ -40,6 +44,9 @@
 		880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettViewController.swift; sourceTree = "<group>"; };
 		8853CE1429DE3F1400A3EE09 /* EnvanterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvanterViewController.swift; sourceTree = "<group>"; };
+		8873B36E29E2D20700F4FB89 /* PaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperViewController.swift; sourceTree = "<group>"; };
+		8873B37029E2D20F00F4FB89 /* Paper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paper.storyboard; sourceTree = "<group>"; };
+		8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOnBoardign.swift; sourceTree = "<group>"; };
 		889A838329D729B8005A1C6C /* Item.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
 		889A838629D729ED005A1C6C /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
@@ -73,6 +80,7 @@
 			files = (
 				88B3D4B629DF1CAE0083838C /* Kingfisher in Frameworks */,
 				88E508DA29D4836100E9E557 /* Alamofire in Frameworks */,
+				8873B36C29E2D1D900F4FB89 /* PaperOnboarding in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,16 @@
 				881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */,
 			);
 			path = "PROFILE SETTINGS";
+			sourceTree = "<group>";
+		};
+		8873B36D29E2D1F300F4FB89 /* PAPER */ = {
+			isa = PBXGroup;
+			children = (
+				8873B36E29E2D20700F4FB89 /* PaperViewController.swift */,
+				8873B37029E2D20F00F4FB89 /* Paper.storyboard */,
+				8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */,
+			);
+			path = PAPER;
 			sourceTree = "<group>";
 		};
 		889A838229D729A4005A1C6C /* ITEM */ = {
@@ -222,6 +240,7 @@
 		88E508C329D481E400E9E557 /* wildbite */ = {
 			isa = PBXGroup;
 			children = (
+				8873B36D29E2D1F300F4FB89 /* PAPER */,
 				88E508DB29D484E900E9E557 /* Model */,
 				88E508DC29D4853800E9E557 /* View */,
 				88E508DD29D4853D00E9E557 /* Controller */,
@@ -299,6 +318,7 @@
 			packageProductDependencies = (
 				88E508D929D4836100E9E557 /* Alamofire */,
 				88B3D4B529DF1CAE0083838C /* Kingfisher */,
+				8873B36B29E2D1D900F4FB89 /* PaperOnboarding */,
 			);
 			productName = wildbite;
 			productReference = 88E508C129D481E300E9E557 /* wildbite.app */;
@@ -331,6 +351,7 @@
 			packageReferences = (
 				88E508D829D4836100E9E557 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				88B3D4B429DF1CAE0083838C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8873B36A29E2D1D900F4FB89 /* XCRemoteSwiftPackageReference "paper-onboarding" */,
 			);
 			productRefGroup = 88E508C229D481E300E9E557 /* Products */;
 			projectDirPath = "";
@@ -349,6 +370,7 @@
 				88CCB2AC29DF898100C9F1D8 /* Hunt.storyboard in Resources */,
 				88E508D129D481E600E9E557 /* LaunchScreen.storyboard in Resources */,
 				88E508CE29D481E600E9E557 /* Assets.xcassets in Resources */,
+				8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */,
 				889A838429D729B8005A1C6C /* Item.storyboard in Resources */,
 				88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */,
 				88E508CC29D481E400E9E557 /* Main.storyboard in Resources */,
@@ -366,8 +388,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */,
+				8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */,
 				88CCB2B129DF93C700C9F1D8 /* HuntCaseViewController.swift in Sources */,
 				88E508C929D481E400E9E557 /* ViewController.swift in Sources */,
+				8873B37529E2D4BB00F4FB89 /* myOnBoardign.swift in Sources */,
 				88E508F129D4918100E9E557 /* UserProfileViewController.swift in Sources */,
 				880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */,
 				88E508E529D490F900E9E557 /* RegisterModel.swift in Sources */,
@@ -612,6 +636,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8873B36A29E2D1D900F4FB89 /* XCRemoteSwiftPackageReference "paper-onboarding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ramotion/paper-onboarding.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		88B3D4B429DF1CAE0083838C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -631,6 +663,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8873B36B29E2D1D900F4FB89 /* PaperOnboarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8873B36A29E2D1D900F4FB89 /* XCRemoteSwiftPackageReference "paper-onboarding" */;
+			productName = PaperOnboarding;
+		};
 		88B3D4B529DF1CAE0083838C /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 88B3D4B429DF1CAE0083838C /* XCRemoteSwiftPackageReference "Kingfisher" */;
