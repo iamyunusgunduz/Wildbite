@@ -17,16 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYJ-Xo-9iR" customClass="myOnBoardign" customModule="wildbite" customModuleProvider="target">
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYJ-Xo-9iR" customClass="myOnBoardign" customModule="wildbite" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfh-gP-XMb">
+                                <rect key="frame" x="20" y="683" width="353" height="35"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CHOOSE THE CHARACTER" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="characterSelectButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E86-AA-E8Z"/>
+                                    <segue destination="nWZ-hK-gaq" kind="presentation" modalPresentationStyle="fullScreen" id="UGL-JE-OPE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JYJ-Xo-9iR" secondAttribute="trailing" id="5zI-rg-mWq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tfh-gP-XMb" secondAttribute="bottom" constant="100" id="BMS-cK-Rm2"/>
+                            <constraint firstItem="tfh-gP-XMb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="HD5-AP-eKh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JYJ-Xo-9iR" secondAttribute="bottom" id="LFe-Hd-xfG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tfh-gP-XMb" secondAttribute="trailing" constant="20" id="YaN-XE-JZx"/>
                             <constraint firstItem="JYJ-Xo-9iR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="g6y-St-WYL"/>
                             <constraint firstItem="JYJ-Xo-9iR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mMx-0S-g0Z"/>
                         </constraints>
@@ -38,6 +55,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="jxQ-jw-4P1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" id="nWZ-hK-gaq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALV-jN-kIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="-94"/>
         </scene>
     </scenes>
     <resources>

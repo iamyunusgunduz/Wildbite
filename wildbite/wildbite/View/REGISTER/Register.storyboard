@@ -28,25 +28,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="54.333333333333336"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cxo-3U-ZVh">
-                                <rect key="frame" x="50" y="88" width="314" height="720"/>
+                                <rect key="frame" x="50" y="145" width="314" height="606"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grW-aN-8EC">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="142"/>
+                                    <button opaque="NO" contentMode="center" horizontalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grW-aN-8EC">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="28"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="left" buttonSize="mini"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="LOGIN" buttonSize="mini" titleAlignment="center"/>
                                         <connections>
                                             <segue destination="7M6-Eh-TDb" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="a7p-gC-r1J"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTH-8k-Uo2">
-                                        <rect key="frame" x="0.0" y="152" width="314" height="20.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="38" width="314" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.93317266909999996" green="0.93317266909999996" blue="0.93317266909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="n67-gf-GIf" userLabel="usernameView">
-                                        <rect key="frame" x="0.0" y="182.33333333333331" width="314" height="100"/>
+                                        <rect key="frame" x="0.0" y="68.333333333333343" width="314" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_text" translatesAutoresizingMaskIntoConstraints="NO" id="f3C-XP-Hxi">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="100"/>
@@ -74,13 +75,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chN-yk-lbO">
-                                        <rect key="frame" x="0.0" y="292.33333333333331" width="314" height="20.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="178.33333333333331" width="314" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.93317266909999996" green="0.93317266909999996" blue="0.93317266909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkV-NS-tBM" userLabel="mailView">
-                                        <rect key="frame" x="0.0" y="322.66666666666669" width="314" height="100"/>
+                                        <rect key="frame" x="0.0" y="208.66666666666669" width="314" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_text" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-Fn-4Zf">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="100"/>
@@ -108,13 +109,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXq-yd-BZy">
-                                        <rect key="frame" x="0.0" y="432.66666666666663" width="314" height="20.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="318.66666666666669" width="314" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.93317266909999996" green="0.93317266909999996" blue="0.93317266909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-pD-2SX" userLabel="PassView">
-                                        <rect key="frame" x="0.0" y="463" width="314" height="100"/>
+                                        <rect key="frame" x="0.0" y="349" width="314" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_text" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-c9-8Bd">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="100"/>
@@ -143,7 +144,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vot-T0-SRh">
-                                        <rect key="frame" x="0.0" y="573" width="314" height="147"/>
+                                        <rect key="frame" x="0.0" y="459" width="314" height="147"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmz-bh-DHp">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="147"/>
@@ -256,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyo-j3-o1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681" y="-254"/>
+            <point key="canvasLocation" x="1862" y="-206"/>
         </scene>
         <!--Main-->
         <scene sceneID="njr-ZR-0me">
@@ -278,7 +279,7 @@
     <resources>
         <image name="alt" width="271" height="56.333332061767578"/>
         <image name="blank_text" width="165.66667175292969" height="55.333332061767578"/>
-        <image name="left" width="133.33332824707031" height="132"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="login" width="133" height="133"/>
         <image name="register" width="133" height="133"/>
         <image name="ust" width="259.33334350585938" height="54.333332061767578"/>
