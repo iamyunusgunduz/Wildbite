@@ -25,7 +25,7 @@
                                 <rect key="frame" x="20" y="683" width="353" height="35"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="CHOOSE THE CHARACTER" cornerStyle="capsule">
+                                <buttonConfiguration key="configuration" style="plain" title="SELECT" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
@@ -35,6 +35,19 @@
                                     <segue destination="nWZ-hK-gaq" kind="presentation" modalPresentationStyle="fullScreen" id="UGL-JE-OPE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os0-ZZ-hcJ">
+                                <rect key="frame" x="20" y="99" width="353" height="35"/>
+                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SELECT CHARACTER" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="characterSelectButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yDX-ar-7Rk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,9 +55,12 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JYJ-Xo-9iR" secondAttribute="trailing" id="5zI-rg-mWq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tfh-gP-XMb" secondAttribute="bottom" constant="100" id="BMS-cK-Rm2"/>
                             <constraint firstItem="tfh-gP-XMb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="HD5-AP-eKh"/>
+                            <constraint firstItem="os0-ZZ-hcJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="JP5-ww-W9T"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JYJ-Xo-9iR" secondAttribute="bottom" id="LFe-Hd-xfG"/>
+                            <constraint firstItem="os0-ZZ-hcJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PDI-eN-LYw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tfh-gP-XMb" secondAttribute="trailing" constant="20" id="YaN-XE-JZx"/>
                             <constraint firstItem="JYJ-Xo-9iR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="g6y-St-WYL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="os0-ZZ-hcJ" secondAttribute="trailing" constant="20" id="luu-2o-mJS"/>
                             <constraint firstItem="JYJ-Xo-9iR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mMx-0S-g0Z"/>
                         </constraints>
                     </view>
