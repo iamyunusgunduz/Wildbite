@@ -9,15 +9,95 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="OMR-bL-5uV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="d1E-Qi-JhI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fX9-gi-9AR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="279"/>
+        </scene>
         <!--WAR-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController title="WAR" id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" id="oRC-mb-dF8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NII-Xq-aqJ">
+                                <rect key="frame" x="20" y="99" width="353" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0X-TX-yFD">
+                                        <rect key="frame" x="20" y="0.0" width="313" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MLy-Uw-AJ3"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="VAMPIRE VAR"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-eT-JqQ">
+                                        <rect key="frame" x="20" y="60" width="313" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6WL-Du-pub"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="HUNTER WAR"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqE-HO-hOS">
+                                        <rect key="frame" x="20" y="120" width="313" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aOc-Ui-kcD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="WEREWOLF WAR"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JhE-eT-JqQ" secondAttribute="trailing" constant="20" id="4XR-F2-WcE"/>
+                                    <constraint firstItem="JhE-eT-JqQ" firstAttribute="leading" secondItem="NII-Xq-aqJ" secondAttribute="leading" constant="20" id="71Z-wY-S0O"/>
+                                    <constraint firstItem="C0X-TX-yFD" firstAttribute="leading" secondItem="NII-Xq-aqJ" secondAttribute="leading" constant="20" id="SFH-XL-yav"/>
+                                    <constraint firstItem="DqE-HO-hOS" firstAttribute="leading" secondItem="NII-Xq-aqJ" secondAttribute="leading" constant="20" id="clF-Hc-qF7"/>
+                                    <constraint firstAttribute="trailing" secondItem="C0X-TX-yFD" secondAttribute="trailing" constant="20" id="qeU-E6-qF7"/>
+                                    <constraint firstAttribute="trailing" secondItem="DqE-HO-hOS" secondAttribute="trailing" constant="20" id="z2f-HU-hzA"/>
+                                </constraints>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntX-zR-e5z">
+                                <rect key="frame" x="0.0" y="808" width="393" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.10414077300000001" green="0.10414077300000001" blue="0.10414077300000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="WAR TYPE" id="JL9-mC-APO">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="ZB8-JM-Sf4">
+                                            <color key="tintColor" systemColor="systemRedColor"/>
+                                            <connections>
+                                                <segue destination="d1E-Qi-JhI" kind="presentation" id="JG5-ng-Jr3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RrV-Rp-Mem"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NII-Xq-aqJ" firstAttribute="top" secondItem="RrV-Rp-Mem" secondAttribute="top" constant="40" id="5mp-mO-Bx0"/>
+                            <constraint firstAttribute="bottom" secondItem="ntX-zR-e5z" secondAttribute="bottom" id="CWf-CL-8gX"/>
+                            <constraint firstItem="NII-Xq-aqJ" firstAttribute="leading" secondItem="RrV-Rp-Mem" secondAttribute="leading" constant="20" id="O3Z-ec-Xjh"/>
+                            <constraint firstItem="ntX-zR-e5z" firstAttribute="leading" secondItem="RrV-Rp-Mem" secondAttribute="leading" id="Yow-xc-vtD"/>
+                            <constraint firstItem="RrV-Rp-Mem" firstAttribute="trailing" secondItem="NII-Xq-aqJ" secondAttribute="trailing" constant="20" id="fCi-UD-JFa"/>
+                            <constraint firstItem="ntX-zR-e5z" firstAttribute="trailing" secondItem="RrV-Rp-Mem" secondAttribute="trailing" id="i7Y-gR-2ef"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -26,8 +106,18 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

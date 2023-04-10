@@ -378,7 +378,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="HUNT"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="MONSTER HUNT"/>
                                         <connections>
                                             <segue destination="nnP-le-1j5" kind="presentation" modalPresentationStyle="fullScreen" id="4eR-hz-mLD"/>
                                         </connections>

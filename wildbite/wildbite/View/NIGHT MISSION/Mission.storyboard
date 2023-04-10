@@ -9,14 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
-        <scene sceneID="m0a-EZ-Bdf">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="SJ0-6f-yAp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kCH-TA-yZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-419" y="263"/>
-        </scene>
         <!--MISSION-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -46,7 +38,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="NIGHT MISSION"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="NIGHT BOSS MISSION"/>
                                         <connections>
                                             <segue destination="9pO-GD-SJ3" kind="presentation" modalPresentationStyle="fullScreen" id="uAC-hf-Ryo"/>
                                         </connections>
@@ -72,12 +64,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="Os0-sY-bRU">
                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                             <connections>
-                                                <segue destination="SJ0-6f-yAp" kind="presentation" modalPresentationStyle="fullScreen" id="8mA-Eg-nLq"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="vVr-bD-kM8">
-                                            <connections>
-                                                <segue destination="3rt-pv-dZb" kind="presentation" modalPresentationStyle="fullScreen" id="8ul-ze-cBL"/>
+                                                <segue destination="3rt-pv-dZb" kind="presentation" modalPresentationStyle="fullScreen" id="pxx-Um-O5g"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -122,7 +109,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="1 LVL Mission"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1 LVL BOSS"/>
                                                 <connections>
                                                     <action selector="btnLvl1Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="mHt-oR-IQK"/>
                                                 </connections>
@@ -135,7 +122,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="5 LVL Mission"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5 LVL BOSS"/>
                                                 <connections>
                                                     <action selector="btnLvl5Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="9kP-bM-mFn"/>
                                                 </connections>
@@ -148,7 +135,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="10 LVL Mission"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="10 LVL BOSS"/>
                                                 <connections>
                                                     <action selector="btnLvl10Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="OAh-V6-wME"/>
                                                 </connections>
@@ -161,7 +148,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="15 LVL Mission"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="15 LVL BOSS"/>
                                                 <connections>
                                                     <action selector="btnLvl15Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="amq-9S-dEv"/>
                                                 </connections>
@@ -174,7 +161,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="20 LVL Mission"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="20 LVL BOSS"/>
                                                 <connections>
                                                     <action selector="btnLvl20Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Eft-8n-tei"/>
                                                 </connections>
@@ -187,7 +174,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="25 LVL Mission"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="25 LVL BOSS"/>
                                                 <connections>
                                                     <action selector="btnLvl25Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="KeD-nt-Ll7"/>
                                                 </connections>
@@ -200,7 +187,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="30 LVL Mission"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="30 LVL BOSS"/>
                                                 <connections>
                                                     <action selector="btnLvl30Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="UCh-qX-eCZ"/>
                                                 </connections>
@@ -213,7 +200,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="35 LVL Mission"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="35 LVL BOSS"/>
                                                 <connections>
                                                     <action selector="btnLvl35Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Axe-Jt-mnv"/>
                                                 </connections>
@@ -321,7 +308,7 @@
                                     <color key="textColor" systemColor="systemTealColor"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="HUNT CHOOSE" id="t1H-aP-Xyd">
+                                    <navigationItem title="MONSTER CHOOSE" id="t1H-aP-Xyd">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="D5U-6S-fp4">
                                             <color key="tintColor" systemColor="systemMintColor"/>
                                             <connections>
@@ -398,7 +385,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8ul-ze-cBL"/>
+        <segue reference="pxx-Um-O5g"/>
         <segue reference="uAC-hf-Ryo"/>
     </inferredMetricsTieBreakers>
     <resources>

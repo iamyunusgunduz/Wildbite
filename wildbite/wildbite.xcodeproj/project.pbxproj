@@ -93,12 +93,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		881513C229E46EA7001CD5CE /* MISSION */ = {
+		881513C229E46EA7001CD5CE /* NIGHT MISSION */ = {
 			isa = PBXGroup;
 			children = (
 				881513C329E46EB9001CD5CE /* Mission.storyboard */,
 			);
-			path = MISSION;
+			path = "NIGHT MISSION";
 			sourceTree = "<group>";
 		};
 		881F3A8929DDEDA7005579CE /* PROFILE SETTINGS */ = {
@@ -235,12 +235,12 @@
 			path = WAR;
 			sourceTree = "<group>";
 		};
-		88CCB2A829DF894600C9F1D8 /* HUNT */ = {
+		88CCB2A829DF894600C9F1D8 /* MONSTER HUNT */ = {
 			isa = PBXGroup;
 			children = (
 				88CCB2AB29DF898100C9F1D8 /* Hunt.storyboard */,
 			);
-			path = HUNT;
+			path = "MONSTER HUNT";
 			sourceTree = "<group>";
 		};
 		88CCB2AD29DF91B100C9F1D8 /* HUNT */ = {
@@ -297,8 +297,8 @@
 		88E508DC29D4853800E9E557 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				881513C229E46EA7001CD5CE /* MISSION */,
-				88CCB2A829DF894600C9F1D8 /* HUNT */,
+				881513C229E46EA7001CD5CE /* NIGHT MISSION */,
+				88CCB2A829DF894600C9F1D8 /* MONSTER HUNT */,
 				88CCB2A729DF891300C9F1D8 /* WAR */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,

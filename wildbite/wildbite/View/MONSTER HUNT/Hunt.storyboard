@@ -9,14 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
-        <scene sceneID="q7N-8Z-xav">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="82i-Ae-zrh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oSm-eW-lZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-611" y="-227"/>
-        </scene>
         <!--HUNT-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -33,16 +25,11 @@
                                     <color key="textColor" systemColor="systemPinkColor"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="HUNTING" id="WDp-30-Af9">
+                                    <navigationItem title="MONSTER HUNTING" id="WDp-30-Af9">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="L4G-66-JTO">
                                             <color key="tintColor" systemColor="systemPinkColor"/>
                                             <connections>
-                                                <segue destination="82i-Ae-zrh" kind="presentation" modalPresentationStyle="fullScreen" id="mNV-jY-zZ3"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="Nbf-93-JIn">
-                                            <connections>
-                                                <segue destination="ATw-8c-gXm" kind="presentation" modalPresentationStyle="fullScreen" id="JUn-YJ-tIb"/>
+                                                <segue destination="ATw-8c-gXm" kind="presentation" modalPresentationStyle="fullScreen" id="L9H-N2-2Vg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -243,7 +230,7 @@
                                 </constraints>
                                 <color key="color" systemColor="systemGreenColor"/>
                             </activityIndicatorView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="409-bH-BaD">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="409-bH-BaD">
                                 <rect key="frame" x="20" y="480.66666666666669" width="353" height="20.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIZE : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1I-XH-WjR">
@@ -316,7 +303,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="39u-cL-ASv"/>
+        <segue reference="L9H-N2-2Vg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
