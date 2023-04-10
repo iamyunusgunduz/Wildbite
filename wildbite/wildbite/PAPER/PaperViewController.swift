@@ -9,7 +9,7 @@ import UIKit
 import PaperOnboarding
 
 class PaperViewController: UIViewController,PaperOnboardingDataSource,PaperOnboardingDelegate {
-   var secilenKarakter = 0
+   var secilenKarakter = "HUNTER"
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
 
         let titleFont = UIFont(name: "Nunito-Bold", size: 36.0) ?? UIFont.boldSystemFont(ofSize: 36.0)
@@ -61,7 +61,7 @@ class PaperViewController: UIViewController,PaperOnboardingDataSource,PaperOnboa
         if(index == 0){
             UIView.animate(withDuration: 0.1) { [self] in
                 print("Debug: Index 0")
-                secilenKarakter = 0
+                secilenKarakter = "HUNTER"
                 print("Debug secilen karakter: \(secilenKarakter)")
             }
             
@@ -69,13 +69,13 @@ class PaperViewController: UIViewController,PaperOnboardingDataSource,PaperOnboa
         if(index == 1){
             UIView.animate(withDuration: 0.9) { [self] in
                 print("Debug: Index 1")
-                secilenKarakter = 1
+                secilenKarakter = "WEREWOLF"
                 print("Debug secilen karakter: \(secilenKarakter)")
             }
         }
             if(index == 2){
                 UIView.animate(withDuration: 0.9) { [self] in
-                    secilenKarakter = 2
+                    secilenKarakter = "VAMPIRE"
                     print("Debug secilen karakter: \(secilenKarakter)")
                     print("Debug: Index 2")
                 }
@@ -86,6 +86,27 @@ class PaperViewController: UIViewController,PaperOnboardingDataSource,PaperOnboa
     
     @IBAction func characterSelectButton(_ sender: Any) {
     print("----- Secilen karakter \(secilenKarakter)")
+      
+        
+        let alert = UIAlertController(title: "Choosen character : \(secilenKarakter)", message: "Are you sure ?", preferredStyle: .alert)
+               let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
+                   print("ok was clicked")
+               }
+        
+       
+     
+
+     
+               let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                   print("cancel was clicked")
+              }
+               alert.addAction(okButton)
+               alert.addAction(cancelButton)
+               present(alert, animated: true) {
+                   print("alert is done")
+               }
+        
+        
     }
     
     @IBOutlet weak var onboardingTwoView: myOnBoardign!

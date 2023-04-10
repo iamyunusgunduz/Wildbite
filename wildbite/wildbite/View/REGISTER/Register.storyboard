@@ -31,7 +31,7 @@
                                 <rect key="frame" x="50" y="148" width="314" height="600.33333333333337"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" horizontalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grW-aN-8EC">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="22.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="22.333333333333332"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

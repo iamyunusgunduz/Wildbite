@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="m0a-EZ-Bdf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="SJ0-6f-yAp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCH-TA-yZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-419" y="263"/>
+        </scene>
+        <!--MISSION-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Mission" title="MISSION" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f6p-T4-pIu">
+                                <rect key="frame" x="20" y="40" width="353" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2st-iM-VqS">
+                                        <rect key="frame" x="20" y="0.0" width="313" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0Zm-Df-RSx"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="DAYTIME MISSION"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOS-hq-ct3">
+                                        <rect key="frame" x="20" y="60" width="313" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="sML-hy-pby"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="NIGHT MISSION"/>
+                                        <connections>
+                                            <segue destination="9pO-GD-SJ3" kind="presentation" modalPresentationStyle="fullScreen" id="uAC-hf-Ryo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2st-iM-VqS" firstAttribute="leading" secondItem="f6p-T4-pIu" secondAttribute="leading" constant="20" id="4Rd-CQ-SHh"/>
+                                    <constraint firstAttribute="trailing" secondItem="pOS-hq-ct3" secondAttribute="trailing" constant="20" id="5Cq-JC-2OL"/>
+                                    <constraint firstAttribute="trailing" secondItem="2st-iM-VqS" secondAttribute="trailing" constant="20" id="CDu-Zs-7dF"/>
+                                    <constraint firstItem="pOS-hq-ct3" firstAttribute="leading" secondItem="f6p-T4-pIu" secondAttribute="leading" constant="20" id="W9m-84-bTV"/>
+                                </constraints>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nco-50-HnY">
+                                <rect key="frame" x="0.0" y="808" width="393" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.10414077300000001" green="0.10414077300000001" blue="0.10414077300000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" systemColor="systemOrangeColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="MISSION" id="6ot-O0-LMk">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="Os0-sY-bRU">
+                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                            <connections>
+                                                <segue destination="SJ0-6f-yAp" kind="presentation" modalPresentationStyle="fullScreen" id="8mA-Eg-nLq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="vVr-bD-kM8">
+                                            <connections>
+                                                <segue destination="3rt-pv-dZb" kind="presentation" modalPresentationStyle="fullScreen" id="8ul-ze-cBL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f6p-T4-pIu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="EZl-Sc-MG4"/>
+                            <constraint firstItem="f6p-T4-pIu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="MTW-YA-FfA"/>
+                            <constraint firstItem="Nco-50-HnY" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="b64-R9-8mN"/>
+                            <constraint firstItem="Nco-50-HnY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="evF-ev-tIB"/>
+                            <constraint firstAttribute="bottom" secondItem="Nco-50-HnY" secondAttribute="bottom" id="j11-oU-zdg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f6p-T4-pIu" secondAttribute="trailing" constant="20" id="syv-a9-dYI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="283" y="-75"/>
+        </scene>
+        <!--MISSION-->
+        <scene sceneID="S3b-9d-ggH">
+            <objects>
+                <viewController storyboardIdentifier="NightMission" title="MISSION" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pO-GD-SJ3" customClass="NightMissionViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wOV-8m-6pn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJR-pD-PFv">
+                                <rect key="frame" x="20" y="10" width="353" height="1441"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6wc-Ny-YnW">
+                                        <rect key="frame" x="0.0" y="9" width="353" height="470"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-zM-Cpy">
+                                                <rect key="frame" x="20" y="0.0" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="x17-Al-flr"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1 LVL Mission"/>
+                                                <connections>
+                                                    <action selector="btnLvl1Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="mHt-oR-IQK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-Nv-GUf">
+                                                <rect key="frame" x="20" y="60" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="asv-cn-5St"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5 LVL Mission"/>
+                                                <connections>
+                                                    <action selector="btnLvl5Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="9kP-bM-mFn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUd-Ez-xw7">
+                                                <rect key="frame" x="20" y="120" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="7Tu-G8-Xy8"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="10 LVL Mission"/>
+                                                <connections>
+                                                    <action selector="btnLvl10Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="OAh-V6-wME"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T6-AW-26c">
+                                                <rect key="frame" x="20" y="180" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="wK7-XO-2u0"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="15 LVL Mission"/>
+                                                <connections>
+                                                    <action selector="btnLvl15Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="amq-9S-dEv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cW-qs-Xhd">
+                                                <rect key="frame" x="20" y="240" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="OJO-LQ-ADu"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="20 LVL Mission"/>
+                                                <connections>
+                                                    <action selector="btnLvl20Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Eft-8n-tei"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAp-yi-kP8">
+                                                <rect key="frame" x="20" y="300" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="2cm-Ux-4hq"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="25 LVL Mission"/>
+                                                <connections>
+                                                    <action selector="btnLvl25Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="KeD-nt-Ll7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-lP-gFQ">
+                                                <rect key="frame" x="20" y="360" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="RU8-0m-Uh3"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="30 LVL Mission"/>
+                                                <connections>
+                                                    <action selector="btnLvl30Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="UCh-qX-eCZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acp-mv-iAP">
+                                                <rect key="frame" x="20" y="420" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="1rH-sd-NCi"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="35 LVL Mission"/>
+                                                <connections>
+                                                    <action selector="btnLvl35Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Axe-Jt-mnv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="yfY-Nv-GUf" secondAttribute="trailing" constant="20" id="0M3-El-U01"/>
+                                            <constraint firstItem="ZUd-Ez-xw7" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="6tg-bh-IHy"/>
+                                            <constraint firstAttribute="trailing" secondItem="t3O-lP-gFQ" secondAttribute="trailing" constant="20" id="7mb-mo-bcu"/>
+                                            <constraint firstItem="acp-mv-iAP" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="A9P-wZ-gr5"/>
+                                            <constraint firstItem="MAp-yi-kP8" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="DME-1D-YPM"/>
+                                            <constraint firstItem="yfY-Nv-GUf" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="HgN-6N-DUM"/>
+                                            <constraint firstAttribute="trailing" secondItem="6cW-qs-Xhd" secondAttribute="trailing" constant="20" id="QPX-BS-TmW"/>
+                                            <constraint firstAttribute="trailing" secondItem="acp-mv-iAP" secondAttribute="trailing" constant="20" id="TNs-tD-S4n"/>
+                                            <constraint firstItem="5T6-AW-26c" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="TZy-y1-9UR"/>
+                                            <constraint firstItem="6cW-qs-Xhd" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="UE9-fR-aFH"/>
+                                            <constraint firstItem="kk2-zM-Cpy" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="Znv-49-o9m"/>
+                                            <constraint firstAttribute="trailing" secondItem="kk2-zM-Cpy" secondAttribute="trailing" constant="20" id="aWC-3l-eNp"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZUd-Ez-xw7" secondAttribute="trailing" constant="20" id="gPz-rj-Lgm"/>
+                                            <constraint firstAttribute="trailing" secondItem="MAp-yi-kP8" secondAttribute="trailing" constant="20" id="kwu-cN-LCg"/>
+                                            <constraint firstItem="t3O-lP-gFQ" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="lbh-Q6-TJ9"/>
+                                            <constraint firstAttribute="trailing" secondItem="5T6-AW-26c" secondAttribute="trailing" constant="20" id="vhZ-Te-AT3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6wc-Ny-YnW" firstAttribute="width" secondItem="Hy7-Zx-ZAM" secondAttribute="width" id="ALh-B2-Jxt"/>
+                                    <constraint firstItem="6wc-Ny-YnW" firstAttribute="bottom" secondItem="RfI-oo-yTU" secondAttribute="bottom" id="ErA-xy-XbB"/>
+                                    <constraint firstItem="6wc-Ny-YnW" firstAttribute="trailing" secondItem="RfI-oo-yTU" secondAttribute="trailing" id="HtH-8w-EHT"/>
+                                    <constraint firstItem="6wc-Ny-YnW" firstAttribute="top" secondItem="RfI-oo-yTU" secondAttribute="top" constant="9" id="KZY-UF-bwR"/>
+                                    <constraint firstItem="6wc-Ny-YnW" firstAttribute="leading" secondItem="RfI-oo-yTU" secondAttribute="leading" id="qFq-sM-hmy"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RfI-oo-yTU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Hy7-Zx-ZAM"/>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUP-39-WlI">
+                                <rect key="frame" x="0.0" y="1456" width="393" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.10414077300000001" green="0.10414077300000001" blue="0.10414077300000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" systemColor="systemTealColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="NIGHT MISSION" id="tsR-c5-LQ0">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="9FT-U7-kMF">
+                                            <color key="tintColor" systemColor="systemMintColor"/>
+                                            <connections>
+                                                <segue destination="Y6W-OH-hqX" kind="presentation" modalPresentationStyle="fullScreen" id="Wks-zB-Bds"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="9xT-ne-NWp">
+                                            <connections>
+                                                <segue destination="3rt-pv-dZb" kind="presentation" modalPresentationStyle="fullScreen" id="PKZ-c5-vPl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KbU-5c-xIf"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cJR-pD-PFv" firstAttribute="leading" secondItem="KbU-5c-xIf" secondAttribute="leading" constant="20" id="1jU-ba-ueO"/>
+                            <constraint firstAttribute="bottom" secondItem="NUP-39-WlI" secondAttribute="bottom" id="T49-pN-BJs"/>
+                            <constraint firstItem="NUP-39-WlI" firstAttribute="trailing" secondItem="KbU-5c-xIf" secondAttribute="trailing" id="ijv-V1-bQS"/>
+                            <constraint firstItem="NUP-39-WlI" firstAttribute="leading" secondItem="KbU-5c-xIf" secondAttribute="leading" id="okg-Mb-LBl"/>
+                            <constraint firstItem="KbU-5c-xIf" firstAttribute="trailing" secondItem="cJR-pD-PFv" secondAttribute="trailing" constant="20" id="syH-6X-B8z"/>
+                            <constraint firstItem="NUP-39-WlI" firstAttribute="top" secondItem="cJR-pD-PFv" secondAttribute="bottom" constant="5" id="xpo-Ml-Jip"/>
+                            <constraint firstItem="cJR-pD-PFv" firstAttribute="top" secondItem="KbU-5c-xIf" secondAttribute="top" constant="10" id="xxc-iZ-oD0"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="1500"/>
+                    <connections>
+                        <outlet property="btnLvl1" destination="kk2-zM-Cpy" id="Gz8-DD-yb9"/>
+                        <outlet property="btnLvl10" destination="ZUd-Ez-xw7" id="iBD-dl-Nrn"/>
+                        <outlet property="btnLvl15" destination="5T6-AW-26c" id="3Ih-Ir-J9z"/>
+                        <outlet property="btnLvl20" destination="6cW-qs-Xhd" id="wrT-rx-2cO"/>
+                        <outlet property="btnLvl25" destination="MAp-yi-kP8" id="bgL-Ak-YL2"/>
+                        <outlet property="btnLvl30" destination="t3O-lP-gFQ" id="3SU-gr-87t"/>
+                        <outlet property="btnLvl35" destination="acp-mv-iAP" id="lAT-Rp-Jjm"/>
+                        <outlet property="btnLvl5" destination="yfY-Nv-GUf" id="LLZ-Qo-jM2"/>
+                        <segue destination="w4I-j2-1Fh" kind="presentation" identifier="NightMissionToCase" modalPresentationStyle="fullScreen" id="5PT-gm-Ghq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OeL-2W-dZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <barButtonItem image="house" catalog="system" id="wp6-ot-eoF"/>
+            </objects>
+            <point key="canvasLocation" x="1139.6946564885495" y="-75.352112676056336"/>
+        </scene>
+        <!--Night Mission Case View Controller-->
+        <scene sceneID="OBC-qq-9I7">
+            <objects>
+                <viewController id="w4I-j2-1Fh" customClass="NightMissionCaseViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="28X-I3-atg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH2-hF-WQE">
+                                <rect key="frame" x="0.0" y="808" width="393" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.10414077300000001" green="0.10414077300000001" blue="0.10414077300000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" systemColor="systemTealColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="HUNT CHOOSE" id="t1H-aP-Xyd">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="D5U-6S-fp4">
+                                            <color key="tintColor" systemColor="systemMintColor"/>
+                                            <connections>
+                                                <segue destination="9pO-GD-SJ3" kind="presentation" modalPresentationStyle="fullScreen" id="4Pw-V0-JCR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="DJc-Ug-bQO">
+                                            <connections>
+                                                <segue destination="3rt-pv-dZb" kind="presentation" modalPresentationStyle="fullScreen" id="HdV-vF-Heo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="rbS-gm-pgu">
+                                <rect key="frame" x="20" y="284.66666666666674" width="353" height="473.33333333333326"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDark" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-HE-PtU">
+                                        <rect key="frame" x="143.33333333333334" y="0.0" width="66.333333333333343" height="67"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="huntName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEd-6Q-zUt">
+                                        <rect key="frame" x="109.00000000000001" y="167" width="135.33333333333337" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="huntPow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhP-7G-31p">
+                                        <rect key="frame" x="119.66666666666666" y="302.99999999999994" width="113.66666666666666" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyB-dX-E4g">
+                                        <rect key="frame" x="20" y="438.99999999999994" width="313" height="34.333333333333314"/>
+                                        <color key="backgroundColor" red="0.10414077300000001" green="0.10414077300000001" blue="0.10414077300000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Attact"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tyB-dX-E4g" secondAttribute="trailing" constant="20" id="4E0-Q2-W8c"/>
+                                    <constraint firstItem="tyB-dX-E4g" firstAttribute="leading" secondItem="rbS-gm-pgu" secondAttribute="leading" constant="20" id="lri-m9-ySg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7CJ-wZ-Tlx"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rbS-gm-pgu" firstAttribute="leading" secondItem="7CJ-wZ-Tlx" secondAttribute="leading" constant="20" id="1Ch-s3-OQH"/>
+                            <constraint firstItem="MH2-hF-WQE" firstAttribute="leading" secondItem="7CJ-wZ-Tlx" secondAttribute="leading" id="VrK-oc-5xx"/>
+                            <constraint firstItem="7CJ-wZ-Tlx" firstAttribute="bottom" secondItem="MH2-hF-WQE" secondAttribute="bottom" id="aqX-gk-4aC"/>
+                            <constraint firstItem="MH2-hF-WQE" firstAttribute="top" secondItem="rbS-gm-pgu" secondAttribute="bottom" constant="50" id="cDe-2R-e87"/>
+                            <constraint firstItem="7CJ-wZ-Tlx" firstAttribute="trailing" secondItem="rbS-gm-pgu" secondAttribute="trailing" constant="20" id="vVV-BH-yV9"/>
+                            <constraint firstAttribute="trailing" secondItem="MH2-hF-WQE" secondAttribute="trailing" id="yLv-Xf-R9V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="huntName" destination="nEd-6Q-zUt" id="fsn-dz-KtY"/>
+                        <outlet property="huntPow" destination="UhP-7G-31p" id="XgA-BJ-Vqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZJ-rw-K0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2136" y="-30"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="yaO-Py-7b9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="3rt-pv-dZb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Al-7b-Wb9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="666"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8ul-ze-cBL"/>
+        <segue reference="uAC-hf-Ryo"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="profileDark" width="66.333335876464844" height="67"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

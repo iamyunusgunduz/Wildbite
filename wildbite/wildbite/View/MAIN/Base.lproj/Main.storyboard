@@ -303,6 +303,14 @@
             </objects>
             <point key="canvasLocation" x="-1188.5496183206105" y="976.76056338028172"/>
         </scene>
+        <!--Mission-->
+        <scene sceneID="rPv-bE-4eB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mission" id="JXD-Mb-6Z5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePd-Kp-BN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2618" y="1398"/>
+        </scene>
         <!--War-->
         <scene sceneID="BnJ-du-6bv">
             <objects>
@@ -327,7 +335,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v5q-PY-rxC">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v5q-PY-rxC">
                                 <rect key="frame" x="20" y="40" width="335" height="538"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46a-RE-fKg">
@@ -336,11 +344,24 @@
                                         <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-uE-ow9">
-                                        <rect key="frame" x="20" y="61.5" width="295" height="100"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKb-b5-Kso">
+                                        <rect key="frame" x="20" y="86.5" width="295" height="50"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="39f-ha-ttu"/>
+                                            <constraint firstAttribute="height" constant="50" id="Yvl-8G-lB5"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="MISSION"/>
+                                        <connections>
+                                            <segue destination="JXD-Mb-6Z5" kind="presentation" modalPresentationStyle="fullScreen" id="WvR-9f-p5d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-uE-ow9">
+                                        <rect key="frame" x="20" y="187" width="295" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="39f-ha-ttu"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -350,10 +371,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poz-ca-8qk">
-                                        <rect key="frame" x="20" y="187" width="295" height="100"/>
+                                        <rect key="frame" x="20" y="287" width="295" height="50"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="dpk-qh-qWS"/>
+                                            <constraint firstAttribute="height" constant="50" id="dpk-qh-qWS"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -363,20 +384,20 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpn-bZ-Jui">
-                                        <rect key="frame" x="20" y="312.5" width="295" height="100"/>
+                                        <rect key="frame" x="20" y="387.5" width="295" height="50"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Etk-w6-vBh"/>
+                                            <constraint firstAttribute="height" constant="50" id="Etk-w6-vBh"/>
                                         </constraints>
                                         <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="SHOP"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNG-zw-maG">
-                                        <rect key="frame" x="20" y="438" width="295" height="100"/>
+                                        <rect key="frame" x="20" y="488" width="295" height="50"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="WWZ-Go-jk2"/>
+                                            <constraint firstAttribute="height" constant="50" id="WWZ-Go-jk2"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -386,9 +407,11 @@
                                 <constraints>
                                     <constraint firstItem="poz-ca-8qk" firstAttribute="leading" secondItem="v5q-PY-rxC" secondAttribute="leading" constant="20" id="CDL-VJ-1by"/>
                                     <constraint firstAttribute="trailing" secondItem="vpn-bZ-Jui" secondAttribute="trailing" constant="20" id="FXF-fb-OZU"/>
+                                    <constraint firstItem="oKb-b5-Kso" firstAttribute="leading" secondItem="v5q-PY-rxC" secondAttribute="leading" constant="20" id="Hgt-Is-xCu"/>
                                     <constraint firstAttribute="trailing" secondItem="mNG-zw-maG" secondAttribute="trailing" constant="20" id="Lve-yO-qZO"/>
                                     <constraint firstAttribute="trailing" secondItem="poz-ca-8qk" secondAttribute="trailing" constant="20" id="Nl4-AD-0Nl"/>
                                     <constraint firstItem="vpn-bZ-Jui" firstAttribute="leading" secondItem="v5q-PY-rxC" secondAttribute="leading" constant="20" id="huo-Fe-nN9"/>
+                                    <constraint firstAttribute="trailing" secondItem="oKb-b5-Kso" secondAttribute="trailing" constant="20" id="kTi-ty-pAq"/>
                                     <constraint firstItem="mNG-zw-maG" firstAttribute="leading" secondItem="v5q-PY-rxC" secondAttribute="leading" constant="20" id="p25-d4-cPc"/>
                                     <constraint firstItem="jNc-uE-ow9" firstAttribute="leading" secondItem="v5q-PY-rxC" secondAttribute="leading" constant="20" id="vuj-39-j6s"/>
                                     <constraint firstAttribute="trailing" secondItem="jNc-uE-ow9" secondAttribute="trailing" constant="20" id="zrj-Sf-onu"/>

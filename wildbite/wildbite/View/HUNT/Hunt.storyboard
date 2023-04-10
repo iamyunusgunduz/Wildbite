@@ -26,21 +26,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJY-7w-njZ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                <color key="barTintColor" systemColor="systemPinkColor"/>
+                                <rect key="frame" x="0.0" y="808" width="393" height="44"/>
+                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="HUNTING" id="WDp-30-Af9">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward.square" catalog="system" id="L4G-66-JTO">
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="L4G-66-JTO">
+                                            <color key="tintColor" systemColor="systemPinkColor"/>
                                             <connections>
                                                 <segue destination="82i-Ae-zrh" kind="presentation" modalPresentationStyle="fullScreen" id="mNV-jY-zZ3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="Nbf-93-JIn">
+                                            <connections>
+                                                <segue destination="ATw-8c-gXm" kind="presentation" modalPresentationStyle="fullScreen" id="JUn-YJ-tIb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="grS-kr-Tf2">
-                                <rect key="frame" x="20" y="64" width="353" height="738"/>
+                                <rect key="frame" x="20" y="20" width="353" height="778"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCN-Tq-sR1">
                                         <rect key="frame" x="20" y="0.0" width="313" height="100"/>
@@ -56,20 +65,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pae-01-GTM">
-                                        <rect key="frame" x="20" y="212.66666666666669" width="313" height="100"/>
+                                        <rect key="frame" x="20" y="226" width="313" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="W6h-a5-5Ui"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="MEDIUM HUNT ( 10 ENERGY)" subtitle="Succes 60%" titleAlignment="trailing"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="MEDIUM HUNT ( 10 ENERGY)" image="chevron.right" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="MEDIUM HUNT ( 10 ENERGY)" subtitle="Success 20%" titleAlignment="trailing"/>
                                         <connections>
                                             <action selector="mediumHunt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mHp-fr-2mz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hh-NT-Hyc">
-                                        <rect key="frame" x="20" y="425.33333333333331" width="313" height="99.999999999999943"/>
+                                        <rect key="frame" x="20" y="452" width="313" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="paN-ft-e7M"/>
@@ -82,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdN-YA-Mer">
-                                        <rect key="frame" x="20" y="638" width="313" height="100"/>
+                                        <rect key="frame" x="20" y="678" width="313" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="GY1-fc-hNm"/>
@@ -111,12 +121,12 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="grS-kr-Tf2" secondAttribute="trailing" constant="20" id="5mK-bg-yhj"/>
-                            <constraint firstItem="lJY-7w-njZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Z7c-rz-e7y"/>
-                            <constraint firstItem="lJY-7w-njZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Z9S-8D-oPG"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="grS-kr-Tf2" secondAttribute="bottom" constant="50" id="bdS-nO-ujJ"/>
-                            <constraint firstItem="grS-kr-Tf2" firstAttribute="top" secondItem="lJY-7w-njZ" secondAttribute="bottom" constant="20" id="cJJ-xu-idm"/>
+                            <constraint firstItem="lJY-7w-njZ" firstAttribute="top" secondItem="grS-kr-Tf2" secondAttribute="bottom" constant="10" id="ade-Ik-rJ0"/>
+                            <constraint firstItem="grS-kr-Tf2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="bQo-U7-UO6"/>
+                            <constraint firstItem="lJY-7w-njZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="g2a-r1-h53"/>
                             <constraint firstItem="grS-kr-Tf2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hYJ-dc-xlx"/>
-                            <constraint firstItem="lJY-7w-njZ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="maK-U9-ON2"/>
+                            <constraint firstItem="lJY-7w-njZ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="sEg-JM-RWm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lJY-7w-njZ" secondAttribute="bottom" id="vf1-Wl-4tb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -126,6 +136,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-111" y="-28"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="83p-cJ-DJ1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="ATw-8c-gXm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ht-5e-8EM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="346"/>
         </scene>
         <!--HUNTCASE-->
         <scene sceneID="Q2M-kg-1Zb">
@@ -183,13 +201,22 @@
                             </stackView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7US-Ar-ylV">
                                 <rect key="frame" x="0.0" y="808" width="393" height="44"/>
-                                <color key="barTintColor" systemColor="systemPinkColor"/>
+                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="HUNT CASE" id="4su-1s-ifI">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward.square" catalog="system" id="y82-SY-cYR">
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="y82-SY-cYR">
+                                            <color key="tintColor" systemColor="systemPinkColor"/>
                                             <connections>
                                                 <segue destination="Y6W-OH-hqX" kind="presentation" modalPresentationStyle="fullScreen" id="BeT-RG-u6y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="1uz-2I-aRR">
+                                            <connections>
+                                                <segue destination="ATw-8c-gXm" kind="presentation" modalPresentationStyle="fullScreen" id="39u-cL-ASv"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -288,9 +315,13 @@
             <point key="canvasLocation" x="834" y="-28"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="39u-cL-ASv"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="chevron.backward.square" catalog="system" width="128" height="114"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
