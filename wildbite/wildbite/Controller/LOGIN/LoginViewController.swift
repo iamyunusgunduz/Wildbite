@@ -73,6 +73,7 @@ class LoginViewController: UIViewController {
                 print("User Role: \(loginResponse!.user.role)")
                 print("User ID: \(loginResponse!.user.id)")
                 print("User email: \(loginResponse!.user.email)")
+                print("User email: \(loginResponse!.user.email)")
                  
               
                 UserDefaults.standard.set(loginResponse!.user.id, forKey: "userID")
@@ -96,12 +97,14 @@ class LoginViewController: UIViewController {
                   self.performSegue(withIdentifier: "loginToMain", sender: nil)
                 case "1":
                     print("Debug: Standart user")
-                   
+                    self.performSegue(withIdentifier: "loginToMain", sender: nil)
                     
                 case "2":
                     print("Debug: Editor Hesabi")
+                    self.performSegue(withIdentifier: "loginToMain", sender: nil)
                 case "3":
                     print("Debug: Admin Hesabi")
+                    self.performSegue(withIdentifier: "loginToMain", sender: nil)
                     
                 default:
                     print("bilinmeyen hesap")

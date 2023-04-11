@@ -14,12 +14,22 @@ struct ProfileModel: Codable {
 
 // MARK: - Item
 struct Item: Codable {
-    let itemName, level, price, itemImage: String
+    let id: Int
+    let name, level, price, priceType: String
+    let priceBuy, priceSell, dressMinLevel, defense: String
+    let power, health, speed: String
+    let image: String
+    let createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
-        case itemName = "item_name"
-        case level, price
-        case itemImage = "item_image"
+        case id, name, level, price
+        case priceType = "price_type"
+        case priceBuy = "price_buy"
+        case priceSell = "price_sell"
+        case dressMinLevel = "dress_min_level"
+        case defense, power, health, speed, image
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
     }
 }
 
@@ -38,17 +48,17 @@ struct UserProfile: Codable {
     let id: Int
     let name, email: String
     let emailVerifiedAt: JSONNullProfile?
-    let exp, level, warTotal, warTotalWin: String
-    let warTotalLose, warTotalGold, gold, diamond: String
-    let totalDamage, power, defense, speed: String
-    let totalHunt, totalSuccessHunt, currentHealth, maximumHealth: String
-    let regenerateHealthRange, currentEnergy, maximumEnergy, image: String
-    let createdAt, updatedAt: String
+    let role, exp, level, warTotal: String
+    let warTotalWin, warTotalLose, warTotalGold, gold: String
+    let diamond, totalDamage, power, defense: String
+    let speed, totalHunt, totalSuccessHunt, currentHealth: String
+    let maximumHealth, regenerateHealthRange, currentEnergy, maximumEnergy: String
+    let image, createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
         case id, name, email
         case emailVerifiedAt = "email_verified_at"
-        case exp, level
+        case role, exp, level
         case warTotal = "war_total"
         case warTotalWin = "war_total_win"
         case warTotalLose = "war_total_lose"
@@ -70,7 +80,6 @@ struct UserProfile: Codable {
 }
 
 // MARK: - Encode/decode helpers
-
 class JSONNullProfile: Codable, Hashable {
 
     public static func == (lhs: JSONNullProfile, rhs: JSONNullProfile) -> Bool {
@@ -95,5 +104,3 @@ class JSONNullProfile: Codable, Hashable {
         try container.encodeNil()
     }
 }
-
-

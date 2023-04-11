@@ -67,13 +67,13 @@ class EnvanterViewController: UIViewController {
                     
                     
                     profileModelresponse!.item.forEach { Item in
-                        print("Item Name: \(Item.itemName) Level")
-                        print(Item.itemName)
+                        print("Item Name: \(Item.name) Level")
+                        print(Item.name)
                       
                         let itemler = ItemFetchCity()
                         
-                        itemler.itemname = Item.itemName
-                        itemler.itemimage = Item.itemImage
+                        itemler.itemname = Item.name
+                        itemler.itemimage = Item.image
                         itemler.itemlevel = Item.level
                         itemler.itemprice = Item.price
                         

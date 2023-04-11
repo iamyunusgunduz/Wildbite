@@ -91,8 +91,8 @@ class HuntCaseViewController: UIViewController {
           
                         
                         profileModelresponse!.item.forEach { Item in
-                            print("Item Name: \(Item.itemName) Level")
-                            print(Item.itemName)
+                            print("Item Name: \(Item.name) Level")
+                            print(Item.name)
 
                         }
                         

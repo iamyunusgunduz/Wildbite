@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88000EA529E555B7008F640F /* ItemListAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA429E555B7008F640F /* ItemListAllModel.swift */; };
+		88000EA729E557D1008F640F /* ItemListAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA629E557D1008F640F /* ItemListAllTableViewCell.swift */; };
+		88000EAA29E56853008F640F /* itemListAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA929E56853008F640F /* itemListAllViewController.swift */; };
 		880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */; };
 		881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881513C329E46EB9001CD5CE /* Mission.storyboard */; };
 		881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */; };
@@ -17,7 +20,7 @@
 		8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B36E29E2D20700F4FB89 /* PaperViewController.swift */; };
 		8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8873B37029E2D20F00F4FB89 /* Paper.storyboard */; };
 		8873B37529E2D4BB00F4FB89 /* myOnBoardign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */; };
-		889A838429D729B8005A1C6C /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889A838329D729B8005A1C6C /* Item.storyboard */; };
+		889A838429D729B8005A1C6C /* ALLItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889A838329D729B8005A1C6C /* ALLItem.storyboard */; };
 		889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A838629D729ED005A1C6C /* ItemViewController.swift */; };
 		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
 		889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B87C129D646FD00E3DF4E /* AdminViewController.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88000EA429E555B7008F640F /* ItemListAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListAllModel.swift; sourceTree = "<group>"; };
+		88000EA629E557D1008F640F /* ItemListAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListAllTableViewCell.swift; sourceTree = "<group>"; };
+		88000EA929E56853008F640F /* itemListAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListAllViewController.swift; sourceTree = "<group>"; };
 		880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		881513C329E46EB9001CD5CE /* Mission.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mission.storyboard; sourceTree = "<group>"; };
 		881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +59,7 @@
 		8873B36E29E2D20700F4FB89 /* PaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperViewController.swift; sourceTree = "<group>"; };
 		8873B37029E2D20F00F4FB89 /* Paper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paper.storyboard; sourceTree = "<group>"; };
 		8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOnBoardign.swift; sourceTree = "<group>"; };
-		889A838329D729B8005A1C6C /* Item.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
+		889A838329D729B8005A1C6C /* ALLItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ALLItem.storyboard; sourceTree = "<group>"; };
 		889A838629D729ED005A1C6C /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		889B87C129D646FD00E3DF4E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88000EA829E5681A008F640F /* ALL ITEM */ = {
+			isa = PBXGroup;
+			children = (
+				88000EA929E56853008F640F /* itemListAllViewController.swift */,
+				88000EA629E557D1008F640F /* ItemListAllTableViewCell.swift */,
+			);
+			path = "ALL ITEM";
+			sourceTree = "<group>";
+		};
 		881513C229E46EA7001CD5CE /* NIGHT MISSION */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,12 +151,12 @@
 			path = PAPER;
 			sourceTree = "<group>";
 		};
-		889A838229D729A4005A1C6C /* ITEM */ = {
+		889A838229D729A4005A1C6C /* ALL ITEM */ = {
 			isa = PBXGroup;
 			children = (
-				889A838329D729B8005A1C6C /* Item.storyboard */,
+				889A838329D729B8005A1C6C /* ALLItem.storyboard */,
 			);
-			path = ITEM;
+			path = "ALL ITEM";
 			sourceTree = "<group>";
 		};
 		889A838529D729DE005A1C6C /* ITEM */ = {
@@ -179,7 +194,6 @@
 		889B87BA29D6468600E3DF4E /* ADMIN */ = {
 			isa = PBXGroup;
 			children = (
-				889A838529D729DE005A1C6C /* ITEM */,
 				889B87C129D646FD00E3DF4E /* AdminViewController.swift */,
 			);
 			path = ADMIN;
@@ -212,7 +226,6 @@
 		889B87BE29D646BC00E3DF4E /* ADMIN */ = {
 			isa = PBXGroup;
 			children = (
-				889A838229D729A4005A1C6C /* ITEM */,
 				889B87BF29D646E600E3DF4E /* Admin.storyboard */,
 			);
 			path = ADMIN;
@@ -290,6 +303,7 @@
 				88E508DE29D4855100E9E557 /* LoginModel.swift */,
 				88E508E429D490F900E9E557 /* RegisterModel.swift */,
 				88E508EC29D4916C00E9E557 /* UserProfileModel.swift */,
+				88000EA429E555B7008F640F /* ItemListAllModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +316,7 @@
 				88CCB2A729DF891300C9F1D8 /* WAR */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,
+				889A838229D729A4005A1C6C /* ALL ITEM */,
 				889B87BC29D646AD00E3DF4E /* REGISTER */,
 				889B87BB29D646A800E3DF4E /* LOGIN */,
 			);
@@ -311,6 +326,7 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88000EA829E5681A008F640F /* ALL ITEM */,
 				88525ABE29E485CE001CFBBE /* MISSION */,
 				88CCB2AD29DF91B100C9F1D8 /* HUNT */,
 				88A4BCFE29DE2D1E006378BB /* INVENTORY */,
@@ -319,6 +335,7 @@
 				889B87B929D6467600E3DF4E /* MAIN */,
 				889B87B629D6463200E3DF4E /* USER */,
 				889B87BA29D6468600E3DF4E /* ADMIN */,
+				889A838529D729DE005A1C6C /* ITEM */,
 				889B87B829D6465E00E3DF4E /* REGISTER */,
 			);
 			path = Controller;
@@ -405,7 +422,7 @@
 				88E508CE29D481E600E9E557 /* Assets.xcassets in Resources */,
 				881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */,
 				8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */,
-				889A838429D729B8005A1C6C /* Item.storyboard in Resources */,
+				889A838429D729B8005A1C6C /* ALLItem.storyboard in Resources */,
 				88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */,
 				88E508CC29D481E400E9E557 /* Main.storyboard in Resources */,
 				889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */,
@@ -421,10 +438,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88000EA729E557D1008F640F /* ItemListAllTableViewCell.swift in Sources */,
 				889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */,
 				8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */,
 				88525AC329E48DBA001CFBBE /* NightMissionCaseViewController.swift in Sources */,
 				88CCB2B129DF93C700C9F1D8 /* HuntCaseViewController.swift in Sources */,
+				88000EA529E555B7008F640F /* ItemListAllModel.swift in Sources */,
 				88E508C929D481E400E9E557 /* ViewController.swift in Sources */,
 				8873B37529E2D4BB00F4FB89 /* myOnBoardign.swift in Sources */,
 				88525AC129E485F0001CFBBE /* NightMissionViewController.swift in Sources */,
@@ -438,6 +457,7 @@
 				88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */,
 				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
 				88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */,
+				88000EAA29E56853008F640F /* itemListAllViewController.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
 				88F488D629DCA4BB0067834F /* LoginViewController.swift in Sources */,
 				881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */,

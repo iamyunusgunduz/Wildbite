@@ -76,7 +76,7 @@ class UserProfileViewController: UIViewController {
                     let profileModelresponse = try? JSONDecoder().decode(ProfileModel.self, from: response.data!)
                     debugPrint(profileModelresponse!)
                     
-                    print(profileModelresponse!.user.name)
+                    print("Debug: Race settings\(profileModelresponse!.race.raceName)")
                     print("Race: \(profileModelresponse!.race.raceName)")
                     usernameLabel.text = "Name: \(profileModelresponse?.user.name ?? "none")"
                     userlevelLabel.text = "Level: \(profileModelresponse?.user.level ?? "none")"
@@ -86,13 +86,14 @@ class UserProfileViewController: UIViewController {
                     userGoldLabel.text = "Gold: \(profileModelresponse?.user.gold ?? "none")"
                     
                     let url = URL(string: "\(profileModelresponse!.user.image)")
+                    let url2 = URL(string: "http://yunusgunduz.site/wildbite/image/iksir/2.png")!
                    
-                    print("Image url : \(url!)")
-                    userProfileImageView.kf.setImage(with: url!)
+                    print("Image url : \(url ?? url2))")
+                    userProfileImageView.kf.setImage(with: url ?? url2)
                     
                     profileModelresponse!.item.forEach { Item in
-                        print("Item Name: \(Item.itemName) Level")
-                        print(Item.itemName)
+                        print("Item Name: \(Item.name) Level")
+                        print(Item.name)
                       
                       
                         

@@ -444,8 +444,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RfI-co-mR0" userLabel="Stack View ust">
                                 <rect key="frame" x="20" y="60" width="335" height="36"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="left" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlN-nB-pwB">
-                                        <rect key="frame" x="0.0" y="1" width="167.5" height="34.5"/>
+                                    <button hidden="YES" opaque="NO" contentMode="left" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlN-nB-pwB">
+                                        <rect key="frame" x="0.0" y="1" width="0.0" height="34.5"/>
                                         <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Admin Panel" titleAlignment="center"/>
@@ -455,7 +455,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nst-XM-xgy">
-                                        <rect key="frame" x="167.5" y="0.0" width="167.5" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>

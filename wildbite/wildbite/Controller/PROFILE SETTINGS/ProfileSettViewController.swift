@@ -55,16 +55,15 @@ class ProfileSettViewController: UIViewController {
     
     
     @IBOutlet weak var AdminPanelButtonText: UIButton!
-    let myUserRole = UserDefaults.standard.value(forKey: "userRole")
+   // let myUserRole = UserDefaults.standard.value(forKey: "userRole")
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         gucProgressView.transform = gucProgressView.transform.scaledBy(x: 1, y: 5)
         defansProgressView.transform = defansProgressView.transform.scaledBy(x: 1, y: 5)
         hizProgressView.transform = hizProgressView.transform.scaledBy(x: 1, y: 5)
         
-        if(myUserRole as! String == "0"){
-            AdminPanelButtonText.isHidden = false
-        }
+        
     }
     override func viewWillAppear(_ animated: Bool) {
        
@@ -110,11 +109,11 @@ class ProfileSettViewController: UIViewController {
                         userRaceLabel.text = "Race: \(profileModelresponse!.race.raceName)"
                         switch profileModelresponse!.race.raceName {
                         case "0":
-                            userRaceLabel.text = "Race: Werewolf"
-                        case "1":
-                            userRaceLabel.text = "Race: Vampire"
-                        case "2":
                             userRaceLabel.text = "Race: Hunter"
+                        case "1":
+                            userRaceLabel.text = "Race: Werewolf"
+                        case "2":
+                            userRaceLabel.text = "Race: Vampire"
                         
                         default:
                             userRaceLabel.text = "Race: None"
@@ -152,13 +151,17 @@ class ProfileSettViewController: UIViewController {
                              
                             hizProgressView.progress = (hizValue )/10
                         }
-                        
-                        
-                       
+                     let myUserRole = profileModelresponse!.user.role
+                        print("Debug: user role\(myUserRole)")
+                        if(myUserRole   == "4"){
+                            AdminPanelButtonText.isHidden = false
+                        }else{
+                            AdminPanelButtonText.isHidden = true
+                        }
                         
                         profileModelresponse!.item.forEach { Item in
-                            print("Item Name: \(Item.itemName) Level")
-                            print(Item.itemName)
+                            print("Item Name: \(Item.name) Level")
+                            print(Item.name)
                             
                             
                             
