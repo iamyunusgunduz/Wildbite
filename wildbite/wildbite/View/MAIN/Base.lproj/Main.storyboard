@@ -335,10 +335,10 @@
             </objects>
             <point key="canvasLocation" x="-2683" y="1725"/>
         </scene>
-        <!--War-->
+        <!--MENU-->
         <scene sceneID="wyG-Gq-gjA">
             <objects>
-                <viewController title="War" id="tKU-q0-ssp" sceneMemberID="viewController">
+                <viewController title="MENU" id="tKU-q0-ssp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sde-Ry-V2D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

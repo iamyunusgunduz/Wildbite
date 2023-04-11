@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
+        <!--ShopMenu-->
         <scene sceneID="M4M-aL-JlP">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="v6j-nF-xXF" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ShopMenu" id="v6j-nF-xXF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWk-es-mxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="579" y="228"/>
@@ -40,6 +40,11 @@
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="Q6f-Ls-quM">
                                             <connections>
                                                 <segue destination="v6j-nF-xXF" kind="presentation" modalPresentationStyle="fullScreen" id="Zlx-07-8t4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="4z0-6B-DD3">
+                                            <connections>
+                                                <segue destination="B4x-SJ-eaW" kind="presentation" modalPresentationStyle="fullScreen" id="BHh-GT-MLs"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -182,9 +187,18 @@
             </objects>
             <point key="canvasLocation" x="1043.5114503816794" y="-34.507042253521128"/>
         </scene>
+        <!--Main-->
+        <scene sceneID="S60-Yh-c1J">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="B4x-SJ-eaW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WV9-E8-zUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="238"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="profileDark" width="66.333335876464844" height="67"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

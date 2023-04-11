@@ -14,11 +14,14 @@ class ShopMenuTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    @IBAction func btnDelete(_ sender: Any) {
+        print("a")
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        print("b")
     }
 
 }

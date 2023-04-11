@@ -19,7 +19,33 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
         return 1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      print("\(gelenMenuler[indexPath.section].menuName)")  
+      print("\(gelenMenuler[indexPath.section].menuName)")
+      print("\(gelenMenuler[indexPath.section].menuId)")
+        
+       
+        switch gelenMenuler[indexPath.section].menuId{
+        case 1:
+            print("MENU1")
+        case 2:
+            print("MENU2")
+        case 3:
+            print("MENU3")
+        case 4:
+            print("MENU4")
+        case 5:
+            print("MENU5")
+        case 6:
+            print("MENU6")
+        case 7:
+            print("MENU7")
+        case 8:
+            print("MENU8")
+        case 12:
+            print("MENU12")
+            performSegue(withIdentifier: "shopMenuToMENU12", sender: nil)
+        default:
+           break
+        }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return gelenMenuler.count
@@ -73,6 +99,7 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
                         
                          let menuler = menuFetch()
                         menuler.menuName = Shop.name
+                        menuler.menuId = Shop.id
                         gelenMenuler.append(menuler)
                          
                         

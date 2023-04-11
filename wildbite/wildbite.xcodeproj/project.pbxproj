@@ -21,7 +21,6 @@
 		8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8873B37029E2D20F00F4FB89 /* Paper.storyboard */; };
 		8873B37529E2D4BB00F4FB89 /* myOnBoardign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */; };
 		889A838429D729B8005A1C6C /* ALLItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889A838329D729B8005A1C6C /* ALLItem.storyboard */; };
-		889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A838629D729ED005A1C6C /* ItemViewController.swift */; };
 		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
 		889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B87C129D646FD00E3DF4E /* AdminViewController.swift */; };
 		88B3D4B629DF1CAE0083838C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 88B3D4B529DF1CAE0083838C /* Kingfisher */; };
@@ -29,6 +28,8 @@
 		88C6802929E5F61F00719CC0 /* ShopMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6802829E5F61F00719CC0 /* ShopMenuViewController.swift */; };
 		88C6802B29E5F63200719CC0 /* ShopMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6802A29E5F63200719CC0 /* ShopMenuTableViewCell.swift */; };
 		88C6802D29E5F7D200719CC0 /* ShopMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6802C29E5F7D200719CC0 /* ShopMenuModel.swift */; };
+		88C6803029E605CD00719CC0 /* ItemAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6802F29E605CD00719CC0 /* ItemAdd.storyboard */; };
+		88C6803329E605E700719CC0 /* ItemAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6803229E605E700719CC0 /* ItemAddViewController.swift */; };
 		88CCB2AA29DF895B00C9F1D8 /* War.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CCB2A929DF895B00C9F1D8 /* War.storyboard */; };
 		88CCB2AC29DF898100C9F1D8 /* Hunt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CCB2AB29DF898100C9F1D8 /* Hunt.storyboard */; };
 		88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCB2AE29DF91C900C9F1D8 /* HuntViewController.swift */; };
@@ -64,13 +65,14 @@
 		8873B37029E2D20F00F4FB89 /* Paper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paper.storyboard; sourceTree = "<group>"; };
 		8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOnBoardign.swift; sourceTree = "<group>"; };
 		889A838329D729B8005A1C6C /* ALLItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ALLItem.storyboard; sourceTree = "<group>"; };
-		889A838629D729ED005A1C6C /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		889B87C129D646FD00E3DF4E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		88C6802529E5F23600719CC0 /* ShopMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopMenu.storyboard; sourceTree = "<group>"; };
 		88C6802829E5F61F00719CC0 /* ShopMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMenuViewController.swift; sourceTree = "<group>"; };
 		88C6802A29E5F63200719CC0 /* ShopMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMenuTableViewCell.swift; sourceTree = "<group>"; };
 		88C6802C29E5F7D200719CC0 /* ShopMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMenuModel.swift; sourceTree = "<group>"; };
+		88C6802F29E605CD00719CC0 /* ItemAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemAdd.storyboard; sourceTree = "<group>"; };
+		88C6803229E605E700719CC0 /* ItemAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAddViewController.swift; sourceTree = "<group>"; };
 		88CCB2A929DF895B00C9F1D8 /* War.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = War.storyboard; sourceTree = "<group>"; };
 		88CCB2AB29DF898100C9F1D8 /* Hunt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hunt.storyboard; sourceTree = "<group>"; };
 		88CCB2AE29DF91C900C9F1D8 /* HuntViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntViewController.swift; sourceTree = "<group>"; };
@@ -167,14 +169,6 @@
 			path = "SHOP ALL ITEM";
 			sourceTree = "<group>";
 		};
-		889A838529D729DE005A1C6C /* ITEM */ = {
-			isa = PBXGroup;
-			children = (
-				889A838629D729ED005A1C6C /* ItemViewController.swift */,
-			);
-			path = ITEM;
-			sourceTree = "<group>";
-		};
 		889B87B629D6463200E3DF4E /* USER */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +259,22 @@
 			path = "SHOP MENU";
 			sourceTree = "<group>";
 		};
+		88C6802E29E6059F00719CC0 /* SHOP ITEM ADD */ = {
+			isa = PBXGroup;
+			children = (
+				88C6802F29E605CD00719CC0 /* ItemAdd.storyboard */,
+			);
+			path = "SHOP ITEM ADD";
+			sourceTree = "<group>";
+		};
+		88C6803129E605D400719CC0 /* ITEM ADD */ = {
+			isa = PBXGroup;
+			children = (
+				88C6803229E605E700719CC0 /* ItemAddViewController.swift */,
+			);
+			path = "ITEM ADD";
+			sourceTree = "<group>";
+		};
 		88CCB2A729DF891300C9F1D8 /* WAR */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +347,7 @@
 		88E508DC29D4853800E9E557 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88C6802E29E6059F00719CC0 /* SHOP ITEM ADD */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
 				88CCB2A829DF894600C9F1D8 /* MONSTER HUNT */,
@@ -353,10 +364,10 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88C6803129E605D400719CC0 /* ITEM ADD */,
 				889B87BA29D6468600E3DF4E /* ADMIN */,
 				88CCB2AD29DF91B100C9F1D8 /* HUNT */,
 				88A4BCFE29DE2D1E006378BB /* INVENTORY */,
-				889A838529D729DE005A1C6C /* ITEM */,
 				88F488D429DCA4AB0067834F /* LOGIN */,
 				889B87B929D6467600E3DF4E /* MAIN */,
 				88525ABE29E485CE001CFBBE /* MISSION */,
@@ -449,6 +460,7 @@
 				88E508D129D481E600E9E557 /* LaunchScreen.storyboard in Resources */,
 				88E508CE29D481E600E9E557 /* Assets.xcassets in Resources */,
 				881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */,
+				88C6803029E605CD00719CC0 /* ItemAdd.storyboard in Resources */,
 				8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */,
 				889A838429D729B8005A1C6C /* ALLItem.storyboard in Resources */,
 				88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */,
@@ -468,7 +480,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				88000EA729E557D1008F640F /* ItemListAllTableViewCell.swift in Sources */,
-				889A838729D729ED005A1C6C /* ItemViewController.swift in Sources */,
 				8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */,
 				88525AC329E48DBA001CFBBE /* NightMissionCaseViewController.swift in Sources */,
 				88CCB2B129DF93C700C9F1D8 /* HuntCaseViewController.swift in Sources */,
@@ -481,6 +492,7 @@
 				88E508F129D4918100E9E557 /* UserProfileViewController.swift in Sources */,
 				880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */,
 				88C6802D29E5F7D200719CC0 /* ShopMenuModel.swift in Sources */,
+				88C6803329E605E700719CC0 /* ItemAddViewController.swift in Sources */,
 				88E508E529D490F900E9E557 /* RegisterModel.swift in Sources */,
 				88E508ED29D4916C00E9E557 /* UserProfileModel.swift in Sources */,
 				88E508DF29D4855100E9E557 /* LoginModel.swift in Sources */,

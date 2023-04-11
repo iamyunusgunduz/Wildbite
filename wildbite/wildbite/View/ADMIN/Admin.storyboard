@@ -128,6 +128,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="ITEM EKLE">
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="FBJ-ht-gyC" kind="presentation" id="dzV-qG-hHb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r3-kk-k1f">
                                 <rect key="frame" x="64" y="111" width="265" height="35"/>
@@ -143,7 +146,7 @@
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-zY-Mbo">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-zY-Mbo">
                                 <rect key="frame" x="64" y="213" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="1  ITEM GOSTER">
@@ -157,7 +160,7 @@
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7vv-oO-mOi" kind="presentation" id="Mf9-1k-XJ7"/>
+                                    <segue destination="7vv-oO-mOi" kind="presentation" modalPresentationStyle="fullScreen" id="Mf9-1k-XJ7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,6 +191,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnk-fd-yfj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2156" y="-35"/>
+        </scene>
+        <!--ItemAdd-->
+        <scene sceneID="YR9-hZ-R1c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ItemAdd" id="FBJ-ht-gyC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkb-jm-Rqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634" y="-195"/>
         </scene>
         <!--ALLItem-->
         <scene sceneID="yCH-5X-h9o">
