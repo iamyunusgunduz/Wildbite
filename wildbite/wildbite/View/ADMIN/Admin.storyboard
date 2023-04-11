@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMl-My-fzl">
-                                <rect key="frame" x="0.0" y="59" width="393" height="78"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="78"/>
                                 <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="ADMIN PANEL" prompt="Yetkili : UserName" id="vPb-fj-48U">
@@ -32,28 +32,28 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tb-Hye">
-                                <rect key="frame" x="64" y="169" width="265" height="35"/>
+                                <rect key="frame" x="64" y="110" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="person" catalog="system" title="USER OPERATIONS">
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ea-6q-ae5">
-                                <rect key="frame" x="64" y="220" width="265" height="35"/>
+                                <rect key="frame" x="64" y="161" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="selection.pin.in.out" catalog="system" title="SHOP OPERATIONS">
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pam-cT-aX6">
-                                <rect key="frame" x="64" y="271" width="265" height="35"/>
+                                <rect key="frame" x="64" y="212" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="book.circle" catalog="system" title="RACE OPERATIONS">
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npg-2c-6Ri">
-                                <rect key="frame" x="64" y="322" width="265" height="35"/>
+                                <rect key="frame" x="64" y="263" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square.split.diagonal" catalog="system" title="ITEM OPERATIONS">
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -115,6 +115,9 @@
                                     <navigationItem title="Item Panel" id="hd2-r2-UMf">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="9xS-pA-lIC">
                                             <color key="tintColor" systemColor="systemRedColor"/>
+                                            <connections>
+                                                <segue destination="Y6W-OH-hqX" kind="presentation" modalPresentationStyle="fullScreen" id="WLL-yY-qVb"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -153,6 +156,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="list.bullet.rectangle.portrait" catalog="system" title="TUM ITEMLERI GOSTER">
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="7vv-oO-mOi" kind="presentation" id="Mf9-1k-XJ7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cpQ-aZ-MNL"/>
@@ -182,6 +188,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnk-fd-yfj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2156" y="-35"/>
+        </scene>
+        <!--ALLItem-->
+        <scene sceneID="yCH-5X-h9o">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ALLItem" id="7vv-oO-mOi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMi-Ms-t8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2640" y="-90"/>
         </scene>
     </scenes>
     <resources>

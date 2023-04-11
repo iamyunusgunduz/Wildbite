@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="M4M-aL-JlP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="v6j-nF-xXF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWk-es-mxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="228"/>
+        </scene>
         <!--Item List All View Controller-->
         <scene sceneID="NMS-ZI-hPg">
             <objects>
@@ -18,8 +26,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epg-mI-qVk">
+                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Tum Itemler" id="Ln5-fl-ceo">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="Q6f-Ls-quM">
+                                            <connections>
+                                                <segue destination="v6j-nF-xXF" kind="presentation" modalPresentationStyle="fullScreen" id="Zlx-07-8t4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zPn-zY-5bH">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="774"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" systemColor="linkColor"/>
                                 <label key="tableHeaderView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artiSeviyesi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EZg-aa-M5e">
@@ -123,29 +150,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epg-mI-qVk">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </textAttributes>
-                                <textAttributes key="largeTitleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Tum Itemler" id="Ln5-fl-ceo"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ARB-h1-9Ga"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                         <constraints>
-                            <constraint firstItem="zPn-zY-5bH" firstAttribute="top" secondItem="epg-mI-qVk" secondAttribute="bottom" id="5Iz-0R-7JZ"/>
+                            <constraint firstItem="epg-mI-qVk" firstAttribute="top" secondItem="zPn-zY-5bH" secondAttribute="bottom" id="0KJ-Mp-g22"/>
+                            <constraint firstItem="zPn-zY-5bH" firstAttribute="trailing" secondItem="ARB-h1-9Ga" secondAttribute="trailing" id="5Vn-KG-tMv"/>
+                            <constraint firstItem="zPn-zY-5bH" firstAttribute="trailing" secondItem="ARB-h1-9Ga" secondAttribute="trailing" id="8Im-Pb-JDS"/>
+                            <constraint firstItem="zPn-zY-5bH" firstAttribute="leading" secondItem="ARB-h1-9Ga" secondAttribute="leading" id="9Zl-d5-LHK"/>
                             <constraint firstItem="zPn-zY-5bH" firstAttribute="trailing" secondItem="ARB-h1-9Ga" secondAttribute="trailing" id="Apm-he-7E2"/>
-                            <constraint firstItem="epg-mI-qVk" firstAttribute="top" secondItem="ARB-h1-9Ga" secondAttribute="top" id="Jhe-pc-fW4"/>
+                            <constraint firstItem="ARB-h1-9Ga" firstAttribute="bottom" secondItem="epg-mI-qVk" secondAttribute="bottom" id="CXo-8Q-iMc"/>
+                            <constraint firstItem="epg-mI-qVk" firstAttribute="trailing" secondItem="ARB-h1-9Ga" secondAttribute="trailing" id="Cnd-PO-Qq0"/>
+                            <constraint firstItem="ARB-h1-9Ga" firstAttribute="trailing" secondItem="epg-mI-qVk" secondAttribute="trailing" id="HIN-jw-zTE"/>
+                            <constraint firstItem="zPn-zY-5bH" firstAttribute="leading" secondItem="ARB-h1-9Ga" secondAttribute="leading" id="SCI-Ss-GFj"/>
                             <constraint firstItem="epg-mI-qVk" firstAttribute="leading" secondItem="ARB-h1-9Ga" secondAttribute="leading" id="U81-ER-5tc"/>
-                            <constraint firstItem="zPn-zY-5bH" firstAttribute="bottom" secondItem="ARB-h1-9Ga" secondAttribute="bottom" id="UYg-J8-aYD"/>
+                            <constraint firstAttribute="trailing" secondItem="zPn-zY-5bH" secondAttribute="trailing" id="YW0-Ox-rSe"/>
                             <constraint firstItem="epg-mI-qVk" firstAttribute="trailing" secondItem="ARB-h1-9Ga" secondAttribute="trailing" id="aaU-Fo-RIW"/>
+                            <constraint firstItem="epg-mI-qVk" firstAttribute="leading" secondItem="ARB-h1-9Ga" secondAttribute="leading" id="e8j-dr-Y7H"/>
+                            <constraint firstItem="epg-mI-qVk" firstAttribute="leading" secondItem="wAu-ny-L1W" secondAttribute="leading" id="jYU-SS-I9g"/>
+                            <constraint firstItem="zPn-zY-5bH" firstAttribute="top" secondItem="wAu-ny-L1W" secondAttribute="top" id="l8v-1B-8Ig"/>
+                            <constraint firstItem="zPn-zY-5bH" firstAttribute="leading" secondItem="ARB-h1-9Ga" secondAttribute="leading" id="q56-gx-ecJ"/>
                             <constraint firstItem="zPn-zY-5bH" firstAttribute="leading" secondItem="ARB-h1-9Ga" secondAttribute="leading" id="uwl-Z3-liu"/>
                         </constraints>
                     </view>
@@ -159,6 +184,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="profileDark" width="66.333335876464844" height="67"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

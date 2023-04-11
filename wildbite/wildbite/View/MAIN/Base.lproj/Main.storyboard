@@ -327,6 +327,14 @@
             </objects>
             <point key="canvasLocation" x="-2664" y="1654"/>
         </scene>
+        <!--ShopMenu-->
+        <scene sceneID="xbs-dc-8De">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShopMenu" id="DbL-lw-uST" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKV-gp-eeC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2683" y="1725"/>
+        </scene>
         <!--War-->
         <scene sceneID="wyG-Gq-gjA">
             <objects>
@@ -392,6 +400,9 @@
                                         <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="SHOP"/>
+                                        <connections>
+                                            <segue destination="DbL-lw-uST" kind="presentation" modalPresentationStyle="fullScreen" id="RPw-da-1e5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNG-zw-maG">
                                         <rect key="frame" x="20" y="488" width="295" height="50"/>
