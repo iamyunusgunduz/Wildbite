@@ -26,10 +26,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NII-Xq-aqJ">
-                                <rect key="frame" x="20" y="99" width="353" height="170"/>
+                                <rect key="frame" x="20" y="99" width="353" height="230"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0X-TX-yFD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbV-OZ-kio">
                                         <rect key="frame" x="20" y="0.0" width="313" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0k3-6e-hl8"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="RANDOM WAR"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0X-TX-yFD">
+                                        <rect key="frame" x="20" y="60" width="313" height="50"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MLy-Uw-AJ3"/>
@@ -37,16 +47,6 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="VAMPIRE VAR"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-eT-JqQ">
-                                        <rect key="frame" x="20" y="60" width="313" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="6WL-Du-pub"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="HUNTER WAR"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqE-HO-hOS">
                                         <rect key="frame" x="20" y="120" width="313" height="50"/>
@@ -58,12 +58,24 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="WEREWOLF WAR"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-eT-JqQ">
+                                        <rect key="frame" x="20" y="180" width="313" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6WL-Du-pub"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="HUNTER WAR"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="JhE-eT-JqQ" secondAttribute="trailing" constant="20" id="4XR-F2-WcE"/>
                                     <constraint firstItem="JhE-eT-JqQ" firstAttribute="leading" secondItem="NII-Xq-aqJ" secondAttribute="leading" constant="20" id="71Z-wY-S0O"/>
+                                    <constraint firstAttribute="trailing" secondItem="HbV-OZ-kio" secondAttribute="trailing" constant="20" id="DUv-n7-Xv1"/>
                                     <constraint firstItem="C0X-TX-yFD" firstAttribute="leading" secondItem="NII-Xq-aqJ" secondAttribute="leading" constant="20" id="SFH-XL-yav"/>
                                     <constraint firstItem="DqE-HO-hOS" firstAttribute="leading" secondItem="NII-Xq-aqJ" secondAttribute="leading" constant="20" id="clF-Hc-qF7"/>
+                                    <constraint firstItem="HbV-OZ-kio" firstAttribute="leading" secondItem="NII-Xq-aqJ" secondAttribute="leading" constant="20" id="fXB-6w-Tls"/>
                                     <constraint firstAttribute="trailing" secondItem="C0X-TX-yFD" secondAttribute="trailing" constant="20" id="qeU-E6-qF7"/>
                                     <constraint firstAttribute="trailing" secondItem="DqE-HO-hOS" secondAttribute="trailing" constant="20" id="z2f-HU-hzA"/>
                                 </constraints>
@@ -81,7 +93,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="ZB8-JM-Sf4">
                                             <color key="tintColor" systemColor="systemRedColor"/>
                                             <connections>
-                                                <segue destination="d1E-Qi-JhI" kind="presentation" id="JG5-ng-Jr3"/>
+                                                <segue destination="d1E-Qi-JhI" kind="presentation" modalPresentationStyle="fullScreen" id="JG5-ng-Jr3"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -107,6 +119,9 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

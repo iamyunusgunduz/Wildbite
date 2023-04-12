@@ -88,7 +88,7 @@ class UserProfileViewController: UIViewController {
                     let url = URL(string: "\(profileModelresponse!.user.image)")
                     let url2 = URL(string: "http://yunusgunduz.site/wildbite/image/iksir/2.png")!
                    
-                    print("Image url : \(url ?? url2))")
+                    print("Image url : \(url ?? url2)")
                     userProfileImageView.kf.setImage(with: url ?? url2)
                     
                     profileModelresponse!.item.forEach { Item in

@@ -96,14 +96,20 @@ class LoginViewController: UIViewController {
                     print("Debug: Banlanmis user")
                   self.performSegue(withIdentifier: "loginToMain", sender: nil)
                 case "1":
-                    print("Debug: Standart user")
+                    print("Debug: Normal user")
                     self.performSegue(withIdentifier: "loginToMain", sender: nil)
                     
                 case "2":
-                    print("Debug: Editor Hesabi")
+                    print("Debug: User Gorevde ")
                     self.performSegue(withIdentifier: "loginToMain", sender: nil)
                 case "3":
-                    print("Debug: Admin Hesabi")
+                    print("Debug: Mod Hesabi")
+                    self.performSegue(withIdentifier: "loginToMain", sender: nil)
+                     case "4":
+                    print("Debug: Admim Hesabi")
+                    self.performSegue(withIdentifier: "loginToMain", sender: nil)
+                case "5":
+                    print("Debug: Dondurulmus Hesap")
                     self.performSegue(withIdentifier: "loginToMain", sender: nil)
                     
                 default:
