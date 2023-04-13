@@ -52,7 +52,7 @@
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zPn-zY-5bH">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="774"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.049076966569999998" green="0.049076966569999998" blue="0.049076966569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexTrackingBackgroundColor" systemColor="linkColor"/>
                                 <label key="tableHeaderView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artiSeviyesi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EZg-aa-M5e">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="13.666666666666668"/>
@@ -133,7 +133,6 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.1180153278" green="0.1180153278" blue="0.1180153278" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="avH-z2-Izy" firstAttribute="leading" secondItem="arl-ci-tzt" secondAttribute="leading" constant="20" symbolic="YES" id="24r-YZ-utG"/>
                                                 <constraint firstItem="avH-z2-Izy" firstAttribute="top" secondItem="arl-ci-tzt" secondAttribute="top" constant="20" id="TgL-Cp-Gx0"/>
@@ -141,7 +140,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="avH-z2-Izy" secondAttribute="trailing" id="gEi-G7-A7U"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.1180153278389362" green="0.1180153278389362" blue="0.1180153278389362" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="artiLabel" destination="EZg-aa-M5e" id="NP3-iQ-ZSQ"/>

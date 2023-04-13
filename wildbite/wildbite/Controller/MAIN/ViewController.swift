@@ -96,9 +96,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func panel(_ sender: Any) {
-        print("admin panel opened")
-    }
+     
     
     
 }

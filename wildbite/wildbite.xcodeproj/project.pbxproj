@@ -53,6 +53,8 @@
 		88E508ED29D4916C00E9E557 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508EC29D4916C00E9E557 /* UserProfileModel.swift */; };
 		88E508F129D4918100E9E557 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E508F029D4918100E9E557 /* UserProfileViewController.swift */; };
 		88F488D629DCA4BB0067834F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F488D529DCA4BB0067834F /* LoginViewController.swift */; };
+		88FD0C5529E848E800C8C152 /* ItemBuyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD0C5429E848E800C8C152 /* ItemBuyModel.swift */; };
+		88FD0C5729E8550B00C8C152 /* ItemSellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD0C5629E8550B00C8C152 /* ItemSellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,8 @@
 		88E508EC29D4916C00E9E557 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
 		88E508F029D4918100E9E557 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		88F488D529DCA4BB0067834F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		88FD0C5429E848E800C8C152 /* ItemBuyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBuyModel.swift; sourceTree = "<group>"; };
+		88FD0C5629E8550B00C8C152 /* ItemSellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +356,8 @@
 				88E508EC29D4916C00E9E557 /* UserProfileModel.swift */,
 				88000EA429E555B7008F640F /* ItemListAllModel.swift */,
 				88C6802C29E5F7D200719CC0 /* ShopMenuModel.swift */,
+				88FD0C5429E848E800C8C152 /* ItemBuyModel.swift */,
+				88FD0C5629E8550B00C8C152 /* ItemSellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -510,6 +516,7 @@
 				88E508ED29D4916C00E9E557 /* UserProfileModel.swift in Sources */,
 				88E508DF29D4855100E9E557 /* LoginModel.swift in Sources */,
 				8853CE1529DE3F1400A3EE09 /* EnvanterViewController.swift in Sources */,
+				88FD0C5529E848E800C8C152 /* ItemBuyModel.swift in Sources */,
 				887EC81D29E756980097D386 /* WiseRegisterViewController.swift in Sources */,
 				887EC82329E75CC90097D386 /* WildRegisterViewController.swift in Sources */,
 				88E508E929D4913200E9E557 /* RegisterViewController.swift in Sources */,
@@ -520,6 +527,7 @@
 				88000EAA29E56853008F640F /* itemListAllViewController.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
 				88F488D629DCA4BB0067834F /* LoginViewController.swift in Sources */,
+				88FD0C5729E8550B00C8C152 /* ItemSellModel.swift in Sources */,
 				881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

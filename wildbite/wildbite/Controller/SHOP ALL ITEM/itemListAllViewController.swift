@@ -9,8 +9,10 @@ import UIKit
 import Alamofire
 import Kingfisher
 
- 
 
+struct ItemBuy: Encodable {
+    let item_id: String
+}
 class GelenItemlerAllAyristirma {
     var itemID = 0
     var itemName = ""
@@ -27,20 +29,36 @@ class GelenItemlerAllAyristirma {
     var itemImage = ""
   
 }
+class UserItemlerAllAyristirma {
+    var itemID = 0
+    var itemName = ""
+
+  
+}
 
 class itemListAllViewController: UIViewController,UITableViewDelegate,UITableViewDataSource  {
     
     public  var gelenItemlerAlls = [GelenItemlerAllAyristirma]()
-
+    public  var userItemlerAlls = [UserItemlerAllAyristirma]()
+    override func viewWillAppear(_ animated: Bool) {
+         
+        allItemList()
+      
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("asdas \(gelenItemlerAlls.count)")
         return 1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if(gelenItemlerAlls[indexPath.section].itemPriceType == "1" ){
+            gelenItemlerAlls[indexPath.section].itemPriceType = "GOLD"
+        }
+        if(gelenItemlerAlls[indexPath.section].itemPriceType == "2" ){
+            gelenItemlerAlls[indexPath.section].itemPriceType = "DIAMOND"
+        }
         let alert = UIAlertController(title: "\n\n\n\n \(gelenItemlerAlls[indexPath.section].itemName)  ",
-                                      message: "\nDress Level : \(gelenItemlerAlls[indexPath.section].itemDressMinLevel) \n Power: \(gelenItemlerAlls[indexPath.section].itemPower) \nDefanse: \(gelenItemlerAlls[indexPath.section].itemDefense) \n Speed: \(gelenItemlerAlls[indexPath.section].itemSpeed) \n Buy price: \(gelenItemlerAlls[indexPath.section].itemPriceBuy)", preferredStyle: .alert)
+                                      message: "\nDress Level : \(gelenItemlerAlls[indexPath.section].itemDressMinLevel) \n Power: \(gelenItemlerAlls[indexPath.section].itemPower) \nDefanse: \(gelenItemlerAlls[indexPath.section].itemDefense) \n Speed: \(gelenItemlerAlls[indexPath.section].itemSpeed) \n Buy price: \(gelenItemlerAlls[indexPath.section].itemPriceBuy)  \( gelenItemlerAlls[indexPath.section].itemPriceType)", preferredStyle: .alert)
             
         let imageView = UIImageView(frame: CGRect(x: 90, y: 10, width: 90, height: 90))
         let url = URL(string: "\(gelenItemlerAlls[indexPath.section].itemImage)")
@@ -48,15 +66,58 @@ class itemListAllViewController: UIViewController,UITableViewDelegate,UITableVie
         imageView.kf.setImage(with: url)
 
         alert.view.addSubview(imageView)
-    let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
+        let okButton = UIAlertAction(title: "BUY", style: .default) { [self] (action) in
                    print("ok was clicked")
+//MARK: -item buy
+            
+            let itembuy = ItemBuy(item_id: "\(gelenItemlerAlls[indexPath.section].itemID) ")
+            
+            let myUserToken = UserDefaults.standard.value(forKey: "userToken")
+            let myUserID = UserDefaults.standard.value(forKey: "userID")
+            
+            print("User Token: \(myUserToken!)")
+            
+                    let token = "\(myUserToken!)"
+                    
+                    let headers: HTTPHeaders = [
+                    
+                        .authorization(bearerToken: token),
+                        .accept("application/json")
+                        
+                    ]
+            
+        
+            AF.request("http://yunusgunduz.site/wildbite/public/api/item_buy/\(myUserID!)",
+                       method: .post,
+                       parameters: itembuy, encoder: JSONParameterEncoder.default, headers: headers)
+  
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                debugPrint(response)
+                
+                switch response.result {
+                case .success:
+                    print("Buying Successful")
+                    
+                    let itemBuyModel = try? JSONDecoder().decode(ItemBuyModel.self, from: response.data!)
+                    
+                    print("SONUC MESAJI : \(itemBuyModel!.message)")
+                    
+                case let .failure(error):
+                    print(error.errorDescription!)
+                    print("Satin Alma hatasi")
+                }
+            }
+            
+            
                }
         
      
                let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
                    print("cancel was clicked")
               }
-               alert.addAction(okButton)
+            alert.addAction(okButton)
               alert.addAction(cancelButton)
                present(alert, animated: true) {
                    print("alert is done")
@@ -69,6 +130,7 @@ class itemListAllViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "ItemListAllCell") as! ItemListAllTableViewCell
+        
         
         cell.queryLabel.text = "\(indexPath.section+1)"
         
@@ -88,8 +150,33 @@ class itemListAllViewController: UIViewController,UITableViewDelegate,UITableVie
         default: break
         
         }
-        cell.priceBuyLabel.text = "\(gelenItemlerAlls[indexPath.section].itemPriceBuy) Buying \(gelenItemlerAlls[indexPath.section].itemPriceType)"
+       
+            cell.priceBuyLabel.text = "\(gelenItemlerAlls[indexPath.section].itemPriceBuy) Buying \(gelenItemlerAlls[indexPath.section].itemPriceType)"
+         //   cell.backgroundColor = .cyan
+        
         cell.priceSellLabel.text = "\(gelenItemlerAlls[indexPath.section].itemPricesell) Selling \(gelenItemlerAlls[indexPath.section].itemPriceType)  "
+        
+        gelenItemlerAlls.forEach { GelenItemlerAllAyristirma in
+            userItemlerAlls.forEach { UserItemlerAllAyristirma in
+               
+                print("Debug: Gelen \(GelenItemlerAllAyristirma.itemName)  Var \(UserItemlerAllAyristirma.itemName) ")
+              
+                if (GelenItemlerAllAyristirma.itemName ==  UserItemlerAllAyristirma.itemName ){
+                //    print("!=")
+                    
+                    print("Debug: -- \(GelenItemlerAllAyristirma.itemName)  Var \(UserItemlerAllAyristirma.itemName) ")
+                    
+                  
+                }
+              
+            }
+            }
+    
+        
+       
+           
+        
+        
         
         return cell
     }
@@ -100,14 +187,72 @@ class itemListAllViewController: UIViewController,UITableViewDelegate,UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        userBilgileriCek()
+    }
+    func userBilgileriCek(){
+        
+        
+        let myUserID = UserDefaults.standard.value(forKey: "userID")
+        let myUserName = UserDefaults.standard.value(forKey: "userName")
+      
+        let myUserToken = UserDefaults.standard.value(forKey: "userToken")
+        print("User Id: \(myUserID!)")
+        print("User Name: \(myUserName!)")
+        print("User Token: \(myUserToken!)")
+        
+                let token = "\(myUserToken!)"
+                
+                let headers: HTTPHeaders = [
+                
+                    .authorization(bearerToken: token),
+                    .accept("application/json")
+                    
+                ]
+        
+     
+      
+        AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData { [self]  response in
+
+                switch response.result {
+                case .success:
+                    print("Validation Successful")
+                    
+                    let profileModelresponse = try? JSONDecoder().decode(ProfileModel.self, from: response.data!)
+                    debugPrint(profileModelresponse!)
+                    print(profileModelresponse!.user.name)
+                    profileModelresponse!.item.forEach { Item in
+                        print("User Envanterdeki itemler \(Item.id)  \(Item.name)")
+                        
+                        
+                        let itemler = UserItemlerAllAyristirma()
+                        
+                        itemler.itemID = Item.id
+                        itemler.itemName = Item.name
+                       
+                       
+                        
+                        userItemlerAlls.append(itemler)
+                        
+                        
+                    }
+                    
+                
+                    
+                 
+                    
+                 
+                    
+                case let .failure(error):
+                    print(error.errorDescription!)
+                    print("hata")
+                }
+            }
     }
     
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-       
-      
+    fileprivate func allItemList(){
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
        
         
@@ -180,5 +325,7 @@ class itemListAllViewController: UIViewController,UITableViewDelegate,UITableVie
             }
        
     }
-
+  
+    
+    
 }
