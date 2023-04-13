@@ -38,7 +38,7 @@
                                     <navigationItem title="SHOP MENU" id="6Z8-KS-eSX">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="J6p-dN-nXA">
                                             <connections>
-                                                <segue destination="PCY-uN-KvZ" kind="presentation" modalPresentationStyle="fullScreen" id="mIk-vq-MOh"/>
+                                                <segue destination="PCY-uN-KvZ" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="mIk-vq-MOh"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -59,13 +59,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ks-Td-gEA">
-                                                            <rect key="frame" x="0.0" y="14.999999999999998" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="14.999999999999998" width="353" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemRedColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaI-bJ-BlS">
-                                                            <rect key="frame" x="268.33333333333331" y="8" width="84.666666666666686" height="34.333333333333336"/>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaI-bJ-BlS">
+                                                            <rect key="frame" x="0.0" y="8" width="0.0" height="34.333333333333336"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="DELETE">
                                                                 <color key="baseForegroundColor" systemColor="systemRedColor"/>
@@ -111,7 +111,7 @@
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="so6-zr-Bbw" id="Lyx-Gc-FN8"/>
-                        <segue destination="GIe-4y-l3z" kind="presentation" identifier="shopMenuToMENU12" modalPresentationStyle="fullScreen" id="Tqf-Ux-gJE"/>
+                        <segue destination="GIe-4y-l3z" kind="presentation" identifier="shopMenuToMENU12" animates="NO" modalPresentationStyle="fullScreen" id="Tqf-Ux-gJE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5Z-0I-v5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

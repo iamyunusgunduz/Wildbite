@@ -22,7 +22,6 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
       print("\(gelenMenuler[indexPath.section].menuName)")
       print("\(gelenMenuler[indexPath.section].menuId)")
         
-       
         switch gelenMenuler[indexPath.section].menuId{
         case 1:
             print("MENU1")
@@ -42,7 +41,7 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
             print("MENU8")
         case 12:
             print("MENU12")
-            performSegue(withIdentifier: "shopMenuToMENU12", sender: nil)
+            try performSegue(withIdentifier: "shopMenuToMENU\(gelenMenuler[indexPath.section].menuId)", sender: nil)
         default:
            break
         }

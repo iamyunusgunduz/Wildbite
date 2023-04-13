@@ -28,6 +28,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epg-mI-qVk">
                                 <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -39,12 +40,12 @@
                                     <navigationItem title="Tum Itemler" id="Ln5-fl-ceo">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="Q6f-Ls-quM">
                                             <connections>
-                                                <segue destination="v6j-nF-xXF" kind="presentation" modalPresentationStyle="fullScreen" id="Zlx-07-8t4"/>
+                                                <segue destination="v6j-nF-xXF" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Zlx-07-8t4"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="4z0-6B-DD3">
                                             <connections>
-                                                <segue destination="B4x-SJ-eaW" kind="presentation" modalPresentationStyle="fullScreen" id="BHh-GT-MLs"/>
+                                                <segue destination="B4x-SJ-eaW" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="BHh-GT-MLs"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

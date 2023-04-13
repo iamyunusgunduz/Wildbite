@@ -59,7 +59,7 @@
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="dpM-Pc-Cfl" kind="presentation" modalPresentationStyle="fullScreen" id="yDs-UN-Agt"/>
+                                    <segue destination="dpM-Pc-Cfl" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="yDs-UN-Agt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,7 +116,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="9xS-pA-lIC">
                                             <color key="tintColor" systemColor="systemRedColor"/>
                                             <connections>
-                                                <segue destination="Y6W-OH-hqX" kind="presentation" modalPresentationStyle="fullScreen" id="WLL-yY-qVb"/>
+                                                <segue destination="Y6W-OH-hqX" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="WLL-yY-qVb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -129,7 +129,7 @@
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="FBJ-ht-gyC" kind="presentation" id="dzV-qG-hHb"/>
+                                    <segue destination="FBJ-ht-gyC" kind="presentation" animates="NO" id="dzV-qG-hHb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r3-kk-k1f">
@@ -160,7 +160,7 @@
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7vv-oO-mOi" kind="presentation" modalPresentationStyle="fullScreen" id="Mf9-1k-XJ7"/>
+                                    <segue destination="7vv-oO-mOi" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Mf9-1k-XJ7"/>
                                 </connections>
                             </button>
                         </subviews>
