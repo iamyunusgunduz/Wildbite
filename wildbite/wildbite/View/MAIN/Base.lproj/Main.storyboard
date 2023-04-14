@@ -207,8 +207,9 @@
                                     <constraint firstItem="I6H-M3-wJR" firstAttribute="top" secondItem="GhL-G8-rQE" secondAttribute="top" id="VDc-m5-sHV"/>
                                 </constraints>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iRi-CD-mj5">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="iRi-CD-mj5">
                                 <rect key="frame" x="0.0" y="196" width="375" height="4"/>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-wI-cYa" userLabel="Stack View ITEMLER">
                                 <rect key="frame" x="20" y="220" width="335" height="378"/>

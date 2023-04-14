@@ -123,7 +123,23 @@ class ProfileSettViewController: UIViewController {
                         userEmailLabel.text = "Email: \(profileModelresponse!.user.email)"
                         userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)"
                         userTotalDamageLabel.text = "Damage: \(profileModelresponse!.user.totalDamage)"
-                        userTotalWarLabel.text = "Total War: \(profileModelresponse!.user.warTotal)"
+                        
+                        let warTotals = profileModelresponse!.user.warTotal
+                        let warWin = Double (profileModelresponse!.user.warTotalWin)
+                        let warLose = Double (profileModelresponse!.user.warTotalLose)
+                        
+                       
+                      
+                        if(warLose! != 0){
+                            let kda:Double = (warWin ?? 1) / (warLose ?? 1)
+                            debugPrint("\(warTotals)  \(warWin!)  \(warLose!) \(kda) (WWR)")
+                            userTotalWarLabel.text = "WAR WIN RATE: \(kda) (WWR) "
+                        }else{
+                            userTotalWarLabel.text = "WAR WIN RATE: \(warWin!) (WWR)"
+                        }
+                        
+                        
+                        
                         userTotalWarWinLabel.text = "Total War Win: \(profileModelresponse!.user.warTotalWin)"
                         userTotalWarLoseLabel.text = "Total War Lose: \(profileModelresponse!.user.warTotalLose)"
                         userTotalWarGoldLabel.text = "Total War Gold: \(profileModelresponse!.user.warTotalGold)"
