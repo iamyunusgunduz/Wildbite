@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01936DD62A05973100780FB3 /* WARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DD52A05973100780FB3 /* WARViewController.swift */; };
 		88000EA529E555B7008F640F /* ItemListAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA429E555B7008F640F /* ItemListAllModel.swift */; };
 		88000EA729E557D1008F640F /* ItemListAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA629E557D1008F640F /* ItemListAllTableViewCell.swift */; };
 		88000EAA29E56853008F640F /* itemListAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA929E56853008F640F /* itemListAllViewController.swift */; };
@@ -20,10 +21,10 @@
 		8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B36E29E2D20700F4FB89 /* PaperViewController.swift */; };
 		8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8873B37029E2D20F00F4FB89 /* Paper.storyboard */; };
 		8873B37529E2D4BB00F4FB89 /* myOnBoardign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */; };
-		887EC81D29E756980097D386 /* WiseRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC81C29E756980097D386 /* WiseRegisterViewController.swift */; };
-		887EC81F29E75CA30097D386 /* GhostRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC81E29E75CA30097D386 /* GhostRegisterViewController.swift */; };
-		887EC82129E75CB60097D386 /* GuardianRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC82029E75CB60097D386 /* GuardianRegisterViewController.swift */; };
-		887EC82329E75CC90097D386 /* WildRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC82229E75CC90097D386 /* WildRegisterViewController.swift */; };
+		887EC81D29E756980097D386 /* HUNTERRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC81C29E756980097D386 /* HUNTERRegisterViewController.swift */; };
+		887EC81F29E75CA30097D386 /* WEREWOLFRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC81E29E75CA30097D386 /* WEREWOLFRegisterViewController.swift */; };
+		887EC82129E75CB60097D386 /* VAMPIRERegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC82029E75CB60097D386 /* VAMPIRERegisterViewController.swift */; };
+		887EC82329E75CC90097D386 /* WITCHRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC82229E75CC90097D386 /* WITCHRegisterViewController.swift */; };
 		889A838429D729B8005A1C6C /* ALLItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889A838329D729B8005A1C6C /* ALLItem.storyboard */; };
 		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
 		889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B87C129D646FD00E3DF4E /* AdminViewController.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01936DD52A05973100780FB3 /* WARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WARViewController.swift; sourceTree = "<group>"; };
 		88000EA429E555B7008F640F /* ItemListAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListAllModel.swift; sourceTree = "<group>"; };
 		88000EA629E557D1008F640F /* ItemListAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListAllTableViewCell.swift; sourceTree = "<group>"; };
 		88000EA929E56853008F640F /* itemListAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListAllViewController.swift; sourceTree = "<group>"; };
@@ -70,10 +72,10 @@
 		8873B36E29E2D20700F4FB89 /* PaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperViewController.swift; sourceTree = "<group>"; };
 		8873B37029E2D20F00F4FB89 /* Paper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paper.storyboard; sourceTree = "<group>"; };
 		8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOnBoardign.swift; sourceTree = "<group>"; };
-		887EC81C29E756980097D386 /* WiseRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseRegisterViewController.swift; sourceTree = "<group>"; };
-		887EC81E29E75CA30097D386 /* GhostRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostRegisterViewController.swift; sourceTree = "<group>"; };
-		887EC82029E75CB60097D386 /* GuardianRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianRegisterViewController.swift; sourceTree = "<group>"; };
-		887EC82229E75CC90097D386 /* WildRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildRegisterViewController.swift; sourceTree = "<group>"; };
+		887EC81C29E756980097D386 /* HUNTERRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUNTERRegisterViewController.swift; sourceTree = "<group>"; };
+		887EC81E29E75CA30097D386 /* WEREWOLFRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WEREWOLFRegisterViewController.swift; sourceTree = "<group>"; };
+		887EC82029E75CB60097D386 /* VAMPIRERegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAMPIRERegisterViewController.swift; sourceTree = "<group>"; };
+		887EC82229E75CC90097D386 /* WITCHRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WITCHRegisterViewController.swift; sourceTree = "<group>"; };
 		889A838329D729B8005A1C6C /* ALLItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ALLItem.storyboard; sourceTree = "<group>"; };
 		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		889B87C129D646FD00E3DF4E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01936DD42A0596FF00780FB3 /* WAR */ = {
+			isa = PBXGroup;
+			children = (
+				01936DD52A05973100780FB3 /* WARViewController.swift */,
+			);
+			path = WAR;
+			sourceTree = "<group>";
+		};
 		88000EA829E5681A008F640F /* SHOP ALL ITEM */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,10 +203,10 @@
 			isa = PBXGroup;
 			children = (
 				88E508E829D4913200E9E557 /* RegisterViewController.swift */,
-				887EC81C29E756980097D386 /* WiseRegisterViewController.swift */,
-				887EC81E29E75CA30097D386 /* GhostRegisterViewController.swift */,
-				887EC82029E75CB60097D386 /* GuardianRegisterViewController.swift */,
-				887EC82229E75CC90097D386 /* WildRegisterViewController.swift */,
+				887EC81C29E756980097D386 /* HUNTERRegisterViewController.swift */,
+				887EC81E29E75CA30097D386 /* WEREWOLFRegisterViewController.swift */,
+				887EC82029E75CB60097D386 /* VAMPIRERegisterViewController.swift */,
+				887EC82229E75CC90097D386 /* WITCHRegisterViewController.swift */,
 			);
 			path = REGISTER;
 			sourceTree = "<group>";
@@ -382,6 +392,7 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				01936DD42A0596FF00780FB3 /* WAR */,
 				88C6803129E605D400719CC0 /* ITEM ADD */,
 				889B87BA29D6468600E3DF4E /* ADMIN */,
 				88CCB2AD29DF91B100C9F1D8 /* HUNT */,
@@ -498,7 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88000EA729E557D1008F640F /* ItemListAllTableViewCell.swift in Sources */,
-				887EC82129E75CB60097D386 /* GuardianRegisterViewController.swift in Sources */,
+				887EC82129E75CB60097D386 /* VAMPIRERegisterViewController.swift in Sources */,
 				8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */,
 				88525AC329E48DBA001CFBBE /* NightMissionCaseViewController.swift in Sources */,
 				88CCB2B129DF93C700C9F1D8 /* HuntCaseViewController.swift in Sources */,
@@ -517,15 +528,16 @@
 				88E508DF29D4855100E9E557 /* LoginModel.swift in Sources */,
 				8853CE1529DE3F1400A3EE09 /* EnvanterViewController.swift in Sources */,
 				88FD0C5529E848E800C8C152 /* ItemBuyModel.swift in Sources */,
-				887EC81D29E756980097D386 /* WiseRegisterViewController.swift in Sources */,
-				887EC82329E75CC90097D386 /* WildRegisterViewController.swift in Sources */,
+				887EC81D29E756980097D386 /* HUNTERRegisterViewController.swift in Sources */,
+				887EC82329E75CC90097D386 /* WITCHRegisterViewController.swift in Sources */,
 				88E508E929D4913200E9E557 /* RegisterViewController.swift in Sources */,
 				88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */,
 				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
 				88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */,
-				887EC81F29E75CA30097D386 /* GhostRegisterViewController.swift in Sources */,
+				887EC81F29E75CA30097D386 /* WEREWOLFRegisterViewController.swift in Sources */,
 				88000EAA29E56853008F640F /* itemListAllViewController.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
+				01936DD62A05973100780FB3 /* WARViewController.swift in Sources */,
 				88F488D629DCA4BB0067834F /* LoginViewController.swift in Sources */,
 				88FD0C5729E8550B00C8C152 /* ItemSellModel.swift in Sources */,
 				881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  GuardianRegisterViewController.swift
+//  GhostRegisterViewController.swift
 //  wildbite
 //
 //  Created by Yunus Gunduz on 13.04.2023.
@@ -7,8 +7,7 @@
 
 import UIKit
 
-class GuardianRegisterViewController: UIViewController {
-
+class WEREWOLFRegisterViewController: UIViewController {
 
     
     @IBOutlet weak var powerProgress: UIProgressView!
@@ -30,15 +29,15 @@ class GuardianRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        powerProgress.progress = 0.3
-        defProgress.progress = 1.0
-        speedProgress.progress = 0.2
-        smartProgress.progress = 0.5
+        powerProgress.progress = 0.5
+        defProgress.progress = 0.2
+        speedProgress.progress = 1.0
+        smartProgress.progress = 0.3
         
-        powValueLabel.text = "3"
-        defValueLabel.text = "10"
-        speedValueLabel.text = "2"
-        smartValueLabel.text = "5"
+        powValueLabel.text = "5"
+        defValueLabel.text = "2"
+        speedValueLabel.text = "10"
+        smartValueLabel.text = "3"
         
       
     }

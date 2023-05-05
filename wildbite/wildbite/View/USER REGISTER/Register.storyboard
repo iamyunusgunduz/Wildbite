@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="54.333333333333336"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cxo-3U-ZVh" userLabel="Stack View global">
-                                <rect key="frame" x="50" y="127.33333333333331" width="314" height="641.66666666666674"/>
+                                <rect key="frame" x="50" y="163" width="314" height="570.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" horizontalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grW-aN-8EC">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="22.333333333333332"/>
@@ -52,7 +52,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkV-NS-tBM" userLabel="mailView">
-                                                <rect key="frame" x="0.0" y="20.333333333333343" width="314" height="100"/>
+                                                <rect key="frame" x="0.0" y="20.333333333333314" width="314" height="100"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_text" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-Fn-4Zf">
                                                         <rect key="frame" x="0.0" y="0.0" width="314" height="100"/>
@@ -138,7 +138,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-pD-2SX" userLabel="PassView">
-                                                <rect key="frame" x="0.0" y="20.333333333333371" width="314" height="100"/>
+                                                <rect key="frame" x="0.0" y="20.333333333333314" width="314" height="100"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_text" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-c9-8Bd">
                                                         <rect key="frame" x="0.0" y="0.0" width="314" height="100"/>
@@ -172,29 +172,30 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zW8-ff-diH" userLabel="Stack View choose">
-                                        <rect key="frame" x="0.0" y="423.33333333333331" width="314" height="61.333333333333314"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zW8-ff-diH" userLabel="Stack View choose">
+                                        <rect key="frame" x="0.0" y="418.33333333333337" width="314" height="10"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE TYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBB-Iu-F3P">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vJ8-Uz-Bau">
-                                                <rect key="frame" x="0.0" y="30.333333333333371" width="314" height="32"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vJ8-Uz-Bau">
+                                                <rect key="frame" x="0.0" y="10" width="314" height="1"/>
                                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <segments>
                                                     <segment title="HUNTER"/>
                                                     <segment title="WEREWOLF"/>
                                                     <segment title="VAMPIRE"/>
+                                                    <segment title="WITCH"/>
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Vot-T0-SRh" userLabel="Stack View register btn">
-                                        <rect key="frame" x="0.0" y="494.66666666666674" width="314" height="147"/>
+                                        <rect key="frame" x="0.0" y="423.33333333333337" width="314" height="147"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmz-bh-DHp">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="147"/>
@@ -202,7 +203,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="register"/>
                                                 <connections>
-                                                    <segue destination="dik-NF-Op9" kind="presentation" modalPresentationStyle="fullScreen" id="yxy-4l-hke"/>
+                                                    <action selector="registerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WGF-G4-1kl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -231,15 +232,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pny-9w-Gvf"/>
+                    <connections>
+                        <outlet property="mailTextField" destination="JQI-ba-2u6" id="RuH-zm-ej6"/>
+                        <outlet property="passwordTextField" destination="0rf-Ny-0Im" id="hR9-gC-UmH"/>
+                        <outlet property="usernameTextField" destination="Xd8-Bo-mIG" id="uIQ-cm-pRu"/>
+                        <segue destination="dik-NF-Op9" kind="presentation" identifier="registerToRace" animates="NO" modalPresentationStyle="fullScreen" id="Xtr-4B-mlj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972.46376811594212" y="-2.6785714285714284"/>
         </scene>
-        <!--WISE-->
+        <!--HUNTER-->
         <scene sceneID="tMY-fW-cjc">
             <objects>
-                <viewController title="WISE" id="dik-NF-Op9" customClass="WiseRegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HUNTER" id="dik-NF-Op9" customClass="HUNTERRegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnh-iW-OpB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,13 +260,13 @@
                                 <color key="textColor" red="0.88429888869999995" green="0.76700663609999997" blue="0.48540320549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WISE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaq-AP-4Yx" userLabel="wise">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUNTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaq-AP-4Yx" userLabel="wise">
                                 <rect key="frame" x="20" y="150.33333333333334" width="374" height="58"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="50"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More than Smart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2F-X1-mNO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A HUMAN WHO HUNTING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2F-X1-mNO">
                                 <rect key="frame" x="20" y="228.33333333333334" width="374" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -370,7 +377,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSH-Ey-AtI" userLabel="Stack View backNext">
                                         <rect key="frame" x="0.0" y="201.33333333333331" width="374" height="34.333333333333343"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK4-UL-nuh">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK4-UL-nuh">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -379,7 +386,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPe-BB-bM6">
                                                 <rect key="frame" x="187" y="0.0" width="187" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="NEXT GHOST" titleAlignment="center"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="NEXT WEREWOLF" titleAlignment="center"/>
                                                 <connections>
                                                     <segue destination="Skv-3z-XxP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="wXX-Ti-g1j"/>
                                                 </connections>
@@ -388,12 +395,13 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amb-fS-srf">
                                         <rect key="frame" x="0.0" y="265.66666666666669" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.083319269119999997" green="0.060352519149999999" blue="0.060270369050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="uf0-HG-lIh"/>
                                         </constraints>
                                         <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="SELECT &quot;WISE&quot;"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SELECT THE &quot;HUNTER&quot;"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -444,10 +452,10 @@
             </objects>
             <point key="canvasLocation" x="1910" y="-178"/>
         </scene>
-        <!--GHOST-->
+        <!--WEREWOLF-->
         <scene sceneID="Nxl-2T-wIM">
             <objects>
-                <viewController title="GHOST" id="Skv-3z-XxP" customClass="GhostRegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WEREWOLF" id="Skv-3z-XxP" customClass="WEREWOLFRegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8EI-We-XCm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -461,7 +469,7 @@
                                 <color key="textColor" red="0.88429888869999995" green="0.76700663609999997" blue="0.48540320549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GHOST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIU-hh-j1d" userLabel="wise">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEREWOLF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIU-hh-j1d" userLabel="wise">
                                 <rect key="frame" x="20" y="150.33333333333334" width="374" height="58"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="50"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
@@ -576,7 +584,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="34.333333333333336"/>
                                                 <color key="tintColor" systemColor="tintColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" imagePlacement="leading" title="BACK WISE"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" imagePlacement="leading" title="BACK HUNTER"/>
                                                 <connections>
                                                     <segue destination="dik-NF-Op9" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cgG-RK-FqY"/>
                                                 </connections>
@@ -584,7 +592,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKs-u1-86j">
                                                 <rect key="frame" x="187" y="0.0" width="187" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="NEXT GUARDIAN" titleAlignment="center"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="NEXT VAMPIRE" titleAlignment="center"/>
                                                 <connections>
                                                     <segue destination="1Hv-eK-IYK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Ihx-y7-WHb"/>
                                                 </connections>
@@ -593,12 +601,13 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCg-Ds-c0X">
                                         <rect key="frame" x="0.0" y="265.66666666666669" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.083319269119999997" green="0.060352519149999999" blue="0.060270369050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="S8v-rz-ody"/>
                                         </constraints>
                                         <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="SELECT &quot;GHOST&quot;"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SELECT THE &quot;WEREWOLF&quot;"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -609,7 +618,7 @@
                                 <rect key="frame" x="107" y="393" width="200" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More than Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kt-Kt-Bgr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More than MEAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kt-Kt-Bgr">
                                 <rect key="frame" x="20" y="228.33333333333334" width="374" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -655,10 +664,10 @@
             </objects>
             <point key="canvasLocation" x="2857.971014492754" y="-216.29464285714286"/>
         </scene>
-        <!--GUARDIAN-->
+        <!--VAMPIRE-->
         <scene sceneID="TtA-QV-9ZJ">
             <objects>
-                <viewController title="GUARDIAN" id="1Hv-eK-IYK" customClass="GuardianRegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="VAMPIRE" id="1Hv-eK-IYK" customClass="VAMPIRERegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jZo-K2-fcS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -672,7 +681,7 @@
                                 <color key="textColor" red="0.88429888869999995" green="0.76700663609999997" blue="0.48540320549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GUARDIAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-EJ-QEQ" userLabel="wise">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAMPIRE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-EJ-QEQ" userLabel="wise">
                                 <rect key="frame" x="20" y="150.33333333333334" width="374" height="58"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="50"/>
                                 <color key="textColor" systemColor="systemTealColor"/>
@@ -787,7 +796,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="34.333333333333336"/>
                                                 <color key="tintColor" systemColor="tintColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" imagePlacement="leading" title="BACK GHOST"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" imagePlacement="leading" title="BACK WEREWOLF"/>
                                                 <connections>
                                                     <segue destination="Skv-3z-XxP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ymj-jY-zbw"/>
                                                 </connections>
@@ -795,7 +804,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c9-Kk-kjl">
                                                 <rect key="frame" x="187" y="0.0" width="187" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="NEXT WILD" titleAlignment="center"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="NEXT WITCH" titleAlignment="center"/>
                                                 <connections>
                                                     <segue destination="q0e-4V-quE" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Vyd-Nd-7aB"/>
                                                 </connections>
@@ -804,12 +813,13 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBJ-T5-AAt">
                                         <rect key="frame" x="0.0" y="265.66666666666669" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.083319269119999997" green="0.060352519149999999" blue="0.060270369050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AYy-Ay-RMF"/>
                                         </constraints>
                                         <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="SELECT &quot;GUARDIAN&quot;"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SELECT THE &quot;VAMPIRE&quot;"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -820,7 +830,7 @@
                                 <rect key="frame" x="107" y="393" width="200" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More than Armour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP3-yF-UVI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More than BLOOD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP3-yF-UVI">
                                 <rect key="frame" x="20" y="229" width="374" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -866,10 +876,10 @@
             </objects>
             <point key="canvasLocation" x="3714" y="-129"/>
         </scene>
-        <!--GUARDIAN-->
+        <!--WITCH-->
         <scene sceneID="aNk-jJ-b9E">
             <objects>
-                <viewController title="GUARDIAN" id="q0e-4V-quE" customClass="WildRegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WITCH" id="q0e-4V-quE" customClass="WITCHRegisterViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owW-ps-fG2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -883,7 +893,7 @@
                                 <color key="textColor" red="0.88429888869999995" green="0.76700663609999997" blue="0.48540320549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4x-BT-7mY" userLabel="wise">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WITCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4x-BT-7mY" userLabel="wise">
                                 <rect key="frame" x="20" y="150.33333333333334" width="374" height="58"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="50"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
@@ -998,12 +1008,12 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="34.333333333333336"/>
                                                 <color key="tintColor" systemColor="tintColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" imagePlacement="leading" title="BACK GUARDIAN"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" imagePlacement="leading" title="BACK VAMPIRE"/>
                                                 <connections>
                                                     <segue destination="1Hv-eK-IYK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="h96-2T-rS7"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti2-wM-Kr0">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti2-wM-Kr0">
                                                 <rect key="frame" x="187" y="0.0" width="187" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -1013,12 +1023,13 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpe-rq-yH4">
                                         <rect key="frame" x="0.0" y="265.66666666666669" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.083319269119999997" green="0.060352519149999999" blue="0.060270369050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="3c0-Gj-5dn"/>
                                         </constraints>
                                         <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="SELECT &quot;WILD&quot;"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SELECT  THE &quot;WITCH&quot;"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1029,7 +1040,7 @@
                                 <rect key="frame" x="107" y="393" width="200" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More than Power" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hf-SR-SxN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More than MYSTERY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hf-SR-SxN">
                                 <rect key="frame" x="20" y="228.33333333333334" width="374" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1079,7 +1090,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="h96-2T-rS7"/>
         <segue reference="ymj-jY-zbw"/>
-        <segue reference="cgG-RK-FqY"/>
+        <segue reference="Xtr-4B-mlj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="alt" width="271" height="56.333332061767578"/>

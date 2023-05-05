@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         if(UserDefaults.standard.value(forKey: "userName") != nil){
             DispatchQueue.main.async(){
               // self.performSegue(withIdentifier: "loginToMain", sender: self)
-                print("Debug: Login To Main")
+                print("Debug: Login To Main yani user giris yapti defauls`u dolu :)")
             }
        
   

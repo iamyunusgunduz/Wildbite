@@ -41,7 +41,7 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
             print("MENU8")
         case 12:
             print("MENU12")
-            try performSegue(withIdentifier: "shopMenuToMENU\(gelenMenuler[indexPath.section].menuId)", sender: nil)
+             performSegue(withIdentifier: "shopMenuToMENU\(gelenMenuler[indexPath.section].menuId)", sender: nil)
         default:
            break
         }
