@@ -16,6 +16,13 @@ class WARViewController: UIViewController {
     }
     
 
- 
+    @IBAction func randomWarButton(_ sender: Any) {
+        performSegue(withIdentifier: "warToChosenPage", sender: nil)
+        let random = Int.random(in: 0...3)
+        
+        UserDefaults.standard.set(random, forKey: "choosenWartype")
+        
+    }
+    
 
 }
