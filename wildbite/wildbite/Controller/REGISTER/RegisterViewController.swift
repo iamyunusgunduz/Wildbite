@@ -58,6 +58,7 @@ class RegisterViewController: UIViewController {
             
             return
         }
+        
         let register = Register(email: mailTextField.text!, name: usernameTextField.text!, password: passwordTextField.text!, password_confirmation: passwordTextField.text!, image: "null.jpg", role: 1, race: 4)
 
        AF.request("https://yunusgunduz.site/wildbite/public/api/register",

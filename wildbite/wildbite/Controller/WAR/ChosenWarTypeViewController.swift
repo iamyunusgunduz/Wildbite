@@ -25,6 +25,7 @@ class ChosenWarTypeViewController: UIViewController {
     @IBOutlet weak var enemySpeed: UILabel!
     @IBOutlet weak var enemyHealth: UILabel!
     
+    @IBOutlet weak var enemyProfileImage: UIImageView!
     
     
     
@@ -38,11 +39,11 @@ class ChosenWarTypeViewController: UIViewController {
         let myUserID = UserDefaults.standard.value(forKey: "userID")
         
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
-        let myChoosenWartype = UserDefaults.standard.value(forKey: "choosenWartype")
+        let myChoosenWartype = UserDefaults.standard.value(forKey: "choosenWartype") as! Int
         print("User Id: \(myUserID!)")
         
         print("User Token: \(myUserToken!)")
-        print("User myChoosenWartype: \(myChoosenWartype!)")
+        print("User myChoosenWartype: \(myChoosenWartype)")
         
         let token = "\(myUserToken!)"
         
@@ -55,7 +56,7 @@ class ChosenWarTypeViewController: UIViewController {
         
         
         
-        AF.request("http://yunusgunduz.site/wildbite/public/api/random-race-user?race=\(myChoosenWartype!))" , headers: headers )
+        AF.request("http://yunusgunduz.site/wildbite/public/api/random-race-user?race=\(myChoosenWartype))" , headers: headers )
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseData { [self]  response in
@@ -77,15 +78,80 @@ class ChosenWarTypeViewController: UIViewController {
                     }else{
                         
                         if let enemyID = chosenWar?.user.id{
+                            
                             if(myUserID as! Int == enemyID){
                                 loadWarProfileEnemy()
                             }
                          
                         }
-                        if let enemyName = chosenWar?.user.name{
+                        // enemy name
+                        if let enemyNamem = chosenWar?.user.name{
                             
-                            enemynameLabel.text = "Name: \(enemyName)"
+                            enemynameLabel.text = "Name: \(enemyNamem)"
                         }
+                        // enemy Type
+                        
+                            switch myChoosenWartype {
+                                case 0:
+                                    enemyRole.text = "Role: HUNTER "
+                                case 1:
+                                    enemyRole.text = "Role: WEREWOLF "
+                                case 2:
+                                    enemyRole.text = "Role: VAMPIRE "
+                                case 3:
+                                    enemyRole.text = "Role: WITCH "
+                                default:
+                                    enemyRole.text = "-"
+                            }
+                           
+                        
+                        // enemy level
+                        if let enemyLevelm = chosenWar?.user.level{
+                            
+                            enemyLevel.text = "Level: \(enemyLevelm)"
+                        }
+                        //enemy Damage
+                        if let enemyDamagem = chosenWar?.user.totalDamage{
+                            
+                            enemyDamage.text = "Damage: \(enemyDamagem)"
+                        }
+                        
+                        //enemy Power
+                        if let enemyPowerm = chosenWar?.user.power{
+                            
+                            enemyPower.text = "Power: \(enemyPowerm)"
+                        }
+                        
+                        //enemy Defence
+                        if let enemyDefensem = chosenWar?.user.defense{
+                            
+                            enemyDefance.text = "Defense: \(enemyDefensem)"
+                        }
+                        
+                        //enemy Speed
+                        if let enemySpeedm = chosenWar?.user.speed{
+                            
+                            enemySpeed.text = "Speed: \(enemySpeedm)"
+                        }
+                        
+                        //enemy Health
+                        if let enemyHealthm = chosenWar?.user.maximumHealth{
+                            
+                            enemyHealth.text = "Health: \(enemyHealthm)"
+                        }
+                        //enemy Health
+                        if let enemyimagem = chosenWar?.user.image{
+                            
+                            let url = URL(string: "\(enemyimagem)")
+                            DispatchQueue.main.async{ [self] in
+                                enemyProfileImage.kf.setImage(with: url)
+                            }
+                           
+                            
+                             
+                        }
+                        
+                        
                         
                     }
                    
@@ -99,9 +165,16 @@ class ChosenWarTypeViewController: UIViewController {
             }
     }
     @IBAction func againChooseButton(_ sender: Any) {
-        let random = Int.random(in: 0...3)
         
-        UserDefaults.standard.set(random, forKey: "choosenWartype")
+        let myChoosenNumber = UserDefaults.standard.value(forKey: "choosenWarNumber")
+        if(myChoosenNumber as! String == "random" ){
+            let random = Int.random(in: 0...3)
+            
+            UserDefaults.standard.set(random, forKey: "choosenWartype")
+        }
+        
+      
+       
         loadWarProfileEnemy()
     }
     

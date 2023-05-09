@@ -50,6 +50,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="VAMPIRE VAR"/>
+                                        <connections>
+                                            <action selector="vampireWarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ovj-HH-JVO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqE-HO-hOS">
                                         <rect key="frame" x="20" y="120" width="313" height="50"/>
@@ -60,6 +63,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="WEREWOLF WAR"/>
+                                        <connections>
+                                            <action selector="werewolfWarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lcr-vr-a84"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-eT-JqQ">
                                         <rect key="frame" x="20" y="180" width="313" height="50"/>
@@ -70,6 +76,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="HUNTER WAR"/>
+                                        <connections>
+                                            <action selector="hunterWarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3ha-5X-Qn9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-hm-dw2">
                                         <rect key="frame" x="20" y="240" width="313" height="50"/>
@@ -80,6 +89,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="WITCH WAR"/>
+                                        <connections>
+                                            <action selector="WitchWarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dm3-qe-K7i"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -143,70 +155,68 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2ap-Ir-6Ad">
-                                <rect key="frame" x="20" y="50" width="353" height="351.66666666666663"/>
+                                <rect key="frame" x="20" y="49.999999999999972" width="353" height="459.33333333333326"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TOt-iJ-5D2">
+                                        <rect key="frame" x="56.666666666666686" y="0.0" width="240" height="128"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARC-eM-kM7" userLabel="name">
-                                        <rect key="frame" x="155.33333333333334" y="0.0" width="42.333333333333343" height="20.333333333333332"/>
+                                        <rect key="frame" x="155.33333333333334" y="138" width="42.333333333333343" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="role" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYV-zH-pUa">
-                                        <rect key="frame" x="162.33333333333334" y="30.333333333333329" width="28.666666666666657" height="20.333333333333329"/>
+                                        <rect key="frame" x="162.33333333333334" y="168.33333333333334" width="28.666666666666657" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-zj-amF">
-                                        <rect key="frame" x="159.33333333333334" y="60.666666666666679" width="34.666666666666657" height="20.333333333333336"/>
+                                        <rect key="frame" x="159.33333333333334" y="198.66666666666666" width="34.666666666666657" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totaldamage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgz-sn-BQM">
-                                        <rect key="frame" x="129" y="91" width="95.333333333333314" height="20.333333333333329"/>
+                                        <rect key="frame" x="129" y="229" width="95.333333333333314" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="power" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrg-aF-6fN" userLabel="email">
-                                        <rect key="frame" x="153" y="121.33333333333333" width="47" height="20.333333333333329"/>
+                                        <rect key="frame" x="153" y="259.33333333333331" width="47" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="defance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYa-Ub-nWz">
-                                        <rect key="frame" x="145.66666666666666" y="151.66666666666666" width="61.666666666666657" height="20.333333333333343"/>
+                                        <rect key="frame" x="145.66666666666666" y="289.66666666666669" width="61.666666666666657" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wu-lx-9mk">
-                                        <rect key="frame" x="153" y="182" width="47" height="20.333333333333343"/>
+                                        <rect key="frame" x="153" y="320" width="47" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maxhealth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0k-ca-jFj">
-                                        <rect key="frame" x="137" y="212.33333333333331" width="79" height="20.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze2-gG-9Yb" userLabel="level">
-                                        <rect key="frame" x="153.33333333333334" y="242.66666666666669" width="46.333333333333343" height="20.333333333333314"/>
+                                        <rect key="frame" x="137" y="350.33333333333331" width="79" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-Ru-RIY">
-                                        <rect key="frame" x="96.666666666666686" y="273" width="160" height="34.333333333333314"/>
+                                        <rect key="frame" x="91.000000000000014" y="380.66666666666669" width="171.33333333333337" height="34.333333333333314"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="WAR (-10 Energy)"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="FIGHT (-10 Energy)"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouh-Ki-ZF9">
-                                        <rect key="frame" x="98.666666666666671" y="317.33333333333331" width="155.66666666666663" height="34.333333333333314"/>
+                                        <rect key="frame" x="98.666666666666671" y="425" width="155.66666666666663" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Again (-1 Energy)"/>
                                         <connections>
@@ -249,10 +259,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="enemyDamage" destination="fgz-sn-BQM" id="9zH-Kg-L5d"/>
                         <outlet property="enemyDefance" destination="kYa-Ub-nWz" id="FYt-e4-iKn"/>
                         <outlet property="enemyHealth" destination="o0k-ca-jFj" id="iJK-8G-Par"/>
                         <outlet property="enemyLevel" destination="4uD-zj-amF" id="0mX-lt-fyW"/>
                         <outlet property="enemyPower" destination="rrg-aF-6fN" id="zoM-JY-YKA"/>
+                        <outlet property="enemyProfileImage" destination="TOt-iJ-5D2" id="vkz-KC-tC2"/>
                         <outlet property="enemyRole" destination="fYV-zH-pUa" id="ihk-Bg-Zx8"/>
                         <outlet property="enemySpeed" destination="6Wu-lx-9mk" id="nnN-fB-rop"/>
                         <outlet property="enemynameLabel" destination="ARC-eM-kM7" id="qBC-Ov-bh1"/>
