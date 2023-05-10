@@ -15,7 +15,8 @@ struct Register: Encodable {
     let password_confirmation: String
     let image: String
     let role:Int
-    let race:Int
+ 
+    
     
     
 }
@@ -59,15 +60,15 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        let register = Register(email: mailTextField.text!, name: usernameTextField.text!, password: passwordTextField.text!, password_confirmation: passwordTextField.text!, image: "null.jpg", role: 1, race: 4)
-
+        let register = Register(email: mailTextField.text!, name: usernameTextField.text!, password: passwordTextField.text!, password_confirmation: passwordTextField.text!, image: "null.jpg", role: 1)
+       
        AF.request("https://yunusgunduz.site/wildbite/public/api/register",
                   method: .post,
                   parameters: register,
                   encoder: JSONParameterEncoder.default)
        .validate(statusCode: 200..<300)
        .validate(contentType: ["application/json"])
-       .responseData { response in
+       .responseData { [self] response in
            debugPrint(response)
            if(response.response?.statusCode == 500){
                self.usernameTextField.backgroundColor = UIColor.yellow
@@ -77,6 +78,7 @@ class RegisterViewController: UIViewController {
                print("Register Successful")
                
                let registerResponse = try? JSONDecoder().decode(RegisterModel.self, from: response.data!)
+
                debugPrint(registerResponse ?? "ne oldi")
                if(registerResponse?.message == nil || self.mailTextField.text == "" || self.passwordTextField.text == ""){
                    print("Debug: Message:  \(registerResponse?.message ?? "bisey oldu")")
@@ -90,10 +92,22 @@ class RegisterViewController: UIViewController {
                print("User ID: \(registerResponse!.user.id)")
                print("User email: \(registerResponse!.user.email)")
                print("User message: \(registerResponse!.message)")
- 
+                   
+                   
+                   
+                   
                if(registerResponse!.message == "Accoun created."){
                    self.performSegue(withIdentifier: "registerToRace", sender: nil)
                   
+                   
+                   UserDefaults.standard.set(registerResponse!.user.name, forKey: "RegisterUserName")
+                   UserDefaults.standard.set(passwordTextField.text!, forKey: "RegisterPassword")
+                   UserDefaults.standard.set(registerResponse!.token, forKey: "RegisterUserToken")
+                   UserDefaults.standard.set(registerResponse!.user.id, forKey: "RegisterUserID")
+                   
+                   UserDefaults.standard.set(registerResponse!.user.email, forKey: "RegisterUserEmail")
+                   
+                
                }else{
                    print("DEBUG: Kayit olunamadi mesaji döndü")
                }
