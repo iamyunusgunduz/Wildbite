@@ -80,3 +80,30 @@ class JSONNullRegisterRace: Codable, Hashable {
         try container.encodeNil()
     }
 }
+struct RegisterRace: Encodable {
+    let name: String
+    let email: String
+    let password: String
+    let role:Int
+    let race:Int
+    let level:Int
+    let exp:Int
+    let war_total:Int
+    let war_total_win:Int
+    let war_total_lose:Int
+    let war_total_gold:Int
+    let gold:Int
+    let diamond:Int
+    let total_damage:Int
+    let power:Int
+    let defense:Int
+    let speed:Int
+    let total_hunt:Int
+    let total_success_hunt:Int
+    let current_health:Int
+    let maximum_health:Int
+    let regenerate_health_range:Int
+    let current_energy:Int
+    let maximum_energy:Int
+    let image: String
+}

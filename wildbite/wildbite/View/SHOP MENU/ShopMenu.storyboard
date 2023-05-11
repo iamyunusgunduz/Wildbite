@@ -111,20 +111,20 @@
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="so6-zr-Bbw" id="Lyx-Gc-FN8"/>
-                        <segue destination="GIe-4y-l3z" kind="presentation" identifier="shopMenuToMENU12" animates="NO" modalPresentationStyle="fullScreen" id="Tqf-Ux-gJE"/>
+                        <segue destination="Ok3-Ps-z8M" kind="presentation" identifier="shopMenuToShopItems" modalPresentationStyle="fullScreen" id="OM2-ji-e6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5Z-0I-v5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1166" y="-56"/>
         </scene>
-        <!--ALLItem-->
-        <scene sceneID="1t3-03-DOr">
+        <!--ShopItems-->
+        <scene sceneID="nHu-AQ-aKZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="ALLItem" id="GIe-4y-l3z" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VK6-7L-5Bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="ShopItems" storyboardName="ShopItems" id="Ok3-Ps-z8M" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ku5-N6-pbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-120"/>
+            <point key="canvasLocation" x="1909" y="-104"/>
         </scene>
     </scenes>
     <resources>

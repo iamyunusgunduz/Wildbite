@@ -8,33 +8,7 @@
 import UIKit
 import Alamofire
 
-struct RegisterRace: Encodable {
-    let name: String
-    let email: String
-    let password: String
-    let role:Int
-    let race:Int
-    let level:Int
-    let exp:Int
-    let war_total:Int
-    let war_total_win:Int
-    let war_total_lose:Int
-    let war_total_gold:Int
-    let gold:Int
-    let diamond:Int
-    let total_damage:Int
-    let power:Int
-    let defense:Int
-    let speed:Int
-    let total_hunt:Int
-    let total_success_hunt:Int
-    let current_health:Int
-    let maximum_health:Int
-    let regenerate_health_range:Int
-    let current_energy:Int
-    let maximum_energy:Int
-    let image: String
-}
+
 class HUNTERRegisterViewController: UIViewController {
 
     
@@ -62,12 +36,12 @@ class HUNTERRegisterViewController: UIViewController {
         powerProgress.progress = 0.2
         defProgress.progress = 0.5
         speedProgress.progress = 0.3
-        smartProgress.progress = 1.0
+       // smartProgress.progress = 1.0
         
         powValueLabel.text = "2"
         defValueLabel.text = "5"
         speedValueLabel.text = "3"
-        smartValueLabel.text = "10"
+      //  smartValueLabel.text = "10"
         
       
     }
@@ -91,7 +65,7 @@ class HUNTERRegisterViewController: UIViewController {
         var userregenerate_health_range = 1
         
         
-        var userrace = 0
+        var userrace = 1
         var userpower = 2
         var userdefense = 5
         var userspeed  = 3
@@ -143,7 +117,7 @@ class HUNTERRegisterViewController: UIViewController {
                        
                        
                        if(registerRaceresponse!.the1 == "User updated"){
-                       self.performSegue(withIdentifier: "ragisterRaceToMain", sender: nil)
+                       self.performSegue(withIdentifier: "registerRaceToLogin", sender: nil)
                       
                        
                        

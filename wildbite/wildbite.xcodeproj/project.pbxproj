@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */; };
+		0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0176F6742A0D2D95009B5749 /* ShopItems.storyboard */; };
+		0176F6782A0D2F50009B5749 /* ShopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */; };
 		01936DD62A05973100780FB3 /* WARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DD52A05973100780FB3 /* WARViewController.swift */; };
 		01936DDB2A05B11200780FB3 /* ChosenWarTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */; };
 		01936DDD2A05B18900780FB3 /* ChosenWarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */; };
@@ -63,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRaceModel.swift; sourceTree = "<group>"; };
+		0176F6742A0D2D95009B5749 /* ShopItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopItems.storyboard; sourceTree = "<group>"; };
+		0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemsViewController.swift; sourceTree = "<group>"; };
 		01936DD52A05973100780FB3 /* WARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WARViewController.swift; sourceTree = "<group>"; };
 		01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarTypeViewController.swift; sourceTree = "<group>"; };
 		01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarModel.swift; sourceTree = "<group>"; };
@@ -129,6 +133,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0176F6732A0D2D75009B5749 /*  SHOP ITEMS */ = {
+			isa = PBXGroup;
+			children = (
+				0176F6742A0D2D95009B5749 /* ShopItems.storyboard */,
+			);
+			path = " SHOP ITEMS";
+			sourceTree = "<group>";
+		};
+		0176F6762A0D2F38009B5749 /* SHOP ITEMS */ = {
+			isa = PBXGroup;
+			children = (
+				0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */,
+			);
+			path = "SHOP ITEMS";
+			sourceTree = "<group>";
+		};
 		01936DD42A0596FF00780FB3 /* WAR */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +404,7 @@
 		88E508DC29D4853800E9E557 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0176F6732A0D2D75009B5749 /*  SHOP ITEMS */,
 				88C6802E29E6059F00719CC0 /* SHOP ITEM ADD */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
@@ -401,6 +422,7 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0176F6762A0D2F38009B5749 /* SHOP ITEMS */,
 				01936DD42A0596FF00780FB3 /* WAR */,
 				88C6803129E605D400719CC0 /* ITEM ADD */,
 				889B87BA29D6468600E3DF4E /* ADMIN */,
@@ -495,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CCB2AC29DF898100C9F1D8 /* Hunt.storyboard in Resources */,
+				0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */,
 				88E508D129D481E600E9E557 /* LaunchScreen.storyboard in Resources */,
 				88E508CE29D481E600E9E557 /* Assets.xcassets in Resources */,
 				881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */,
@@ -526,6 +549,7 @@
 				88000EA529E555B7008F640F /* ItemListAllModel.swift in Sources */,
 				88E508C929D481E400E9E557 /* ViewController.swift in Sources */,
 				8873B37529E2D4BB00F4FB89 /* myOnBoardign.swift in Sources */,
+				0176F6782A0D2F50009B5749 /* ShopItemsViewController.swift in Sources */,
 				88C6802B29E5F63200719CC0 /* ShopMenuTableViewCell.swift in Sources */,
 				88525AC129E485F0001CFBBE /* NightMissionViewController.swift in Sources */,
 				01936DDD2A05B18900780FB3 /* ChosenWarModel.swift in Sources */,

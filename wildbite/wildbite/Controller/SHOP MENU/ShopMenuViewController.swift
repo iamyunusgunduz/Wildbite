@@ -22,29 +22,11 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
       print("\(gelenMenuler[indexPath.section].menuName)")
       print("\(gelenMenuler[indexPath.section].menuId)")
         
-        switch gelenMenuler[indexPath.section].menuId{
-        case 1:
-            print("MENU1")
-        case 2:
-            print("MENU2")
-        case 3:
-            print("MENU3")
-        case 4:
-            print("MENU4")
-        case 5:
-            print("MENU5")
-        case 6:
-            print("MENU6")
-        case 7:
-            print("MENU7")
-        case 8:
-            print("MENU8")
-        case 12:
-            print("MENU12")
-             performSegue(withIdentifier: "shopMenuToMENU\(gelenMenuler[indexPath.section].menuId)", sender: nil)
-        default:
-           break
-        }
+        
+                performSegue(withIdentifier: "shopMenuToShopItems", sender: nil)
+                UserDefaults.standard.set("\(gelenMenuler[indexPath.section].menuId)", forKey: "ShopMenuID")
+                UserDefaults.standard.set("\(gelenMenuler[indexPath.section].menuName)", forKey: "ShopMenuAD")
+        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return gelenMenuler.count
@@ -78,7 +60,7 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
             
         ]
         AF.request("http://yunusgunduz.site/wildbite/public/api/shop" , headers: headers )
-            .validate(statusCode: 200..<300)
+            .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in
                 
@@ -89,14 +71,15 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
                     
                     let sopMenuResponse = try? JSONDecoder().decode(ShopMenuModel.self, from: response.data!)
                     
-                    debugPrint(sopMenuResponse!)
+                    dump(sopMenuResponse!)
 
                     
                     sopMenuResponse!.shop.forEach { Shop in
                         print("Shop Name: \(Shop.name)")
+                        print("Shop ID: \(Shop.id)")
                         
                         
-                         let menuler = menuFetch()
+                        let menuler = menuFetch()
                         menuler.menuName = Shop.name
                         menuler.menuId = Shop.id
                         gelenMenuler.append(menuler)

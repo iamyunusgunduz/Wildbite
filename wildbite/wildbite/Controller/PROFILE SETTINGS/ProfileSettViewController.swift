@@ -108,13 +108,16 @@ class ProfileSettViewController: UIViewController {
                         
                         userRaceLabel.text = "Race: \(profileModelresponse!.race.raceName)"
                         switch profileModelresponse!.race.raceName {
-                        case "0":
-                            userRaceLabel.text = "Race: Hunter"
                         case "1":
-                            userRaceLabel.text = "Race: Werewolf"
+                            userRaceLabel.text = "Race: Hunter"
                         case "2":
+                            userRaceLabel.text = "Race: Werewolf"
+                        case "3":
                             userRaceLabel.text = "Race: Vampire"
-                        
+                        case "4":
+                            userRaceLabel.text = "Race: Witch"
+                        case "0":
+                                userRaceLabel.text = "Race: Not Selected"
                         default:
                             userRaceLabel.text = "Race: None"
                         }
@@ -150,10 +153,13 @@ class ProfileSettViewController: UIViewController {
                         let defValue = Float(profileModelresponse!.user.defense)!
                         let hizValue = Float(profileModelresponse!.user.speed)!
                         
+                            dump(profileModelresponse!.user.power)
+                            
                         gucLabel.text = "\(Int(gucValue))"
                         defansLabel.text = "\(Int(defValue))"
                         speedLabel.text = "\(Int(hizValue))"
                         
+                           
                         if(gucValue > 99.0 || defValue > 99.0 || hizValue > 99.0){
                             gucProgressView.progress = (gucValue )/1000
                              

@@ -85,7 +85,7 @@ class itemListAllViewController: UIViewController,UITableViewDelegate,UITableVie
     
     
  
-    
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("asdas \(ensonhaliDizi.count)")
         return 1
@@ -244,7 +244,8 @@ class itemListAllViewController: UIViewController,UITableViewDelegate,UITableVie
      
       
         AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
-            .validate(statusCode: 200..<300)
+     //   AF.request("http://yunusgunduz.site/wildbite/public/api/item-shop-filter?shop=1" , headers: headers )
+            .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self]  response in
 
