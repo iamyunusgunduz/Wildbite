@@ -99,9 +99,9 @@
                                 <rect key="frame" x="20" y="10" width="353" height="1441"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6wc-Ny-YnW">
-                                        <rect key="frame" x="0.0" y="9" width="353" height="470"/>
+                                        <rect key="frame" x="0.0" y="9" width="353" height="1790"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-zM-Cpy">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-zM-Cpy">
                                                 <rect key="frame" x="20" y="0.0" width="313" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <constraints>
@@ -109,12 +109,14 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="1 LVL BOSS"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1 LVL Shadowbeast">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="btnLvl1Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="mHt-oR-IQK"/>
+                                                    <action selector="btn1:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Mtk-OC-pC8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-Nv-GUf">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-Nv-GUf">
                                                 <rect key="frame" x="20" y="60" width="313" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <constraints>
@@ -122,12 +124,14 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="5 LVL BOSS"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3 LVL Steelclaw">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="btnLvl5Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="9kP-bM-mFn"/>
+                                                    <action selector="btn3:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="zWW-ZO-U5Q"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUd-Ez-xw7">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUd-Ez-xw7">
                                                 <rect key="frame" x="20" y="120" width="313" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <constraints>
@@ -135,12 +139,14 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="10 LVL BOSS"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5 LVL Venomgaze">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="btnLvl10Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="OAh-V6-wME"/>
+                                                    <action selector="btn5:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="HkV-MF-a3P"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T6-AW-26c">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T6-AW-26c">
                                                 <rect key="frame" x="20" y="180" width="313" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <constraints>
@@ -148,12 +154,14 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="15 LVL BOSS"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7 LVL Flamespirit">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="btnLvl15Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="amq-9S-dEv"/>
+                                                    <action selector="btn7:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="O89-9t-5lX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cW-qs-Xhd">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cW-qs-Xhd">
                                                 <rect key="frame" x="20" y="240" width="313" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <constraints>
@@ -161,12 +169,14 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="20 LVL BOSS"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9 LVL Stoneroar">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="btnLvl20Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Eft-8n-tei"/>
+                                                    <action selector="btn9:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="MlV-T8-qXt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAp-yi-kP8">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAp-yi-kP8">
                                                 <rect key="frame" x="20" y="300" width="313" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <constraints>
@@ -174,12 +184,14 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="25 LVL BOSS"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="10 LVL Bloodsoil">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="btnLvl25Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="KeD-nt-Ll7"/>
+                                                    <action selector="btn10:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="41e-zL-IQ6"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-lP-gFQ">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-lP-gFQ">
                                                 <rect key="frame" x="20" y="360" width="313" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <constraints>
@@ -187,12 +199,14 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="30 LVL BOSS"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="11 LVL Shadowreaper">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="btnLvl30Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="UCh-qX-eCZ"/>
+                                                    <action selector="btn11:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="IBh-Yo-RTK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acp-mv-iAP">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acp-mv-iAP">
                                                 <rect key="frame" x="20" y="420" width="313" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <constraints>
@@ -200,29 +214,405 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="35 LVL BOSS"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="13LVL Mindbreaker">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="btnLvl35Click:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Axe-Jt-mnv"/>
+                                                    <action selector="btn13:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="11y-wd-UZX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ade-o0-Jod">
+                                                <rect key="frame" x="20" y="480" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BAN-n7-X6N"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="15 LVL Windmyst">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn15:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="lUH-2Y-Itz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb0-Ip-5Rs">
+                                                <rect key="frame" x="20" y="540" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dak-jA-Xed"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="17 LVL Starcrusher">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn17:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="uLx-TX-t5r"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mk-1X-HHH">
+                                                <rect key="frame" x="20" y="600" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="xmc-jO-5MW"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="19 LVL Fearlessgaze">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn19:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Okb-Gl-plM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TED-8m-v6P">
+                                                <rect key="frame" x="20" y="660" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="s75-fU-uNY"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="20 LVL Swordshatter">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn20:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="tcC-RN-vBS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17q-td-BoS">
+                                                <rect key="frame" x="20" y="720" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="UcS-16-V4J"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="21 LVL Flamejudgment">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn21:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Mfw-EY-kvg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-dm-eBI">
+                                                <rect key="frame" x="20" y="780" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="g4J-ET-SJd"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="23 LVL Venomclaw">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn23:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="s5t-eY-t6I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnY-rU-JY7">
+                                                <rect key="frame" x="20" y="840" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="0pD-ed-XIN"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="25 LVL Ironrend">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn25:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="4RI-Je-w5l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-Dt-VjW">
+                                                <rect key="frame" x="20" y="900" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Iah-71-Wet"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="27 LVL Bloodhowl">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn27:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="adZ-91-y5p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaK-0t-DTS">
+                                                <rect key="frame" x="20" y="960" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5DL-ct-hXX"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="29 LVL Shadowbane">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn29:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="GUi-C2-ZpI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhs-Xj-FPz">
+                                                <rect key="frame" x="20" y="1020" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Kgo-04-8Zf"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="30 LVL Echoessence">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn30:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="4t0-52-GOx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36g-5q-CzC">
+                                                <rect key="frame" x="20" y="1080" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="XMM-Lz-HR1"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="31 LVL Spiritwanderer">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn31:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Yh9-Vw-RIv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8L-yP-sIz">
+                                                <rect key="frame" x="20" y="1140" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="bu9-hA-GEg"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="33 LVL Wingednightmare">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn33:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Ejf-Vd-N4q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsO-Qb-oM2">
+                                                <rect key="frame" x="20" y="1200" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ahe-UT-Ejb"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="35 LVL Darkwall">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn35:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="AcV-2l-DdV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eU-8f-wtO">
+                                                <rect key="frame" x="20" y="1260" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="fve-ej-Oz5"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="37 LVL Grandomenace">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn37:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="x51-Wq-l9R"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEi-yn-neg">
+                                                <rect key="frame" x="20" y="1320" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9aQ-dR-s4i"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="39 LVL Venomscout">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn39:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Gb8-s0-QEt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yt0-BL-toJ">
+                                                <rect key="frame" x="20" y="1380" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="3rU-Ql-rET"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="40 LVL Stoneclaw">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn40:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="H20-J1-naJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAc-f3-aZa">
+                                                <rect key="frame" x="20" y="1440" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="aPl-az-1Ie"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="41 LVL Skyblade">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn41:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="D8V-oN-840"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sht-p6-229">
+                                                <rect key="frame" x="20" y="1500" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="lXV-2e-YcT"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="43 LVL Bloodcleave">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn43:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="DuK-Ar-ByT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpW-og-i0w">
+                                                <rect key="frame" x="20" y="1560" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="CoC-oC-FVG"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="45 LVL Moonshadow">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn45:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="RKJ-6J-jH3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGc-vG-pjX">
+                                                <rect key="frame" x="20" y="1620" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8Ol-A1-jpw"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="47 LVL Blackdeath">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn47:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Pan-g4-VNo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6T5-F9-6SA">
+                                                <rect key="frame" x="20" y="1680" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dVG-3y-Chn"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="49 LVL Ironrend">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn49:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="Ga8-5L-MzH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCD-xT-cp1">
+                                                <rect key="frame" x="20" y="1740" width="313" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Pd9-KM-mHy"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="50 LVL Thundergaze">
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="20" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn50:" destination="9pO-GD-SJ3" eventType="touchUpInside" id="yBr-EX-8tr"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="yfY-Nv-GUf" secondAttribute="trailing" constant="20" id="0M3-El-U01"/>
+                                            <constraint firstAttribute="trailing" secondItem="UGc-vG-pjX" secondAttribute="trailing" constant="20" id="39a-b9-9rL"/>
                                             <constraint firstItem="ZUd-Ez-xw7" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="6tg-bh-IHy"/>
+                                            <constraint firstAttribute="trailing" secondItem="TED-8m-v6P" secondAttribute="trailing" constant="20" id="6yy-OX-cUX"/>
+                                            <constraint firstAttribute="trailing" secondItem="MAc-f3-aZa" secondAttribute="trailing" constant="20" id="7kB-Jk-t3J"/>
                                             <constraint firstAttribute="trailing" secondItem="t3O-lP-gFQ" secondAttribute="trailing" constant="20" id="7mb-mo-bcu"/>
+                                            <constraint firstItem="HnY-rU-JY7" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="9qO-2N-8YW"/>
                                             <constraint firstItem="acp-mv-iAP" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="A9P-wZ-gr5"/>
+                                            <constraint firstAttribute="trailing" secondItem="qsO-Qb-oM2" secondAttribute="trailing" constant="20" id="AjH-dP-WzN"/>
+                                            <constraint firstItem="cwB-Dt-VjW" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="BAy-9n-brA"/>
                                             <constraint firstItem="MAp-yi-kP8" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="DME-1D-YPM"/>
+                                            <constraint firstAttribute="trailing" secondItem="CEi-yn-neg" secondAttribute="trailing" constant="20" id="GEr-Iw-15K"/>
+                                            <constraint firstItem="nCD-xT-cp1" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="GJ1-5V-LmZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="bhs-Xj-FPz" secondAttribute="trailing" constant="20" id="HM9-c1-ACr"/>
                                             <constraint firstItem="yfY-Nv-GUf" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="HgN-6N-DUM"/>
+                                            <constraint firstItem="17q-td-BoS" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="I8o-AC-1Oo"/>
+                                            <constraint firstAttribute="trailing" secondItem="yt0-BL-toJ" secondAttribute="trailing" constant="20" id="Iw3-yW-Tth"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ade-o0-Jod" secondAttribute="trailing" constant="20" id="KQx-TM-h7Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="sht-p6-229" secondAttribute="trailing" constant="20" id="LpH-Tv-iPG"/>
+                                            <constraint firstAttribute="trailing" secondItem="vpW-og-i0w" secondAttribute="trailing" constant="20" id="MlT-MI-UCt"/>
+                                            <constraint firstAttribute="trailing" secondItem="nCD-xT-cp1" secondAttribute="trailing" constant="20" id="Nws-Kz-36D"/>
+                                            <constraint firstItem="0eU-8f-wtO" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="PMy-ce-PmE"/>
+                                            <constraint firstItem="bhs-Xj-FPz" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="PQ4-qd-Ris"/>
+                                            <constraint firstItem="CEi-yn-neg" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="Pxo-6e-cVR"/>
                                             <constraint firstAttribute="trailing" secondItem="6cW-qs-Xhd" secondAttribute="trailing" constant="20" id="QPX-BS-TmW"/>
+                                            <constraint firstAttribute="trailing" secondItem="HnY-rU-JY7" secondAttribute="trailing" constant="20" id="QpH-C6-XxM"/>
+                                            <constraint firstItem="qsO-Qb-oM2" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="S1m-mA-5hC"/>
                                             <constraint firstAttribute="trailing" secondItem="acp-mv-iAP" secondAttribute="trailing" constant="20" id="TNs-tD-S4n"/>
                                             <constraint firstItem="5T6-AW-26c" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="TZy-y1-9UR"/>
                                             <constraint firstItem="6cW-qs-Xhd" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="UE9-fR-aFH"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y8L-yP-sIz" secondAttribute="trailing" constant="20" id="XV4-fD-Ocd"/>
                                             <constraint firstItem="kk2-zM-Cpy" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="Znv-49-o9m"/>
                                             <constraint firstAttribute="trailing" secondItem="kk2-zM-Cpy" secondAttribute="trailing" constant="20" id="aWC-3l-eNp"/>
+                                            <constraint firstItem="Y8L-yP-sIz" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="boO-ch-CcM"/>
+                                            <constraint firstItem="yt0-BL-toJ" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="bpA-cA-fO6"/>
+                                            <constraint firstAttribute="trailing" secondItem="5mk-1X-HHH" secondAttribute="trailing" constant="20" id="bx4-Qn-d9f"/>
                                             <constraint firstAttribute="trailing" secondItem="ZUd-Ez-xw7" secondAttribute="trailing" constant="20" id="gPz-rj-Lgm"/>
+                                            <constraint firstItem="UGc-vG-pjX" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="gQG-WO-HpJ"/>
+                                            <constraint firstItem="bbl-dm-eBI" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="ix1-se-zS6"/>
+                                            <constraint firstItem="NaK-0t-DTS" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="j3o-Nr-wMO"/>
+                                            <constraint firstItem="vpW-og-i0w" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="jF7-Sw-f13"/>
+                                            <constraint firstItem="kb0-Ip-5Rs" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="jSZ-wb-qfU"/>
+                                            <constraint firstAttribute="trailing" secondItem="6T5-F9-6SA" secondAttribute="trailing" constant="20" id="k3b-wU-37L"/>
+                                            <constraint firstItem="Ade-o0-Jod" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="kbE-lE-opm"/>
                                             <constraint firstAttribute="trailing" secondItem="MAp-yi-kP8" secondAttribute="trailing" constant="20" id="kwu-cN-LCg"/>
                                             <constraint firstItem="t3O-lP-gFQ" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="lbh-Q6-TJ9"/>
+                                            <constraint firstItem="6T5-F9-6SA" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="nPV-Fj-7kN"/>
+                                            <constraint firstItem="TED-8m-v6P" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="ne6-Xa-nOG"/>
+                                            <constraint firstAttribute="trailing" secondItem="0eU-8f-wtO" secondAttribute="trailing" constant="20" id="nix-U8-7Tg"/>
+                                            <constraint firstItem="5mk-1X-HHH" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="pKy-az-xXL"/>
+                                            <constraint firstAttribute="trailing" secondItem="36g-5q-CzC" secondAttribute="trailing" constant="20" id="r16-js-uFn"/>
+                                            <constraint firstAttribute="trailing" secondItem="NaK-0t-DTS" secondAttribute="trailing" constant="20" id="rv4-EC-0i2"/>
+                                            <constraint firstItem="36g-5q-CzC" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="sde-NK-w2W"/>
+                                            <constraint firstAttribute="trailing" secondItem="bbl-dm-eBI" secondAttribute="trailing" constant="20" id="tIv-AH-bNQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="17q-td-BoS" secondAttribute="trailing" constant="20" id="vJf-8l-vgP"/>
+                                            <constraint firstAttribute="trailing" secondItem="cwB-Dt-VjW" secondAttribute="trailing" constant="20" id="vKZ-ry-KcV"/>
                                             <constraint firstAttribute="trailing" secondItem="5T6-AW-26c" secondAttribute="trailing" constant="20" id="vhZ-Te-AT3"/>
+                                            <constraint firstItem="MAc-f3-aZa" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="vlk-dh-aVp"/>
+                                            <constraint firstAttribute="trailing" secondItem="kb0-Ip-5Rs" secondAttribute="trailing" constant="20" id="xsp-iF-4mg"/>
+                                            <constraint firstItem="sht-p6-229" firstAttribute="leading" secondItem="6wc-Ny-YnW" secondAttribute="leading" constant="20" id="zw6-lj-fh6"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -275,14 +665,36 @@
                     </view>
                     <size key="freeformSize" width="393" height="1500"/>
                     <connections>
-                        <outlet property="btnLvl1" destination="kk2-zM-Cpy" id="Gz8-DD-yb9"/>
-                        <outlet property="btnLvl10" destination="ZUd-Ez-xw7" id="iBD-dl-Nrn"/>
-                        <outlet property="btnLvl15" destination="5T6-AW-26c" id="3Ih-Ir-J9z"/>
-                        <outlet property="btnLvl20" destination="6cW-qs-Xhd" id="wrT-rx-2cO"/>
-                        <outlet property="btnLvl25" destination="MAp-yi-kP8" id="bgL-Ak-YL2"/>
-                        <outlet property="btnLvl30" destination="t3O-lP-gFQ" id="3SU-gr-87t"/>
-                        <outlet property="btnLvl35" destination="acp-mv-iAP" id="lAT-Rp-Jjm"/>
-                        <outlet property="btnLvl5" destination="yfY-Nv-GUf" id="LLZ-Qo-jM2"/>
+                        <outlet property="nmButton1" destination="kk2-zM-Cpy" id="hht-sx-GnP"/>
+                        <outlet property="nmButton10" destination="kb0-Ip-5Rs" id="g05-ar-oJU"/>
+                        <outlet property="nmButton11" destination="5mk-1X-HHH" id="4n7-dJ-yng"/>
+                        <outlet property="nmButton12" destination="TED-8m-v6P" id="Fpw-5c-DZl"/>
+                        <outlet property="nmButton13" destination="17q-td-BoS" id="yOW-x0-43p"/>
+                        <outlet property="nmButton14" destination="bbl-dm-eBI" id="H61-gn-hnd"/>
+                        <outlet property="nmButton15" destination="HnY-rU-JY7" id="HF6-ke-Qji"/>
+                        <outlet property="nmButton16" destination="cwB-Dt-VjW" id="3z8-Gp-AzB"/>
+                        <outlet property="nmButton17" destination="NaK-0t-DTS" id="XND-i4-fnU"/>
+                        <outlet property="nmButton18" destination="bhs-Xj-FPz" id="mEC-fw-Hqz"/>
+                        <outlet property="nmButton19" destination="36g-5q-CzC" id="cxf-yb-84r"/>
+                        <outlet property="nmButton2" destination="yfY-Nv-GUf" id="uwL-g5-8IZ"/>
+                        <outlet property="nmButton20" destination="Y8L-yP-sIz" id="oEr-6z-vB5"/>
+                        <outlet property="nmButton21" destination="qsO-Qb-oM2" id="WeF-0s-8qB"/>
+                        <outlet property="nmButton22" destination="0eU-8f-wtO" id="vAP-Pe-nhY"/>
+                        <outlet property="nmButton23" destination="CEi-yn-neg" id="iFc-cT-gfn"/>
+                        <outlet property="nmButton24" destination="yt0-BL-toJ" id="nLg-98-sdG"/>
+                        <outlet property="nmButton25" destination="MAc-f3-aZa" id="eg2-8L-3Lm"/>
+                        <outlet property="nmButton26" destination="sht-p6-229" id="eZr-KK-pd6"/>
+                        <outlet property="nmButton27" destination="vpW-og-i0w" id="0nQ-xI-P6R"/>
+                        <outlet property="nmButton28" destination="UGc-vG-pjX" id="uHX-Vi-8rd"/>
+                        <outlet property="nmButton29" destination="6T5-F9-6SA" id="AMT-hg-Uag"/>
+                        <outlet property="nmButton3" destination="ZUd-Ez-xw7" id="fXE-Ur-Nar"/>
+                        <outlet property="nmButton30" destination="nCD-xT-cp1" id="Njd-uY-GYW"/>
+                        <outlet property="nmButton4" destination="5T6-AW-26c" id="ihP-jC-3hz"/>
+                        <outlet property="nmButton5" destination="6cW-qs-Xhd" id="zBA-4u-LGg"/>
+                        <outlet property="nmButton6" destination="MAp-yi-kP8" id="Hpq-X7-aUG"/>
+                        <outlet property="nmButton7" destination="t3O-lP-gFQ" id="Aj8-IZ-YOk"/>
+                        <outlet property="nmButton8" destination="acp-mv-iAP" id="hUZ-kJ-A6a"/>
+                        <outlet property="nmButton9" destination="Ade-o0-Jod" id="s7f-wT-Oed"/>
                         <segue destination="w4I-j2-1Fh" kind="presentation" identifier="NightMissionToCase" modalPresentationStyle="fullScreen" id="5PT-gm-Ghq"/>
                     </connections>
                 </viewController>
@@ -299,6 +711,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rbS-gm-pgu">
+                                <rect key="frame" x="20" y="40" width="353" height="419.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDark" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-HE-PtU">
+                                        <rect key="frame" x="126.66666666666666" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="651-gp-UjZ"/>
+                                            <constraint firstAttribute="width" constant="100" id="lhm-qr-YN7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="huntName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEd-6Q-zUt">
+                                        <rect key="frame" x="109.00000000000001" y="120" width="135.33333333333337" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="huntPow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhP-7G-31p">
+                                        <rect key="frame" x="119.66666666666666" y="208" width="113.66666666666666" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="huntHealth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdU-dS-qMM">
+                                        <rect key="frame" x="104.66666666666667" y="296" width="143.66666666666663" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyB-dX-E4g">
+                                        <rect key="frame" x="141.66666666666666" y="385" width="70" height="34.333333333333314"/>
+                                        <color key="backgroundColor" red="0.10414077300000001" green="0.10414077300000001" blue="0.10414077300000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Attact"/>
+                                        <connections>
+                                            <action selector="attackButton:" destination="w4I-j2-1Fh" eventType="touchUpInside" id="NNi-ra-yUZ"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mıssıon statte" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFb-lU-WOM">
+                                        <rect key="frame" x="87.333333333333329" y="419.33333333333331" width="178.66666666666669" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="goldLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT0-5i-i4n">
+                                        <rect key="frame" x="112.66666666666666" y="419.33333333333331" width="127.66666666666666" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH2-hF-WQE">
                                 <rect key="frame" x="0.0" y="808" width="393" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -323,52 +787,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="rbS-gm-pgu">
-                                <rect key="frame" x="20" y="284.66666666666674" width="353" height="473.33333333333326"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDark" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-HE-PtU">
-                                        <rect key="frame" x="143.33333333333334" y="0.0" width="66.333333333333343" height="67"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="huntName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEd-6Q-zUt">
-                                        <rect key="frame" x="109.00000000000001" y="167" width="135.33333333333337" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="huntPow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhP-7G-31p">
-                                        <rect key="frame" x="119.66666666666666" y="302.99999999999994" width="113.66666666666666" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyB-dX-E4g">
-                                        <rect key="frame" x="20" y="438.99999999999994" width="313" height="34.333333333333314"/>
-                                        <color key="backgroundColor" red="0.10414077300000001" green="0.10414077300000001" blue="0.10414077300000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Attact"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="tyB-dX-E4g" secondAttribute="trailing" constant="20" id="4E0-Q2-W8c"/>
-                                    <constraint firstItem="tyB-dX-E4g" firstAttribute="leading" secondItem="rbS-gm-pgu" secondAttribute="leading" constant="20" id="lri-m9-ySg"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7CJ-wZ-Tlx"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rbS-gm-pgu" firstAttribute="leading" secondItem="7CJ-wZ-Tlx" secondAttribute="leading" constant="20" id="1Ch-s3-OQH"/>
-                            <constraint firstItem="MH2-hF-WQE" firstAttribute="leading" secondItem="7CJ-wZ-Tlx" secondAttribute="leading" id="VrK-oc-5xx"/>
-                            <constraint firstItem="7CJ-wZ-Tlx" firstAttribute="bottom" secondItem="MH2-hF-WQE" secondAttribute="bottom" id="aqX-gk-4aC"/>
-                            <constraint firstItem="MH2-hF-WQE" firstAttribute="top" secondItem="rbS-gm-pgu" secondAttribute="bottom" constant="50" id="cDe-2R-e87"/>
-                            <constraint firstItem="7CJ-wZ-Tlx" firstAttribute="trailing" secondItem="rbS-gm-pgu" secondAttribute="trailing" constant="20" id="vVV-BH-yV9"/>
-                            <constraint firstAttribute="trailing" secondItem="MH2-hF-WQE" secondAttribute="trailing" id="yLv-Xf-R9V"/>
+                            <constraint firstItem="rbS-gm-pgu" firstAttribute="leading" secondItem="7CJ-wZ-Tlx" secondAttribute="leading" constant="20" id="4Ff-R5-Cmy"/>
+                            <constraint firstItem="MH2-hF-WQE" firstAttribute="leading" secondItem="7CJ-wZ-Tlx" secondAttribute="leading" id="6Bp-AY-ruG"/>
+                            <constraint firstItem="MH2-hF-WQE" firstAttribute="trailing" secondItem="7CJ-wZ-Tlx" secondAttribute="trailing" id="Cx1-bS-qlt"/>
+                            <constraint firstItem="7CJ-wZ-Tlx" firstAttribute="trailing" secondItem="rbS-gm-pgu" secondAttribute="trailing" constant="20" id="Vcg-Vf-bcG"/>
+                            <constraint firstItem="rbS-gm-pgu" firstAttribute="top" secondItem="7CJ-wZ-Tlx" secondAttribute="top" constant="40" id="Yyw-61-LaY"/>
+                            <constraint firstItem="7CJ-wZ-Tlx" firstAttribute="bottom" secondItem="MH2-hF-WQE" secondAttribute="bottom" id="pVp-5X-YDq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attactButton" destination="tyB-dX-E4g" id="bEq-hV-SRX"/>
+                        <outlet property="goldLabel" destination="DT0-5i-i4n" id="DA1-sQ-4vJ"/>
+                        <outlet property="huntHealth" destination="KdU-dS-qMM" id="0s0-5H-bLB"/>
                         <outlet property="huntName" destination="nEd-6Q-zUt" id="fsn-dz-KtY"/>
                         <outlet property="huntPow" destination="UhP-7G-31p" id="XgA-BJ-Vqx"/>
+                        <outlet property="missionMonsterImage" destination="ybG-HE-PtU" id="PYA-Ep-YmZ"/>
+                        <outlet property="missionResult" destination="HFb-lU-WOM" id="cZF-UT-50e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZJ-rw-K0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -385,8 +823,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pxx-Um-O5g"/>
-        <segue reference="uAC-hf-Ryo"/>
+        <segue reference="HdV-vF-Heo"/>
+        <segue reference="4Pw-V0-JCR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
@@ -394,6 +832,9 @@
         <image name="profileDark" width="66.333335876464844" height="67"/>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
