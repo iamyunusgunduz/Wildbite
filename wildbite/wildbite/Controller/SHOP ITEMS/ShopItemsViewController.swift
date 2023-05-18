@@ -23,5 +23,7 @@ class ShopItemsViewController: UIViewController {
         print("Shop Name: \(UserDefaults.standard.string(forKey: "ShopMenuAD")!)")
        
     }
+    // shop id 7 ayakkabı yani bot
+    // 1:gold 2 : diamond
 
 }

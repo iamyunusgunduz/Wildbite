@@ -10,6 +10,7 @@
 		012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */; };
 		0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0176F6742A0D2D95009B5749 /* ShopItems.storyboard */; };
 		0176F6782A0D2F50009B5749 /* ShopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */; };
+		01857B492A16D00F0040564F /* NightMissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01857B482A16D00F0040564F /* NightMissionModel.swift */; };
 		01936DD62A05973100780FB3 /* WARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DD52A05973100780FB3 /* WARViewController.swift */; };
 		01936DDB2A05B11200780FB3 /* ChosenWarTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */; };
 		01936DDD2A05B18900780FB3 /* ChosenWarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */; };
@@ -67,6 +68,7 @@
 		012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRaceModel.swift; sourceTree = "<group>"; };
 		0176F6742A0D2D95009B5749 /* ShopItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopItems.storyboard; sourceTree = "<group>"; };
 		0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemsViewController.swift; sourceTree = "<group>"; };
+		01857B482A16D00F0040564F /* NightMissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightMissionModel.swift; sourceTree = "<group>"; };
 		01936DD52A05973100780FB3 /* WARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WARViewController.swift; sourceTree = "<group>"; };
 		01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarTypeViewController.swift; sourceTree = "<group>"; };
 		01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarModel.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 		889B87BE29D646BC00E3DF4E /* ADMIN */ = {
 			isa = PBXGroup;
 			children = (
+				88C6802E29E6059F00719CC0 /* SHOP ITEM ADD */,
 				889B87BF29D646E600E3DF4E /* Admin.storyboard */,
 			);
 			path = ADMIN;
@@ -397,6 +400,7 @@
 				88FD0C5629E8550B00C8C152 /* ItemSellModel.swift */,
 				01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */,
 				012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */,
+				01857B482A16D00F0040564F /* NightMissionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,7 +409,6 @@
 			isa = PBXGroup;
 			children = (
 				0176F6732A0D2D75009B5749 /*  SHOP ITEMS */,
-				88C6802E29E6059F00719CC0 /* SHOP ITEM ADD */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
 				88CCB2A829DF894600C9F1D8 /* MONSTER HUNT */,
@@ -567,6 +570,7 @@
 				887EC82329E75CC90097D386 /* WITCHRegisterViewController.swift in Sources */,
 				88E508E929D4913200E9E557 /* RegisterViewController.swift in Sources */,
 				88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */,
+				01857B492A16D00F0040564F /* NightMissionModel.swift in Sources */,
 				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
 				012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */,
 				88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */,
@@ -732,6 +736,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -766,6 +771,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (

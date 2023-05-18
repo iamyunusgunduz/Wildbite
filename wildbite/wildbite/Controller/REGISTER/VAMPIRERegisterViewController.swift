@@ -91,7 +91,7 @@ class VAMPIRERegisterViewController: UIViewController {
                 
             ]
 
-          let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userrace, level: userlevel, exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: userimage)
+        let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userrace, level: userlevel, night_mission_state:"1", exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: userimage)
           
            AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(useridUSS)",
                       method: .put,
@@ -105,7 +105,7 @@ class VAMPIRERegisterViewController: UIViewController {
                switch response.result {
                case .success:
                    print("Register Successful")
-                   
+                       self.performSegue(withIdentifier: "registerRaceToLogin", sender: nil)
                        let registerRaceresponse = try? JSONDecoder().decode(RegisterRaceModel.self,  from: response.data!)
 
                    debugPrint(registerRaceresponse ?? "ne oldi")

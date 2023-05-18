@@ -88,7 +88,7 @@ class HUNTERRegisterViewController: UIViewController {
                 
             ]
 
-          let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userrace, level: userlevel, exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: userimage)
+        let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userrace, level: userlevel, night_mission_state:"1", exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: userimage)
           
            AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(useridUSS)",
                       method: .put,
@@ -104,31 +104,20 @@ class HUNTERRegisterViewController: UIViewController {
                    print("Register Successful")
                    
                        let registerRaceresponse = try? JSONDecoder().decode(RegisterRaceModel.self,  from: response.data!)
-
+                       self.performSegue(withIdentifier: "registerRaceToLogin", sender: nil)
                    debugPrint(registerRaceresponse ?? "ne oldi")
                    if(registerRaceresponse?.the1 == nil){
                        print("Debug: Message:  \(registerRaceresponse?.the1 ?? "bisey oldu")")
                        return
                    }
-                 
-                   
-                  
-                       
-                       
-                       
+
                        if(registerRaceresponse!.the1 == "User updated"){
                        self.performSegue(withIdentifier: "registerRaceToLogin", sender: nil)
-                      
-                       
-                       
-                       
-                    
+
                    }else{
                        print("DEBUG: Kayit olunamadi mesaji döndü")
                    }
-                    
-                   
-                   
+
                case let .failure(error):
                    print(error.errorDescription!)
                    print("hata")

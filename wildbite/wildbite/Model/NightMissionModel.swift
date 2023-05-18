@@ -1,38 +1,35 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let registerRace = try? JSONDecoder().decode(RegisterRaceModel.self, from: jsonData)
+//   let nightMissionModel = try? JSONDecoder().decode(NightMissionModel.self, from: jsonData)
 
 import Foundation
 
-// MARK: - RegisterRace
-struct RegisterRaceModel: Codable {
-    let the0, the1: String
-    let user: UserRegisterRace
-
-    enum CodingKeys: String, CodingKey {
-        case the0 = "0"
-        case the1 = "1"
-        case user
-    }
+// MARK: - NightMissionModel
+struct NightMissionModel: Codable {
+    let user: UserNightMissionModel
 }
 
 // MARK: - User
-struct UserRegisterRace: Codable {
+struct UserNightMissionModel: Codable {
     let id: Int
-    let night_mission_state: String
     let name, email: String
-    let emailVerifiedAt: JSONNull?
-    let role, exp, level, warTotal: String
-    let warTotalWin, warTotalLose, warTotalGold, gold: String
+    let emailVerifiedAt: JSONNullNMissoin?
+    let role: String
+    let exp, level: Int
+    let warTotal, warTotalWin, warTotalLose, warTotalGold: String
+    let gold: Int
     let diamond, totalDamage, power, defense: String
-    let speed, totalHunt, totalSuccessHunt, currentHealth: String
-    let maximumHealth, regenerateHealthRange, currentEnergy, maximumEnergy: String
+    let speed, totalHunt, totalSuccessHunt: String
+    let currentHealth, maximumHealth: Int
+    let regenerateHealthRange: String
+    let currentEnergy, maximumEnergy: Int
+    let nightMissionState: String
     let image: String
     let createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
-        case id, name, email,night_mission_state
+        case id, name, email
         case emailVerifiedAt = "email_verified_at"
         case role, exp, level
         case warTotal = "war_total"
@@ -49,6 +46,7 @@ struct UserRegisterRace: Codable {
         case regenerateHealthRange = "regenerate_health_range"
         case currentEnergy = "current_energy"
         case maximumEnergy = "maximum_energy"
+        case nightMissionState = "night_mission_state"
         case image
         case createdAt = "created_at"
         case updatedAt = "updated_at"
@@ -57,12 +55,13 @@ struct UserRegisterRace: Codable {
 
 // MARK: - Encode/decode helpers
 
-class JSONNullRegisterRace: Codable, Hashable {
+class JSONNullNMissoin: Codable, Hashable {
 
-    public static func == (lhs: JSONNullRegisterRace, rhs: JSONNullRegisterRace) -> Bool {
+    public static func == (lhs: JSONNullNMissoin, rhs: JSONNullNMissoin) -> Bool {
         return true
     }
 
+  
     public func hash(into hasher: inout Hasher) {
             hasher.combine(0)
         }
@@ -72,7 +71,7 @@ class JSONNullRegisterRace: Codable, Hashable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+            throw DecodingError.typeMismatch(JSONNullNMissoin.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
         }
     }
 
@@ -81,20 +80,28 @@ class JSONNullRegisterRace: Codable, Hashable {
         try container.encodeNil()
     }
 }
-struct RegisterRace: Encodable {
+
+struct NightMissionYapi: Encodable {
+    let gold:Int
+    let current_health:Int
+    let maximum_health:Int
+    let current_energy:Int
+    let maximum_energy:Int
+    let level:Int
+    let night_mission_state:String
+    let exp:Int
+    /*
     let name: String
     let email: String
     let password: String
     let role:Int
     let race:Int
-    let level:Int
-    let night_mission_state:String
-    let exp:Int
+    let regenerate_health_range:Int
     let war_total:Int
     let war_total_win:Int
     let war_total_lose:Int
     let war_total_gold:Int
-    let gold:Int
+    let image: String
     let diamond:Int
     let total_damage:Int
     let power:Int
@@ -102,10 +109,6 @@ struct RegisterRace: Encodable {
     let speed:Int
     let total_hunt:Int
     let total_success_hunt:Int
-    let current_health:Int
-    let maximum_health:Int
-    let regenerate_health_range:Int
-    let current_energy:Int
-    let maximum_energy:Int
-    let image: String
+    */
+   
 }

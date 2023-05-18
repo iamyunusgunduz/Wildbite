@@ -91,39 +91,41 @@ class NightMissionViewController: UIViewController {
                         UserDefaults.standard.set(profileModelresponse!.user.currentEnergy, forKey: "NightMissionUserEnergy")
                         UserDefaults.standard.set(profileModelresponse!.user.level, forKey: "NightMissionUserLevel")
                         
-                        let missionYapilabilmedurumu =  "3" // apiden gelcek  ve ona gore duzenlenıcek bu kısım
-                        let userLevel = Int(profileModelresponse!.user.level)
-                        
-                        if( userLevel! <= 1  && missionYapilabilmedurumu == "1") {nmButton1.isEnabled = true}
-                        if( userLevel! <= 3  && missionYapilabilmedurumu == "3") {nmButton2.isEnabled = true}
-                        if( userLevel! <= 5  && missionYapilabilmedurumu == "5") {nmButton3.isEnabled = true}
-                        if(profileModelresponse!.user.level == "7") {nmButton4.isEnabled = true}
-                        if(profileModelresponse!.user.level == "9") {nmButton5.isEnabled = true}
-                        if(profileModelresponse!.user.level == "10") {nmButton6.isEnabled = true}
-                        if(profileModelresponse!.user.level == "11") {nmButton7.isEnabled = true}
-                        if(profileModelresponse!.user.level == "13") {nmButton8.isEnabled = true}
-                        if(profileModelresponse!.user.level == "15") {nmButton9.isEnabled = true}
-                        if(profileModelresponse!.user.level == "17") {nmButton10.isEnabled = true}
-                        if(profileModelresponse!.user.level == "19") {nmButton11.isEnabled = true}
-                        if(profileModelresponse!.user.level == "20") {nmButton12.isEnabled = true}
-                        if(profileModelresponse!.user.level == "21") {nmButton13.isEnabled = true}
-                        if(profileModelresponse!.user.level == "23") {nmButton14.isEnabled = true}
-                        if(profileModelresponse!.user.level == "25") {nmButton15.isEnabled = true}
-                        if(profileModelresponse!.user.level == "27") {nmButton16.isEnabled = true}
-                        if(profileModelresponse!.user.level == "29") {nmButton17.isEnabled = true}
-                        if(profileModelresponse!.user.level == "30") {nmButton18.isEnabled = true}
-                        if(profileModelresponse!.user.level == "31") {nmButton19.isEnabled = true}
-                        if(profileModelresponse!.user.level == "33") {nmButton20.isEnabled = true}
-                        if(profileModelresponse!.user.level == "35") {nmButton21.isEnabled = true}
-                        if(profileModelresponse!.user.level == "37") {nmButton22.isEnabled = true}
-                        if(profileModelresponse!.user.level == "39") {nmButton23.isEnabled = true}
-                        if(profileModelresponse!.user.level == "40") {nmButton24.isEnabled = true}
-                        if(profileModelresponse!.user.level == "41") {nmButton25.isEnabled = true}
-                        if(profileModelresponse!.user.level == "43") {nmButton26.isEnabled = true}
-                        if(profileModelresponse!.user.level == "45") {nmButton27.isEnabled = true}
-                        if(profileModelresponse!.user.level == "47") {nmButton28.isEnabled = true}
-                        if(profileModelresponse!.user.level == "49") {nmButton29.isEnabled = true}
-                        if(profileModelresponse!.user.level == "50") {nmButton30.isEnabled = true}
+                        let missionYapilabilmedurumu = Int(profileModelresponse!.user.night_mission_state)  // apiden
+                       let userLevel = Int(profileModelresponse!.user.level)
+                       // let userLevel = Int("5")
+                        dump("User userLevel : \(userLevel!)")
+                        dump("User missionYapilabilmedurumu : \(missionYapilabilmedurumu!)")
+                        if( userLevel! >= 1  && missionYapilabilmedurumu == 1) {nmButton1.isEnabled = true}
+                        if( userLevel! >= 3  && missionYapilabilmedurumu == 2) {nmButton2.isEnabled = true}
+                        if( userLevel! >= 5  && missionYapilabilmedurumu == 3) {nmButton3.isEnabled = true}
+                        if( userLevel! >= 7  && missionYapilabilmedurumu == 4){nmButton4.isEnabled = true}
+                        if( userLevel! >= 9  && missionYapilabilmedurumu == 5){nmButton5.isEnabled = true}
+                        if( userLevel! >= 10  && missionYapilabilmedurumu == 6){nmButton6.isEnabled = true}
+                        if( userLevel! >= 11  && missionYapilabilmedurumu == 7){nmButton7.isEnabled = true}
+                        if( userLevel! >= 13  && missionYapilabilmedurumu == 8){nmButton8.isEnabled = true}
+                        if( userLevel! >= 15  && missionYapilabilmedurumu == 9){nmButton9.isEnabled = true}
+                        if( userLevel! >= 17  && missionYapilabilmedurumu == 10){nmButton10.isEnabled = true}
+                        if( userLevel! >= 19  && missionYapilabilmedurumu == 11){nmButton11.isEnabled = true}
+                        if( userLevel! >= 20  && missionYapilabilmedurumu == 12){nmButton12.isEnabled = true}
+                        if( userLevel! >= 21  && missionYapilabilmedurumu == 13){nmButton13.isEnabled = true}
+                        if( userLevel! >= 23  && missionYapilabilmedurumu == 14){nmButton14.isEnabled = true}
+                        if( userLevel! >= 25  && missionYapilabilmedurumu == 15){nmButton15.isEnabled = true}
+                        if( userLevel! >= 27  && missionYapilabilmedurumu == 16){nmButton16.isEnabled = true}
+                        if( userLevel! >= 29  && missionYapilabilmedurumu == 17){nmButton17.isEnabled = true}
+                        if( userLevel! >= 30  && missionYapilabilmedurumu == 18){nmButton18.isEnabled = true}
+                        if( userLevel! >= 31  && missionYapilabilmedurumu == 19){nmButton19.isEnabled = true}
+                        if( userLevel! >= 33  && missionYapilabilmedurumu == 20){nmButton20.isEnabled = true}
+                        if( userLevel! >= 35  && missionYapilabilmedurumu == 21){nmButton21.isEnabled = true}
+                        if( userLevel! >= 37  && missionYapilabilmedurumu == 22){nmButton22.isEnabled = true}
+                        if( userLevel! >= 39  && missionYapilabilmedurumu == 23){nmButton23.isEnabled = true}
+                        if( userLevel! >= 40  && missionYapilabilmedurumu == 24){nmButton24.isEnabled = true}
+                        if( userLevel! >= 41  && missionYapilabilmedurumu == 25){nmButton25.isEnabled = true}
+                        if( userLevel! >= 43  && missionYapilabilmedurumu == 26){nmButton26.isEnabled = true}
+                        if( userLevel! >= 45  && missionYapilabilmedurumu == 27){nmButton27.isEnabled = true}
+                        if( userLevel! >= 47  && missionYapilabilmedurumu == 28){nmButton28.isEnabled = true}
+                        if( userLevel! >= 49  && missionYapilabilmedurumu == 29){nmButton29.isEnabled = true}
+                        if( userLevel! >= 50  && missionYapilabilmedurumu == 30){nmButton30.isEnabled = true}
                            
                       
                         
@@ -146,147 +148,147 @@ class NightMissionViewController: UIViewController {
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn3(_ sender: Any) {
-        var value = 3
+        var value = 2
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn5(_ sender: Any) {
-        var value = 5
+        var value = 3
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn7(_ sender: Any) {
-        var value = 7
+        var value = 4
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn9(_ sender: Any) {
-        var value = 9
+        var value = 5
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn10(_ sender: Any) {
-        var value = 10
+        var value = 6
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn11(_ sender: Any) {
-        var value = 11
+        var value = 7
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn13(_ sender: Any) {
-        var value = 13
+        var value = 8
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn15(_ sender: Any) {
-        var value = 15
+        var value = 9
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn17(_ sender: Any) {
-        var value = 17
+        var value = 10
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn19(_ sender: Any) {
-        var value = 19
+        var value = 11
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn20(_ sender: Any) {
-        var value = 20
+        var value = 12
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn21(_ sender: Any) {
-        var value = 21
+        var value = 13
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn23(_ sender: Any) {
-        var value = 23
+        var value = 14
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn25(_ sender: Any) {
-        var value = 25
+        var value = 15
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn27(_ sender: Any) {
-        var value = 27
+        var value = 16
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn29(_ sender: Any) {
-        var value = 29
+        var value = 17
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn30(_ sender: Any) {
-        var value = 30
+        var value = 18
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn31(_ sender: Any) {
-        var value = 31
+        var value = 19
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn33(_ sender: Any) {
-        var value = 33
+        var value = 20
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn35(_ sender: Any) {
-        var value = 35
+        var value = 21
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn37(_ sender: Any) {
-        var value = 37
+        var value = 22
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn39(_ sender: Any) {
-        var value = 39
+        var value = 23
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn40(_ sender: Any) {
-        var value = 40
+        var value = 24
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn41(_ sender: Any) {
-        var value = 41
+        var value = 25
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn43(_ sender: Any) {
-        var value = 43
+        var value = 26
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn45(_ sender: Any) {
-        var value = 45
+        var value = 27
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn47(_ sender: Any) {
-        var value = 47
+        var value = 28
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn49(_ sender: Any) {
-        var value = 49
+        var value = 29
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }
     @IBAction func btn50(_ sender: Any) {
-        var value = 50
+        var value = 30
         UserDefaults.standard.set(value, forKey: "NightMissionType")
         performSegue(withIdentifier: "NightMissionToCase", sender: nil)
     }

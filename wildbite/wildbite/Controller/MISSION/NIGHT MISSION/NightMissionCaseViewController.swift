@@ -13,11 +13,12 @@ class NightMissionCaseViewController: UIViewController {
 
     @IBOutlet weak var huntName: UILabel!
     @IBOutlet weak var huntHealth: UILabel!
-    @IBOutlet weak var missionResult: UILabel!
+   
     
+    @IBOutlet weak var huntResult: UILabel!
     @IBOutlet weak var attactButton: UIButton!
     @IBOutlet weak var huntPow: UILabel!
-    @IBOutlet weak var goldLabel: UILabel!
+    
     
     @IBOutlet weak var missionMonsterImage: UIImageView!
     override func viewDidLoad() {
@@ -33,32 +34,101 @@ class NightMissionCaseViewController: UIViewController {
         let NightMissionUserLevel = UserDefaults.standard.integer(forKey: "NightMissionUserLevel")
         let NightMissionUserName = UserDefaults.standard.string(forKey: "NightMissionUserName")
         let NightMissionUserTotalDamage = UserDefaults.standard.integer(forKey: "NightMissionUserTotalDamage")
+      //  let NightMissionUserTotalDamage = 99999999
         let NightMissionUserHealth = UserDefaults.standard.integer(forKey: "NightMissionUserHealth")
         let NightMissionUserEnergy = UserDefaults.standard.integer(forKey: "NightMissionUserEnergy")
         
-  
+      
+        let usertoken = UserDefaults.standard.string(forKey: "userToken")
+    
         
-        
-            if(NightMissionUserTotalDamage >= nightMissionType * 10){
+        // savas kismi
+
+            if(NightMissionUserTotalDamage >= nightMissionType * 10){ // kazanma durumu
                
-                missionResult.text = "\(NightMissionUserName!) WON \n\n + \(nightMissionType * 3)  Exp"
-               
-                attactButton.isHidden = true
-                missionResult.isHidden = false
-                goldLabel.isHidden = false
-            }else{
-                missionResult.isHidden = false
-                missionResult.text = "\(NightMissionUserName!) LOSE \n Health - \(nightMissionType * 10) \n Energy - \(nightMissionType * 5)"
-                missionResult.textColor = UIColor.red
+
+                // api  start
+               let headers: HTTPHeaders = [
+                   .authorization(bearerToken: usertoken!),
+                   .accept("application/json")
+               ]
+                let kazanilanGold = nightMissionType * 100
+                let kazanilanCan = nightMissionType * 10
+                let kazanilanExp = nightMissionType * 3
+                let kazanilanEnergy = nightMissionType * 9
+                
+                let nightMissionParameters = NightMissionYapi(gold: kazanilanGold, current_health: kazanilanCan, maximum_health: kazanilanCan, current_energy: kazanilanEnergy, maximum_energy: kazanilanEnergy, level: 0, night_mission_state: "\(nightMissionType+1)", exp: kazanilanExp )
+                
+              AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+                         method: .put,
+                         parameters: nightMissionParameters,
+                         headers: headers)
+              .validate(statusCode: 200..<500)
+              .validate(contentType: ["application/json"])
+              .responseData {  response in
+                  debugPrint(response)
+                  switch response.result {
+                  case .success:
+                          let NightMissionresponse = try? JSONDecoder().decode(NightMissionModel.self,  from: response.data!)
+                          debugPrint(NightMissionresponse!)
+                          self.attactButton.isHidden = true
+                          self.huntResult.text = "Av Başarılı: \n +\(kazanilanCan) Can \n +\(kazanilanExp) Exp \n +\(kazanilanGold) Gold \n +\(kazanilanEnergy) Enerji"
+                          self.huntResult.textColor = UIColor.systemGreen
+                  case let .failure(error):
+                      print(error.errorDescription!)
+                      print("hata")
+                  }
+              }
+            // api end
+                
+            }else{ // kaybetme durumu
+                attactButton.isHidden = false
+                
+                // api  start
+               let headers: HTTPHeaders = [
+                   .authorization(bearerToken: usertoken!),
+                   .accept("application/json")
+               ]
+                let kazanilanGold = nightMissionType * 100
+                let kazanilanCan = nightMissionType * 10
+                let kazanilanExp = nightMissionType * 3
+                let kazanilanEnergy = nightMissionType * 3
+                
+                let nightMissionParameters = NightMissionYapi(gold: -kazanilanGold, current_health: -kazanilanCan, maximum_health: 0, current_energy: -kazanilanEnergy, maximum_energy: 0, level: 0, night_mission_state: "\(nightMissionType)", exp: 0 )
+                
+              AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+                         method: .put,
+                         parameters: nightMissionParameters,
+                         headers: headers)
+              .validate(statusCode: 200..<500)
+              .validate(contentType: ["application/json"])
+              .responseData {  response in
+                  debugPrint(response)
+                  switch response.result {
+                  case .success:
+                          let NightMissionresponse = try? JSONDecoder().decode(NightMissionModel.self,  from: response.data!)
+                          debugPrint(NightMissionresponse!)
+                          
+                          self.huntResult.text = "Av Başarısız: \n -\(kazanilanCan) Can \n -\(kazanilanExp) Exp \n -\(kazanilanGold) Gold \n -\(kazanilanEnergy) Enerji"
+                          self.huntResult.textColor = UIColor.systemRed
+                          
+                  case let .failure(error):
+                      print(error.errorDescription!)
+                      print("hata")
+                  }
+              }
+            // api end
                 
                 
             }
-            
-            
+     
+
+        
         
         
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         
      
@@ -70,17 +140,19 @@ class NightMissionCaseViewController: UIViewController {
         let NightMissionUserHealth = UserDefaults.standard.integer(forKey: "NightMissionUserHealth")
         let NightMissionUserEnergy = UserDefaults.standard.integer(forKey: "NightMissionUserEnergy")
         
-      
-     
+        dump("User Total Damage : \(NightMissionUserTotalDamage)")
+        dump("User missionYapilabilmedurumu : \(nightMissionType)")
+        //mosnter resimleri
         let url = URL(string: "http://yunusgunduz.site/wildbite/image/missions/nightboss/\(nightMissionType).png")
         DispatchQueue.main.async{ [self] in
             missionMonsterImage.kf.setImage(with: url)
         }
         
         huntPow.text = "Monster Power: \(nightMissionType * 10 )"
-        goldLabel.text = " +\(nightMissionType * 1000 ) GOLD"
+      
         huntHealth.text = "Health : \(nightMissionType * 100 ) "
         
+        // monster isimleri
         switch nightMissionType {
             case 1:  huntName.text = "Shadowbeast"
             case 3:  huntName.text = "Steelclaw"
@@ -115,8 +187,9 @@ class NightMissionCaseViewController: UIViewController {
                
             default:  huntName.text = "monster name"
         }
-   
-      
+  
+        
+        
     }
 
     

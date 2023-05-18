@@ -15,6 +15,7 @@ struct ProfileModel: Codable {
 // MARK: - Item
 struct Item: Codable {
     let id: Int
+    let night_mission_state: String
     let name, level, price, priceType: String
     let priceBuy, priceSell, dressMinLevel, defense: String
     let power, health, speed: String
@@ -22,7 +23,7 @@ struct Item: Codable {
     let createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
-        case id, name, level, price
+        case id, name, level, price,night_mission_state
         case priceType = "price_type"
         case priceBuy = "price_buy"
         case priceSell = "price_sell"
@@ -46,6 +47,7 @@ struct Race: Codable {
 // MARK: - User
 struct UserProfile: Codable {
     let id: Int
+    let night_mission_state: String
     let name, email: String
     let emailVerifiedAt: JSONNullProfile?
     let role, exp, level, warTotal: String
@@ -56,7 +58,7 @@ struct UserProfile: Codable {
     let image, createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
-        case id, name, email
+        case id, name, email,night_mission_state
         case emailVerifiedAt = "email_verified_at"
         case role, exp, level
         case warTotal = "war_total"
