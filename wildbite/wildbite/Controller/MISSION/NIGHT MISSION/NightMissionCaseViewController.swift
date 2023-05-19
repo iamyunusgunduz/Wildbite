@@ -73,6 +73,7 @@ class NightMissionCaseViewController: UIViewController {
                           debugPrint(NightMissionresponse!)
                           self.attactButton.isHidden = true
                           self.huntResult.text = "Av Başarılı: \n +\(kazanilanCan) Can \n +\(kazanilanExp) Exp \n +\(kazanilanGold) Gold \n +\(kazanilanEnergy) Enerji"
+                          UserDefaults.standard.set(nightMissionType+1, forKey: "NightMissionType")
                           self.huntResult.textColor = UIColor.systemGreen
                   case let .failure(error):
                       print(error.errorDescription!)
