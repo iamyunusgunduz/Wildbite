@@ -182,7 +182,7 @@ class NightMissionCaseViewController: UIViewController {
             case 43:  huntName.text = "Bloodcleave"
             case 45:  huntName.text = "Moonshadow"
             case 47:  huntName.text = "Blackdeath"
-            case 49:  huntName.text = "Ironrend"
+            case 49:  huntName.text = "IronBroker"
             case 50:  huntName.text = "Thundergaze"
                
             default:  huntName.text = "monster name"
