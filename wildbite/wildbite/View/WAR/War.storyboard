@@ -208,7 +208,7 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-Ru-RIY">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-Ru-RIY">
                                         <rect key="frame" x="91.000000000000014" y="380.66666666666669" width="171.33333333333337" height="34.333333333333314"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
@@ -218,7 +218,7 @@
                                             <segue destination="gkF-sT-80y" kind="presentation" modalPresentationStyle="fullScreen" id="lVu-zy-xHr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouh-Ki-ZF9">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouh-Ki-ZF9">
                                         <rect key="frame" x="98.666666666666671" y="425" width="155.66666666666663" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Again (-1 Energy)"/>
@@ -262,6 +262,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="againButton" destination="Ouh-Ki-ZF9" id="EvB-lX-gGK"/>
                         <outlet property="enemyDamage" destination="fgz-sn-BQM" id="9zH-Kg-L5d"/>
                         <outlet property="enemyDefance" destination="kYa-Ub-nWz" id="FYt-e4-iKn"/>
                         <outlet property="enemyHealth" destination="o0k-ca-jFj" id="iJK-8G-Par"/>
@@ -271,6 +272,7 @@
                         <outlet property="enemyRole" destination="fYV-zH-pUa" id="ihk-Bg-Zx8"/>
                         <outlet property="enemySpeed" destination="6Wu-lx-9mk" id="nnN-fB-rop"/>
                         <outlet property="enemynameLabel" destination="ARC-eM-kM7" id="qBC-Ov-bh1"/>
+                        <outlet property="figgtButton" destination="FTR-Ru-RIY" id="rrS-Yf-ile"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S30-o8-Wv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -643,6 +645,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="lVu-zy-xHr"/>
         <segue reference="F3r-8S-iFq"/>
     </inferredMetricsTieBreakers>
     <resources>

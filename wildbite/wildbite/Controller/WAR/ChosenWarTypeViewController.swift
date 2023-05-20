@@ -27,7 +27,9 @@ class ChosenWarTypeViewController: UIViewController {
     
     @IBOutlet weak var enemyProfileImage: UIImageView!
     
+    @IBOutlet weak var figgtButton: UIButton!
     
+    @IBOutlet weak var againButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +38,24 @@ class ChosenWarTypeViewController: UIViewController {
     }
     
     fileprivate func loadWarProfileEnemy() {
+        
         let myUserID = UserDefaults.standard.value(forKey: "userID")
         
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
         let myChoosenWartype = UserDefaults.standard.value(forKey: "choosenWartype") as! Int
+        let WarSaldiranUserCurrentEnergy = UserDefaults.standard.integer(forKey: "WarSaldiranUserCurrentEnergy")
+        if(WarSaldiranUserCurrentEnergy >= 1){
+            againButton.isEnabled = true
+            if(WarSaldiranUserCurrentEnergy >= 10){
+                 figgtButton.isEnabled = true
+            }else{
+                 
+                figgtButton.isEnabled = false
+            }
+        }else{
+            againButton.isEnabled = false
+            figgtButton.isEnabled = false
+        }
         print("User Id: \(myUserID!)")
         
         print("User Token: \(myUserToken!)")
@@ -71,7 +87,7 @@ class ChosenWarTypeViewController: UIViewController {
                     
                     
                     
-                    print(chosenWar!)
+                    print(chosenWar ?? "Choosen var hata oldu")
                    
                     if(chosenWar == nil){
                         loadWarProfileEnemy()
@@ -160,6 +176,8 @@ class ChosenWarTypeViewController: UIViewController {
                         dump("Api usercurenthealth: \(chosenWar!.user.currentHealth)")
                         dump("Api usermaxhealth: \(chosenWar!.user.maximumHealth)")
                         dump("Api usercurentenergy: \(chosenWar!.user.currentEnergy)")
+                        
+                     
                         dump("Api usermaxenergy: \(chosenWar!.user.maximumEnergy)")
                       
                         dump("Api userdamaga: \(chosenWar!.user.totalDamage)")
@@ -202,7 +220,11 @@ class ChosenWarTypeViewController: UIViewController {
             }
     }
     @IBAction func againChooseButton(_ sender: Any) {
-        
+        self.againButton.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.againButton.isHidden = false
+        }
+   
         let myChoosenNumber = UserDefaults.standard.value(forKey: "choosenWarNumber")
         if(myChoosenNumber as! String == "random" ){
             let random = Int.random(in: 1...4)
@@ -221,8 +243,9 @@ class ChosenWarTypeViewController: UIViewController {
         let WarSaldiranUserGold = UserDefaults.standard.integer(forKey: "WarSaldiranUserGold")
         let WarSaldiranUserCurrentHealth = UserDefaults.standard.integer(forKey: "WarSaldiranUserCurrentHealth")
         let WarSaldiranUserMaximumHealth = UserDefaults.standard.integer(forKey: "WarSaldiranUserMaximumHealth")
-        let WarSaldiranUserCurrentEnergy = UserDefaults.standard.integer(forKey: "WarSaldiranUserCurrentEnergy")
+         
         let WarSaldiranUserMaximumEnergy = UserDefaults.standard.integer(forKey: "WarSaldiranUserMaximumEnergy")
+      
         let WarSaldiranUserNightMissionState = UserDefaults.standard.integer(forKey: "WarSaldiranUserNightMissionState")
         let WarSaldiranUserTotalDamage = UserDefaults.standard.integer(forKey: "WarSaldiranUserTotalDamage")
         let WarSaldiranUserPower = UserDefaults.standard.integer(forKey: "WarSaldiranUserPower")
@@ -231,6 +254,7 @@ class ChosenWarTypeViewController: UIViewController {
         let WarSaldiranUserRacename = UserDefaults.standard.integer(forKey: "WarSaldiranUserRacename")
          */ 
         let WarSaldiranUserNightMissionState = UserDefaults.standard.integer(forKey: "WarSaldiranUserNightMissionState")
+        let WarSaldiranUserCurrentEnergy = UserDefaults.standard.integer(forKey: "WarSaldiranUserCurrentEnergy")
         let usertoken = UserDefaults.standard.string(forKey: "userToken")
         // api  start
        let headers: HTTPHeaders = [
@@ -252,8 +276,8 @@ class ChosenWarTypeViewController: UIViewController {
           switch response.result {
           case .success:
                   let NightMissionresponse = try? JSONDecoder().decode(NightMissionModel.self,  from: response.data!)
-                  debugPrint(NightMissionresponse!)
-                
+                  debugPrint(NightMissionresponse ?? "NightMissionresponse hata oldu " )
+                  UserDefaults.standard.set(WarSaldiranUserCurrentEnergy - 1, forKey: "WarSaldiranUserCurrentEnergy")
                   self.loadWarProfileEnemy()
                   
           case let .failure(error):
@@ -268,7 +292,21 @@ class ChosenWarTypeViewController: UIViewController {
         loadWarProfileEnemy()
         let nightMissionType = UserDefaults.standard.integer(forKey: "NightMissionType")
         dump("nightMissionType: \(nightMissionType)")
+        let WarSaldiranUserCurrentEnergy = UserDefaults.standard.integer(forKey: "WarSaldiranUserCurrentEnergy")
+        if(WarSaldiranUserCurrentEnergy >= 1){
+            againButton.isEnabled = true
+            if(WarSaldiranUserCurrentEnergy >= 10){
+                 figgtButton.isEnabled = true
+            }else{
+                 
+                figgtButton.isEnabled = false
             }
+        }else{
+            againButton.isEnabled = false
+            figgtButton.isEnabled = false
+        }
+       
+    }
     }
    
     

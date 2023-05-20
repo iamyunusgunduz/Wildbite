@@ -40,7 +40,7 @@ class WarCaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //MARK: - Do any additional setup after loading the view.
     }
     
 
@@ -102,10 +102,15 @@ class WarCaseViewController: UIViewController {
         dump("Hiz Farki: \(hizFarki)")
                            if(damageFarki >= 0){kazanan = "saldiran"} else {kazanan = "savunan"} // şimdilik kazanan toplam damage ile belirleniyor
         print("Kazanan = \(kazanan)")
+        let headers: HTTPHeaders = [
+            .authorization(bearerToken: usertoken!),
+            .accept("application/json")
+        ]
         
         switch kazanan{
-            case "saldiran":
-                // kazanan tarafi
+            case "saldiran":   //MARK: saldiran kazandi Case
+                
+              
                 kazananName.text = "\(WarSaldiranUserName!)"
                 if(WarSaldiranUserRacename == 1){kazananRace.text = "Avcı"}
                 if(WarSaldiranUserRacename == 2){kazananRace.text = "KurtAdam"}
@@ -118,7 +123,7 @@ class WarCaseViewController: UIViewController {
                 kazananSpeed.text = "\(WarSaldiranUserSpeed)"
                 kazananHealth.text = "\(WarSaldiranUserCurrentHealth)"
                 
-                // kaybeden tarafi
+               
                 kaybedenName.text = "   \(WarSavunanUserName!)"
                 if(WarSavunanUserRacename == "1"){kaybedenRace.text = "Avcı"}
                 if(WarSavunanUserRacename == "2"){kaybedenRace.text = "KurtAdam"}
@@ -131,16 +136,46 @@ class WarCaseViewController: UIViewController {
                 kaybedenSpeed.text = "\(WarSavunanUserSpeed)"
                 kaybedenHealth.text = "\(WarSavunanUserMaximumHealth)"
                 
-                // image
+              
                 let urlKazanan = URL(string: "\(WarSaldiranUserImage!)")
                 let urlSavunan = URL(string: "\(WarSavunanUserImage!)")
             DispatchQueue.main.async{
                 self.kazananImage.kf.setImage(with: urlKazanan)
                 self.kaybedenImage.kf.setImage(with: urlSavunan)
-            }
                 
-            case "savunan":
-                // kazanan tarafi
+                
+            }
+                //MARK: api  start
+                var kazanilanCan =  (WarSavunanUserMaximumHealth * 30 ) / 100
+                var kazanilanAltin =  (WarSavunanUserGold * 20 ) / 100
+                var kazanilanExp = levelFarki * 3
+         
+                let nightMissionParameters = NightMissionYapi(gold: kazanilanAltin, current_health:kazanilanCan, maximum_health: 0, current_energy: -10, maximum_energy: 0, level: 0, night_mission_state: "\(WarSaldiranUserNightMissionState)", exp: kazanilanExp )
+                
+              AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+                         method: .put,
+                         parameters: nightMissionParameters,
+                         headers: headers)
+              .validate(statusCode: 200..<500)
+              .validate(contentType: ["application/json"])
+              .responseData {  response in
+                  debugPrint(response)
+                  switch response.result {
+                  case .success:
+                          let NightMissionresponse = try? JSONDecoder().decode(NightMissionModel.self,  from: response.data!)
+                          debugPrint(NightMissionresponse!)
+                          UserDefaults.standard.set(WarSaldiranUserCurrentEnergy - 10, forKey: "WarSaldiranUserCurrentEnergy")
+                      
+                          
+                  case let .failure(error):
+                      print(error.errorDescription!)
+                      print("hata")
+                  }
+              }
+                 
+                
+            case "savunan": //MARK: - savunan kazandi Case
+                
                 kazananName.text = "\(WarSavunanUserName!)"
                 if(WarSavunanUserRacename == "1"){kazananRace.text = "Avcı"}
                 if(WarSavunanUserRacename == "2"){kazananRace.text = "KurtAdam"}
@@ -173,13 +208,41 @@ class WarCaseViewController: UIViewController {
                     self.kazananImage.kf.setImage(with: urlKazanan)
                     self.kaybedenImage.kf.setImage(with: urlSavunan)
                 }
-                
-            default:
+                //MARK:  api  start
+                var kaybedilenCan =  (WarSavunanUserMaximumHealth * 30 ) / 100
+                var kaybedilenAltin =  (WarSavunanUserGold * 20 ) / 100
+                 
+                let nightMissionParameters = NightMissionYapi(gold: -kaybedilenAltin, current_health: -kaybedilenCan, maximum_health: 0, current_energy: -10, maximum_energy: 0, level: 0, night_mission_state: "\(WarSaldiranUserNightMissionState)", exp: 0 )
+            
+             
+              AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+                         method: .put,
+                         parameters: nightMissionParameters,
+                         headers: headers)
+              .validate(statusCode: 200..<500)
+              .validate(contentType: ["application/json"])
+              .responseData {  response in
+                  debugPrint(response)
+                  switch response.result {
+                  case .success:
+                          let NightMissionresponse = try? JSONDecoder().decode(NightMissionModel.self,  from: response.data!)
+                          debugPrint(NightMissionresponse!)
+                        
+                          UserDefaults.standard.set(WarSaldiranUserCurrentEnergy - 10, forKey: "WarSaldiranUserCurrentEnergy")
+                          
+                  case let .failure(error):
+                      print(error.errorDescription!)
+                      print("hata")
+                  }
+              }
+             default:
                 break
         }
        
            
-            
+        
+        
+       
              
         }
         
