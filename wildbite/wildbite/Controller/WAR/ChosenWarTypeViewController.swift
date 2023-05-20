@@ -93,13 +93,13 @@ class ChosenWarTypeViewController: UIViewController {
                         
                             switch myChoosenWartype {
                                 case 1:
-                                    enemyRole.text = "Role: HUNTER "
+                                    enemyRole.text = "Race: HUNTER "
                                 case 2:
-                                    enemyRole.text = "Role: WEREWOLF "
+                                    enemyRole.text = "Race: WEREWOLF "
                                 case 3:
-                                    enemyRole.text = "Role: VAMPIRE "
+                                    enemyRole.text = "Race: VAMPIRE "
                                 case 4:
-                                    enemyRole.text = "Role: WITCH "
+                                    enemyRole.text = "Race: WITCH "
                                 default:
                                     enemyRole.text = "-"
                             }
@@ -152,6 +152,43 @@ class ChosenWarTypeViewController: UIViewController {
                         }
                         
                         
+                        dump("Api username: \(chosenWar!.user.name)")
+                        dump("Api userrole: \(chosenWar!.user.role)")
+                        dump("Api userexp: \(chosenWar!.user.exp)")
+                        dump("Api userlevel: \(chosenWar!.user.level)")
+                        dump("Api usergold: \(chosenWar!.user.gold)")
+                        dump("Api usercurenthealth: \(chosenWar!.user.currentHealth)")
+                        dump("Api usermaxhealth: \(chosenWar!.user.maximumHealth)")
+                        dump("Api usercurentenergy: \(chosenWar!.user.currentEnergy)")
+                        dump("Api usermaxenergy: \(chosenWar!.user.maximumEnergy)")
+                      
+                        dump("Api userdamaga: \(chosenWar!.user.totalDamage)")
+                        dump("Api userpower: \(chosenWar!.user.power)")
+                        dump("Api userdefense: \(chosenWar!.user.defense)")
+                        dump("Api userspeed: \(chosenWar!.user.speed)")
+                        dump("Api userrace: \(myChoosenWartype)")
+                        dump("Api userimage: \(chosenWar!.user.image)")
+                       
+                        
+                        UserDefaults.standard.set(chosenWar!.user.name, forKey: "WarSavunanUserName")
+                        UserDefaults.standard.set(chosenWar!.user.role, forKey: "WarSavunanUserRole")
+                        UserDefaults.standard.set(chosenWar!.user.exp, forKey: "WarSavunanUserExp")
+                        UserDefaults.standard.set(chosenWar!.user.level, forKey: "WarSavunanUserLevel")
+                        UserDefaults.standard.set(chosenWar!.user.gold, forKey: "WarSavunanUserGold")
+                        UserDefaults.standard.set(chosenWar!.user.currentHealth, forKey: "WarSavunanUserCurrentHealth")
+                        UserDefaults.standard.set(chosenWar!.user.maximumHealth, forKey: "WarSavunanUserMaximumHealth")
+                        UserDefaults.standard.set(chosenWar!.user.currentEnergy, forKey: "WarSavunanUserCurrentEnergy")
+                        UserDefaults.standard.set(chosenWar!.user.maximumEnergy, forKey: "WarSavunanUserMaximumEnergy")
+                     
+                        UserDefaults.standard.set(chosenWar!.user.totalDamage, forKey: "WarSavunanUserTotalDamage")
+                        UserDefaults.standard.set(chosenWar!.user.power, forKey: "WarSavunanUserPower")
+                        UserDefaults.standard.set(chosenWar!.user.defense, forKey: "WarSavunanUserDefense")
+                        UserDefaults.standard.set(chosenWar!.user.speed, forKey: "WarSavunanUserSpeed")
+                        UserDefaults.standard.set(myChoosenWartype, forKey: "WarSavunanUserRacename")
+                        UserDefaults.standard.set(chosenWar!.user.image, forKey: "WarSavunanUserImage")
+                        
+                        
+                        
                         
                     }
                    
@@ -176,7 +213,7 @@ class ChosenWarTypeViewController: UIViewController {
       
        
        
-        
+        /*
         let WarSaldiranUserName = UserDefaults.standard.string(forKey: "WarSaldiranUserName")
         let WarSaldiranUserRole = UserDefaults.standard.integer(forKey: "WarSaldiranUserRole")
         let WarSaldiranUserExp = UserDefaults.standard.integer(forKey: "WarSaldiranUserExp")
@@ -192,6 +229,8 @@ class ChosenWarTypeViewController: UIViewController {
         let WarSaldiranUserDefense = UserDefaults.standard.integer(forKey: "WarSaldiranUserDefense")
         let WarSaldiranUserSpeed = UserDefaults.standard.integer(forKey: "WarSaldiranUserSpeed")
         let WarSaldiranUserRacename = UserDefaults.standard.integer(forKey: "WarSaldiranUserRacename")
+         */ 
+        let WarSaldiranUserNightMissionState = UserDefaults.standard.integer(forKey: "WarSaldiranUserNightMissionState")
         let usertoken = UserDefaults.standard.string(forKey: "userToken")
         // api  start
        let headers: HTTPHeaders = [

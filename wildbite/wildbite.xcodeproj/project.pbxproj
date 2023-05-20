@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */; };
+		0159D6672A19545100AB98F3 /* WarCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159D6662A19545100AB98F3 /* WarCaseViewController.swift */; };
 		0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0176F6742A0D2D95009B5749 /* ShopItems.storyboard */; };
 		0176F6782A0D2F50009B5749 /* ShopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */; };
 		01857B492A16D00F0040564F /* NightMissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01857B482A16D00F0040564F /* NightMissionModel.swift */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRaceModel.swift; sourceTree = "<group>"; };
+		0159D6662A19545100AB98F3 /* WarCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarCaseViewController.swift; sourceTree = "<group>"; };
 		0176F6742A0D2D95009B5749 /* ShopItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopItems.storyboard; sourceTree = "<group>"; };
 		0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemsViewController.swift; sourceTree = "<group>"; };
 		01857B482A16D00F0040564F /* NightMissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightMissionModel.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				01936DD52A05973100780FB3 /* WARViewController.swift */,
 				01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */,
+				0159D6662A19545100AB98F3 /* WarCaseViewController.swift */,
 			);
 			path = WAR;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				88000EA729E557D1008F640F /* ItemListAllTableViewCell.swift in Sources */,
 				887EC82129E75CB60097D386 /* VAMPIRERegisterViewController.swift in Sources */,
 				8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */,
+				0159D6672A19545100AB98F3 /* WarCaseViewController.swift in Sources */,
 				88525AC329E48DBA001CFBBE /* NightMissionCaseViewController.swift in Sources */,
 				88CCB2B129DF93C700C9F1D8 /* HuntCaseViewController.swift in Sources */,
 				88C6802929E5F61F00719CC0 /* ShopMenuViewController.swift in Sources */,

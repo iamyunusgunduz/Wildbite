@@ -96,6 +96,7 @@ class WARViewController: UIViewController {
                         dump("Api userdefense: \(profileModelresponse!.user.defense)")
                         dump("Api userspeed: \(profileModelresponse!.user.speed)")
                         dump("Api userrace: \(profileModelresponse!.race.raceName)")
+                        dump("Api userimage: \(profileModelresponse!.user.image)")
                        
                         
                         UserDefaults.standard.set(profileModelresponse!.user.name, forKey: "WarSaldiranUserName")
@@ -113,6 +114,7 @@ class WARViewController: UIViewController {
                         UserDefaults.standard.set(profileModelresponse!.user.defense, forKey: "WarSaldiranUserDefense")
                         UserDefaults.standard.set(profileModelresponse!.user.speed, forKey: "WarSaldiranUserSpeed")
                         UserDefaults.standard.set(profileModelresponse!.race.raceName, forKey: "WarSaldiranUserRacename")
+                        UserDefaults.standard.set(profileModelresponse!.user.image, forKey: "WarSaldiranUserImage")
                   
                      
                  
