@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */; };
 		0159D6672A19545100AB98F3 /* WarCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159D6662A19545100AB98F3 /* WarCaseViewController.swift */; };
+		015CFE882A1A7C4200C7B668 /* WarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CFE872A1A7C4200C7B668 /* WarModel.swift */; };
 		0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0176F6742A0D2D95009B5749 /* ShopItems.storyboard */; };
 		0176F6782A0D2F50009B5749 /* ShopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */; };
 		01857B492A16D00F0040564F /* NightMissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01857B482A16D00F0040564F /* NightMissionModel.swift */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRaceModel.swift; sourceTree = "<group>"; };
 		0159D6662A19545100AB98F3 /* WarCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarCaseViewController.swift; sourceTree = "<group>"; };
+		015CFE872A1A7C4200C7B668 /* WarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarModel.swift; sourceTree = "<group>"; };
 		0176F6742A0D2D95009B5749 /* ShopItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopItems.storyboard; sourceTree = "<group>"; };
 		0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemsViewController.swift; sourceTree = "<group>"; };
 		01857B482A16D00F0040564F /* NightMissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightMissionModel.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */,
 				012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */,
 				01857B482A16D00F0040564F /* NightMissionModel.swift */,
+				015CFE872A1A7C4200C7B668 /* WarModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				88C6802D29E5F7D200719CC0 /* ShopMenuModel.swift in Sources */,
 				88C6803329E605E700719CC0 /* ItemAddViewController.swift in Sources */,
 				88E508E529D490F900E9E557 /* RegisterModel.swift in Sources */,
+				015CFE882A1A7C4200C7B668 /* WarModel.swift in Sources */,
 				88E508ED29D4916C00E9E557 /* UserProfileModel.swift in Sources */,
 				88E508DF29D4855100E9E557 /* LoginModel.swift in Sources */,
 				8853CE1529DE3F1400A3EE09 /* EnvanterViewController.swift in Sources */,

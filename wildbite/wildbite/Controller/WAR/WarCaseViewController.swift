@@ -32,6 +32,10 @@ class WarCaseViewController: UIViewController {
     @IBOutlet weak var kaybedenSpeed: UILabel!
     @IBOutlet weak var kaybedenHealth: UILabel!
     
+    @IBOutlet weak var expLabel: UILabel!
+    @IBOutlet weak var goldLabel: UILabel!
+    @IBOutlet weak var canLabel: UILabel!
+    
     
     
     
@@ -121,7 +125,7 @@ class WarCaseViewController: UIViewController {
                 kazananPower.text = "\(WarSaldiranUserPower)"
                 kazananDefense.text = "\(WarSaldiranUserDefense)"
                 kazananSpeed.text = "\(WarSaldiranUserSpeed)"
-                kazananHealth.text = "\(WarSaldiranUserCurrentHealth)"
+              
                 
                
                 kaybedenName.text = "   \(WarSavunanUserName!)"
@@ -135,6 +139,7 @@ class WarCaseViewController: UIViewController {
                 kaybedenDefense.text = "\(WarSavunanUserDefense)"
                 kaybedenSpeed.text = "\(WarSavunanUserSpeed)"
                 kaybedenHealth.text = "\(WarSavunanUserMaximumHealth)"
+            
                 
               
                 let urlKazanan = URL(string: "\(WarSaldiranUserImage!)")
@@ -146,26 +151,42 @@ class WarCaseViewController: UIViewController {
                 
             }
                 //MARK: api  start
+                 
+                
                 var kazanilanCan =  (WarSavunanUserMaximumHealth * 30 ) / 100
                 var kazanilanAltin =  (WarSavunanUserGold * 20 ) / 100
-                var kazanilanExp = levelFarki * 3
+                var kazanilanExp:Int
+                kazananHealth.text = "\(WarSaldiranUserCurrentHealth+kazanilanCan)"
+                if(levelFarki >= 0){
+                    kazanilanExp =  (WarSavunanUserTotalDamage * 10) / 100
+                }else{
+                    kazanilanExp =  (WarSavunanUserTotalDamage * 15 ) / 100
+                }
+                    
+               
          
-                let nightMissionParameters = NightMissionYapi(gold: kazanilanAltin, current_health:kazanilanCan, maximum_health: 0, current_energy: -10, maximum_energy: 0, level: 0, night_mission_state: "\(WarSaldiranUserNightMissionState)", exp: kazanilanExp )
+                let warParameters = WarModelYapi(exp: kazanilanExp, gold: kazanilanAltin, current_health: kazanilanCan, maximum_health: 0, current_energy: -5, maximum_energy: 0, level: 0, war_total: 1, war_total_win: 1, war_total_lose: 0, war_total_gold: kazanilanAltin)
                 
-              AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+              AF.request("http://yunusgunduz.site/wildbite/public/api/war",
                          method: .put,
-                         parameters: nightMissionParameters,
+                         parameters: warParameters,
                          headers: headers)
               .validate(statusCode: 200..<500)
               .validate(contentType: ["application/json"])
-              .responseData {  response in
+              .responseData { [self]  response in
                   debugPrint(response)
                   switch response.result {
                   case .success:
-                          let NightMissionresponse = try? JSONDecoder().decode(NightMissionModel.self,  from: response.data!)
-                          debugPrint(NightMissionresponse!)
-                          UserDefaults.standard.set(WarSaldiranUserCurrentEnergy - 10, forKey: "WarSaldiranUserCurrentEnergy")
-                      
+                          let warResponse = try? JSONDecoder().decode(WarModel.self,  from: response.data!)
+                          debugPrint(warResponse!)
+                          expLabel.text = "Tecrube: +\(kazanilanExp)"
+                          goldLabel.text = "Altın: +\(kazanilanAltin)"
+                          canLabel.text = "Can +\(kazanilanCan)"
+                          UserDefaults.standard.set(WarSaldiranUserCurrentEnergy - 5, forKey: "WarSaldiranUserCurrentEnergy")
+                          UserDefaults.standard.set(WarSaldiranUserGold+kazanilanAltin,forKey: "WarSaldiranUserGold")
+                          UserDefaults.standard.set(WarSaldiranUserCurrentHealth+kazanilanCan,forKey: "WarSaldiranUserCurrentHealth")
+                          UserDefaults.standard.set(WarSaldiranUserExp + kazanilanExp,forKey: "WarSaldiranUserExp")
+
                           
                   case let .failure(error):
                       print(error.errorDescription!)
@@ -199,7 +220,7 @@ class WarCaseViewController: UIViewController {
                 kaybedenPower.text = "\(WarSaldiranUserPower)"
                 kaybedenDefense.text = "\(WarSaldiranUserDefense)"
                 kaybedenSpeed.text = "\(WarSaldiranUserSpeed)"
-                kaybedenHealth.text = "\(WarSaldiranUserMaximumHealth)"
+              
                 
                 // image
                     let urlKazanan = URL(string: "\(WarSavunanUserImage!)")
@@ -211,24 +232,30 @@ class WarCaseViewController: UIViewController {
                 //MARK:  api  start
                 var kaybedilenCan =  (WarSavunanUserMaximumHealth * 30 ) / 100
                 var kaybedilenAltin =  (WarSavunanUserGold * 20 ) / 100
-                 
-                let nightMissionParameters = NightMissionYapi(gold: -kaybedilenAltin, current_health: -kaybedilenCan, maximum_health: 0, current_energy: -10, maximum_energy: 0, level: 0, night_mission_state: "\(WarSaldiranUserNightMissionState)", exp: 0 )
-            
-             
-              AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+               // kaybedenHealth.text = "\(WarSaldiranUserCurrentHealth - kaybedilenCan)"
+                kaybedenHealth.text = "\(WarSaldiranUserCurrentHealth - kaybedilenCan)"
+                
+                       let warParameters = WarModelYapi(exp: 0, gold: -kaybedilenAltin, current_health: -kaybedilenCan, maximum_health: 0, current_energy: -10, maximum_energy: 0, level: 0, war_total: 1, war_total_win: 0, war_total_lose: 1, war_total_gold: 0)
+                       
+              AF.request("http://yunusgunduz.site/wildbite/public/api/war",
                          method: .put,
-                         parameters: nightMissionParameters,
+                         parameters: warParameters,
                          headers: headers)
               .validate(statusCode: 200..<500)
               .validate(contentType: ["application/json"])
-              .responseData {  response in
+              .responseData { [self]  response in
                   debugPrint(response)
                   switch response.result {
                   case .success:
-                          let NightMissionresponse = try? JSONDecoder().decode(NightMissionModel.self,  from: response.data!)
-                          debugPrint(NightMissionresponse!)
-                        
+                          let warResponse = try? JSONDecoder().decode(WarModel.self,  from: response.data!)
+                          debugPrint(warResponse!)
+                          expLabel.text = ""
+                          goldLabel.text = "Altın: -\(kaybedilenAltin)"
+                          canLabel.text = ""
                           UserDefaults.standard.set(WarSaldiranUserCurrentEnergy - 10, forKey: "WarSaldiranUserCurrentEnergy")
+                          UserDefaults.standard.set(WarSaldiranUserGold-kaybedilenAltin,forKey: "WarSaldiranUserGold")
+                          UserDefaults.standard.set(WarSaldiranUserCurrentHealth-kaybedilenCan,forKey: "WarSaldiranUserCurrentHealth")
+                          
                           
                   case let .failure(error):
                       print(error.errorDescription!)

@@ -122,9 +122,39 @@ class ProfileSettViewController: UIViewController {
                             userRaceLabel.text = "Race: None"
                         }
                         
-                        userLevelLabel.text = "Level: \(profileModelresponse!.user.level)"
+                            var userExpOrani =  Int(profileModelresponse!.user.exp)
+                            switch userExpOrani!{  //MARK: - kafama göre  level orani belirledim
+                                case 1...10:
+                                    userLevelLabel.text = "Level: 1"
+                                    userExpLabel.text = "Experience: \(profileModelresponse!.user.exp) / 10"
+                                case 11...30:
+                                    userLevelLabel.text = "Level: 2"
+                                    userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)/ 30"
+                                case 31...60:
+                                    userLevelLabel.text = "Level: 3"
+                                    userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)/ 60"
+                                case 61...100:
+                                    userLevelLabel.text = "Level: 4"
+                                    userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)/ 100"
+                                case 101...200:
+                                    userLevelLabel.text = "Level: 5"
+                                    userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)/ 200"
+                                case 201...450:
+                                    userLevelLabel.text = "Level: 6"
+                                    userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)/ 450"
+                                case 451...750:
+                                    userLevelLabel.text = "Level: 7"
+                                    userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)/ 750"
+                                case 751...1000:
+                                    userLevelLabel.text = "Level: 8"
+                                    userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)/ 1000"
+                                default:
+                                    userLevelLabel.text = "Level: None"
+                                    userExpLabel.text = "Experience: none"
+                            }
+                       
                         userEmailLabel.text = "Email: \(profileModelresponse!.user.email)"
-                        userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)"
+                      
                         userTotalDamageLabel.text = "Damage: \(profileModelresponse!.user.totalDamage)"
                         
                         let warTotals = profileModelresponse!.user.warTotal
@@ -136,7 +166,7 @@ class ProfileSettViewController: UIViewController {
                         if(warLose! != 0){
                             let kda:Double = (warWin ?? 1) / (warLose ?? 1)
                             debugPrint("\(warTotals)  \(warWin!)  \(warLose!) \(kda) (WWR)")
-                            userTotalWarLabel.text = "WAR WIN RATE: \(kda) (WWR) "
+                            userTotalWarLabel.text = "WAR WIN RATE: \(kda) in (\(warTotals)) war "
                         }else{
                             userTotalWarLabel.text = "WAR WIN RATE: \(warWin!) (WWR)"
                         }
