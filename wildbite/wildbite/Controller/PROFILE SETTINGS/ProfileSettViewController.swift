@@ -35,28 +35,34 @@ class ProfileSettViewController: UIViewController {
     
     @IBOutlet weak var userTotalSuccessHuntLabel: UILabel!
     
+    @IBOutlet weak var userGoldLabel: UILabel!
     
     @IBOutlet weak var gucLabel: UILabel!
     
-    
     @IBOutlet weak var defansLabel: UILabel!
-    
     
     @IBOutlet weak var speedLabel: UILabel!
     
-    
     @IBOutlet weak var gucProgressView: UIProgressView!
-    
     
     @IBOutlet weak var defansProgressView: UIProgressView!
     
-    
     @IBOutlet weak var hizProgressView: UIProgressView!
-    
     
     @IBOutlet weak var AdminPanelButtonText: UIButton!
    // let myUserRole = UserDefaults.standard.value(forKey: "userRole")
   
+    
+    @IBOutlet weak var gucButtonLabel: UIButton!
+    @IBOutlet weak var defButtonLabel: UIButton!
+    @IBOutlet weak var speedButtonLabel: UIButton!
+    
+    var gucDegeri = 0
+    var defDegeri  = 0
+    var speedDegeri  = 0
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gucProgressView.transform = gucProgressView.transform.scaledBy(x: 1, y: 5)
@@ -154,6 +160,7 @@ class ProfileSettViewController: UIViewController {
                             }
                        
                         userEmailLabel.text = "Email: \(profileModelresponse!.user.email)"
+                        userGoldLabel.text = "Gold: \(profileModelresponse!.user.gold)"
                       
                         userTotalDamageLabel.text = "Damage: \(profileModelresponse!.user.totalDamage)"
                         
@@ -161,6 +168,9 @@ class ProfileSettViewController: UIViewController {
                         let warWin = Double (profileModelresponse!.user.warTotalWin)
                         let warLose = Double (profileModelresponse!.user.warTotalLose)
                         
+                            if(Int(profileModelresponse!.user.gold)! < 10){gucButtonLabel.isEnabled = false} else {gucButtonLabel.isEnabled = true}
+                            if(Int(profileModelresponse!.user.gold)! < 5 ){defButtonLabel.isEnabled = false} else {defButtonLabel.isEnabled = true}
+                            if(Int(profileModelresponse!.user.gold)! < 2 ){speedButtonLabel.isEnabled = false} else {speedButtonLabel.isEnabled = true}
                        
                       
                         if(warLose! != 0){
@@ -182,7 +192,11 @@ class ProfileSettViewController: UIViewController {
                         let gucValue = Float(profileModelresponse!.user.power)!
                         let defValue = Float(profileModelresponse!.user.defense)!
                         let hizValue = Float(profileModelresponse!.user.speed)!
-                        
+                            gucDegeri = Int(gucValue)
+                            defDegeri = Int(defValue)
+                            speedDegeri = Int(hizValue)
+                            
+                            
                             dump(profileModelresponse!.user.power)
                             
                         gucLabel.text = "\(Int(gucValue))"
@@ -233,8 +247,61 @@ class ProfileSettViewController: UIViewController {
         }
     }
 
-   
+    @IBAction func GucArttirButton(_ sender: Any) {
+    
+        
+        userStateArttir(pow: 1, def: 0, spd: 0, totlDamge: 3, gld: -10)
+    
+    }
+    @IBAction func DefArttirButton(_ sender: Any) {
+        userStateArttir(pow: 0, def: 1, spd: 0, totlDamge: 2, gld: -5)
+    }
+    @IBAction func HizArttirButton(_ sender: Any) {
+        userStateArttir(pow: 0, def: 0, spd: 1, totlDamge: 1, gld: -2)
+    }
     @IBAction func AdminPanelButton(_ sender: Any) {
     }
     
+    func userStateArttir(pow:Int, def:Int, spd:Int, totlDamge:Int, gld:Int){
+        let myUserID = UserDefaults.standard.value(forKey: "userID")
+        let myUserName = UserDefaults.standard.value(forKey: "userName")
+        let myUserToken = UserDefaults.standard.value(forKey: "userToken")
+        print("User Id: \(myUserID!)")
+        print("User Name: \(myUserName!)")
+        print("User Token: \(myUserToken!)")
+        
+                let token = "\(myUserToken!)"
+        let headers: HTTPHeaders = [
+            .authorization(bearerToken: token),
+            .accept("application/json")
+        ]
+        let userStateParameters = UserStateUpdate(power: pow, defense: def, speed: spd, total_damage: totlDamge, gold: gld)
+        
+      AF.request("http://yunusgunduz.site/wildbite/public/api/user-statu/\(myUserID!)",
+                 method: .put,
+                 parameters: userStateParameters,
+                 headers: headers)
+      .validate(statusCode: 200..<500)
+      .validate(contentType: ["application/json"])
+      .responseData { [self]  response in
+          debugPrint(response)
+          switch response.result {
+          case .success:
+                  let userStateUpdateResponse = try? JSONDecoder().decode(UserStateModel.self,  from: response.data!)
+                  debugPrint(userStateUpdateResponse ?? "userStateUpdateResponse ariza")
+                  dump("User state message: \(userStateUpdateResponse!.the1)")
+                  dump("User state power: \(userStateUpdateResponse!.user.power)")
+                  dump("User state def: \(userStateUpdateResponse!.user.defense)")
+                  dump("User state speed: \(userStateUpdateResponse!.user.speed)")
+                  dump("User state total damage: \(userStateUpdateResponse!.user.totalDamage)")
+                  dump("User state gold: \(userStateUpdateResponse!.user.gold)")
+                
+                  viewWillAppear(true)
+          case let .failure(error):
+              print(error.errorDescription!)
+              print("hata")
+          }
+      }
+
+    }
 }

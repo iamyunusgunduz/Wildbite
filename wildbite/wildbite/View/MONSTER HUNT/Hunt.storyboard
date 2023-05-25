@@ -17,26 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJY-7w-njZ">
-                                <rect key="frame" x="0.0" y="808" width="393" height="44"/>
-                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" systemColor="systemPinkColor"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="MONSTER HUNTING" id="WDp-30-Af9">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="L4G-66-JTO">
-                                            <color key="tintColor" systemColor="systemPinkColor"/>
-                                            <connections>
-                                                <segue destination="ATw-8c-gXm" kind="presentation" modalPresentationStyle="fullScreen" id="L9H-N2-2Vg"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="grS-kr-Tf2">
-                                <rect key="frame" x="20" y="20" width="353" height="778"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="grS-kr-Tf2">
+                                <rect key="frame" x="20" y="398" width="353" height="400"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCN-Tq-sR1">
                                         <rect key="frame" x="20" y="0.0" width="313" height="100"/>
@@ -52,7 +34,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pae-01-GTM">
-                                        <rect key="frame" x="20" y="226" width="313" height="100"/>
+                                        <rect key="frame" x="20" y="100" width="313" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="W6h-a5-5Ui"/>
@@ -66,7 +48,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hh-NT-Hyc">
-                                        <rect key="frame" x="20" y="452" width="313" height="100"/>
+                                        <rect key="frame" x="20" y="200" width="313" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="paN-ft-e7M"/>
@@ -79,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdN-YA-Mer">
-                                        <rect key="frame" x="20" y="678" width="313" height="100"/>
+                                        <rect key="frame" x="20" y="300" width="313" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="GY1-fc-hNm"/>
@@ -103,26 +85,47 @@
                                     <constraint firstAttribute="trailing" secondItem="3hh-NT-Hyc" secondAttribute="trailing" constant="20" id="jq9-eC-Uvx"/>
                                 </constraints>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJY-7w-njZ">
+                                <rect key="frame" x="0.0" y="808" width="393" height="44"/>
+                                <color key="tintColor" red="0.64115256070000004" green="0.23408800360000001" blue="0.3333322406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="MONSTER HUNTING" id="WDp-30-Af9">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="L4G-66-JTO">
+                                            <color key="tintColor" systemColor="systemPinkColor"/>
+                                            <connections>
+                                                <segue destination="ATw-8c-gXm" kind="presentation" modalPresentationStyle="fullScreen" id="L9H-N2-2Vg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="grS-kr-Tf2" secondAttribute="trailing" constant="20" id="5mK-bg-yhj"/>
                             <constraint firstItem="lJY-7w-njZ" firstAttribute="top" secondItem="grS-kr-Tf2" secondAttribute="bottom" constant="10" id="ade-Ik-rJ0"/>
-                            <constraint firstItem="grS-kr-Tf2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="bQo-U7-UO6"/>
                             <constraint firstItem="lJY-7w-njZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="g2a-r1-h53"/>
                             <constraint firstItem="grS-kr-Tf2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hYJ-dc-xlx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lJY-7w-njZ" secondAttribute="bottom" id="hZg-Kt-zrS"/>
                             <constraint firstItem="lJY-7w-njZ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="sEg-JM-RWm"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lJY-7w-njZ" secondAttribute="bottom" id="vf1-Wl-4tb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="easyButton" destination="OCN-Tq-sR1" id="Kyi-sh-JHH"/>
+                        <outlet property="hardButton" destination="3hh-NT-Hyc" id="Mpc-7Z-gkc"/>
+                        <outlet property="mediumButton" destination="Pae-01-GTM" id="MtV-cU-mAF"/>
+                        <outlet property="veryHardButton" destination="qdN-YA-Mer" id="AAp-kh-FWD"/>
                         <segue destination="NxQ-Zx-JxR" kind="presentation" identifier="huntToCase" modalPresentationStyle="fullScreen" id="MQO-t3-NaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="-28"/>
+            <point key="canvasLocation" x="-112.21374045801527" y="-28.169014084507044"/>
         </scene>
         <!--Main-->
         <scene sceneID="83p-cJ-DJ1">
@@ -303,7 +306,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="L9H-N2-2Vg"/>
+        <segue reference="39u-cL-ASv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
