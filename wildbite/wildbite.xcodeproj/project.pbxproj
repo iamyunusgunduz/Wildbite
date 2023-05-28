@@ -22,6 +22,7 @@
 		01936DD62A05973100780FB3 /* WARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DD52A05973100780FB3 /* WARViewController.swift */; };
 		01936DDB2A05B11200780FB3 /* ChosenWarTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */; };
 		01936DDD2A05B18900780FB3 /* ChosenWarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */; };
+		01ACC2D72A23E4C50052BD59 /* ShopItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACC2D62A23E4C50052BD59 /* ShopItemDetailsViewController.swift */; };
 		880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */; };
 		881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881513C329E46EB9001CD5CE /* Mission.storyboard */; };
 		881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */; };
@@ -84,6 +85,7 @@
 		01936DD52A05973100780FB3 /* WARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WARViewController.swift; sourceTree = "<group>"; };
 		01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarTypeViewController.swift; sourceTree = "<group>"; };
 		01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarModel.swift; sourceTree = "<group>"; };
+		01ACC2D62A23E4C50052BD59 /* ShopItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemDetailsViewController.swift; sourceTree = "<group>"; };
 		880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		881513C329E46EB9001CD5CE /* Mission.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mission.storyboard; sourceTree = "<group>"; };
 		881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		010859BA2A22AB9800FAB693 /* SHOP */ = {
 			isa = PBXGroup;
 			children = (
+				01ACC2D52A23E4780052BD59 /* SHOPITEMDETAILS */,
 				010859BB2A22ABC100FAB693 /* SHOPBOXIN */,
 				0176F6762A0D2F38009B5749 /* SHOP ITEMS */,
 				88C6802729E5F5F800719CC0 /* SHOP MENU */,
@@ -203,6 +206,14 @@
 				0159D6662A19545100AB98F3 /* WarCaseViewController.swift */,
 			);
 			path = WAR;
+			sourceTree = "<group>";
+		};
+		01ACC2D52A23E4780052BD59 /* SHOPITEMDETAILS */ = {
+			isa = PBXGroup;
+			children = (
+				01ACC2D62A23E4C50052BD59 /* ShopItemDetailsViewController.swift */,
+			);
+			path = SHOPITEMDETAILS;
 			sourceTree = "<group>";
 		};
 		881513C229E46EA7001CD5CE /* NIGHT MISSION */ = {
@@ -586,6 +597,7 @@
 				880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */,
 				01936DDB2A05B11200780FB3 /* ChosenWarTypeViewController.swift in Sources */,
 				88C6802D29E5F7D200719CC0 /* ShopMenuModel.swift in Sources */,
+				01ACC2D72A23E4C50052BD59 /* ShopItemDetailsViewController.swift in Sources */,
 				88C6803329E605E700719CC0 /* ItemAddViewController.swift in Sources */,
 				88E508E529D490F900E9E557 /* RegisterModel.swift in Sources */,
 				015CFE882A1A7C4200C7B668 /* WarModel.swift in Sources */,
