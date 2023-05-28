@@ -48,7 +48,7 @@ class HuntViewController: UIViewController {
     fileprivate func loadPage() {
         
         
-        let huntType = UserDefaults.standard.value(forKey: "HuntType") as! Int
+        let huntType = UserDefaults.standard.value(forKey: "HuntType") as? Int
         let myUserID = UserDefaults.standard.value(forKey: "userID")
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
         print("User Id: \(myUserID!)")

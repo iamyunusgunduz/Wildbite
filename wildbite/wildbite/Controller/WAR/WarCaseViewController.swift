@@ -126,7 +126,7 @@ class WarCaseViewController: UIViewController {
                 kazananDefense.text = "\(WarSaldiranUserDefense)"
                 kazananSpeed.text = "\(WarSaldiranUserSpeed)"
               
-                
+               
                
                 kaybedenName.text = "   \(WarSavunanUserName!)"
                 if(WarSavunanUserRacename == "1"){kaybedenRace.text = "Avcı"}
@@ -142,8 +142,8 @@ class WarCaseViewController: UIViewController {
             
                 
               
-                let urlKazanan = URL(string: "\(WarSaldiranUserImage!)")
-                let urlSavunan = URL(string: "\(WarSavunanUserImage!)")
+                let urlKazanan = URL(string: "\(WarSaldiranUserImage ?? "adasd")")
+                let urlSavunan = URL(string: "\(WarSavunanUserImage ?? "asdas")")
             DispatchQueue.main.async{
                 self.kazananImage.kf.setImage(with: urlKazanan)
                 self.kaybedenImage.kf.setImage(with: urlSavunan)

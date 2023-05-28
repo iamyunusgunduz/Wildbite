@@ -11,6 +11,7 @@ import Alamofire
 class menuFetch {
     var menuId = 0
     var menuName = ""
+    var menuImage = ""
 }
 class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var gelenMenuler = [menuFetch]()
@@ -26,6 +27,7 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 performSegue(withIdentifier: "shopMenuToShopItems", sender: nil)
                 UserDefaults.standard.set("\(gelenMenuler[indexPath.section].menuId)", forKey: "ShopMenuID")
                 UserDefaults.standard.set("\(gelenMenuler[indexPath.section].menuName)", forKey: "ShopMenuAD")
+                UserDefaults.standard.set("\(gelenMenuler[indexPath.section].menuImage)", forKey: "ShopMenuImage")
         
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,11 +84,14 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
                         let menuler = menuFetch()
                         menuler.menuName = Shop.name
                         menuler.menuId = Shop.id
+                        menuler.menuImage = Shop.image
                         gelenMenuler.append(menuler)
                          
                         
                     }
-                        
+                        UserDefaults.standard.removeObject(forKey: "itemCekilisiItemResimleri")
+                        UserDefaults.standard.removeObject(forKey: "itemCekilisiItemAdi")
+                        UserDefaults.standard.removeObject(forKey: "itemCekilisiItemAdedi")
                     myTableView.reloadData()
                         myTableView.delegate = self
                         myTableView.dataSource = self

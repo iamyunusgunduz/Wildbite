@@ -159,9 +159,6 @@
                                 <buttonConfiguration key="configuration" style="plain" image="list.bullet.rectangle.portrait" catalog="system" title="TUM ITEMLERI GOSTER">
                                     <color key="baseForegroundColor" red="0.47145563359999998" green="0.55682069059999995" blue="0.55686444040000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="7vv-oO-mOi" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Mf9-1k-XJ7"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cpQ-aZ-MNL"/>
@@ -199,14 +196,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hkb-jm-Rqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2634" y="-195"/>
-        </scene>
-        <!--ALLItem-->
-        <scene sceneID="yCH-5X-h9o">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ALLItem" id="7vv-oO-mOi" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wMi-Ms-t8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2640" y="-90"/>
         </scene>
     </scenes>
     <resources>

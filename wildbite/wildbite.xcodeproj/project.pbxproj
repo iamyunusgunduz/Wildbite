@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010859BD2A22ABE200FAB693 /* ShopBoxInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859BC2A22ABE200FAB693 /* ShopBoxInViewController.swift */; };
+		010859BF2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */; };
+		010859C12A22ACB100FAB693 /* ItemShopFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */; };
 		012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */; };
 		0159D6672A19545100AB98F3 /* WarCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159D6662A19545100AB98F3 /* WarCaseViewController.swift */; };
 		015CFE882A1A7C4200C7B668 /* WarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CFE872A1A7C4200C7B668 /* WarModel.swift */; };
 		0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0176F6742A0D2D95009B5749 /* ShopItems.storyboard */; };
 		0176F6782A0D2F50009B5749 /* ShopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */; };
+		0184F09C2A2226C600FD1F12 /* DressedItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0184F09B2A2226C600FD1F12 /* DressedItemsViewController.swift */; };
 		01857B492A16D00F0040564F /* NightMissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01857B482A16D00F0040564F /* NightMissionModel.swift */; };
 		019237FA2A1FA54500D579E9 /* UserStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019237F92A1FA54500D579E9 /* UserStateModel.swift */; };
 		019237FC2A1FBB4900D579E9 /* UserDressedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019237FB2A1FBB4900D579E9 /* UserDressedModel.swift */; };
 		01936DD62A05973100780FB3 /* WARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DD52A05973100780FB3 /* WARViewController.swift */; };
 		01936DDB2A05B11200780FB3 /* ChosenWarTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */; };
 		01936DDD2A05B18900780FB3 /* ChosenWarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */; };
-		88000EA529E555B7008F640F /* ItemListAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA429E555B7008F640F /* ItemListAllModel.swift */; };
-		88000EA729E557D1008F640F /* ItemListAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA629E557D1008F640F /* ItemListAllTableViewCell.swift */; };
-		88000EAA29E56853008F640F /* itemListAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000EA929E56853008F640F /* itemListAllViewController.swift */; };
 		880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */; };
 		881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881513C329E46EB9001CD5CE /* Mission.storyboard */; };
 		881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */; };
@@ -35,7 +36,6 @@
 		887EC81F29E75CA30097D386 /* WEREWOLFRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC81E29E75CA30097D386 /* WEREWOLFRegisterViewController.swift */; };
 		887EC82129E75CB60097D386 /* VAMPIRERegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC82029E75CB60097D386 /* VAMPIRERegisterViewController.swift */; };
 		887EC82329E75CC90097D386 /* WITCHRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC82229E75CC90097D386 /* WITCHRegisterViewController.swift */; };
-		889A838429D729B8005A1C6C /* ALLItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889A838329D729B8005A1C6C /* ALLItem.storyboard */; };
 		889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889B87BF29D646E600E3DF4E /* Admin.storyboard */; };
 		889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B87C129D646FD00E3DF4E /* AdminViewController.swift */; };
 		88B3D4B629DF1CAE0083838C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 88B3D4B529DF1CAE0083838C /* Kingfisher */; };
@@ -69,20 +69,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010859BC2A22ABE200FAB693 /* ShopBoxInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBoxInViewController.swift; sourceTree = "<group>"; };
+		010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBoxInTableViewCell.swift; sourceTree = "<group>"; };
+		010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShopFilterModel.swift; sourceTree = "<group>"; };
 		012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRaceModel.swift; sourceTree = "<group>"; };
 		0159D6662A19545100AB98F3 /* WarCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarCaseViewController.swift; sourceTree = "<group>"; };
 		015CFE872A1A7C4200C7B668 /* WarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarModel.swift; sourceTree = "<group>"; };
 		0176F6742A0D2D95009B5749 /* ShopItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopItems.storyboard; sourceTree = "<group>"; };
 		0176F6772A0D2F50009B5749 /* ShopItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemsViewController.swift; sourceTree = "<group>"; };
+		0184F09B2A2226C600FD1F12 /* DressedItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressedItemsViewController.swift; sourceTree = "<group>"; };
 		01857B482A16D00F0040564F /* NightMissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightMissionModel.swift; sourceTree = "<group>"; };
 		019237F92A1FA54500D579E9 /* UserStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateModel.swift; sourceTree = "<group>"; };
 		019237FB2A1FBB4900D579E9 /* UserDressedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDressedModel.swift; sourceTree = "<group>"; };
 		01936DD52A05973100780FB3 /* WARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WARViewController.swift; sourceTree = "<group>"; };
 		01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarTypeViewController.swift; sourceTree = "<group>"; };
 		01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarModel.swift; sourceTree = "<group>"; };
-		88000EA429E555B7008F640F /* ItemListAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListAllModel.swift; sourceTree = "<group>"; };
-		88000EA629E557D1008F640F /* ItemListAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListAllTableViewCell.swift; sourceTree = "<group>"; };
-		88000EA929E56853008F640F /* itemListAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListAllViewController.swift; sourceTree = "<group>"; };
 		880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		881513C329E46EB9001CD5CE /* Mission.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mission.storyboard; sourceTree = "<group>"; };
 		881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		887EC81E29E75CA30097D386 /* WEREWOLFRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WEREWOLFRegisterViewController.swift; sourceTree = "<group>"; };
 		887EC82029E75CB60097D386 /* VAMPIRERegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAMPIRERegisterViewController.swift; sourceTree = "<group>"; };
 		887EC82229E75CC90097D386 /* WITCHRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WITCHRegisterViewController.swift; sourceTree = "<group>"; };
-		889A838329D729B8005A1C6C /* ALLItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ALLItem.storyboard; sourceTree = "<group>"; };
 		889B87BF29D646E600E3DF4E /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		889B87C129D646FD00E3DF4E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		88C6802529E5F23600719CC0 /* ShopMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopMenu.storyboard; sourceTree = "<group>"; };
@@ -143,6 +143,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010859B92A22A76A00FAB693 /* SHOP */ = {
+			isa = PBXGroup;
+			children = (
+				0176F6732A0D2D75009B5749 /*  SHOP ITEMS */,
+				88C6802229E5EFA300719CC0 /* SHOP MENU */,
+			);
+			path = SHOP;
+			sourceTree = "<group>";
+		};
+		010859BA2A22AB9800FAB693 /* SHOP */ = {
+			isa = PBXGroup;
+			children = (
+				010859BB2A22ABC100FAB693 /* SHOPBOXIN */,
+				0176F6762A0D2F38009B5749 /* SHOP ITEMS */,
+				88C6802729E5F5F800719CC0 /* SHOP MENU */,
+			);
+			path = SHOP;
+			sourceTree = "<group>";
+		};
+		010859BB2A22ABC100FAB693 /* SHOPBOXIN */ = {
+			isa = PBXGroup;
+			children = (
+				010859BC2A22ABE200FAB693 /* ShopBoxInViewController.swift */,
+				010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */,
+			);
+			path = SHOPBOXIN;
+			sourceTree = "<group>";
+		};
 		0176F6732A0D2D75009B5749 /*  SHOP ITEMS */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +187,14 @@
 			path = "SHOP ITEMS";
 			sourceTree = "<group>";
 		};
+		0184F09A2A2226AE00FD1F12 /* DRESSED */ = {
+			isa = PBXGroup;
+			children = (
+				0184F09B2A2226C600FD1F12 /* DressedItemsViewController.swift */,
+			);
+			path = DRESSED;
+			sourceTree = "<group>";
+		};
 		01936DD42A0596FF00780FB3 /* WAR */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,15 +203,6 @@
 				0159D6662A19545100AB98F3 /* WarCaseViewController.swift */,
 			);
 			path = WAR;
-			sourceTree = "<group>";
-		};
-		88000EA829E5681A008F640F /* SHOP ALL ITEM */ = {
-			isa = PBXGroup;
-			children = (
-				88000EA929E56853008F640F /* itemListAllViewController.swift */,
-				88000EA629E557D1008F640F /* ItemListAllTableViewCell.swift */,
-			);
-			path = "SHOP ALL ITEM";
 			sourceTree = "<group>";
 		};
 		881513C229E46EA7001CD5CE /* NIGHT MISSION */ = {
@@ -219,14 +246,6 @@
 				8873B37429E2D4BB00F4FB89 /* myOnBoardign.swift */,
 			);
 			path = PAPER;
-			sourceTree = "<group>";
-		};
-		889A838229D729A4005A1C6C /* SHOP ALL ITEM */ = {
-			isa = PBXGroup;
-			children = (
-				889A838329D729B8005A1C6C /* ALLItem.storyboard */,
-			);
-			path = "SHOP ALL ITEM";
 			sourceTree = "<group>";
 		};
 		889B87B629D6463200E3DF4E /* USER */ = {
@@ -403,7 +422,6 @@
 				88E508DE29D4855100E9E557 /* LoginModel.swift */,
 				88E508E429D490F900E9E557 /* RegisterModel.swift */,
 				88E508EC29D4916C00E9E557 /* UserProfileModel.swift */,
-				88000EA429E555B7008F640F /* ItemListAllModel.swift */,
 				88C6802C29E5F7D200719CC0 /* ShopMenuModel.swift */,
 				88FD0C5429E848E800C8C152 /* ItemBuyModel.swift */,
 				88FD0C5629E8550B00C8C152 /* ItemSellModel.swift */,
@@ -413,6 +431,7 @@
 				015CFE872A1A7C4200C7B668 /* WarModel.swift */,
 				019237F92A1FA54500D579E9 /* UserStateModel.swift */,
 				019237FB2A1FBB4900D579E9 /* UserDressedModel.swift */,
+				010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,13 +439,11 @@
 		88E508DC29D4853800E9E557 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0176F6732A0D2D75009B5749 /*  SHOP ITEMS */,
+				010859B92A22A76A00FAB693 /* SHOP */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
 				88CCB2A829DF894600C9F1D8 /* MONSTER HUNT */,
 				881513C229E46EA7001CD5CE /* NIGHT MISSION */,
-				889A838229D729A4005A1C6C /* SHOP ALL ITEM */,
-				88C6802229E5EFA300719CC0 /* SHOP MENU */,
 				889B87BB29D646A800E3DF4E /* USER LOGIN */,
 				889B87BC29D646AD00E3DF4E /* USER REGISTER */,
 				88CCB2A729DF891300C9F1D8 /* WAR */,
@@ -437,7 +454,8 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0176F6762A0D2F38009B5749 /* SHOP ITEMS */,
+				010859BA2A22AB9800FAB693 /* SHOP */,
+				0184F09A2A2226AE00FD1F12 /* DRESSED */,
 				01936DD42A0596FF00780FB3 /* WAR */,
 				88C6803129E605D400719CC0 /* ITEM ADD */,
 				889B87BA29D6468600E3DF4E /* ADMIN */,
@@ -448,8 +466,6 @@
 				88525ABE29E485CE001CFBBE /* MISSION */,
 				881F3A8929DDEDA7005579CE /* PROFILE SETTINGS */,
 				889B87B829D6465E00E3DF4E /* REGISTER */,
-				88000EA829E5681A008F640F /* SHOP ALL ITEM */,
-				88C6802729E5F5F800719CC0 /* SHOP MENU */,
 				889B87B629D6463200E3DF4E /* USER */,
 			);
 			path = Controller;
@@ -538,7 +554,6 @@
 				881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */,
 				88C6803029E605CD00719CC0 /* ItemAdd.storyboard in Resources */,
 				8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */,
-				889A838429D729B8005A1C6C /* ALLItem.storyboard in Resources */,
 				88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */,
 				88E508CC29D481E400E9E557 /* Main.storyboard in Resources */,
 				889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */,
@@ -555,14 +570,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88000EA729E557D1008F640F /* ItemListAllTableViewCell.swift in Sources */,
 				887EC82129E75CB60097D386 /* VAMPIRERegisterViewController.swift in Sources */,
 				8873B36F29E2D20700F4FB89 /* PaperViewController.swift in Sources */,
 				0159D6672A19545100AB98F3 /* WarCaseViewController.swift in Sources */,
 				88525AC329E48DBA001CFBBE /* NightMissionCaseViewController.swift in Sources */,
 				88CCB2B129DF93C700C9F1D8 /* HuntCaseViewController.swift in Sources */,
 				88C6802929E5F61F00719CC0 /* ShopMenuViewController.swift in Sources */,
-				88000EA529E555B7008F640F /* ItemListAllModel.swift in Sources */,
 				88E508C929D481E400E9E557 /* ViewController.swift in Sources */,
 				8873B37529E2D4BB00F4FB89 /* myOnBoardign.swift in Sources */,
 				0176F6782A0D2F50009B5749 /* ShopItemsViewController.swift in Sources */,
@@ -578,7 +591,10 @@
 				015CFE882A1A7C4200C7B668 /* WarModel.swift in Sources */,
 				88E508ED29D4916C00E9E557 /* UserProfileModel.swift in Sources */,
 				88E508DF29D4855100E9E557 /* LoginModel.swift in Sources */,
+				010859BD2A22ABE200FAB693 /* ShopBoxInViewController.swift in Sources */,
+				010859BF2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift in Sources */,
 				8853CE1529DE3F1400A3EE09 /* EnvanterViewController.swift in Sources */,
+				0184F09C2A2226C600FD1F12 /* DressedItemsViewController.swift in Sources */,
 				88FD0C5529E848E800C8C152 /* ItemBuyModel.swift in Sources */,
 				887EC81D29E756980097D386 /* HUNTERRegisterViewController.swift in Sources */,
 				887EC82329E75CC90097D386 /* WITCHRegisterViewController.swift in Sources */,
@@ -590,7 +606,7 @@
 				012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */,
 				88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */,
 				887EC81F29E75CA30097D386 /* WEREWOLFRegisterViewController.swift in Sources */,
-				88000EAA29E56853008F640F /* itemListAllViewController.swift in Sources */,
+				010859C12A22ACB100FAB693 /* ItemShopFilterModel.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
 				019237FC2A1FBB4900D579E9 /* UserDressedModel.swift in Sources */,
 				01936DD62A05973100780FB3 /* WARViewController.swift in Sources */,

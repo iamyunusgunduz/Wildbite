@@ -32,15 +32,11 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var eldivenImage: UIImageView!
     @IBOutlet weak var ayakkabiImage: UIImageView!
     
+ 
     
     
     
-    
-    
-    
-    
-    
-    
+ 
     @IBOutlet weak var usernameLabel: UILabel!
     
     
@@ -55,9 +51,87 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var userGoldLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-
+        //kask image
+        let tapKask = UITapGestureRecognizer(target: self, action: #selector(self.tappedKask))
+        kaskImage.addGestureRecognizer(tapKask)
+        kaskImage.isUserInteractionEnabled = true
+        //silah image
+        let tapSilah = UITapGestureRecognizer(target: self, action: #selector(self.tappedSilah))
+        silahImage.addGestureRecognizer(tapSilah)
+        silahImage.isUserInteractionEnabled = true
+        //zirh image
+        let tapZirh = UITapGestureRecognizer(target: self, action: #selector(self.tappedZirh))
+        zirhImage.addGestureRecognizer(tapZirh)
+        zirhImage.isUserInteractionEnabled = true
+        //kalkan image
+        let tapKalkan = UITapGestureRecognizer(target: self, action: #selector(self.tappedKalkan))
+        kalkanImage.addGestureRecognizer(tapKalkan)
+        kalkanImage.isUserInteractionEnabled = true
+        //eldıven image
+        let tapEldiven = UITapGestureRecognizer(target: self, action: #selector(self.tappedEldiven))
+        eldivenImage.addGestureRecognizer(tapEldiven)
+        eldivenImage.isUserInteractionEnabled = true
+        //kolye image
+        let tapKolye = UITapGestureRecognizer(target: self, action: #selector(self.tappedKolye))
+        kolyeImage.addGestureRecognizer(tapKolye)
+        kolyeImage.isUserInteractionEnabled = true
+        //ayakkabi image
+        let tapAyakkabi = UITapGestureRecognizer(target: self, action: #selector(self.tappedAyakkabi))
+        ayakkabiImage.addGestureRecognizer(tapAyakkabi)
+        ayakkabiImage.isUserInteractionEnabled = true
+        
     }
+    
+    
+    
+    @objc func tappedKask()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("kask", forKey: "DressedItemTap")
+    }
+    @objc func tappedSilah()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("silah", forKey: "DressedItemTap")
+    }
+    @objc func tappedZirh()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("zirh", forKey: "DressedItemTap")
+    }
+    @objc func tappedKalkan()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("kalkan", forKey: "DressedItemTap")
+    }
+    @objc func tappedEldiven()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("eldiven", forKey: "DressedItemTap")
+    }
+    @objc func tappedKolye()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("kolye", forKey: "DressedItemTap")
+    }
+    @objc func tappedAyakkabi()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("ayakkabi", forKey: "DressedItemTap")
+    }
+    
+
+    
+    
+    
+    
     
     fileprivate func loadUserProfile() {
         let myUserID = UserDefaults.standard.value(forKey: "userID")
@@ -208,6 +282,10 @@ class UserProfileViewController: UIViewController {
         loadUserDressedItems()
     }
     
+    
+   
 
+   
+    
 }
 
