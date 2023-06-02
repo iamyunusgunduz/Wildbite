@@ -39,7 +39,7 @@ class ShopItemDetailsViewController: UIViewController {
         let itemResimAdiUD = UserDefaults.standard.array(forKey: "itemCekilisiItemResimleri")
         let itemItemAdiUD = UserDefaults.standard.array(forKey: "itemCekilisiItemAdi")
         let itemItemID = UserDefaults.standard.array(forKey: "itemCekilisiItemID")
-        
+      
         let itemItemDressLevelUD = UserDefaults.standard.array(forKey: "itemCekilisiItemDressLevel")
         let itemItemLevelUD = UserDefaults.standard.array(forKey: "itemCekilisiItemLevel")
         let itemItemPowerUD = UserDefaults.standard.array(forKey: "itemCekilisiItemPower")
@@ -61,10 +61,40 @@ class ShopItemDetailsViewController: UIViewController {
     }
 
     @IBAction func itemKusan(_ sender: Any) {
+        let shopID = UserDefaults.standard.integer(forKey: "ShopMenuID")
+        let itemItemID = UserDefaults.standard.array(forKey: "itemCekilisiItemID")
+        let itemItemRandomNumberUD = UserDefaults.standard.integer(forKey: "itemCekilisiRandomNumber")
+        let usertoken = UserDefaults.standard.string(forKey: "userToken")
+        dump("Debug: Kuşanılan item = { shop id : \(shopID)   item id: \(itemItemID?[itemItemRandomNumberUD] ?? 0) }")
         
         
+        let headers: HTTPHeaders = [
+            .authorization(bearerToken: usertoken!),
+            .accept("application/json")
+        ]
+        let itemGiyParameters =
         
-        
+        AF.request("http://yunusgunduz.site/wildbite/public/api/dressed?shop_id=\(shopID)&item_id=\(itemItemID?[itemItemRandomNumberUD] ?? 0)",
+                   method: .post,
+                   headers: headers)
+        .validate(statusCode: 200..<500)
+        .validate(contentType: ["application/json"])
+        .responseData {  response in
+            debugPrint(response)
+            switch response.result {
+            case .success:
+                    let itemGiyresponse = try? JSONDecoder().decode(ItemGiyModel.self,  from: response.data!)
+                    debugPrint(itemGiyresponse ??  "bisey oldu itemGiyresponse")
+                    dump("Debug: Message = \(itemGiyresponse?.message ?? "bisey oldu itemGiyresponse")")
+                    if(itemGiyresponse?.message == "Kuşanıldı"){
+                        self.viewWillAppear(true)
+                    }
+                    
+            case let .failure(error):
+                print(error.errorDescription!)
+                print("hata")
+            }
+        }
     }
     fileprivate func loadUserDressedItems() {
         let myUserID = UserDefaults.standard.value(forKey: "userID")
@@ -97,15 +127,15 @@ class ShopItemDetailsViewController: UIViewController {
                         let dressResponse = try? JSONDecoder().decode(UserDressedModel.self, from: response.data!)
                         debugPrint(dressResponse ?? "dress list bisey oldu")
                        
-                        dump("Item + user pow\(dressResponse!.userPower)")
-                        dump("Item + user health\(dressResponse!.userCurrentHealth)")
-                        dump("Item + user def\(dressResponse!.userDefense)")
-                        dump("Item + user speed\(dressResponse!.userSpeed)")
+                        dump("Item + user pow\(dressResponse?.userPower ?? 0)")
+                        dump("Item + user health\(dressResponse?.userCurrentHealth ?? 0)")
+                        dump("Item + user def\(dressResponse?.userDefense ?? 0)")
+                        dump("Item + user speed\(dressResponse?.userSpeed ?? 0)")
                        
-                        dump("Only Item pow: \(dressResponse!.itemPower)")
-                        dump("Only Item health: \(dressResponse!.itemHealth)")
-                        dump("Only Item def: \(dressResponse!.itemDefense)")
-                        dump("Only Item speed: \(dressResponse!.itemSpeed)")
+                        dump("Only Item pow: \(dressResponse?.itemPower ?? 0)")
+                        dump("Only Item health: \(dressResponse?.itemHealth ?? 0)")
+                        dump("Only Item def: \(dressResponse?.itemDefense ?? 0)")
+                        dump("Only Item speed: \(dressResponse?.itemSpeed ?? 0)")
                         
                         dressResponse?.dressed.forEach({ itemler in
                             switch itemler.shopName{
@@ -215,10 +245,6 @@ class ShopItemDetailsViewController: UIViewController {
                             
                            
                         })
-                       
-                        
-                        
-                        
                        
                         
                     case let .failure(error):

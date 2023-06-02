@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     func userLoggined(){
         if(UserDefaults.standard.value(forKey: "userName") != nil){
             DispatchQueue.main.async(){
-              // self.performSegue(withIdentifier: "loginToMain", sender: self)
+               self.performSegue(withIdentifier: "loginToMain", sender: self)
                 print("Debug: Login To Main yani user giris yapti defauls`u dolu :)")
             }
        

@@ -67,7 +67,7 @@ class WarCaseViewController: UIViewController {
         let WarSaldiranUserImage = UserDefaults.standard.string(forKey: "WarSaldiranUserImage")
         let usertoken = UserDefaults.standard.string(forKey: "userToken")
         
-        
+        dump("Debug: saldiran Image: \(String(describing: WarSaldiranUserImage))")
         
         
         let WarSavunanUserName = UserDefaults.standard.string(forKey: "WarSavunanUserName")
@@ -144,6 +144,7 @@ class WarCaseViewController: UIViewController {
               
                 let urlKazanan = URL(string: "\(WarSaldiranUserImage ?? "adasd")")
                 let urlSavunan = URL(string: "\(WarSavunanUserImage ?? "asdas")")
+                dump("Debug: Kazanan Image: \(String(describing: urlKazanan))")
             DispatchQueue.main.async{
                 self.kazananImage.kf.setImage(with: urlKazanan)
                 self.kaybedenImage.kf.setImage(with: urlSavunan)

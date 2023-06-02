@@ -247,6 +247,11 @@ class ProfileSettViewController: UIViewController {
         }
     }
 
+    
+    @IBAction func cikisButton(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "userName")
+    }
+    
     @IBAction func GucArttirButton(_ sender: Any) {
     
         

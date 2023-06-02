@@ -114,7 +114,7 @@ class WARViewController: UIViewController {
                         UserDefaults.standard.set(profileModelresponse!.user.defense, forKey: "WarSaldiranUserDefense")
                         UserDefaults.standard.set(profileModelresponse!.user.speed, forKey: "WarSaldiranUserSpeed")
                         UserDefaults.standard.set(profileModelresponse!.race.raceName, forKey: "WarSaldiranUserRacename")
-                        UserDefaults.standard.set(profileModelresponse!.user.image, forKey: "   ")
+                        UserDefaults.standard.set(profileModelresponse!.user.image, forKey: "WarSaldiranUserImage")
                   
                      
                  

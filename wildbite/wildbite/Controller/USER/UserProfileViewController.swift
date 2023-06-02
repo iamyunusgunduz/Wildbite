@@ -220,15 +220,15 @@ class UserProfileViewController: UIViewController {
                         let dressResponse = try? JSONDecoder().decode(UserDressedModel.self, from: response.data!)
                         debugPrint(dressResponse ?? "dress list bisey oldu")
                        
-                        dump("Item + user pow\(dressResponse!.userPower)")
-                        dump("Item + user health\(dressResponse!.userCurrentHealth)")
-                        dump("Item + user def\(dressResponse!.userDefense)")
-                        dump("Item + user speed\(dressResponse!.userSpeed)")
+                        dump("Item + user pow\(dressResponse?.userPower ?? 0)")
+                        dump("Item + user health\(dressResponse?.userCurrentHealth  ?? 0)")
+                        dump("Item + user def\(dressResponse?.userDefense  ?? 0)")
+                        dump("Item + user speed\(dressResponse?.userSpeed  ?? 0)")
                        
-                        dump("Only Item pow: \(dressResponse!.itemPower)")
-                        dump("Only Item health: \(dressResponse!.itemHealth)")
-                        dump("Only Item def: \(dressResponse!.itemDefense)")
-                        dump("Only Item speed: \(dressResponse!.itemSpeed)")
+                        dump("Only Item pow: \(dressResponse?.itemPower  ?? 0)")
+                        dump("Only Item health: \(dressResponse?.itemHealth  ?? 0)")
+                        dump("Only Item def: \(dressResponse?.itemDefense  ?? 0)")
+                        dump("Only Item speed: \(dressResponse?.itemSpeed  ?? 0)")
                         
                         dressResponse?.dressed.forEach({ itemler in
                             switch itemler.shopName{
