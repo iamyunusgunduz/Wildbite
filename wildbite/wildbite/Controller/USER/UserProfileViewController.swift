@@ -137,9 +137,9 @@ class UserProfileViewController: UIViewController {
         let myUserID = UserDefaults.standard.value(forKey: "userID")
         let myUserName = UserDefaults.standard.value(forKey: "userName")
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
-        print("User Id: \(myUserID!)")
-        print("User Name: \(myUserName!)")
-        print("User Token: \(myUserToken!)")
+        print("User Id: \(myUserID ?? 0 )")
+        print("User Name: \(myUserName ?? 0)")
+        print("User Token: \(myUserToken ?? 0)")
         
         let token = "\(myUserToken!)"
         

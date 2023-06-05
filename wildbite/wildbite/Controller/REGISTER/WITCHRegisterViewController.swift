@@ -33,7 +33,7 @@ class WITCHRegisterViewController: UIViewController {
         defProgress.progress = 0.5
         speedProgress.progress = 0.2
       //  smartProgress.progress = 0.5
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "RegisterBackground.png")!)
         powValueLabel.text = "3"
         defValueLabel.text = "5"
         speedValueLabel.text = "2"

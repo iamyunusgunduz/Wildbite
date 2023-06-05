@@ -17,31 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ust" translatesAutoresizingMaskIntoConstraints="NO" id="3eF-pg-k6N">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Window_Header_Overlay" translatesAutoresizingMaskIntoConstraints="NO" id="3eF-pg-k6N">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="mK1-9D-5c9"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-qn-h3r">
-                                <rect key="frame" x="0.0" y="259.66666666666669" width="430" height="413.00000000000006"/>
+                                <rect key="frame" x="0.0" y="178" width="430" height="576"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZU-ME-jgz">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Window_Header_LOGIN" translatesAutoresizingMaskIntoConstraints="NO" id="A8X-gt-o0v">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="176"/>
+                                    </imageView>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGp-gG-ApV" userLabel="mailView">
-                                        <rect key="frame" x="0.0" y="46" width="430" height="100"/>
+                                        <rect key="frame" x="0.0" y="186" width="430" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_text" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-I5-5Pe">
-                                                <rect key="frame" x="0.0" y="0.0" width="430" height="100"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input_Background" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-I5-5Pe">
+                                                <rect key="frame" x="-92" y="0.0" width="614" height="100"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="ali@gmail.com" placeholder="email" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-wP-IrT">
+                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="ali@gmail.com" placeholder="email" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" background="Input_Focus" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-wP-IrT">
                                                 <rect key="frame" x="138.66666666666666" y="38" width="152.99999999999997" height="24"/>
-                                                <color key="backgroundColor" red="0.42567169669999999" green="0.07162509114" blue="0.039169482890000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="153" id="9Pv-IZ-t8S"/>
                                                     <constraint firstAttribute="height" constant="24" id="D9y-dI-BWi"/>
@@ -51,27 +46,23 @@
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="h3S-I5-5Pe" firstAttribute="leading" secondItem="fGp-gG-ApV" secondAttribute="leading" id="M6G-La-FQd"/>
+                                            <constraint firstItem="h3S-I5-5Pe" firstAttribute="centerX" secondItem="fGp-gG-ApV" secondAttribute="centerX" id="BBP-pz-cnp"/>
                                             <constraint firstItem="h3S-I5-5Pe" firstAttribute="top" secondItem="fGp-gG-ApV" secondAttribute="top" id="Otn-Bm-7gM"/>
                                             <constraint firstItem="WG0-wP-IrT" firstAttribute="centerY" secondItem="fGp-gG-ApV" secondAttribute="centerY" id="QGx-sI-KIz"/>
                                             <constraint firstAttribute="bottom" secondItem="h3S-I5-5Pe" secondAttribute="bottom" id="WUA-hm-D0Y"/>
-                                            <constraint firstAttribute="trailing" secondItem="h3S-I5-5Pe" secondAttribute="trailing" id="XFp-53-1bF"/>
                                             <constraint firstAttribute="height" constant="100" id="rGe-b8-4cq"/>
                                             <constraint firstItem="WG0-wP-IrT" firstAttribute="centerX" secondItem="fGp-gG-ApV" secondAttribute="centerX" id="uIa-qy-PZj"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="KmH-m8-3ie" userLabel="PassView">
-                                        <rect key="frame" x="0.0" y="156" width="430" height="100"/>
+                                        <rect key="frame" x="0.0" y="296" width="430" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_text" translatesAutoresizingMaskIntoConstraints="NO" id="62Q-bx-XaQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="430" height="100"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input_Background" translatesAutoresizingMaskIntoConstraints="NO" id="62Q-bx-XaQ">
+                                                <rect key="frame" x="-92" y="0.0" width="614" height="100"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="12345" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0n0-uh-F3b">
-                                                <rect key="frame" x="163.66666666666666" y="41.333333333333314" width="102.99999999999997" height="17"/>
-                                                <color key="backgroundColor" red="0.42567169669999999" green="0.07162509114" blue="0.039169482890000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="12345" placeholder="password" textAlignment="center" minimumFontSize="17" background="Input_Focus" translatesAutoresizingMaskIntoConstraints="NO" id="0n0-uh-F3b">
+                                                <rect key="frame" x="163.66666666666666" y="41.666666666666629" width="102.99999999999997" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="F2b-zo-K8n"/>
                                                     <constraint firstAttribute="width" constant="103" id="QXT-AC-9en"/>
@@ -82,47 +73,47 @@
                                             </textField>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="Hzz-pD-AQi"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="0n0-uh-F3b" firstAttribute="centerX" secondItem="KmH-m8-3ie" secondAttribute="centerX" id="4MO-1p-IlG"/>
-                                            <constraint firstItem="62Q-bx-XaQ" firstAttribute="leading" secondItem="KmH-m8-3ie" secondAttribute="leading" id="DJb-oF-nVH"/>
                                             <constraint firstAttribute="height" constant="100" id="HEV-an-B12"/>
                                             <constraint firstAttribute="bottom" secondItem="62Q-bx-XaQ" secondAttribute="bottom" id="NGM-1P-VnW"/>
-                                            <constraint firstAttribute="trailing" secondItem="62Q-bx-XaQ" secondAttribute="trailing" id="U0h-bt-Uli"/>
+                                            <constraint firstItem="62Q-bx-XaQ" firstAttribute="centerX" secondItem="KmH-m8-3ie" secondAttribute="centerX" id="SE9-Wf-emf"/>
                                             <constraint firstItem="0n0-uh-F3b" firstAttribute="centerY" secondItem="KmH-m8-3ie" secondAttribute="centerY" id="qXV-3f-0uE"/>
                                             <constraint firstItem="62Q-bx-XaQ" firstAttribute="top" secondItem="KmH-m8-3ie" secondAttribute="top" id="xTh-1d-doD"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pgn-yc-wsZ">
-                                        <rect key="frame" x="0.0" y="265.99999999999994" width="430" height="147"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW5-MC-NlR">
-                                                <rect key="frame" x="0.0" y="2" width="215" height="143"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="login" buttonSize="mini"/>
-                                                <connections>
-                                                    <action selector="loginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ig4-Lr-g6W"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHo-UE-DtD">
-                                                <rect key="frame" x="215" y="0.0" width="215" height="147"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="register"/>
-                                                <connections>
-                                                    <segue destination="x25-sk-2Ai" kind="presentation" modalPresentationStyle="fullScreen" id="f73-Il-Zgk"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW5-MC-NlR">
+                                        <rect key="frame" x="0.0" y="406" width="430" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="gaL-aE-coW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="tintColor" red="0.35106813718357766" green="0.11442979014044066" blue="0.009475851825868218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="LOGIN" backgroundImage="Button_Login"/>
+                                        <connections>
+                                            <action selector="loginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ig4-Lr-g6W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHo-UE-DtD">
+                                        <rect key="frame" x="0.0" y="496" width="430" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="qgo-sA-ulI"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.4147190154" green="0.0" blue="0.027685213829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="REGİSTER">
+                                            <backgroundConfiguration key="background" image="Button_Register"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="x25-sk-2Ai" kind="presentation" modalPresentationStyle="fullScreen" id="f73-Il-Zgk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="pgn-yc-wsZ" firstAttribute="centerX" secondItem="BmS-qn-h3r" secondAttribute="centerX" id="Gpe-Ug-lK5"/>
-                                </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alt" translatesAutoresizingMaskIntoConstraints="NO" id="P5s-BC-XwU">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Window_Header_Overlay" translatesAutoresizingMaskIntoConstraints="NO" id="P5s-BC-XwU">
                                 <rect key="frame" x="0.0" y="832" width="430" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="5og-49-Spc"/>
@@ -151,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71.25" y="-34.859154929577464"/>
+            <point key="canvasLocation" x="68" y="-42"/>
         </scene>
         <!--Main-->
         <scene sceneID="Nmg-gH-7Jl">
@@ -171,11 +162,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="alt" width="271" height="56.333332061767578"/>
-        <image name="blank_text" width="165.66667175292969" height="55.333332061767578"/>
-        <image name="login" width="133" height="133"/>
-        <image name="register" width="133" height="133"/>
-        <image name="ust" width="259.33334350585938" height="54.333332061767578"/>
+        <image name="Button_Login" width="454" height="142"/>
+        <image name="Button_Register" width="328" height="110"/>
+        <image name="Input_Background" width="614" height="182"/>
+        <image name="Input_Focus" width="128" height="96"/>
+        <image name="Window_Header_LOGIN" width="632" height="176"/>
+        <image name="Window_Header_Overlay" width="316" height="78"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

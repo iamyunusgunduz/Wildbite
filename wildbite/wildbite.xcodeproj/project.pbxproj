@@ -176,6 +176,13 @@
 			path = SHOPBOXIN;
 			sourceTree = "<group>";
 		};
+		013361F32A29DF2E002ED455 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		0176F6732A0D2D75009B5749 /*  SHOP ITEMS */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +475,7 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				013361F32A29DF2E002ED455 /* New Group */,
 				010859BA2A22AB9800FAB693 /* SHOP */,
 				0184F09A2A2226AE00FD1F12 /* DRESSED */,
 				01936DD42A0596FF00780FB3 /* WAR */,

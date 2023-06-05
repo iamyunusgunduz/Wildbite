@@ -29,7 +29,7 @@ class WEREWOLFRegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "RegisterBackground.png")!)
         powerProgress.progress = 0.3
         defProgress.progress = 0.2
         speedProgress.progress = 0.5

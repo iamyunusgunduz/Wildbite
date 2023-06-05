@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userLoggined()
-       
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png")!)
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
