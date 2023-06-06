@@ -885,7 +885,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mN7-uF-fOF">
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="mN7-uF-fOF">
                                 <rect key="frame" x="20" y="40" width="374" height="816"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-AV-Og7">
@@ -894,19 +894,19 @@
                                             <constraint firstAttribute="height" constant="40" id="2sN-bN-Sz5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.88429888869999995" green="0.76700663609999997" blue="0.48540320549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.75160050389999999" green="0.3455178142" blue="0.13258540630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="8aa-AT-z1f">
-                                        <rect key="frame" x="0.0" y="60" width="374" height="512"/>
+                                        <rect key="frame" x="0.0" y="85" width="374" height="548"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQh-CL-uog">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="512"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="548"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="ysc-tj-WrS"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                <color key="tintColor" red="0.35690999769999998" green="0.35690999769999998" blue="0.35690999769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.75160050389999999" green="0.3455178142" blue="0.13258540630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
@@ -916,14 +916,14 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MN0-AU-FIk">
-                                                <rect key="frame" x="30" y="0.0" width="314" height="512"/>
+                                                <rect key="frame" x="30" y="0.0" width="314" height="548"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-Pz-VMJ">
-                                                <rect key="frame" x="344" y="0.0" width="30" height="512"/>
+                                                <rect key="frame" x="344" y="0.0" width="30" height="548"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="TtT-9a-B0F"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.35690999769999998" green="0.35690999769999998" blue="0.35690999769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.75160050389999999" green="0.3455178142" blue="0.13258540630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="chevron.forward" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -934,10 +934,13 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPw-MI-PJO">
-                                        <rect key="frame" x="0.0" y="592" width="374" height="224"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPw-MI-PJO">
+                                        <rect key="frame" x="0.0" y="678" width="374" height="138"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="Button_OK"/>
+                                        <state key="normal" image="OK">
+                                            <color key="titleColor" red="0.75160050389999999" green="0.3455178142" blue="0.13258540630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="characterSelectButton:" destination="KFA-d5-mSX" eventType="touchUpInside" id="v99-v2-fXY"/>
                                         </connections>
@@ -1124,9 +1127,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Button_Login" width="454" height="142"/>
-        <image name="Button_OK" width="228" height="228"/>
         <image name="Button_Register" width="328" height="110"/>
         <image name="Input_Background" width="614" height="182"/>
+        <image name="OK" width="138" height="138"/>
         <image name="Window_Header_REGISTER" width="632" height="176"/>
         <image name="alt" width="271" height="56.333332061767578"/>
         <image name="chevron.forward" catalog="system" width="97" height="128"/>
