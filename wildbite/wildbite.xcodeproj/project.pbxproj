@@ -10,8 +10,12 @@
 		010859BD2A22ABE200FAB693 /* ShopBoxInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859BC2A22ABE200FAB693 /* ShopBoxInViewController.swift */; };
 		010859BF2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */; };
 		010859C12A22ACB100FAB693 /* ItemShopFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */; };
+		010C2F4E2A2FD27300CBF67A /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 010C2F4D2A2FD27300CBF67A /* SwiftyGif */; };
+		010C2F512A2FD52C00CBF67A /* gif.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010C2F502A2FD52C00CBF67A /* gif.storyboard */; };
+		010C2F532A2FD54200CBF67A /* gifyyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C2F522A2FD54200CBF67A /* gifyyViewController.swift */; };
 		012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */; };
 		013361F22A29DA29002ED455 /* ItemGiyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013361F12A29DA29002ED455 /* ItemGiyModel.swift */; };
+		013383112A2FE9CE00783563 /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013383102A2FE9CE00783563 /* RegisterStepTwoViewController.swift */; };
 		0159D6672A19545100AB98F3 /* WarCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159D6662A19545100AB98F3 /* WarCaseViewController.swift */; };
 		015CFE882A1A7C4200C7B668 /* WarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CFE872A1A7C4200C7B668 /* WarModel.swift */; };
 		0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0176F6742A0D2D95009B5749 /* ShopItems.storyboard */; };
@@ -74,8 +78,11 @@
 		010859BC2A22ABE200FAB693 /* ShopBoxInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBoxInViewController.swift; sourceTree = "<group>"; };
 		010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBoxInTableViewCell.swift; sourceTree = "<group>"; };
 		010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShopFilterModel.swift; sourceTree = "<group>"; };
+		010C2F502A2FD52C00CBF67A /* gif.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = gif.storyboard; sourceTree = "<group>"; };
+		010C2F522A2FD54200CBF67A /* gifyyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifyyViewController.swift; sourceTree = "<group>"; };
 		012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRaceModel.swift; sourceTree = "<group>"; };
 		013361F12A29DA29002ED455 /* ItemGiyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGiyModel.swift; sourceTree = "<group>"; };
+		013383102A2FE9CE00783563 /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
 		0159D6662A19545100AB98F3 /* WarCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarCaseViewController.swift; sourceTree = "<group>"; };
 		015CFE872A1A7C4200C7B668 /* WarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarModel.swift; sourceTree = "<group>"; };
 		0176F6742A0D2D95009B5749 /* ShopItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopItems.storyboard; sourceTree = "<group>"; };
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B3D4B629DF1CAE0083838C /* Kingfisher in Frameworks */,
+				010C2F4E2A2FD27300CBF67A /* SwiftyGif in Frameworks */,
 				88E508DA29D4836100E9E557 /* Alamofire in Frameworks */,
 				8873B36C29E2D1D900F4FB89 /* PaperOnboarding in Frameworks */,
 			);
@@ -174,6 +182,15 @@
 				010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */,
 			);
 			path = SHOPBOXIN;
+			sourceTree = "<group>";
+		};
+		010C2F4F2A2FD50600CBF67A /* GIFLEARN */ = {
+			isa = PBXGroup;
+			children = (
+				010C2F502A2FD52C00CBF67A /* gif.storyboard */,
+				010C2F522A2FD54200CBF67A /* gifyyViewController.swift */,
+			);
+			path = GIFLEARN;
 			sourceTree = "<group>";
 		};
 		013361F32A29DF2E002ED455 /* New Group */ = {
@@ -280,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				88E508E829D4913200E9E557 /* RegisterViewController.swift */,
+				013383102A2FE9CE00783563 /* RegisterStepTwoViewController.swift */,
 				887EC81C29E756980097D386 /* HUNTERRegisterViewController.swift */,
 				887EC81E29E75CA30097D386 /* WEREWOLFRegisterViewController.swift */,
 				887EC82029E75CB60097D386 /* VAMPIRERegisterViewController.swift */,
@@ -460,6 +478,7 @@
 		88E508DC29D4853800E9E557 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				010C2F4F2A2FD50600CBF67A /* GIFLEARN */,
 				010859B92A22A76A00FAB693 /* SHOP */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
@@ -521,6 +540,7 @@
 				88E508D929D4836100E9E557 /* Alamofire */,
 				88B3D4B529DF1CAE0083838C /* Kingfisher */,
 				8873B36B29E2D1D900F4FB89 /* PaperOnboarding */,
+				010C2F4D2A2FD27300CBF67A /* SwiftyGif */,
 			);
 			productName = wildbite;
 			productReference = 88E508C129D481E300E9E557 /* wildbite.app */;
@@ -554,6 +574,7 @@
 				88E508D829D4836100E9E557 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				88B3D4B429DF1CAE0083838C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				8873B36A29E2D1D900F4FB89 /* XCRemoteSwiftPackageReference "paper-onboarding" */,
+				010C2F4C2A2FD27200CBF67A /* XCRemoteSwiftPackageReference "SwiftyGif" */,
 			);
 			productRefGroup = 88E508C229D481E300E9E557 /* Products */;
 			projectDirPath = "";
@@ -572,6 +593,7 @@
 				88CCB2AC29DF898100C9F1D8 /* Hunt.storyboard in Resources */,
 				0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */,
 				88E508D129D481E600E9E557 /* LaunchScreen.storyboard in Resources */,
+				010C2F512A2FD52C00CBF67A /* gif.storyboard in Resources */,
 				88E508CE29D481E600E9E557 /* Assets.xcassets in Resources */,
 				881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */,
 				88C6803029E605CD00719CC0 /* ItemAdd.storyboard in Resources */,
@@ -624,9 +646,11 @@
 				887EC82329E75CC90097D386 /* WITCHRegisterViewController.swift in Sources */,
 				88E508E929D4913200E9E557 /* RegisterViewController.swift in Sources */,
 				88E508C529D481E400E9E557 /* AppDelegate.swift in Sources */,
+				013383112A2FE9CE00783563 /* RegisterStepTwoViewController.swift in Sources */,
 				01857B492A16D00F0040564F /* NightMissionModel.swift in Sources */,
 				019237FA2A1FA54500D579E9 /* UserStateModel.swift in Sources */,
 				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
+				010C2F532A2FD54200CBF67A /* gifyyViewController.swift in Sources */,
 				012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */,
 				88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */,
 				887EC81F29E75CA30097D386 /* WEREWOLFRegisterViewController.swift in Sources */,
@@ -870,6 +894,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		010C2F4C2A2FD27200CBF67A /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kirualex/SwiftyGif";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		8873B36A29E2D1D900F4FB89 /* XCRemoteSwiftPackageReference "paper-onboarding" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Ramotion/paper-onboarding.git";
@@ -897,6 +929,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		010C2F4D2A2FD27300CBF67A /* SwiftyGif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 010C2F4C2A2FD27200CBF67A /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
+		};
 		8873B36B29E2D1D900F4FB89 /* PaperOnboarding */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8873B36A29E2D1D900F4FB89 /* XCRemoteSwiftPackageReference "paper-onboarding" */;

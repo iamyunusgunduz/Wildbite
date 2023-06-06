@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 import Kingfisher
-
+import SwiftyGif
 
 class ItemFetch {
     var itemimage = ""
@@ -176,7 +176,12 @@ class UserProfileViewController: UIViewController {
                         let url2 = URL(string: "http://yunusgunduz.site/wildbite/image/iksir/2.png")!
                         
                         print("Image url : \(url ?? url2)")
-                        userProfileImageView.kf.setImage(with: url ?? url2)
+                     //   userProfileImageView.kf.setImage(with: url ?? url2)
+                      
+                    
+                       
+                        self.userProfileImageView.setGifFromURL(URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/200px-Rotating_earth_%28large%29.gif")!)
+                        
                         
                         profileModelresponse!.item.forEach { Item in
                             print("Item Name: \(Item.name) Level")

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dik-NF-Op9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yhZ-sB-v2y">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -228,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyo-j3-o1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="-35"/>
+            <point key="canvasLocation" x="2084" y="-233"/>
         </scene>
         <!--WEREWOLF-->
         <scene sceneID="Nxl-2T-wIM">
@@ -876,6 +877,93 @@
             </objects>
             <point key="canvasLocation" x="4612" y="10"/>
         </scene>
+        <!--Register Step Two View Controller-->
+        <scene sceneID="wPS-jB-mYf">
+            <objects>
+                <viewController id="KFA-d5-mSX" customClass="RegisterStepTwoViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8of-UU-6tE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mN7-uF-fOF">
+                                <rect key="frame" x="20" y="40" width="374" height="816"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-AV-Og7">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2sN-bN-Sz5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.88429888869999995" green="0.76700663609999997" blue="0.48540320549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="8aa-AT-z1f">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="512"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQh-CL-uog">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="512"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="ysc-tj-WrS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                <color key="tintColor" red="0.35690999769999998" green="0.35690999769999998" blue="0.35690999769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="beforeButton:" destination="KFA-d5-mSX" eventType="touchUpInside" id="GZW-zE-zPl"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MN0-AU-FIk">
+                                                <rect key="frame" x="30" y="0.0" width="314" height="512"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-Pz-VMJ">
+                                                <rect key="frame" x="344" y="0.0" width="30" height="512"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="TtT-9a-B0F"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.35690999769999998" green="0.35690999769999998" blue="0.35690999769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.forward" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="afterButton:" destination="KFA-d5-mSX" eventType="touchUpInside" id="PjE-bK-m5k"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPw-MI-PJO">
+                                        <rect key="frame" x="0.0" y="592" width="374" height="224"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="Button_OK"/>
+                                        <connections>
+                                            <action selector="characterSelectButton:" destination="KFA-d5-mSX" eventType="touchUpInside" id="v99-v2-fXY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KPJ-mb-dIq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mN7-uF-fOF" firstAttribute="leading" secondItem="KPJ-mb-dIq" secondAttribute="leading" constant="20" id="XVM-hH-njO"/>
+                            <constraint firstItem="mN7-uF-fOF" firstAttribute="top" secondItem="KPJ-mb-dIq" secondAttribute="top" constant="40" id="Xgj-eM-ICJ"/>
+                            <constraint firstItem="KPJ-mb-dIq" firstAttribute="bottom" secondItem="mN7-uF-fOF" secondAttribute="bottom" constant="40" id="cBC-dp-8un"/>
+                            <constraint firstAttribute="trailing" secondItem="mN7-uF-fOF" secondAttribute="trailing" constant="20" id="vJp-SP-02p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="afterButtonLabel" destination="9sO-Pz-VMJ" id="zSH-vX-z5A"/>
+                        <outlet property="beforeButtonLabel" destination="IQh-CL-uog" id="lpO-Az-s8F"/>
+                        <outlet property="profileImage" destination="MN0-AU-FIk" id="GAG-mo-cqH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZe-bN-rW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="196"/>
+        </scene>
         <!--REGISTER STEP ONE-->
         <scene sceneID="2jQ-fX-XF5">
             <objects>
@@ -988,7 +1076,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="registerButton:" destination="yhZ-sB-v2y" eventType="touchUpInside" id="sYY-xx-b3v"/>
+                                            <segue destination="KFA-d5-mSX" kind="presentation" modalPresentationStyle="fullScreen" id="VDH-8G-b4H"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoW-TD-x4V">
@@ -1032,19 +1120,24 @@
         <segue reference="Ihx-y7-WHb"/>
         <segue reference="wXX-Ti-g1j"/>
         <segue reference="SlY-LI-Ci7"/>
-        <segue reference="xWG-nO-i0b"/>
+        <segue reference="Qih-hE-FKj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Button_Login" width="454" height="142"/>
+        <image name="Button_OK" width="228" height="228"/>
         <image name="Button_Register" width="328" height="110"/>
         <image name="Input_Background" width="614" height="182"/>
         <image name="Window_Header_REGISTER" width="632" height="176"/>
         <image name="alt" width="271" height="56.333332061767578"/>
+        <image name="chevron.forward" catalog="system" width="97" height="128"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="ust" width="259.33334350585938" height="54.333332061767578"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
