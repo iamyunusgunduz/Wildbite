@@ -3,7 +3,7 @@
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,38 +35,32 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input_Background" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-I5-5Pe">
                                                 <rect key="frame" x="-92" y="0.0" width="614" height="100"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="ali@gmail.com" placeholder="email" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" background="Input_Focus" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-wP-IrT">
+                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" background="Input_Focus" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-wP-IrT">
                                                 <rect key="frame" x="138.66666666666666" y="38" width="152.99999999999997" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="153" id="9Pv-IZ-t8S"/>
-                                                    <constraint firstAttribute="height" constant="24" id="D9y-dI-BWi"/>
-                                                </constraints>
                                                 <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="WG0-wP-IrT" firstAttribute="centerY" secondItem="h3S-I5-5Pe" secondAttribute="centerY" id="AJU-tI-Ous"/>
                                             <constraint firstItem="h3S-I5-5Pe" firstAttribute="centerX" secondItem="fGp-gG-ApV" secondAttribute="centerX" id="BBP-pz-cnp"/>
+                                            <constraint firstItem="WG0-wP-IrT" firstAttribute="centerX" secondItem="h3S-I5-5Pe" secondAttribute="centerX" id="Fju-da-5tJ"/>
                                             <constraint firstItem="h3S-I5-5Pe" firstAttribute="top" secondItem="fGp-gG-ApV" secondAttribute="top" id="Otn-Bm-7gM"/>
-                                            <constraint firstItem="WG0-wP-IrT" firstAttribute="centerY" secondItem="fGp-gG-ApV" secondAttribute="centerY" id="QGx-sI-KIz"/>
                                             <constraint firstAttribute="bottom" secondItem="h3S-I5-5Pe" secondAttribute="bottom" id="WUA-hm-D0Y"/>
                                             <constraint firstAttribute="height" constant="100" id="rGe-b8-4cq"/>
-                                            <constraint firstItem="WG0-wP-IrT" firstAttribute="centerX" secondItem="fGp-gG-ApV" secondAttribute="centerX" id="uIa-qy-PZj"/>
+                                            <constraint firstItem="WG0-wP-IrT" firstAttribute="height" secondItem="h3S-I5-5Pe" secondAttribute="height" multiplier="0.24" id="udK-De-DiP"/>
+                                            <constraint firstItem="WG0-wP-IrT" firstAttribute="width" secondItem="h3S-I5-5Pe" secondAttribute="width" multiplier="0.249186" id="wkX-DL-dsr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="KmH-m8-3ie" userLabel="PassView">
                                         <rect key="frame" x="0.0" y="296" width="430" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input_Background" translatesAutoresizingMaskIntoConstraints="NO" id="62Q-bx-XaQ">
-                                                <rect key="frame" x="-92" y="0.0" width="614" height="100"/>
+                                                <rect key="frame" x="-91" y="0.0" width="612" height="100"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="12345" placeholder="password" textAlignment="center" minimumFontSize="17" background="Input_Focus" translatesAutoresizingMaskIntoConstraints="NO" id="0n0-uh-F3b">
-                                                <rect key="frame" x="163.66666666666666" y="41.666666666666629" width="102.99999999999997" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="17" id="F2b-zo-K8n"/>
-                                                    <constraint firstAttribute="width" constant="103" id="QXT-AC-9en"/>
-                                                </constraints>
+                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="17" background="Input_Focus" translatesAutoresizingMaskIntoConstraints="NO" id="0n0-uh-F3b">
+                                                <rect key="frame" x="163.66666666666666" y="41.666666666666629" width="102.66666666666666" height="17"/>
                                                 <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -74,11 +68,14 @@
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="Hzz-pD-AQi"/>
                                         <constraints>
-                                            <constraint firstItem="0n0-uh-F3b" firstAttribute="centerX" secondItem="KmH-m8-3ie" secondAttribute="centerX" id="4MO-1p-IlG"/>
+                                            <constraint firstItem="0n0-uh-F3b" firstAttribute="centerY" secondItem="62Q-bx-XaQ" secondAttribute="centerY" id="1ec-af-obe"/>
+                                            <constraint firstItem="0n0-uh-F3b" firstAttribute="width" secondItem="62Q-bx-XaQ" secondAttribute="width" multiplier="0.167752" id="66h-CT-qRL"/>
+                                            <constraint firstItem="0n0-uh-F3b" firstAttribute="centerX" secondItem="62Q-bx-XaQ" secondAttribute="centerX" id="Gbm-GD-k0P"/>
                                             <constraint firstAttribute="height" constant="100" id="HEV-an-B12"/>
                                             <constraint firstAttribute="bottom" secondItem="62Q-bx-XaQ" secondAttribute="bottom" id="NGM-1P-VnW"/>
                                             <constraint firstItem="62Q-bx-XaQ" firstAttribute="centerX" secondItem="KmH-m8-3ie" secondAttribute="centerX" id="SE9-Wf-emf"/>
-                                            <constraint firstItem="0n0-uh-F3b" firstAttribute="centerY" secondItem="KmH-m8-3ie" secondAttribute="centerY" id="qXV-3f-0uE"/>
+                                            <constraint firstItem="0n0-uh-F3b" firstAttribute="leading" secondItem="Hzz-pD-AQi" secondAttribute="leading" constant="163.66666666666663" id="sld-i2-6H9"/>
+                                            <constraint firstItem="0n0-uh-F3b" firstAttribute="height" secondItem="62Q-bx-XaQ" secondAttribute="height" multiplier="0.17" id="wVW-JD-ksw"/>
                                             <constraint firstItem="62Q-bx-XaQ" firstAttribute="top" secondItem="KmH-m8-3ie" secondAttribute="top" id="xTh-1d-doD"/>
                                         </constraints>
                                     </view>
@@ -104,8 +101,16 @@
                                         </constraints>
                                         <color key="tintColor" red="0.4147190154" green="0.0" blue="0.027685213829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="REGİSTER">
+                                        <buttonConfiguration key="configuration" style="plain">
                                             <backgroundConfiguration key="background" image="Button_Register"/>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="REGİSTER">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="Copperplate"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="x25-sk-2Ai" kind="presentation" modalPresentationStyle="fullScreen" id="f73-Il-Zgk"/>

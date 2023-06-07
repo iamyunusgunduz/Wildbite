@@ -97,7 +97,7 @@ class RegisterViewController: UIViewController {
                    
                    
                if(registerResponse!.message == "Accoun created."){
-                   self.performSegue(withIdentifier: "registerToRace", sender: nil)
+                   self.performSegue(withIdentifier: "registerStepTwo", sender: nil)
                   
                    
                    UserDefaults.standard.set(registerResponse!.user.name, forKey: "RegisterUserName")

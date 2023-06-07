@@ -8,18 +8,21 @@
 import UIKit
 import Alamofire
 import SwiftyGif
+import Kingfisher
 class RegisterStepTwoViewController: UIViewController {
 
     
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var klanImage: UIImageView!
     
-    @IBOutlet weak var characterName: UILabel!
+    @IBOutlet weak var klanNameLabel: UILabel!
     
     @IBOutlet weak var beforeButtonLabel: UIButton!
     
+    @IBOutlet weak var userImagem: UIImageView!
     @IBOutlet weak var afterButtonLabel: UIButton!
-  var userimage:String = "https://yunusgunduz.site/wildbite/image/user/0.gif";
-    var userimageValue:Int = 0
+  var userimage = "https://yunusgunduz.site/wildbite/image/race/101.png";
+    var userimagemm:String = "https://yunusgunduz.site/wildbite/image/user/0.gif";
+    var userimageValue:Int = 101
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png")!)
@@ -30,42 +33,71 @@ class RegisterStepTwoViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/101.png")
+        klanNameLabel.text = "Klan \(userimageValue)"
         DispatchQueue.main.async { [self] in
-           profileImage.setGifFromURL(URL(string: "\(userimage)")!)
-        }
+                   userImagem.setGifFromURL(URL(string: "\(userimagemm)")!)
+                }
+    DispatchQueue.main.async{
+        self.klanImage.kf.setImage(with: urlKlanImage)
+        
+    }
     }
 
     @IBAction func afterButton(_ sender: Any) {
         
       
-        if(userimageValue >= 0 && userimageValue < 7 ){
+        if(userimageValue >= 101 && userimageValue < 148 ){
             userimageValue += 1 ;
-            userimage = "https://yunusgunduz.site/wildbite/image/user/\(userimageValue).gif"
-            DispatchQueue.main.async { [self] in
-                self.profileImage.setGifFromURL(URL(string: "\(userimage)")!)
-            }
+           
+            let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
+            
+        DispatchQueue.main.async{
+            self.klanImage.kf.setImage(with: urlKlanImage)
+            
+        }
             
             dump(   userimage )
+        }else{
+            userimageValue = 101
+            let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
+            
+        DispatchQueue.main.async{
+            self.klanImage.kf.setImage(with: urlKlanImage)
+            
         }
-    
+            dump(   userimage )
+        }
+        klanNameLabel.text = "Klan \(userimageValue)"
     }
     
     @IBAction func beforeButton(_ sender: Any) {
-        if(userimageValue > 0 && userimageValue <= 7 ){
+        if(userimageValue > 101 && userimageValue <= 148 ){
             userimageValue -= 1 ;
-            userimage = "https://yunusgunduz.site/wildbite/image/user/\(userimageValue).gif"
-            DispatchQueue.main.async { [self] in
-                self.profileImage.setGifFromURL(URL(string: "\(userimage)")!)
-            }
+            let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
+            
+        DispatchQueue.main.async{
+            self.klanImage.kf.setImage(with: urlKlanImage)
+            
+        }
+            dump(   userimage )
+        }else{
+            userimageValue = 148
+            let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
+            
+        DispatchQueue.main.async{
+            self.klanImage.kf.setImage(with: urlKlanImage)
+            
+        }
             dump(   userimage )
         }
         
-      
+        klanNameLabel.text = "Klan \(userimageValue)"
     }
     
     @IBAction func characterSelectButton(_ sender: Any) {
         dump(   userimage )
-      /*
+      
        var userrole = 1
         var userlevel = 1
         var userexp = 0
@@ -84,7 +116,7 @@ class RegisterStepTwoViewController: UIViewController {
         var userregenerate_health_range = 1
         var totaldamage = 10
         
-        var userrace = 1
+         
         var userpower = 2
         var userdefense = 5
         var userspeed  = 3
@@ -102,7 +134,7 @@ class RegisterStepTwoViewController: UIViewController {
             .accept("application/json")
             
         ]
-        let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userrace, level: userlevel, night_mission_state:"1", exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: RegisterStepTwoViewController.userimage)
+        let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userimageValue, level: userlevel, night_mission_state:"1", exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: "https://yunusgunduz.site/wildbite/image/user/0.gif")
           
            AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(useridUSS)",
                       method: .put,
@@ -138,7 +170,7 @@ class RegisterStepTwoViewController: UIViewController {
                }
            }
         
-        */
+      
     }
     
 }

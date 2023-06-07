@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 struct Login: Encodable {
-    let email: String
+    let username: String
     let password: String
 }
 
@@ -41,11 +41,11 @@ class LoginViewController: UIViewController {
     }
      func userLogin() {
         
-         if(mailTextField.text == "" || passwordTextField.text == "" || !mailTextField.text!.contains("@")){
+         if(mailTextField.text == "" || passwordTextField.text == ""){
              
              return
          }
-         let login = Login(email: mailTextField.text!, password: passwordTextField.text!)
+         let login = Login(username: mailTextField.text!, password: passwordTextField.text!)
 
         AF.request("http://yunusgunduz.site/wildbite/public/api/login",
                    method: .post,

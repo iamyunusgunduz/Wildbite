@@ -173,14 +173,14 @@ class UserProfileViewController: UIViewController {
                         userGoldLabel.text = "Gold: \(profileModelresponse?.user.gold ?? "none")"
                         
                         let url = URL(string: "\(profileModelresponse!.user.image)")
-                        let url2 = URL(string: "http://yunusgunduz.site/wildbite/image/iksir/2.png")!
+                        let url2 = URL(string: "https://yunusgunduz.site/wildbite/image/user/0.gif")!
                         
                         print("Image url : \(url ?? url2)")
                      //   userProfileImageView.kf.setImage(with: url ?? url2)
                       
                     
                        
-                        self.userProfileImageView.setGifFromURL(URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/200px-Rotating_earth_%28large%29.gif")!)
+                    self.userProfileImageView.setGifFromURL(URL(string: "\(url ?? url2)")!)
                         
                         
                         profileModelresponse!.item.forEach { Item in
