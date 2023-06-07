@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import Kingfisher
 
 class menuFetch {
     var menuId = 0
@@ -36,6 +37,8 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "ShopMenuCell") as! ShopMenuTableViewCell
         cell.menuAdiLabel.text = gelenMenuler[indexPath.section].menuName
+        let url = URL(string: "https://yunusgunduz.site/wildbite/image/kasa/\(gelenMenuler[indexPath.section].menuImage).png")
+        cell.shopImageView.kf.setImage(with: url )
         return cell
     }
     
@@ -43,7 +46,7 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      //  self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png")!)
         
     }
     

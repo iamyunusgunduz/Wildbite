@@ -12,17 +12,19 @@ import Kingfisher
 class RegisterStepTwoViewController: UIViewController {
 
     
-    @IBOutlet weak var klanImage: UIImageView!
+    @IBOutlet weak var klanImageView: UIImageView!
     
     @IBOutlet weak var klanNameLabel: UILabel!
     
     @IBOutlet weak var beforeButtonLabel: UIButton!
     
-    @IBOutlet weak var userImagem: UIImageView!
+    @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var afterButtonLabel: UIButton!
-  var userimage = "https://yunusgunduz.site/wildbite/image/race/101.png";
-    var userimagemm:String = "https://yunusgunduz.site/wildbite/image/user/0.gif";
+    var klanImage = "https://yunusgunduz.site/wildbite/image/race/101.png";
+    var userimage:String = "https://yunusgunduz.site/wildbite/image/user/idle/00.gif";
+    
     var userimageValue:Int = 101
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png")!)
@@ -36,10 +38,10 @@ class RegisterStepTwoViewController: UIViewController {
         let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/101.png")
         klanNameLabel.text = "Klan \(userimageValue)"
         DispatchQueue.main.async { [self] in
-                   userImagem.setGifFromURL(URL(string: "\(userimagemm)")!)
+            userImageView.setGifFromURL(URL(string: "\(userimage)")!)
                 }
     DispatchQueue.main.async{
-        self.klanImage.kf.setImage(with: urlKlanImage)
+        self.klanImageView.kf.setImage(with: urlKlanImage)
         
     }
     }
@@ -53,7 +55,7 @@ class RegisterStepTwoViewController: UIViewController {
             let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
             
         DispatchQueue.main.async{
-            self.klanImage.kf.setImage(with: urlKlanImage)
+            self.klanImageView.kf.setImage(with: urlKlanImage)
             
         }
             
@@ -63,7 +65,7 @@ class RegisterStepTwoViewController: UIViewController {
             let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
             
         DispatchQueue.main.async{
-            self.klanImage.kf.setImage(with: urlKlanImage)
+            self.klanImageView.kf.setImage(with: urlKlanImage)
             
         }
             dump(   userimage )
@@ -77,7 +79,7 @@ class RegisterStepTwoViewController: UIViewController {
             let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
             
         DispatchQueue.main.async{
-            self.klanImage.kf.setImage(with: urlKlanImage)
+            self.klanImageView.kf.setImage(with: urlKlanImage)
             
         }
             dump(   userimage )
@@ -86,7 +88,7 @@ class RegisterStepTwoViewController: UIViewController {
             let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
             
         DispatchQueue.main.async{
-            self.klanImage.kf.setImage(with: urlKlanImage)
+            self.klanImageView.kf.setImage(with: urlKlanImage)
             
         }
             dump(   userimage )
@@ -134,7 +136,7 @@ class RegisterStepTwoViewController: UIViewController {
             .accept("application/json")
             
         ]
-        let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userimageValue, level: userlevel, night_mission_state:"1", exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: "https://yunusgunduz.site/wildbite/image/user/0.gif")
+        let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userimageValue, level: userlevel, night_mission_state:"1", exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: "00")
           
            AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(useridUSS)",
                       method: .put,

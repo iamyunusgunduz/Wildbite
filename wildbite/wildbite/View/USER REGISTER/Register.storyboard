@@ -976,9 +976,9 @@
                     <connections>
                         <outlet property="afterButtonLabel" destination="9sO-Pz-VMJ" id="zSH-vX-z5A"/>
                         <outlet property="beforeButtonLabel" destination="IQh-CL-uog" id="lpO-Az-s8F"/>
-                        <outlet property="klanImage" destination="MN0-AU-FIk" id="Iio-f9-aut"/>
+                        <outlet property="klanImageView" destination="MN0-AU-FIk" id="8RR-qE-Q8K"/>
                         <outlet property="klanNameLabel" destination="JSw-AV-Og7" id="mE4-7l-EOU"/>
-                        <outlet property="userImagem" destination="sbF-ll-xNO" id="jQH-uu-est"/>
+                        <outlet property="userImageView" destination="sbF-ll-xNO" id="4Tp-86-GVa"/>
                         <segue destination="7M6-Eh-TDb" kind="presentation" identifier="registerRaceToLogin" modalPresentationStyle="fullScreen" id="nv1-AK-wH0"/>
                     </connections>
                 </viewController>
@@ -1141,7 +1141,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Ihx-y7-WHb"/>
         <segue reference="wXX-Ti-g1j"/>
-        <segue reference="Qih-hE-FKj"/>
+        <segue reference="nv1-AK-wH0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Button_Login" width="454" height="142"/>

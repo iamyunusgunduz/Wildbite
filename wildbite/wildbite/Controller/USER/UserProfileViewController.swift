@@ -172,8 +172,8 @@ class UserProfileViewController: UIViewController {
                         userCanLabel.text = "Can: \(profileModelresponse?.user.currentHealth ?? "none")/\(profileModelresponse?.user.maximumHealth ?? "none")"
                         userGoldLabel.text = "Gold: \(profileModelresponse?.user.gold ?? "none")"
                         
-                        let url = URL(string: "\(profileModelresponse!.user.image)")
-                        let url2 = URL(string: "https://yunusgunduz.site/wildbite/image/user/0.gif")!
+                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/user/idle/\(profileModelresponse!.user.image).gif")
+                        let url2 = URL(string: "https://yunusgunduz.site/wildbite/image/user/idle/00.gif")!
                         
                         print("Image url : \(url ?? url2)")
                      //   userProfileImageView.kf.setImage(with: url ?? url2)

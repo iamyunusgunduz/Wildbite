@@ -9,14 +9,15 @@ import UIKit
 
 class ShopMenuTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var kategoriNameView: UIView!
+    @IBOutlet weak var shopImageView: UIImageView!
+    
     @IBOutlet weak var menuAdiLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        kategoriNameView.backgroundColor = UIColor(patternImage: UIImage(named: "Quest_Background.png")!)
     }
-    @IBAction func btnDelete(_ sender: Any) {
-        print("a")
-    }
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

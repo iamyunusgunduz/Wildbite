@@ -39,11 +39,7 @@ class ShopItemsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
        
-        
-        print("Shop id: \(UserDefaults.standard.integer(forKey: "ShopMenuID"))")
-        print("Shop Name: \(UserDefaults.standard.string(forKey: "ShopMenuAD")!)")
        
-        print("Shop image: \(UserDefaults.standard.string(forKey: "ShopMenuImage")!)")
         loadUserProfile()
         veriCekShop()
        
