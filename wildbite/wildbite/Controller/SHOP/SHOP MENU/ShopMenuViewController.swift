@@ -76,12 +76,13 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
                     
                     let sopMenuResponse = try? JSONDecoder().decode(ShopMenuModel.self, from: response.data!)
                     
-                    dump(sopMenuResponse!)
+                    //dump(sopMenuResponse!)
 
                     
                     sopMenuResponse!.shop.forEach { Shop in
                         print("Shop Name: \(Shop.name)")
                         print("Shop ID: \(Shop.id)")
+                        print("Shop IMAGE: \(Shop.image)")
                         
                         
                         let menuler = menuFetch()

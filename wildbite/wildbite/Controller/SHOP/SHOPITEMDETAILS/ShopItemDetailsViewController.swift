@@ -47,8 +47,8 @@ class ShopItemDetailsViewController: UIViewController {
         let itemItemSpeedUD = UserDefaults.standard.array(forKey: "itemCekilisiItemSpeed")
         let itemItemHealthUD = UserDefaults.standard.array(forKey: "itemCekilisiItemHealth")
         let itemItemRandomNumberUD = UserDefaults.standard.integer(forKey: "itemCekilisiRandomNumber")
-        
-        let url = URL(string: itemResimAdiUD![itemItemRandomNumberUD] as! String)!
+        let KasadanCikanItemImageURL = UserDefaults.standard.url(forKey: "KasadanCikanItemImageURL")
+        let url = KasadanCikanItemImageURL!
         kasaItemImageView.kf.setImage(with: url )
         kasaItemDressLevelLabel.text = (itemItemDressLevelUD![itemItemRandomNumberUD] as! String)
         kasaItemNameLabel.text = (itemItemAdiUD![itemItemRandomNumberUD] as! String)
