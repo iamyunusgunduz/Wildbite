@@ -50,36 +50,47 @@ class UserProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background2.png")!)
-        /*
-        //kask image
+        
+        //kask image 1
         let tapKask = UITapGestureRecognizer(target: self, action: #selector(self.tappedKask))
         kaskImage.addGestureRecognizer(tapKask)
         kaskImage.isUserInteractionEnabled = true
-        //silah image
+        //silah image 2
         let tapSilah = UITapGestureRecognizer(target: self, action: #selector(self.tappedSilah))
         silahImage.addGestureRecognizer(tapSilah)
         silahImage.isUserInteractionEnabled = true
-        //zirh image
+        //zirh image 3
         let tapZirh = UITapGestureRecognizer(target: self, action: #selector(self.tappedZirh))
         zirhImage.addGestureRecognizer(tapZirh)
         zirhImage.isUserInteractionEnabled = true
-        //kalkan image
+        //kalkan image 4
         let tapKalkan = UITapGestureRecognizer(target: self, action: #selector(self.tappedKalkan))
         kalkanImage.addGestureRecognizer(tapKalkan)
         kalkanImage.isUserInteractionEnabled = true
-        //eldıven image
+        //eldıven image 5
         let tapEldiven = UITapGestureRecognizer(target: self, action: #selector(self.tappedEldiven))
         eldivenImage.addGestureRecognizer(tapEldiven)
         eldivenImage.isUserInteractionEnabled = true
-        //kolye image
-        let tapKolye = UITapGestureRecognizer(target: self, action: #selector(self.tappedKolye))
-        kolyeImage.addGestureRecognizer(tapKolye)
-        kolyeImage.isUserInteractionEnabled = true
-        //ayakkabi image
+        //takı image 6
+        let tapTaki = UITapGestureRecognizer(target: self, action: #selector(self.tappedTaki))
+        takiImage.addGestureRecognizer(tapTaki)
+        takiImage.isUserInteractionEnabled = true
+        //ayakkabi image 7
         let tapAyakkabi = UITapGestureRecognizer(target: self, action: #selector(self.tappedAyakkabi))
         ayakkabiImage.addGestureRecognizer(tapAyakkabi)
         ayakkabiImage.isUserInteractionEnabled = true
-        */
+        //kemer image 8
+        let tapKemer = UITapGestureRecognizer(target: self, action: #selector(self.tappedKemer))
+        kemerImage.addGestureRecognizer(tapKemer)
+        kemerImage.isUserInteractionEnabled = true
+        
+        //pantolon image 9
+        let tapPantolon = UITapGestureRecognizer(target: self, action: #selector(self.tappedPantolon))
+        pantolonImage.addGestureRecognizer(tapPantolon)
+        pantolonImage.isUserInteractionEnabled = true
+   
+        
+        
     }
     
     
@@ -114,11 +125,11 @@ class UserProfileViewController: UIViewController {
         performSegue(withIdentifier: "dresseditemDetails", sender: nil)
         UserDefaults.standard.set("eldiven", forKey: "DressedItemTap")
     }
-    @objc func tappedKolye()
+    @objc func tappedTaki()
     {
          
         performSegue(withIdentifier: "dresseditemDetails", sender: nil)
-        UserDefaults.standard.set("kolye", forKey: "DressedItemTap")
+        UserDefaults.standard.set("taki", forKey: "DressedItemTap")
     }
     @objc func tappedAyakkabi()
     {
@@ -128,9 +139,19 @@ class UserProfileViewController: UIViewController {
     }
     
 
+    @objc func tappedPantolon()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("pantolon", forKey: "DressedItemTap")
+    }
     
-    
-    
+    @objc func tappedKemer()
+    {
+         
+        performSegue(withIdentifier: "dresseditemDetails", sender: nil)
+        UserDefaults.standard.set("kemer", forKey: "DressedItemTap")
+    }
     
     
     fileprivate func loadUserProfile() {
@@ -236,10 +257,7 @@ class UserProfileViewController: UIViewController {
                         dump("Only Item speed: \(dressResponse?.itemSpeed  ?? 0)")
                      
                         dressResponse?.dressed.forEach({ itemler in
-                            
-                
-                            
-                           
+ 
                             switch itemler.shopName{
                                    
                                                   
@@ -366,16 +384,9 @@ class UserProfileViewController: UIViewController {
                             }
                             
                             
-                            if( itemler.shopName == "kask" ){
-                               
-                            }
+                            
                         })
-                       
-                        
-                        
-                        
-                       
-                        
+ 
                     case let .failure(error):
                         print(error.errorDescription!)
                         print("hata")

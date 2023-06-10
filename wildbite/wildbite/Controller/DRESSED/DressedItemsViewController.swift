@@ -30,7 +30,7 @@ class DressedItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background2.png")!)
     }
     override func viewWillAppear(_ animated: Bool) {
         loadUserDressedItems()
@@ -78,135 +78,9 @@ class DressedItemsViewController: UIViewController {
                         
                         dressResponse?.dressed.forEach({ itemler in
                             switch itemler.shopName{
-                                case "kask":
-                                    if(tiklananItem == "kask"){
-                                        let url = URL(string: itemler.image)!
-                                        itemImageView.kf.setImage(with: url )
-                                        itemNameLabel.text = "Name: \(itemler.name)"
-                                        itemLevelLabel.text = "Level: +\(itemler.level)"
-                                        if(itemler.priceType == "1"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
-                                        }
-                                        if(itemler.priceType == "2"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
-                                        }
-                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
-                                        itemPowerLabel.text = "Power: \(itemler.power)"
-                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
-                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
-                                        itemHealthLabel.text = "Health: \(itemler.health)"
-                                    }
-                                   
-                                case "zırh":
-                                    if(tiklananItem == "zirh"){
-                                        let url = URL(string: itemler.image)!
-                                        itemImageView.kf.setImage(with: url )
-                                        itemNameLabel.text = "Name: \(itemler.name)"
-                                        itemLevelLabel.text = "Level: +\(itemler.level)"
-                                        if(itemler.priceType == "1"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
-                                        }
-                                        if(itemler.priceType == "2"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
-                                        }
-                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
-                                        itemPowerLabel.text = "Power: \(itemler.power)"
-                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
-                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
-                                        itemHealthLabel.text = "Health: \(itemler.health)"
-                                    }
-                                  
-                                case "silah":
-                                    if(tiklananItem == "silah"){
-                                        let url = URL(string: itemler.image)!
-                                        itemImageView.kf.setImage(with: url )
-                                        itemNameLabel.text = "Name: \(itemler.name)"
-                                        itemLevelLabel.text = "Level: +\(itemler.level)"
-                                        if(itemler.priceType == "1"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
-                                        }
-                                        if(itemler.priceType == "2"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
-                                        }
-                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
-                                        itemPowerLabel.text = "Power: \(itemler.power)"
-                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
-                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
-                                        itemHealthLabel.text = "Health: \(itemler.health)"
-                                    }
-                                   
-                                case "kalkan":
-                                    if(tiklananItem == "kalkan"){
-                                        let url = URL(string: itemler.image)!
-                                        itemImageView.kf.setImage(with: url )
-                                        itemNameLabel.text = "Name: \(itemler.name)"
-                                        itemLevelLabel.text = "Level: +\(itemler.level)"
-                                        if(itemler.priceType == "1"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
-                                        }
-                                        if(itemler.priceType == "2"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
-                                        }
-                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
-                                        itemPowerLabel.text = "Power: \(itemler.power)"
-                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
-                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
-                                        itemHealthLabel.text = "Health: \(itemler.health)"
-                                    }
-                                   
-                                case "kolye":
-                                    if(tiklananItem == "kolye"){
-                                        let url = URL(string: itemler.image)!
-                                        itemImageView.kf.setImage(with: url )
-                                        itemNameLabel.text = "Name: \(itemler.name)"
-                                        itemLevelLabel.text = "Level: +\(itemler.level)"
-                                        if(itemler.priceType == "1"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
-                                        }
-                                        if(itemler.priceType == "2"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
-                                        }
-                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
-                                        itemPowerLabel.text = "Power: \(itemler.power)"
-                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
-                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
-                                        itemHealthLabel.text = "Health: \(itemler.health)"
-                                    }
-                                   
-                                case "eldiven":
-                                    if(tiklananItem == "eldiven"){
-                                        let url = URL(string: itemler.image)!
-                                        itemImageView.kf.setImage(with: url )
-                                        itemNameLabel.text = "Name: \(itemler.name)"
-                                        itemLevelLabel.text = "Level: +\(itemler.level)"
-                                        if(itemler.priceType == "1"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
-                                        }
-                                        if(itemler.priceType == "2"){
-                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
-                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
-                                        }
-                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
-                                        itemPowerLabel.text = "Power: \(itemler.power)"
-                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
-                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
-                                        itemHealthLabel.text = "Health: \(itemler.health)"
-                                    }
-                                  
-                                case "bot":
+                                case "STANDART Ayakkabı Kasası":
                                     if(tiklananItem == "ayakkabi"){
-                                        let url = URL(string: itemler.image)!
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -224,7 +98,565 @@ class DressedItemsViewController: UIViewController {
                                         itemSpeedLabel.text = "Speed: \(itemler.speed)"
                                         itemHealthLabel.text = "Health: \(itemler.health)"
                                     }
-
+                                   
+                                case "PREMIUM Ayakkabı Kasası":
+                                    if(tiklananItem == "ayakkabi"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                  
+                                case "STANDART Eldiven Kasası":
+                                    if(tiklananItem == "eldiven"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                   
+                                case "PREMIUM Eldiven Kasası":
+                                    if(tiklananItem == "eldiven"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                   
+                                case "STANDART Kalkan Kasası":
+                                    if(tiklananItem == "kalkan"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                   
+                                case "PREMIUM Kalkan Kasası":
+                                    if(tiklananItem == "kalkan"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                  
+                                case "STANDART Kask Kasası":
+                                    if(tiklananItem == "kask"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Kask Kasası":
+                                    if(tiklananItem == "kask"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Kemer Kasası":
+                                    if(tiklananItem == "kemer"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                    
+                                    
+                                case "PREMIUM Kemer Kasası":
+                                    if(tiklananItem == "kemer"){
+                                        let url =  URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Pantolon Kasası":
+                                    if(tiklananItem == "pantolon"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Pantolon Kasası":
+                                    if(tiklananItem == "pantolon"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Takı Kasası":
+                                    if(tiklananItem == "taki"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Takı Kasası":
+                                    if(tiklananItem == "taki"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Zırh Kasası":
+                                    if(tiklananItem == "zirh"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Zırh Kasası":
+                                    if(tiklananItem == "zirh"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Asa Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Asa Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Balta Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Balta Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Balyoz Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url =  URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Balyoz Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Kılıç Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Kılıç Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Mızrak Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Mızrak Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                    
+                                case "STANDART Yay/Arbalet Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletGold/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
+                                case "PREMIUM Yay/Arbalet Kasası":
+                                    if(tiklananItem == "silah"){
+                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletDiamond/\(itemler.image).png")!
+                                        itemImageView.kf.setImage(with: url )
+                                        itemNameLabel.text = "Name: \(itemler.name)"
+                                        itemLevelLabel.text = "Level: +\(itemler.level)"
+                                        if(itemler.priceType == "1"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) GOLD"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) GOLD"
+                                        }
+                                        if(itemler.priceType == "2"){
+                                            itemBuyPriceLabel.text = "Buy Price: \(itemler.priceBuy) DIAMOND"
+                                            itemSellPriceLabel.text = "Sell Price: \(itemler.priceSell) DIAMOND"
+                                        }
+                                        itemDressLevelLabel.text = "Dress Level: \(itemler.dressMinLevel)"
+                                        itemPowerLabel.text = "Power: \(itemler.power)"
+                                        itemDefenseLabel.text = "Defense: \(itemler.defense)"
+                                        itemSpeedLabel.text = "Speed: \(itemler.speed)"
+                                        itemHealthLabel.text = "Health: \(itemler.health)"
+                                    }
                                 default:
                                     break
                             }
