@@ -21,7 +21,7 @@ class ShopBoxInViewController: UIViewController,UITabBarDelegate,UITableViewData
       
         let itemData =  gelenItemler[indexPath.section]
         let itemSans = (100 - Int(itemData.itemDressLevel)!)/10
-        cell.itemNameLabel.text = "[\(itemData.itemDressLevel) Level]  \(itemData.itemName)  (+\(itemData.itemLevel))  {\(itemSans)%}"
+        cell.itemNameLabel.text = "[\(itemData.itemDressLevel) Lv]  \(itemData.itemName)  (+\(itemData.itemLevel))  {\(itemSans)%}"
       
         return cell
     }

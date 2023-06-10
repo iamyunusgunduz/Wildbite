@@ -25,8 +25,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uxt-0X-kWb">
+                                <rect key="frame" x="20" y="59" width="353" height="32"/>
+                                <color key="backgroundColor" red="0.49123328919999998" green="0.19289454819999999" blue="0.053048439320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="STANDART KASA"/>
+                                    <segment title="PREMIUM KASA"/>
+                                </segments>
+                                <color key="tintColor" red="0.35690999769999998" green="0.35690999769999998" blue="0.35690999769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="KasalarSegmentedControl:" destination="fNj-pg-pR3" eventType="valueChanged" id="Ivc-cs-iDn"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="so6-zr-Bbw">
-                                <rect key="frame" x="20" y="59" width="353" height="715"/>
+                                <rect key="frame" x="20" y="100" width="353" height="674"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopMenuCell" id="1kV-XC-Sep" customClass="ShopMenuTableViewCell" customModule="wildbite" customModuleProvider="target">
@@ -110,22 +123,26 @@
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstItem="B1M-0x-Gto" firstAttribute="trailing" secondItem="so6-zr-Bbw" secondAttribute="trailing" constant="20" id="7GJ-4m-8kF"/>
+                            <constraint firstItem="B1M-0x-Gto" firstAttribute="trailing" secondItem="Uxt-0X-kWb" secondAttribute="trailing" constant="20" id="AMd-ZC-g5f"/>
                             <constraint firstItem="xGb-7l-CLM" firstAttribute="trailing" secondItem="B1M-0x-Gto" secondAttribute="trailing" id="BY4-Jv-3Ms"/>
+                            <constraint firstItem="Uxt-0X-kWb" firstAttribute="top" secondItem="B1M-0x-Gto" secondAttribute="top" id="XDs-E1-idz"/>
                             <constraint firstItem="xGb-7l-CLM" firstAttribute="leading" secondItem="B1M-0x-Gto" secondAttribute="leading" id="fmf-DQ-lja"/>
-                            <constraint firstItem="so6-zr-Bbw" firstAttribute="top" secondItem="B1M-0x-Gto" secondAttribute="top" id="hKj-aM-f4h"/>
+                            <constraint firstItem="so6-zr-Bbw" firstAttribute="top" secondItem="Uxt-0X-kWb" secondAttribute="bottom" constant="10" id="uJH-9q-5PR"/>
                             <constraint firstItem="so6-zr-Bbw" firstAttribute="leading" secondItem="B1M-0x-Gto" secondAttribute="leading" constant="20" id="w7b-UT-UJT"/>
+                            <constraint firstItem="Uxt-0X-kWb" firstAttribute="leading" secondItem="B1M-0x-Gto" secondAttribute="leading" constant="20" id="wZj-4b-Kb3"/>
                             <constraint firstItem="xGb-7l-CLM" firstAttribute="top" secondItem="so6-zr-Bbw" secondAttribute="bottom" id="xr1-4M-kAD"/>
                             <constraint firstItem="xGb-7l-CLM" firstAttribute="bottom" secondItem="B1M-0x-Gto" secondAttribute="bottom" id="z8b-sb-hGx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="KasalarSegmentedControl" destination="Uxt-0X-kWb" id="W6Z-oK-Q3A"/>
                         <outlet property="myTableView" destination="so6-zr-Bbw" id="Lyx-Gc-FN8"/>
                         <segue destination="Ok3-Ps-z8M" kind="presentation" identifier="shopMenuToShopItems" modalPresentationStyle="fullScreen" id="OM2-ji-e6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5Z-0I-v5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-56"/>
+            <point key="canvasLocation" x="1165.6488549618321" y="-56.338028169014088"/>
         </scene>
         <!--ShopItems-->
         <scene sceneID="nHu-AQ-aKZ">

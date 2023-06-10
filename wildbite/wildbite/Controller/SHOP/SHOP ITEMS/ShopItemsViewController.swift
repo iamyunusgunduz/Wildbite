@@ -24,9 +24,13 @@ class ShopItemsViewController: UIViewController {
    
     
     @IBOutlet weak var kasaImage: UIImageView!
-    
     @IBOutlet weak var kasaAcButtonLabel: UIButton!
     @IBOutlet weak var itemGiyButtonLabel: UIButton!
+    
+    @IBOutlet weak var GoMainPageButtonLabel: UIBarButtonItem!
+    @IBOutlet weak var GoShopMenuPageButtonLabel: UIBarButtonItem!
+    
+    
     var countdownSeconds = 12
        var timer: Timer?
     
@@ -179,6 +183,8 @@ class ShopItemsViewController: UIViewController {
     @objc func updateCountdown() {
          itemGiyButtonLabel.isEnabled = false
         kasaAcButtonLabel.isEnabled = false
+        GoMainPageButtonLabel.isEnabled = false
+        GoShopMenuPageButtonLabel.isEnabled = false
         let itemResimAdiUD = UserDefaults.standard.array(forKey: "itemCekilisiItemResimleri")
         let itemItemAdiUD = UserDefaults.standard.array(forKey: "itemCekilisiItemAdi")
       
@@ -231,7 +237,7 @@ class ShopItemsViewController: UIViewController {
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Kask Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskKold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Kask Kasası":
@@ -332,6 +338,8 @@ class ShopItemsViewController: UIViewController {
       //  dump("\(countdownSeconds)")
         } else { //MARK: cikan item
             timer?.invalidate()
+            GoMainPageButtonLabel.isEnabled = true
+            GoShopMenuPageButtonLabel.isEnabled = true
             if(itemResimAdiUD!.count != 0){
                 let randomNumber = Int.random(in: 0 ... itemResimAdiUD!.count-1)
                 UserDefaults.standard.set(randomNumber, forKey: "itemCekilisiRandomNumber")
@@ -363,7 +371,7 @@ class ShopItemsViewController: UIViewController {
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Kask Kasası":
-                        urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskKold/\(itemResimAdiUD![randomNumber]).png")!
+                        urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Kask Kasası":

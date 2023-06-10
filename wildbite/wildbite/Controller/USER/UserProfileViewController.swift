@@ -22,27 +22,25 @@ class ItemFetch {
 class UserProfileViewController: UIViewController {
   
     @IBOutlet weak var userProfileImageView: UIImageView!
+    @IBOutlet weak var userRaceImageView: UIImageView!
     
 
     @IBOutlet weak var kaskImage: UIImageView!
     @IBOutlet weak var zirhImage: UIImageView!
     @IBOutlet weak var silahImage: UIImageView!
     @IBOutlet weak var kalkanImage: UIImageView!
-    @IBOutlet weak var kolyeImage: UIImageView!
+    @IBOutlet weak var takiImage: UIImageView!
     @IBOutlet weak var eldivenImage: UIImageView!
     @IBOutlet weak var ayakkabiImage: UIImageView!
+    @IBOutlet weak var kemerImage: UIImageView!
+    @IBOutlet weak var pantolonImage: UIImageView!
     
  
     
     
-    
+    // https://yunusgunduz.site/wildbite/image/race/148.png
  
-    @IBOutlet weak var usernameLabel: UILabel!
-    
-    
-    @IBOutlet weak var userlevelLabel: UILabel!
-    
-    @IBOutlet weak var usertecrubeLabel: UILabel!
+
     
     @IBOutlet weak var userEnerjiLabel: UILabel!
     
@@ -51,6 +49,8 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var userGoldLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background2.png")!)
+        /*
         //kask image
         let tapKask = UITapGestureRecognizer(target: self, action: #selector(self.tappedKask))
         kaskImage.addGestureRecognizer(tapKask)
@@ -79,7 +79,7 @@ class UserProfileViewController: UIViewController {
         let tapAyakkabi = UITapGestureRecognizer(target: self, action: #selector(self.tappedAyakkabi))
         ayakkabiImage.addGestureRecognizer(tapAyakkabi)
         ayakkabiImage.isUserInteractionEnabled = true
-        
+        */
     }
     
     
@@ -161,16 +161,16 @@ class UserProfileViewController: UIViewController {
                         print("Validation Successful")
                         
                         let profileModelresponse = try? JSONDecoder().decode(ProfileModel.self, from: response.data!)
-                        debugPrint(profileModelresponse!)
+                     //   debugPrint(profileModelresponse!)
                         
                         print("Debug: Race settings\(profileModelresponse!.race.raceName)")
+                      
+                        let urlRace = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(profileModelresponse!.race.raceName).png")
                         print("Race: \(profileModelresponse!.race.raceName)")
-                        usernameLabel.text = "Name: \(profileModelresponse?.user.name ?? "none")"
-                        userlevelLabel.text = "Level: \(profileModelresponse?.user.level ?? "none")"
-                        usertecrubeLabel.text = "Exp: \(profileModelresponse?.user.exp  ?? "none")"
-                        userEnerjiLabel.text = "Energy: \(profileModelresponse?.user.currentEnergy ?? "none")/\(profileModelresponse?.user.maximumEnergy ?? "none")"
-                        userCanLabel.text = "Can: \(profileModelresponse?.user.currentHealth ?? "none")/\(profileModelresponse?.user.maximumHealth ?? "none")"
-                        userGoldLabel.text = "Gold: \(profileModelresponse?.user.gold ?? "none")"
+                        DispatchQueue.main.async{ [self] in  userRaceImageView.kf.setImage(with: urlRace)    }
+                        userEnerjiLabel.text = "\(profileModelresponse?.user.currentEnergy ?? "none")/\(profileModelresponse?.user.maximumEnergy ?? "none")"
+                        userCanLabel.text = "\(profileModelresponse?.user.currentHealth ?? "none")/\(profileModelresponse?.user.maximumHealth ?? "none")"
+                        userGoldLabel.text = "\(profileModelresponse?.user.gold ?? "none")"
                         
                         let url = URL(string: "https://yunusgunduz.site/wildbite/image/user/idle/\(profileModelresponse!.user.image).gif")
                         let url2 = URL(string: "https://yunusgunduz.site/wildbite/image/user/idle/00.gif")!
@@ -234,34 +234,135 @@ class UserProfileViewController: UIViewController {
                         dump("Only Item health: \(dressResponse?.itemHealth  ?? 0)")
                         dump("Only Item def: \(dressResponse?.itemDefense  ?? 0)")
                         dump("Only Item speed: \(dressResponse?.itemSpeed  ?? 0)")
-                        
+                     
                         dressResponse?.dressed.forEach({ itemler in
+                            
+                
+                            
+                           
                             switch itemler.shopName{
-                                case "kask":
-                                    let url = URL(string: itemler.image)!
-                                    kaskImage.kf.setImage(with: url )
-                                case "zırh":
-                                    let url = URL(string: itemler.image)!
-                                    zirhImage.kf.setImage(with: url )
-                                case "silah":
-                                    let url = URL(string: itemler.image)!
-                                    silahImage.kf.setImage(with: url )
-                                case "kalkan":
-                                    let url = URL(string: itemler.image)!
-                                    kalkanImage.kf.setImage(with: url )
-                                case "kolye":
-                                    let url = URL(string: itemler.image)!
-                                    kolyeImage.kf.setImage(with: url )
-                                case "eldiven":
-                                    let url = URL(string: itemler.image)!
-                                    eldivenImage.kf.setImage(with: url )
-                                case "bot":
-                                    let url = URL(string: itemler.image)!
-                                    ayakkabiImage.kf.setImage(with: url )
+                                   
+                                                  
+                                case "STANDART Ayakkabı Kasası":
+                                                   let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemler.image).png")!
+                                   
+                                                    DispatchQueue.main.async{ [self] in  self.ayakkabiImage.kf.setImage(with: urlImage)    }
+                                   
+                                   print("asd")
                                     
-                                
-                                default:
-                                    break
+                                case "PREMIUM Ayakkabı Kasası":
+                                    let  urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.ayakkabiImage.kf.setImage(with: urlImage)    }
+                                   
+                                                   case "STANDART Eldiven Kasası":
+                                    let       urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.eldivenImage.kf.setImage(with: urlImage)    }
+                                                        
+                                                   case "PREMIUM Eldiven Kasası":
+                                    let      urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenDiamond/\(itemler.image).png")!
+                                                DispatchQueue.main.async{ [self] in  eldivenImage.kf.setImage(with: urlImage)    }
+                                                
+                                                   case "STANDART Kalkan Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.kalkanImage.kf.setImage(with: urlImage)    }
+                                                      
+                                                   case "PREMIUM Kalkan Kasası":
+                                    let  urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.kalkanImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "STANDART Kask Kasası":
+                                    let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.kaskImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "PREMIUM Kask Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.kaskImage.kf.setImage(with: urlImage)    }
+                                                      
+                                                   case "STANDART Kemer Kasası":
+                                    let     urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.kemerImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "PREMIUM Kemer Kasası":
+                                    let     urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.kemerImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "STANDART Pantolon Kasası":
+                                    let     urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.pantolonImage.kf.setImage(with: urlImage)    }
+                                                      
+                                                   case "PREMIUM Pantolon Kasası":
+                                    let       urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.pantolonImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "STANDART Takı Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.takiImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "PREMIUM Takı Kasası":
+                                    let     urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.takiImage.kf.setImage(with: urlImage)    }
+                                                      
+                                                   case "STANDART Zırh Kasası":
+                                    let  urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.zirhImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "PREMIUM Zırh Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.zirhImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "STANDART Asa Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                      
+                                                   case "PREMIUM Asa Kasası":
+                                    let  urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "STANDART Balta Kasası":
+                                    let    urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "PREMIUM Balta Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                      
+                                                   case "STANDART Balyoz Kasası":
+                                    let  urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "PREMIUM Balyoz Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "STANDART Kılıç Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                      
+                                                   case "PREMIUM Kılıç Kasası":
+                                    let  urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "STANDART Mızrak Kasası":
+                                    let     urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "PREMIUM Mızrak Kasası":
+                                    let     urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   case "STANDART Yay/Arbalet Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletGold/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                        
+                                                   case "PREMIUM Yay/Arbalet Kasası":
+                                    let   urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletDiamond/\(itemler.image).png")!
+                                                       DispatchQueue.main.async{ [self] in  self.silahImage.kf.setImage(with: urlImage)    }
+                                                       
+                                                   
+                                                       
+                                                   default:
+                                                       break
+
                             }
                             
                             
