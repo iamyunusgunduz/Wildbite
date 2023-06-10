@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xYA-Zn-5kc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,12 +15,12 @@
                 <viewControllerPlaceholder storyboardName="Main" id="d1E-Qi-JhI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fX9-gi-9AR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-807" y="279"/>
+            <point key="canvasLocation" x="882" y="338"/>
         </scene>
-        <!--WAR-->
+        <!--WAR(kaldirildi)-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="War" title="WAR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WARViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="War" title="WAR(kaldirildi)" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WARViewController" customModule="wildbite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oRC-mb-dF8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="-28"/>
+            <point key="canvasLocation" x="-434" y="-378"/>
         </scene>
         <!--WAR TYPE-->
         <scene sceneID="NbD-n3-c7Y">
@@ -238,7 +238,7 @@
                                     <navigationItem title="WAR" id="RK0-RB-v9e">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="ANw-qo-4bi">
                                             <connections>
-                                                <segue destination="Y6W-OH-hqX" kind="presentation" modalPresentationStyle="fullScreen" id="UML-qa-rlL"/>
+                                                <segue destination="d1E-Qi-JhI" kind="presentation" modalPresentationStyle="fullScreen" id="3IU-t1-iit"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -648,8 +648,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UML-qa-rlL"/>
-        <segue reference="JG5-ng-Jr3"/>
+        <segue reference="3IU-t1-iit"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>

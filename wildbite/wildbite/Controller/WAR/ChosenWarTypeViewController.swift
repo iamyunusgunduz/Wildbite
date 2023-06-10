@@ -42,7 +42,7 @@ class ChosenWarTypeViewController: UIViewController {
         let myUserID = UserDefaults.standard.value(forKey: "userID")
         
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
-        let myChoosenWartype = UserDefaults.standard.value(forKey: "choosenWartype") as! Int
+     
         let WarSaldiranUserCurrentEnergy = UserDefaults.standard.integer(forKey: "WarSaldiranUserCurrentEnergy")
         if(WarSaldiranUserCurrentEnergy >= 1){
             againButton.isEnabled = true
@@ -59,7 +59,7 @@ class ChosenWarTypeViewController: UIViewController {
         print("User Id: \(myUserID!)")
         
         print("User Token: \(myUserToken!)")
-        print("User myChoosenWartype: \(myChoosenWartype)")
+     
         
         let token = "\(myUserToken!)"
         
@@ -71,12 +71,12 @@ class ChosenWarTypeViewController: UIViewController {
         ]
         
         
-        
-        AF.request("http://yunusgunduz.site/wildbite/public/api/random-race-user?race=\(myChoosenWartype))" , headers: headers )
+        let randomSayi = Int.random(in: 101...108)
+        AF.request("http://yunusgunduz.site/wildbite/public/api/random-race-user?race=\(randomSayi))" , headers: headers )
             .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self]  response in
-                debugPrint(response)
+                    //  debugPrint(response)
                 
                 switch response.result {
                 case .success:
@@ -84,13 +84,14 @@ class ChosenWarTypeViewController: UIViewController {
                     
                     let chosenWar = try? JSONDecoder().decode(ChosenWar.self, from: response.data!)
                     
-                    
-                    
+                        
                     
                     print(chosenWar ?? "Choosen var hata oldu")
                    
-                    if(chosenWar == nil){
+                        if(chosenWar?.user == nil){
                         loadWarProfileEnemy()
+                            againButton.isEnabled = false
+                            figgtButton.isEnabled = false
                     }else{
                         
                         if let enemyID = chosenWar?.user.id{
@@ -102,11 +103,12 @@ class ChosenWarTypeViewController: UIViewController {
                         }
                         // enemy name
                         if let enemyNamem = chosenWar?.user.name{
-                            
+                            againButton.isEnabled = true
+                            figgtButton.isEnabled = true
                             enemynameLabel.text = "Name: \(enemyNamem)"
                         }
                         // enemy Type
-                        
+                        /*
                             switch myChoosenWartype {
                                 case 1:
                                     enemyRole.text = "Race: HUNTER "
@@ -120,7 +122,7 @@ class ChosenWarTypeViewController: UIViewController {
                                     enemyRole.text = "-"
                             }
                            
-                        
+                        */
                         // enemy level
                         if let enemyLevelm = chosenWar?.user.level{
                             
@@ -184,7 +186,7 @@ class ChosenWarTypeViewController: UIViewController {
                         dump("Api userpower: \(chosenWar!.user.power)")
                         dump("Api userdefense: \(chosenWar!.user.defense)")
                         dump("Api userspeed: \(chosenWar!.user.speed)")
-                        dump("Api userrace: \(myChoosenWartype)")
+                       // dump("Api userrace: \(myChoosenWartype)")
                         dump("Api userimage: \(chosenWar!.user.image)")
                        
                         
@@ -202,7 +204,7 @@ class ChosenWarTypeViewController: UIViewController {
                         UserDefaults.standard.set(chosenWar!.user.power, forKey: "WarSavunanUserPower")
                         UserDefaults.standard.set(chosenWar!.user.defense, forKey: "WarSavunanUserDefense")
                         UserDefaults.standard.set(chosenWar!.user.speed, forKey: "WarSavunanUserSpeed")
-                        UserDefaults.standard.set(myChoosenWartype, forKey: "WarSavunanUserRacename")
+                  //      UserDefaults.standard.set(myChoosenWartype, forKey: "WarSavunanUserRacename")
                         UserDefaults.standard.set(chosenWar!.user.image, forKey: "WarSavunanUserImage")
                         
                         
@@ -225,12 +227,7 @@ class ChosenWarTypeViewController: UIViewController {
             self.againButton.isHidden = false
         }
    
-        let myChoosenNumber = UserDefaults.standard.value(forKey: "choosenWarNumber")
-        if(myChoosenNumber as! String == "random" ){
-            let random = Int.random(in: 1...4)
-            
-            UserDefaults.standard.set(random, forKey: "choosenWartype")
-        }
+        
         
       
        

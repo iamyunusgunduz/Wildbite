@@ -98,23 +98,7 @@ class WARViewController: UIViewController {
                         dump("Api userrace: \(profileModelresponse!.race.raceName)")
                         dump("Api userimage: \(profileModelresponse!.user.image)")
                        
-                        
-                        UserDefaults.standard.set(profileModelresponse!.user.name, forKey: "WarSaldiranUserName")
-                        UserDefaults.standard.set(profileModelresponse!.user.role, forKey: "WarSaldiranUserRole")
-                        UserDefaults.standard.set(profileModelresponse!.user.exp, forKey: "WarSaldiranUserExp")
-                        UserDefaults.standard.set(profileModelresponse!.user.level, forKey: "WarSaldiranUserLevel")
-                        UserDefaults.standard.set(profileModelresponse!.user.gold, forKey: "WarSaldiranUserGold")
-                        UserDefaults.standard.set(profileModelresponse!.user.currentHealth, forKey: "WarSaldiranUserCurrentHealth")
-                        UserDefaults.standard.set(profileModelresponse!.user.maximumHealth, forKey: "WarSaldiranUserMaximumHealth")
-                        UserDefaults.standard.set(profileModelresponse!.user.currentEnergy, forKey: "WarSaldiranUserCurrentEnergy")
-                        UserDefaults.standard.set(profileModelresponse!.user.maximumEnergy, forKey: "WarSaldiranUserMaximumEnergy")
-                        UserDefaults.standard.set(profileModelresponse!.user.night_mission_state, forKey: "WarSaldiranUserNightMissionState")
-                        UserDefaults.standard.set(profileModelresponse!.user.totalDamage, forKey: "WarSaldiranUserTotalDamage")
-                        UserDefaults.standard.set(profileModelresponse!.user.power, forKey: "WarSaldiranUserPower")
-                        UserDefaults.standard.set(profileModelresponse!.user.defense, forKey: "WarSaldiranUserDefense")
-                        UserDefaults.standard.set(profileModelresponse!.user.speed, forKey: "WarSaldiranUserSpeed")
-                        UserDefaults.standard.set(profileModelresponse!.race.raceName, forKey: "WarSaldiranUserRacename")
-                        UserDefaults.standard.set(profileModelresponse!.user.image, forKey: "WarSaldiranUserImage")
+                 
                   
                      
                  

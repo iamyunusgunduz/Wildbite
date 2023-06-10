@@ -1006,7 +1006,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input_Background" translatesAutoresizingMaskIntoConstraints="NO" id="c6j-4M-fxM">
                                                 <rect key="frame" x="-100" y="0.0" width="614" height="100"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="email" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="nLe-p8-P8k">
+                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="race@gmail.com" placeholder="email" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="nLe-p8-P8k">
                                                 <rect key="frame" x="130.66666666666666" y="38" width="152.99999999999997" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="6zd-Z0-Ot2"/>
@@ -1032,7 +1032,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input_Background" translatesAutoresizingMaskIntoConstraints="NO" id="ucP-dp-bY8">
                                                 <rect key="frame" x="-100" y="0.0" width="614" height="100"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="X0v-Xh-1QJ">
+                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="race" placeholder="username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="X0v-Xh-1QJ">
                                                 <rect key="frame" x="130.66666666666666" y="38" width="152.99999999999997" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="HyH-Hm-fYk"/>
@@ -1058,7 +1058,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input_Background" translatesAutoresizingMaskIntoConstraints="NO" id="Sue-gA-Q6X">
                                                 <rect key="frame" x="-100" y="0.0" width="614" height="100"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="password" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="nNK-cC-GDN">
+                                            <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="1234 " placeholder="password" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="nNK-cC-GDN">
                                                 <rect key="frame" x="130.66666666666666" y="38" width="152.99999999999997" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="uBf-Th-sbN"/>
@@ -1141,7 +1141,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Ihx-y7-WHb"/>
         <segue reference="wXX-Ti-g1j"/>
-        <segue reference="nv1-AK-wH0"/>
+        <segue reference="Qih-hE-FKj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Button_Login" width="454" height="142"/>

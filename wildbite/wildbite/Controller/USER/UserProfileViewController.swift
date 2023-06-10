@@ -21,10 +21,12 @@ class ItemFetch {
 
 class UserProfileViewController: UIViewController {
   
+    @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userProfileImageView: UIImageView!
     @IBOutlet weak var userRaceImageView: UIImageView!
     
-
+  
+    
     @IBOutlet weak var kaskImage: UIImageView!
     @IBOutlet weak var zirhImage: UIImageView!
     @IBOutlet weak var silahImage: UIImageView!
@@ -184,6 +186,22 @@ class UserProfileViewController: UIViewController {
                         let profileModelresponse = try? JSONDecoder().decode(ProfileModel.self, from: response.data!)
                      //   debugPrint(profileModelresponse!)
                         
+                        UserDefaults.standard.set(profileModelresponse!.user.name, forKey: "WarSaldiranUserName")
+                        UserDefaults.standard.set(profileModelresponse!.user.role, forKey: "WarSaldiranUserRole")
+                        UserDefaults.standard.set(profileModelresponse!.user.exp, forKey: "WarSaldiranUserExp")
+                        UserDefaults.standard.set(profileModelresponse!.user.level, forKey: "WarSaldiranUserLevel")
+                        UserDefaults.standard.set(profileModelresponse!.user.gold, forKey: "WarSaldiranUserGold")
+                        UserDefaults.standard.set(profileModelresponse!.user.currentHealth, forKey: "WarSaldiranUserCurrentHealth")
+                        UserDefaults.standard.set(profileModelresponse!.user.maximumHealth, forKey: "WarSaldiranUserMaximumHealth")
+                        UserDefaults.standard.set(profileModelresponse!.user.currentEnergy, forKey: "WarSaldiranUserCurrentEnergy")
+                        UserDefaults.standard.set(profileModelresponse!.user.maximumEnergy, forKey: "WarSaldiranUserMaximumEnergy")
+                        UserDefaults.standard.set(profileModelresponse!.user.night_mission_state, forKey: "WarSaldiranUserNightMissionState")
+                        UserDefaults.standard.set(profileModelresponse!.user.totalDamage, forKey: "WarSaldiranUserTotalDamage")
+                        UserDefaults.standard.set(profileModelresponse!.user.power, forKey: "WarSaldiranUserPower")
+                        UserDefaults.standard.set(profileModelresponse!.user.defense, forKey: "WarSaldiranUserDefense")
+                        UserDefaults.standard.set(profileModelresponse!.user.speed, forKey: "WarSaldiranUserSpeed")
+                        UserDefaults.standard.set(profileModelresponse!.race.raceName, forKey: "WarSaldiranUserRacename")
+                        UserDefaults.standard.set(profileModelresponse!.user.image, forKey: "WarSaldiranUserImage")
                         print("Debug: Race settings\(profileModelresponse!.race.raceName)")
                       
                         let urlRace = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(profileModelresponse!.race.raceName).png")
@@ -192,6 +210,7 @@ class UserProfileViewController: UIViewController {
                         userEnerjiLabel.text = "\(profileModelresponse?.user.currentEnergy ?? "none")/\(profileModelresponse?.user.maximumEnergy ?? "none")"
                         userCanLabel.text = "\(profileModelresponse?.user.currentHealth ?? "none")/\(profileModelresponse?.user.maximumHealth ?? "none")"
                         userGoldLabel.text = "\(profileModelresponse?.user.gold ?? "none")"
+                        userNameLabel.text = "\(profileModelresponse?.user.name ?? "none")"
                         
                         let url = URL(string: "https://yunusgunduz.site/wildbite/image/user/idle/\(profileModelresponse!.user.image).gif")
                         let url2 = URL(string: "https://yunusgunduz.site/wildbite/image/user/idle/00.gif")!
@@ -257,7 +276,92 @@ class UserProfileViewController: UIViewController {
                         dump("Only Item speed: \(dressResponse?.itemSpeed  ?? 0)")
                      
                         dressResponse?.dressed.forEach({ itemler in
- 
+                            
+                            if(itemler.level == "0"){
+                                kaskImage.backgroundColor = UIColor.systemPurple
+                                silahImage.backgroundColor = UIColor.systemPurple
+                                zirhImage.backgroundColor = UIColor.systemPurple
+                                kalkanImage.backgroundColor = UIColor.systemPurple
+                                eldivenImage.backgroundColor = UIColor.systemPurple
+                                takiImage.backgroundColor = UIColor.systemPurple
+                                kemerImage.backgroundColor = UIColor.systemPurple
+                                pantolonImage.backgroundColor = UIColor.systemPurple
+                                ayakkabiImage.backgroundColor = UIColor.systemPurple
+                                
+                            }
+                            if(itemler.level == "1"){
+                                kaskImage.backgroundColor = UIColor.systemBlue
+                                silahImage.backgroundColor = UIColor.systemBlue
+                                zirhImage.backgroundColor = UIColor.systemBlue
+                                kalkanImage.backgroundColor = UIColor.systemBlue
+                                eldivenImage.backgroundColor = UIColor.systemBlue
+                                takiImage.backgroundColor = UIColor.systemBlue
+                                kemerImage.backgroundColor = UIColor.systemBlue
+                                pantolonImage.backgroundColor = UIColor.systemBlue
+                                ayakkabiImage.backgroundColor = UIColor.systemBlue
+                                
+                            }
+                            if(itemler.level == "2"){
+                                kaskImage.backgroundColor = UIColor.systemGreen
+                                silahImage.backgroundColor = UIColor.systemGreen
+                                zirhImage.backgroundColor = UIColor.systemGreen
+                                kalkanImage.backgroundColor = UIColor.systemGreen
+                                eldivenImage.backgroundColor = UIColor.systemGreen
+                                takiImage.backgroundColor = UIColor.systemGreen
+                                kemerImage.backgroundColor = UIColor.systemGreen
+                                pantolonImage.backgroundColor = UIColor.systemGreen
+                                ayakkabiImage.backgroundColor = UIColor.systemGreen
+                                
+                            }
+                            if(itemler.level == "3"){
+                                kaskImage.backgroundColor = UIColor.systemYellow
+                                silahImage.backgroundColor = UIColor.systemYellow
+                                zirhImage.backgroundColor = UIColor.systemYellow
+                                kalkanImage.backgroundColor = UIColor.systemYellow
+                                eldivenImage.backgroundColor = UIColor.systemYellow
+                                takiImage.backgroundColor = UIColor.systemYellow
+                                kemerImage.backgroundColor = UIColor.systemYellow
+                                pantolonImage.backgroundColor = UIColor.systemYellow
+                                ayakkabiImage.backgroundColor = UIColor.systemYellow
+                                
+                            }
+                            if(itemler.level == "4"){
+                                kaskImage.backgroundColor = UIColor.systemOrange
+                                silahImage.backgroundColor = UIColor.systemOrange
+                                zirhImage.backgroundColor = UIColor.systemOrange
+                                kalkanImage.backgroundColor = UIColor.systemOrange
+                                eldivenImage.backgroundColor = UIColor.systemOrange
+                                takiImage.backgroundColor = UIColor.systemOrange
+                                kemerImage.backgroundColor = UIColor.systemOrange
+                                pantolonImage.backgroundColor = UIColor.systemOrange
+                                ayakkabiImage.backgroundColor = UIColor.systemOrange
+                                
+                            }
+                            if(itemler.level == "5"){
+                                kaskImage.backgroundColor = UIColor.systemRed
+                                silahImage.backgroundColor = UIColor.systemRed
+                                zirhImage.backgroundColor = UIColor.systemRed
+                                kalkanImage.backgroundColor = UIColor.systemRed
+                                eldivenImage.backgroundColor = UIColor.systemRed
+                                takiImage.backgroundColor = UIColor.systemRed
+                                kemerImage.backgroundColor = UIColor.systemRed
+                                pantolonImage.backgroundColor = UIColor.systemRed
+                                ayakkabiImage.backgroundColor = UIColor.systemRed
+                                
+                            }
+                            if(itemler.level == "6"){
+                                kaskImage.backgroundColor = UIColor.black
+                                silahImage.backgroundColor = UIColor.black
+                                zirhImage.backgroundColor = UIColor.black
+                                kalkanImage.backgroundColor = UIColor.black
+                                eldivenImage.backgroundColor = UIColor.black
+                                takiImage.backgroundColor = UIColor.black
+                                kemerImage.backgroundColor = UIColor.black
+                                pantolonImage.backgroundColor = UIColor.black
+                                ayakkabiImage.backgroundColor = UIColor.black
+                                
+                            }
+                            
                             switch itemler.shopName{
                                    
                                                   
@@ -289,6 +393,7 @@ class UserProfileViewController: UIViewController {
                                                        DispatchQueue.main.async{ [self] in  self.kalkanImage.kf.setImage(with: urlImage)    }
                                                        
                                                    case "STANDART Kask Kasası":
+                                   
                                     let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskGold/\(itemler.image).png")!
                                                        DispatchQueue.main.async{ [self] in  self.kaskImage.kf.setImage(with: urlImage)    }
                                                        

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9pO-GD-SJ3">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MISSION-->
+        <!--MISSION (kaldirildi)-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Mission" title="MISSION" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Mission" title="MISSION (kaldirildi)" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f6p-T4-pIu">
-                                <rect key="frame" x="20" y="40" width="353" height="110"/>
+                                <rect key="frame" x="20" y="99" width="353" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2st-iM-VqS">
                                         <rect key="frame" x="20" y="0.0" width="313" height="50"/>
@@ -698,10 +698,10 @@
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="9FT-U7-kMF">
                                             <color key="tintColor" systemColor="systemMintColor"/>
                                             <connections>
-                                                <segue destination="Y6W-OH-hqX" kind="presentation" modalPresentationStyle="fullScreen" id="Wks-zB-Bds"/>
+                                                <segue destination="3rt-pv-dZb" kind="presentation" modalPresentationStyle="fullScreen" id="3bs-iw-wbP"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="9xT-ne-NWp">
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" image="house" catalog="system" id="9xT-ne-NWp">
                                             <connections>
                                                 <segue destination="3rt-pv-dZb" kind="presentation" modalPresentationStyle="fullScreen" id="PKZ-c5-vPl"/>
                                             </connections>
@@ -875,9 +875,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5PT-gm-Ghq"/>
         <segue reference="PKZ-c5-vPl"/>
-        <segue reference="4Pw-V0-JCR"/>
+        <segue reference="uAC-hf-Ryo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>

@@ -75,8 +75,16 @@ class DressedItemsViewController: UIViewController {
                         dump("Only Item health: \(dressResponse?.itemHealth ?? 0)")
                         dump("Only Item def: \(dressResponse?.itemDefense ?? 0) ")
                         dump("Only Item speed: \(dressResponse?.itemSpeed ?? 0)")
-                        
+                      
                         dressResponse?.dressed.forEach({ itemler in
+                            
+                            if( itemler.level == "0"){     itemImageView.backgroundColor = UIColor.systemPurple }
+                            if( itemler.level == "1"){     itemImageView.backgroundColor = UIColor.systemBlue }
+                            if( itemler.level == "2"){     itemImageView.backgroundColor = UIColor.systemGreen }
+                            if( itemler.level == "3"){     itemImageView.backgroundColor = UIColor.systemYellow }
+                            if( itemler.level == "4"){     itemImageView.backgroundColor = UIColor.systemOrange }
+                            if( itemler.level == "5"){     itemImageView.backgroundColor = UIColor.systemRed }
+                            if( itemler.level == "6"){     itemImageView.backgroundColor = UIColor.systemRed }
                             switch itemler.shopName{
                                 case "STANDART Ayakkabı Kasası":
                                     if(tiklananItem == "ayakkabi"){
