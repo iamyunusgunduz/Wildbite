@@ -20,8 +20,8 @@ class RegisterStepTwoViewController: UIViewController {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var afterButtonLabel: UIButton!
-    var klanImage = "https://yunusgunduz.site/wildbite/image/race/101.png";
-    var userimage:String = "https://yunusgunduz.site/wildbite/image/user/idle/00.gif";
+    var klanImage = "https://backhub.site/wildbite/image/race/101.png";
+    var userimage:String = "https://backhub.site/wildbite/image/user/idle/00.gif";
     
     var userimageValue:Int = 101
     
@@ -35,7 +35,7 @@ class RegisterStepTwoViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/101.png")
+        let urlKlanImage = URL(string: "https://backhub.site/wildbite/image/race/101.png")
         klanNameLabel.text = "Klan \(userimageValue)"
         DispatchQueue.main.async { [self] in
             userImageView.setGifFromURL(URL(string: "\(userimage)")!)
@@ -52,7 +52,7 @@ class RegisterStepTwoViewController: UIViewController {
         if(userimageValue >= 101 && userimageValue < 148 ){
             userimageValue += 1 ;
            
-            let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
+            let urlKlanImage = URL(string: "https://backhub.site/wildbite/image/race/\(userimageValue).png")
             
         DispatchQueue.main.async{
             self.klanImageView.kf.setImage(with: urlKlanImage)
@@ -62,7 +62,7 @@ class RegisterStepTwoViewController: UIViewController {
             dump(   userimage )
         }else{
             userimageValue = 101
-            let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
+            let urlKlanImage = URL(string: "https://backhub.site/wildbite/image/race/\(userimageValue).png")
             
         DispatchQueue.main.async{
             self.klanImageView.kf.setImage(with: urlKlanImage)
@@ -76,7 +76,7 @@ class RegisterStepTwoViewController: UIViewController {
     @IBAction func beforeButton(_ sender: Any) {
         if(userimageValue > 101 && userimageValue <= 148 ){
             userimageValue -= 1 ;
-            let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
+            let urlKlanImage = URL(string: "https://backhub.site/wildbite/image/race/\(userimageValue).png")
             
         DispatchQueue.main.async{
             self.klanImageView.kf.setImage(with: urlKlanImage)
@@ -85,7 +85,7 @@ class RegisterStepTwoViewController: UIViewController {
             dump(   userimage )
         }else{
             userimageValue = 148
-            let urlKlanImage = URL(string: "https://yunusgunduz.site/wildbite/image/race/\(userimageValue).png")
+            let urlKlanImage = URL(string: "https://backhub.site/wildbite/image/race/\(userimageValue).png")
             
         DispatchQueue.main.async{
             self.klanImageView.kf.setImage(with: urlKlanImage)
@@ -138,7 +138,7 @@ class RegisterStepTwoViewController: UIViewController {
         ]
         let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userimageValue, level: userlevel, night_mission_state:"1", exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: "00")
           
-           AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(useridUSS)",
+           AF.request("http://backhub.site/wildbite/public/api/user/\(useridUSS)",
                       method: .put,
                       parameters: registerraceparameters,
                       headers: headers)

@@ -72,7 +72,7 @@ class HUNTERRegisterViewController: UIViewController {
        
         var totaldamage = 10
         let random = Int.random(in: 1...6)
-        var userimage = "http://yunusgunduz.site/wildbite/image/user/avci/\(Int.random(in: 1...6)).png"
+        var userimage = "http://backhub.site/wildbite/image/user/avci/\(Int.random(in: 1...6)).png"
         
        var usernameUSS = UserDefaults.standard.string(forKey: "RegisterUserName")
        var usertokenUSS = UserDefaults.standard.string(forKey: "RegisterUserToken")
@@ -90,7 +90,7 @@ class HUNTERRegisterViewController: UIViewController {
 
         let registerraceparameters =  RegisterRace(name: usernameUSS!, email: useremailUSS!, password: userpasswordUSS!, role: userrole, race: userrace, level: userlevel, night_mission_state:"1", exp: userexp, war_total: userwartotal, war_total_win: userwarwin, war_total_lose: userwarlose, war_total_gold: userwargold, gold: usergold, diamond: userdiamond, total_damage: totaldamage, power: userpower, defense: userdefense, speed: userspeed, total_hunt: usertotalhunt, total_success_hunt: usersuccesshunt, current_health: usercurrenthealth, maximum_health: usermaxhealth, regenerate_health_range: userregenerate_health_range, current_energy: usercurrentenergy, maximum_energy: usermaxenergy, image: userimage)
           
-           AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(useridUSS)",
+           AF.request("http://backhub.site/wildbite/public/api/user/\(useridUSS)",
                       method: .put,
                       parameters: registerraceparameters,
                       headers: headers)

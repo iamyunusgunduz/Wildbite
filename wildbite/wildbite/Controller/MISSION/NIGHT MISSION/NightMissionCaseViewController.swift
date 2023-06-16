@@ -59,7 +59,7 @@ class NightMissionCaseViewController: UIViewController {
                 
                 let nightMissionParameters = NightMissionYapi(gold: kazanilanGold, current_health: kazanilanCan, maximum_health: kazanilanCan, current_energy: kazanilanEnergy, maximum_energy: kazanilanEnergy, level: 0, night_mission_state: "\(nightMissionType+1)", exp: kazanilanExp )
                 
-              AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+              AF.request("https://backhub.site/wildbite/public/api/night-mission",
                          method: .put,
                          parameters: nightMissionParameters,
                          headers: headers)
@@ -97,7 +97,7 @@ class NightMissionCaseViewController: UIViewController {
                 
                 let nightMissionParameters = NightMissionYapi(gold: -kazanilanGold, current_health: -kazanilanCan, maximum_health: 0, current_energy: -kazanilanEnergy, maximum_energy: 0, level: 0, night_mission_state: "\(nightMissionType)", exp: 0 )
                 
-              AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+              AF.request("https://backhub.site/wildbite/public/api/night-mission",
                          method: .put,
                          parameters: nightMissionParameters,
                          headers: headers)
@@ -144,7 +144,7 @@ class NightMissionCaseViewController: UIViewController {
         dump("User Total Damage : \(NightMissionUserTotalDamage)")
         dump("User missionYapilabilmedurumu : \(nightMissionType)")
         //mosnter resimleri
-        let url = URL(string: "http://yunusgunduz.site/wildbite/image/missions/nightboss/\(nightMissionType).png")
+        let url = URL(string: "http://backhub.site/wildbite/image/missions/nightboss/\(nightMissionType).png")
         DispatchQueue.main.async{ [self] in
             missionMonsterImage.kf.setImage(with: url)
         }

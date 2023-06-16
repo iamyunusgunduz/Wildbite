@@ -62,7 +62,7 @@ class RegisterViewController: UIViewController {
         
         let register = Register(email: mailTextField.text!, name: usernameTextField.text!, password: passwordTextField.text!, password_confirmation: passwordTextField.text!, image: "null.jpg", role: 1)
        
-       AF.request("https://yunusgunduz.site/wildbite/public/api/register",
+       AF.request("https://backhub.site/wildbite/public/api/register",
                   method: .post,
                   parameters: register,
                   encoder: JSONParameterEncoder.default)

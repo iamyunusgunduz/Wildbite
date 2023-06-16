@@ -65,7 +65,7 @@ class ShopItemsViewController: UIViewController {
             
         ]
 
-        AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in
@@ -121,7 +121,7 @@ class ShopItemsViewController: UIViewController {
             .accept("application/json")
             
         ]
-        AF.request("http://yunusgunduz.site/wildbite/public/api/item-shop-filter?shop=\(shopID)" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/item-shop-filter?shop=\(shopID)" , headers: headers )
             .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in
@@ -213,116 +213,116 @@ class ShopItemsViewController: UIViewController {
             
                 switch shopAD{
                     case "STANDART Ayakkabı Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Ayakkabı Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/ayakkabi/AyakkabiDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "STANDART Eldiven Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/eldiven/EldivenGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Eldiven Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/eldiven/EldivenDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Kalkan Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kalkan/KalkanGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "PREMIUM Kalkan Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kalkan/KalkanDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Kask Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kask/KaskGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Kask Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kask/KaskDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "STANDART Kemer Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kemer/KemerGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Kemer Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kemer/KemerDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Pantolon Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/pantolon/PantolonGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "PREMIUM Pantolon Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/pantolon/PantolonDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Takı Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/taki/TakiGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Takı Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/taki/TakiDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "STANDART Zırh Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/zirh/ZirhGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Zırh Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/zirh/ZirhDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Asa Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/asa/AsaGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "PREMIUM Asa Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/asa/AsaDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Balta Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/balta/BaltaGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Balta Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/balta/BaltaDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "STANDART Balyoz Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/balyoz/BalyozGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Balyoz Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/balyoz/BalyozDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Kılıç Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kilic/KilicGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "PREMIUM Kılıç Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kilic/KilicDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Mızrak Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/mizrak/MizrakGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Mızrak Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/mizrak/MizrakDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Yay/Arbalet Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletGold/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/yayArbalet/YayArbaletGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                         
                     case "PREMIUM Yay/Arbalet Kasası":
-                        let urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletDiamond/\(itemResimAdiUD![randomNumber]).png")
+                        let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/yayArbalet/YayArbaletDiamond/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     
@@ -343,120 +343,120 @@ class ShopItemsViewController: UIViewController {
             if(itemResimAdiUD!.count != 0){
                 let randomNumber = Int.random(in: 0 ... itemResimAdiUD!.count-1)
                 UserDefaults.standard.set(randomNumber, forKey: "itemCekilisiRandomNumber")
-                var urlImage = URL(string:"https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiGold/1.png")
+                var urlImage = URL(string:"https://backhub.site/wildbite/image/Items/ayakkabi/AyakkabiGold/1.png")
                 print("random Number : \(randomNumber)")
                 switch shopAD{
                     case "STANDART Ayakkabı Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Ayakkabı Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/ayakkabi/AyakkabiDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "STANDART Eldiven Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenGold/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/eldiven/EldivenGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Eldiven Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/eldiven/EldivenDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Kalkan Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanGold/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kalkan/KalkanGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "PREMIUM Kalkan Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kalkan/KalkanDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Kask Kasası":
-                        urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskGold/\(itemResimAdiUD![randomNumber]).png")!
+                        urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kask/KaskGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Kask Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kask/KaskDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "STANDART Kemer Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerGold/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kemer/KemerGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Kemer Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kemer/KemerDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Pantolon Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonGold/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/pantolon/PantolonGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "PREMIUM Pantolon Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/pantolon/PantolonDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Takı Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiGold/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/taki/TakiGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Takı Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/taki/TakiDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "STANDART Zırh Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhGold/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/zirh/ZirhGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Zırh Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/zirh/ZirhDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Asa Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaGold/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/asa/AsaGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "PREMIUM Asa Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/asa/AsaDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Balta Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaGold/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/balta/BaltaGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Balta Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/balta/BaltaDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "STANDART Balyoz Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozGold/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/balyoz/BalyozGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Balyoz Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/balyoz/BalyozDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Kılıç Kasası":
-                         urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicGold/\(itemResimAdiUD![randomNumber]).png")!
+                         urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kilic/KilicGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                        
                     case "PREMIUM Kılıç Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/kilic/KilicDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Mızrak Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakGold/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/mizrak/MizrakGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "PREMIUM Mızrak Kasası":
-                          urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                          urlImage = URL(string: "https://backhub.site/wildbite/image/Items/mizrak/MizrakDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     case "STANDART Yay/Arbalet Kasası":
-                        urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletGold/\(itemResimAdiUD![randomNumber]).png")!
+                        urlImage = URL(string: "https://backhub.site/wildbite/image/Items/yayArbalet/YayArbaletGold/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                         
                     case "PREMIUM Yay/Arbalet Kasası":
-                        urlImage = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletDiamond/\(itemResimAdiUD![randomNumber]).png")!
+                        urlImage = URL(string: "https://backhub.site/wildbite/image/Items/yayArbalet/YayArbaletDiamond/\(itemResimAdiUD![randomNumber]).png")!
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
                     
@@ -500,7 +500,7 @@ class ShopItemsViewController: UIViewController {
         ]
         let userStateParameters = UserStateUpdate(power: pow, defense: def, speed: spd, total_damage: totlDamge, gold: gld)
         
-      AF.request("http://yunusgunduz.site/wildbite/public/api/user-statu/\(myUserID!)",
+      AF.request("http://backhub.site/wildbite/public/api/user-statu/\(myUserID!)",
                  method: .put,
                  parameters: userStateParameters,
                  headers: headers)

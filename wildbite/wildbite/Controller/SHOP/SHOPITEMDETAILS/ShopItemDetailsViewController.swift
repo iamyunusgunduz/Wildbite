@@ -74,7 +74,7 @@ class ShopItemDetailsViewController: UIViewController {
         ]
         let itemGiyParameters =
         
-        AF.request("http://yunusgunduz.site/wildbite/public/api/dressed?shop_id=\(shopID)&item_id=\(itemItemID?[itemItemRandomNumberUD] ?? 0)",
+        AF.request("http://backhub.site/wildbite/public/api/dressed?shop_id=\(shopID)&item_id=\(itemItemID?[itemItemRandomNumberUD] ?? 0)",
                    method: .post,
                    headers: headers)
         .validate(statusCode: 200..<500)
@@ -113,7 +113,7 @@ class ShopItemDetailsViewController: UIViewController {
             
         ]
 
-        AF.request("http://yunusgunduz.site/wildbite/public/api/dressed-enemy/\(myUserID!))" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/dressed-enemy/\(myUserID!))" , headers: headers )
             .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in

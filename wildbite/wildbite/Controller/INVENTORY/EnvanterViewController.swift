@@ -56,7 +56,7 @@ class EnvanterViewController: UIViewController {
         
         
         
-        AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in
@@ -158,7 +158,7 @@ extension EnvanterViewController: UICollectionViewDataSource, UICollectionViewDe
                     ]
             
         
-            AF.request("http://yunusgunduz.site/wildbite/public/api/item_sell/\(myUserID!)",
+            AF.request("http://backhub.site/wildbite/public/api/item_sell/\(myUserID!)",
                        method: .post,
                        parameters: itemSell, encoder: JSONParameterEncoder.default, headers: headers)
   

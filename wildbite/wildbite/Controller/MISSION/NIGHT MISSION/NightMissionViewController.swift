@@ -76,7 +76,7 @@ class NightMissionViewController: UIViewController {
         
      
       
-        AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in

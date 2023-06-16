@@ -65,7 +65,7 @@ class HuntCaseViewController: UIViewController {
         ]
         
         DispatchQueue.main.async {
-            AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
+            AF.request("http://backhub.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
                 .validate(statusCode: 200..<500)
                 .validate(contentType: ["application/json"])
                 .responseData { [self]  response in
@@ -201,7 +201,7 @@ class HuntCaseViewController: UIViewController {
                             prizeLabel.text = "ENERGY -5"
                            huntParameters = WarModelYapi(exp:0, gold: 0, current_health: 0, maximum_health: 0, current_energy: -5, maximum_energy: 0, level: 0, war_total: 0, war_total_win: 0, war_total_lose: 0, war_total_gold: 0)
                         }
-                      AF.request("http://yunusgunduz.site/wildbite/public/api/war",
+                      AF.request("http://backhub.site/wildbite/public/api/war",
                                  method: .put,
                                  parameters: huntParameters,
                                  headers: headers)
@@ -251,7 +251,7 @@ class HuntCaseViewController: UIViewController {
                             prizeLabel.text = "ENERGY -10"
                            huntParameters = WarModelYapi(exp:0, gold: 0, current_health: 0, maximum_health: 0, current_energy: -10, maximum_energy: 0, level: 0, war_total: 0, war_total_win: 0, war_total_lose: 0, war_total_gold: 0)
                         }
-                      AF.request("http://yunusgunduz.site/wildbite/public/api/war",
+                      AF.request("http://backhub.site/wildbite/public/api/war",
                                  method: .put,
                                  parameters: huntParameters,
                                  headers: headers)
@@ -296,7 +296,7 @@ class HuntCaseViewController: UIViewController {
                             prizeLabel.text = "ENERGY -20"
                            huntParameters = WarModelYapi(exp:0, gold: 0, current_health: 0, maximum_health: 0, current_energy: -20, maximum_energy: 0, level: 0, war_total: 0, war_total_win: 0, war_total_lose: 0, war_total_gold: 0)
                         }
-                      AF.request("http://yunusgunduz.site/wildbite/public/api/war",
+                      AF.request("http://backhub.site/wildbite/public/api/war",
                                  method: .put,
                                  parameters: huntParameters,
                                  headers: headers)
@@ -342,7 +342,7 @@ class HuntCaseViewController: UIViewController {
                             prizeLabel.text = "ENERGY -30"
                            huntParameters = WarModelYapi(exp:0, gold: 0, current_health: 0, maximum_health: 0, current_energy: -30, maximum_energy: 0, level: 0, war_total: 0, war_total_win: 0, war_total_lose: 0, war_total_gold: 0)
                         }
-                      AF.request("http://yunusgunduz.site/wildbite/public/api/war",
+                      AF.request("http://backhub.site/wildbite/public/api/war",
                                  method: .put,
                                  parameters: huntParameters,
                                  headers: headers)

@@ -25,41 +25,41 @@ class ItemAddViewController: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
-                // http://yunusgunduz.site/wildbite/image/kask/
+                // http://backhub.site/wildbite/image/kask/
             itemImageNameLabel.text = "Kask Image: "
             itemImageNameTextField.placeholder = "kaskname.png"
         case 1:
-            // http://yunusgunduz.site/wildbite/image/kask/
+            // http://backhub.site/wildbite/image/kask/
             itemImageNameLabel.text = "Zırh Image: "
             itemImageNameTextField.placeholder = "Zırh.png"
             
         case 2:
-                // http://yunusgunduz.site/wildbite/image/kask/
+                // http://backhub.site/wildbite/image/kask/
             itemImageNameLabel.text = "Sılah Image: "
             itemImageNameTextField.placeholder = "Sılah.png"
             
         case 3:
-                // http://yunusgunduz.site/wildbite/image/kask/
+                // http://backhub.site/wildbite/image/kask/
             itemImageNameLabel.text = "Kalkan Image: "
             itemImageNameTextField.placeholder = "Kalkan.png"
             
         case 4:
-                // http://yunusgunduz.site/wildbite/image/kask/
+                // http://backhub.site/wildbite/image/kask/
             itemImageNameLabel.text = "Kolye Image: "
             itemImageNameTextField.placeholder = "Kolye.png"
             
         case 5:
-                // http://yunusgunduz.site/wildbite/image/kask/
+                // http://backhub.site/wildbite/image/kask/
             itemImageNameLabel.text = "Eldıven Image: "
             itemImageNameTextField.placeholder = "Eldıven.png"
             
         case 6:
-                // http://yunusgunduz.site/wildbite/image/kask/
+                // http://backhub.site/wildbite/image/kask/
             itemImageNameLabel.text = "Bot Image: "
             itemImageNameTextField.placeholder = "Bot.png"
             
         case 7:
-                // http://yunusgunduz.site/wildbite/image/kask/
+                // http://backhub.site/wildbite/image/kask/
             itemImageNameLabel.text = "Iksır Image: "
             itemImageNameTextField.placeholder = "Iksır.png"
             

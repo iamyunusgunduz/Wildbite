@@ -53,7 +53,7 @@ class DressedItemsViewController: UIViewController {
             
         ]
 
-        AF.request("http://yunusgunduz.site/wildbite/public/api/dressed-enemy/\(myUserID!))" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/dressed-enemy/\(myUserID!))" , headers: headers )
             .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in
@@ -88,7 +88,7 @@ class DressedItemsViewController: UIViewController {
                             switch itemler.shopName{
                                 case "STANDART Ayakkabı Kasası":
                                     if(tiklananItem == "ayakkabi"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -109,7 +109,7 @@ class DressedItemsViewController: UIViewController {
                                    
                                 case "PREMIUM Ayakkabı Kasası":
                                     if(tiklananItem == "ayakkabi"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/ayakkabi/AyakkabiDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/ayakkabi/AyakkabiDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -130,7 +130,7 @@ class DressedItemsViewController: UIViewController {
                                   
                                 case "STANDART Eldiven Kasası":
                                     if(tiklananItem == "eldiven"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/eldiven/EldivenGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -151,7 +151,7 @@ class DressedItemsViewController: UIViewController {
                                    
                                 case "PREMIUM Eldiven Kasası":
                                     if(tiklananItem == "eldiven"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/eldiven/EldivenDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/eldiven/EldivenDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -172,7 +172,7 @@ class DressedItemsViewController: UIViewController {
                                    
                                 case "STANDART Kalkan Kasası":
                                     if(tiklananItem == "kalkan"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/kalkan/KalkanGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -193,7 +193,7 @@ class DressedItemsViewController: UIViewController {
                                    
                                 case "PREMIUM Kalkan Kasası":
                                     if(tiklananItem == "kalkan"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kalkan/KalkanDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/kalkan/KalkanDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -214,7 +214,7 @@ class DressedItemsViewController: UIViewController {
                                   
                                 case "STANDART Kask Kasası":
                                     if(tiklananItem == "kask"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/kask/KaskGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -234,7 +234,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Kask Kasası":
                                     if(tiklananItem == "kask"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kask/KaskDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/kask/KaskDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -255,7 +255,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Kemer Kasası":
                                     if(tiklananItem == "kemer"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/kemer/KemerGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -278,7 +278,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "PREMIUM Kemer Kasası":
                                     if(tiklananItem == "kemer"){
-                                        let url =  URL(string: "https://yunusgunduz.site/wildbite/image/Items/kemer/KemerDiamond/\(itemler.image).png")!
+                                        let url =  URL(string: "https://backhub.site/wildbite/image/Items/kemer/KemerDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -299,7 +299,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Pantolon Kasası":
                                     if(tiklananItem == "pantolon"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/pantolon/PantolonGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -319,7 +319,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Pantolon Kasası":
                                     if(tiklananItem == "pantolon"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/pantolon/PantolonDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/pantolon/PantolonDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -340,7 +340,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Takı Kasası":
                                     if(tiklananItem == "taki"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/taki/TakiGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -360,7 +360,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Takı Kasası":
                                     if(tiklananItem == "taki"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/taki/TakiDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/taki/TakiDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -381,7 +381,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Zırh Kasası":
                                     if(tiklananItem == "zirh"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/zirh/ZirhGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -401,7 +401,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Zırh Kasası":
                                     if(tiklananItem == "zirh"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/zirh/ZirhDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/zirh/ZirhDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -422,7 +422,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Asa Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/asa/AsaGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -442,7 +442,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Asa Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/asa/AsaDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/asa/AsaDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -463,7 +463,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Balta Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/balta/BaltaGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -483,7 +483,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Balta Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balta/BaltaDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/balta/BaltaDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -504,7 +504,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Balyoz Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url =  URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozGold/\(itemler.image).png")!
+                                        let url =  URL(string: "https://backhub.site/wildbite/image/Items/balyoz/BalyozGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -524,7 +524,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Balyoz Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/balyoz/BalyozDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/balyoz/BalyozDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -545,7 +545,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Kılıç Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/kilic/KilicGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -565,7 +565,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Kılıç Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/kilic/KilicDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/kilic/KilicDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -586,7 +586,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Mızrak Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/mizrak/MizrakGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -606,7 +606,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Mızrak Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/mizrak/MizrakDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/mizrak/MizrakDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -627,7 +627,7 @@ class DressedItemsViewController: UIViewController {
                                     
                                 case "STANDART Yay/Arbalet Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletGold/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/yayArbalet/YayArbaletGold/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"
@@ -647,7 +647,7 @@ class DressedItemsViewController: UIViewController {
                                     }
                                 case "PREMIUM Yay/Arbalet Kasası":
                                     if(tiklananItem == "silah"){
-                                        let url = URL(string: "https://yunusgunduz.site/wildbite/image/Items/yayArbalet/YayArbaletDiamond/\(itemler.image).png")!
+                                        let url = URL(string: "https://backhub.site/wildbite/image/Items/yayArbalet/YayArbaletDiamond/\(itemler.image).png")!
                                         itemImageView.kf.setImage(with: url )
                                         itemNameLabel.text = "Name: \(itemler.name)"
                                         itemLevelLabel.text = "Level: +\(itemler.level)"

@@ -64,7 +64,7 @@ class HuntViewController: UIViewController {
         ]
         
         DispatchQueue.main.async {
-            AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
+            AF.request("http://backhub.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
                 .validate(statusCode: 200..<500)
                 .validate(contentType: ["application/json"])
                 .responseData { [self]  response in

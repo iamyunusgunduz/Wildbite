@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
          }
          let login = Login(username: mailTextField.text!, password: passwordTextField.text!)
 
-        AF.request("http://yunusgunduz.site/wildbite/public/api/login",
+        AF.request("http://backhub.site/wildbite/public/api/login",
                    method: .post,
                    parameters: login,
                    encoder: JSONParameterEncoder.default)

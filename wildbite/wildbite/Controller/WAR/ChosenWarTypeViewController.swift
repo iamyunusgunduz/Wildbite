@@ -14,7 +14,9 @@ import Kingfisher
 
 class ChosenWarTypeViewController: UIViewController {
 
-    
+    @IBOutlet weak var userHealthLabel: UILabel!
+    @IBOutlet weak var userGoldLabel: UILabel!
+    @IBOutlet weak var userEnergyLabel: UILabel!
     
     @IBOutlet weak var enemynameLabel: UILabel!
     @IBOutlet weak var enemyRole: UILabel!
@@ -43,19 +45,7 @@ class ChosenWarTypeViewController: UIViewController {
         
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
      
-        let WarSaldiranUserCurrentEnergy = UserDefaults.standard.integer(forKey: "WarSaldiranUserCurrentEnergy")
-        if(WarSaldiranUserCurrentEnergy >= 1){
-            againButton.isEnabled = true
-            if(WarSaldiranUserCurrentEnergy >= 10){
-                 figgtButton.isEnabled = true
-            }else{
-                 
-                figgtButton.isEnabled = false
-            }
-        }else{
-            againButton.isEnabled = false
-            figgtButton.isEnabled = false
-        }
+      
         print("User Id: \(myUserID!)")
         
         print("User Token: \(myUserToken!)")
@@ -72,7 +62,7 @@ class ChosenWarTypeViewController: UIViewController {
         
         
         let randomSayi = Int.random(in: 101...108)
-        AF.request("http://yunusgunduz.site/wildbite/public/api/random-race-user?race=\(randomSayi))" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/random-race-user?race=\(randomSayi))" , headers: headers )
             .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self]  response in
@@ -89,40 +79,23 @@ class ChosenWarTypeViewController: UIViewController {
                     print(chosenWar ?? "Choosen var hata oldu")
                    
                         if(chosenWar?.user == nil){
-                        loadWarProfileEnemy()
-                            againButton.isEnabled = false
-                            figgtButton.isEnabled = false
+                            viewWillAppear(true)
                     }else{
                         
                         if let enemyID = chosenWar?.user.id{
                             
                             if(myUserID as! Int == enemyID){
-                                loadWarProfileEnemy()
+                                viewWillAppear(true)
+                                
                             }
                          
                         }
                         // enemy name
                         if let enemyNamem = chosenWar?.user.name{
-                            againButton.isEnabled = true
-                            figgtButton.isEnabled = true
+                          
                             enemynameLabel.text = "Name: \(enemyNamem)"
                         }
-                        // enemy Type
-                        /*
-                            switch myChoosenWartype {
-                                case 1:
-                                    enemyRole.text = "Race: HUNTER "
-                                case 2:
-                                    enemyRole.text = "Race: WEREWOLF "
-                                case 3:
-                                    enemyRole.text = "Race: VAMPIRE "
-                                case 4:
-                                    enemyRole.text = "Race: WITCH "
-                                default:
-                                    enemyRole.text = "-"
-                            }
-                           
-                        */
+                     
                         // enemy level
                         if let enemyLevelm = chosenWar?.user.level{
                             
@@ -160,9 +133,9 @@ class ChosenWarTypeViewController: UIViewController {
                         //enemy Health
                         if let enemyimagem = chosenWar?.user.image{
                             
-                            let url = URL(string: "\(enemyimagem)")
+                          let url = URL(string: "https://backhub.site/wildbite/image/user/idle/\(enemyimagem).gif")
                             DispatchQueue.main.async{ [self] in
-                                enemyProfileImage.kf.setImage(with: url)
+                                enemyProfileImage.setGifFromURL(url!,showLoader: true)
                             }
                            
                             
@@ -170,24 +143,24 @@ class ChosenWarTypeViewController: UIViewController {
                         }
                         
                         
-                        dump("Api username: \(chosenWar!.user.name)")
-                        dump("Api userrole: \(chosenWar!.user.role)")
-                        dump("Api userexp: \(chosenWar!.user.exp)")
-                        dump("Api userlevel: \(chosenWar!.user.level)")
-                        dump("Api usergold: \(chosenWar!.user.gold)")
-                        dump("Api usercurenthealth: \(chosenWar!.user.currentHealth)")
-                        dump("Api usermaxhealth: \(chosenWar!.user.maximumHealth)")
-                        dump("Api usercurentenergy: \(chosenWar!.user.currentEnergy)")
+                        dump("chosenWarApi username: \(chosenWar!.user.name)")
+                        dump("chosenWarApi userrole: \(chosenWar!.user.role)")
+                        dump("chosenWarApi userexp: \(chosenWar!.user.exp)")
+                        dump("chosenWarApi userlevel: \(chosenWar!.user.level)")
+                        dump("chosenWarApi usergold: \(chosenWar!.user.gold)")
+                        dump("chosenWarApi usercurenthealth: \(chosenWar!.user.currentHealth)")
+                        dump("chosenWarApi usermaxhealth: \(chosenWar!.user.maximumHealth)")
+                        dump("chosenWarApi usercurentenergy: \(chosenWar!.user.currentEnergy)")
                         
                      
-                        dump("Api usermaxenergy: \(chosenWar!.user.maximumEnergy)")
+                        dump("chosenWarApi usermaxenergy: \(chosenWar!.user.maximumEnergy)")
                       
-                        dump("Api userdamaga: \(chosenWar!.user.totalDamage)")
-                        dump("Api userpower: \(chosenWar!.user.power)")
-                        dump("Api userdefense: \(chosenWar!.user.defense)")
-                        dump("Api userspeed: \(chosenWar!.user.speed)")
+                        dump("chosenWarApi userdamaga: \(chosenWar!.user.totalDamage)")
+                        dump("chosenWarApi userpower: \(chosenWar!.user.power)")
+                        dump("chosenWarApi userdefense: \(chosenWar!.user.defense)")
+                        dump("chosenWarApi userspeed: \(chosenWar!.user.speed)")
                        // dump("Api userrace: \(myChoosenWartype)")
-                        dump("Api userimage: \(chosenWar!.user.image)")
+                        dump("chosenWarApi userimage: \(chosenWar!.user.image)")
                        
                         
                         UserDefaults.standard.set(chosenWar!.user.name, forKey: "WarSavunanUserName")
@@ -222,9 +195,10 @@ class ChosenWarTypeViewController: UIViewController {
             }
     }
     @IBAction func againChooseButton(_ sender: Any) {
-        self.againButton.isHidden = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.againButton.isHidden = false
+        againButton.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+            againButton.isHidden = false
+            saldiranUserProfileLoaD()
         }
    
         
@@ -262,7 +236,7 @@ class ChosenWarTypeViewController: UIViewController {
         
         let nightMissionParameters = NightMissionYapi(gold: 0, current_health: 0, maximum_health: 0, current_energy: -1, maximum_energy: 0, level: 0, night_mission_state: "\(WarSaldiranUserNightMissionState)", exp: 0 )
         
-      AF.request("https://yunusgunduz.site/wildbite/public/api/night-mission",
+      AF.request("https://backhub.site/wildbite/public/api/night-mission",
                  method: .put,
                  parameters: nightMissionParameters,
                  headers: headers)
@@ -286,26 +260,119 @@ class ChosenWarTypeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadWarProfileEnemy()
-        let nightMissionType = UserDefaults.standard.integer(forKey: "NightMissionType")
-        dump("nightMissionType: \(nightMissionType)")
-        let WarSaldiranUserCurrentEnergy = UserDefaults.standard.integer(forKey: "WarSaldiranUserCurrentEnergy")
-        if(WarSaldiranUserCurrentEnergy >= 1){
-            againButton.isEnabled = true
-            if(WarSaldiranUserCurrentEnergy >= 10){
-                 figgtButton.isEnabled = true
-            }else{
-                 
-                figgtButton.isEnabled = false
-            }
-        }else{
-            againButton.isEnabled = false
-            figgtButton.isEnabled = false
-        }
        
-    }
-    }
+        loadWarProfileEnemy()
    
     
+       
+        saldiranUserProfileLoaD()
+       
+    }
+    
+    
+    func  saldiranUserProfileLoaD() {
+        let myUserID = UserDefaults.standard.value(forKey: "userID")
+        let myUserName = UserDefaults.standard.value(forKey: "userName")
+        let myUserToken = UserDefaults.standard.value(forKey: "userToken")
+        print("User Id: \(myUserID!)")
+        print("User Name: \(myUserName!)")
+        print("User Token: \(myUserToken!)")
+        
+                let token = "\(myUserToken!)"
+                
+                let headers: HTTPHeaders = [
+                
+                    .authorization(bearerToken: token),
+                    .accept("application/json")
+                    
+                ]
+        
+     
+      
+        AF.request("http://backhub.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
+            .validate(statusCode: 200..<500)
+            .validate(contentType: ["application/json"])
+            .responseData { [self]  response in
+                
+                
+                switch response.result {
+                case .success:
+                    print("Validation Successful")
+                    
+                    let profileModelresponse = try? JSONDecoder().decode(ProfileModel.self, from: response.data!)
+                    debugPrint(profileModelresponse ?? "profil dönen mesajda hata oldu nil galiba")
+                        dump("Api username: \(profileModelresponse!.user.name)")
+                        dump("Api userrole: \(profileModelresponse!.user.role)")
+                        dump("Api userexp: \(profileModelresponse!.user.exp)")
+                        dump("Api userlevel: \(profileModelresponse!.user.level)")
+                        dump("Api usergold: \(profileModelresponse!.user.gold)")
+                        dump("Api usercurenthealth: \(profileModelresponse!.user.currentHealth)")
+                        dump("Api usermaxhealth: \(profileModelresponse!.user.maximumHealth)")
+                        dump("Api usercurentenergy: \(profileModelresponse!.user.currentEnergy)")
+                        dump("Api usermaxenergy: \(profileModelresponse!.user.maximumEnergy)")
+                        dump("Api nightmissionState: \(profileModelresponse!.user.night_mission_state)")
+                        dump("Api userdamaga: \(profileModelresponse!.user.totalDamage)")
+                        dump("Api userpower: \(profileModelresponse!.user.power)")
+                        dump("Api userdefense: \(profileModelresponse!.user.defense)")
+                        dump("Api userspeed: \(profileModelresponse!.user.speed)")
+                        dump("Api userrace: \(profileModelresponse!.race.raceName)")
+                        dump("Api userimage: \(profileModelresponse!.user.image)")
+                        UserDefaults.standard.set(profileModelresponse!.user.name, forKey: "WarSaldiranUserName")
+                        UserDefaults.standard.set(profileModelresponse!.user.role, forKey: "WarSaldiranUserRole")
+                        UserDefaults.standard.set(profileModelresponse!.user.exp, forKey: "WarSaldiranUserExp")
+                        UserDefaults.standard.set(profileModelresponse!.user.level, forKey: "WarSaldiranUserLevel")
+                        UserDefaults.standard.set(profileModelresponse!.user.gold, forKey: "WarSaldiranUserGold")
+                        UserDefaults.standard.set(profileModelresponse!.user.currentHealth, forKey: "WarSaldiranUserCurrentHealth")
+                        UserDefaults.standard.set(profileModelresponse!.user.maximumHealth, forKey: "WarSaldiranUserMaximumHealth")
+                        UserDefaults.standard.set(profileModelresponse!.user.currentEnergy, forKey: "WarSaldiranUserCurrentEnergy")
+                        UserDefaults.standard.set(profileModelresponse!.user.maximumEnergy, forKey: "WarSaldiranUserMaximumEnergy")
+                        UserDefaults.standard.set(profileModelresponse!.user.night_mission_state, forKey: "WarSaldiranUserNightMissionState")
+                        UserDefaults.standard.set(profileModelresponse!.user.totalDamage, forKey: "WarSaldiranUserTotalDamage")
+                        UserDefaults.standard.set(profileModelresponse!.user.power, forKey: "WarSaldiranUserPower")
+                        UserDefaults.standard.set(profileModelresponse!.user.defense, forKey: "WarSaldiranUserDefense")
+                        UserDefaults.standard.set(profileModelresponse!.user.speed, forKey: "WarSaldiranUserSpeed")
+                        UserDefaults.standard.set(profileModelresponse!.race.raceName, forKey: "WarSaldiranUserRacename")
+                        UserDefaults.standard.set(profileModelresponse!.user.image, forKey: "WarSaldiranUserImage")
+                 
+                  
+                        userGoldLabel.text = "\(profileModelresponse!.user.gold)"
+                        userEnergyLabel.text = "\(profileModelresponse!.user.currentEnergy)"
+                        userHealthLabel.text = "\(profileModelresponse!.user.currentHealth)"
+                 
+                        UserDefaults.standard.set(profileModelresponse!.user.currentEnergy, forKey: "WarSaldiranUserCurrentEnergy")
+                   
+                 
+                        
+                        if(Int(profileModelresponse!.user.currentEnergy)! >= 1){
+                            againButton.isEnabled = true
+                            print("Againbutton on")
+                            if(Int(profileModelresponse!.user.currentEnergy)! >= 10){
+                                 figgtButton.isEnabled = true
+                                print("figgtButton on")
+                            }else{
+                                 
+                                figgtButton.isEnabled = false
+                                print("figgtButton off")
+                            }
+                        }else{
+                            againButton.isEnabled = false
+                            figgtButton.isEnabled = false
+                            print("againButton off")
+                            print("figgtButton off")
+                        }
+                  
+              
+                   
+                    
+                case let .failure(error):
+                    print(error.errorDescription!)
+                    print("hata")
+                }
+            }
+    }
+    
+    }
+   
+    //   UserDefaults.standard.set(WarSaldiranUserCurrentEnergy, forKey: "WarSaldiranUserCurrentEnergy")
 
 

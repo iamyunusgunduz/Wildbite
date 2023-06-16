@@ -72,15 +72,15 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
         switch KasalarSegmentedControl.selectedSegmentIndex{
             case 0:
                 cell.menuAdiLabel.text = gelenMenulerStandart[indexPath.section].menuName
-                let url = URL(string: "https://yunusgunduz.site/wildbite/image/kasa/\(gelenMenulerStandart[indexPath.section].menuImage).png")
+                let url = URL(string: "https://backhub.site/wildbite/image/kasa/\(gelenMenulerStandart[indexPath.section].menuImage).png")
                 cell.shopImageView.kf.setImage(with: url )
             case 1:
                 cell.menuAdiLabel.text = gelenMenulerPremium[indexPath.section].menuName
-                let url = URL(string: "https://yunusgunduz.site/wildbite/image/kasa/\(gelenMenulerPremium[indexPath.section].menuImage).png")
+                let url = URL(string: "https://backhub.site/wildbite/image/kasa/\(gelenMenulerPremium[indexPath.section].menuImage).png")
                 cell.shopImageView.kf.setImage(with: url )
            default:
                 cell.menuAdiLabel.text = gelenMenuler[indexPath.section].menuName
-                let url = URL(string: "https://yunusgunduz.site/wildbite/image/kasa/\(gelenMenuler[indexPath.section].menuImage).png")
+                let url = URL(string: "https://backhub.site/wildbite/image/kasa/\(gelenMenuler[indexPath.section].menuImage).png")
                 cell.shopImageView.kf.setImage(with: url )
         }
        
@@ -120,7 +120,7 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
             .accept("application/json")
             
         ]
-        AF.request("http://yunusgunduz.site/wildbite/public/api/shop" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/shop" , headers: headers )
             .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in

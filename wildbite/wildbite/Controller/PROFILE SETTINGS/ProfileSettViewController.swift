@@ -93,7 +93,7 @@ class ProfileSettViewController: UIViewController {
                 ]
         
         DispatchQueue.main.async {
-            AF.request("http://yunusgunduz.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
+            AF.request("http://backhub.site/wildbite/public/api/user/\(myUserID!))" , headers: headers )
                 .validate(statusCode: 200..<300)
                 .validate(contentType: ["application/json"])
                 .responseData { [self]  response in
@@ -113,23 +113,11 @@ class ProfileSettViewController: UIViewController {
                         userNameLabel.text = "Username: \(profileModelresponse!.user.name)"
                         
                         userRaceLabel.text = "Race: \(profileModelresponse!.race.raceName)"
-                        switch profileModelresponse!.race.raceName {
-                        case "1":
-                            userRaceLabel.text = "Race: Hunter"
-                        case "2":
-                            userRaceLabel.text = "Race: Werewolf"
-                        case "3":
-                            userRaceLabel.text = "Race: Vampire"
-                        case "4":
-                            userRaceLabel.text = "Race: Witch"
-                        case "0":
-                                userRaceLabel.text = "Race: Not Selected"
-                        default:
-                            userRaceLabel.text = "Race: None"
-                        }
-                        
+                         
+                            userLevelLabel.text = "Level: \(profileModelresponse!.user.level)"
+                            userExpLabel.text = "Experience: \(profileModelresponse!.user.exp)"
                             var userExpOrani =  Int(profileModelresponse!.user.exp)
-                            switch userExpOrani!{  //MARK: - kafama göre  level orani belirledim
+                                /*     switch userExpOrani!{  //MARK: - kafama göre  level orani belirledim
                                 case 1...10:
                                     userLevelLabel.text = "Level: 1"
                                     userExpLabel.text = "Experience: \(profileModelresponse!.user.exp) / 10"
@@ -158,7 +146,7 @@ class ProfileSettViewController: UIViewController {
                                     userLevelLabel.text = "Level: None"
                                     userExpLabel.text = "Experience: none"
                             }
-                       
+                       */
                         userEmailLabel.text = "Email: \(profileModelresponse!.user.email)"
                         userGoldLabel.text = "Gold: \(profileModelresponse!.user.gold)"
                       
@@ -175,8 +163,10 @@ class ProfileSettViewController: UIViewController {
                       
                         if(warLose! != 0){
                             let kda:Double = (warWin ?? 1) / (warLose ?? 1)
-                            debugPrint("\(warTotals)  \(warWin!)  \(warLose!) \(kda) (WWR)")
-                            userTotalWarLabel.text = "WAR WIN RATE: \(kda) in (\(warTotals)) war "
+                            
+                            var kdaFormat = String(format: "%.1f", kda)
+                            debugPrint("\(warTotals)  \(warWin!)  \(warLose!) \(kdaFormat) (WWR)")
+                            userTotalWarLabel.text = "WAR WIN RATE: \(kdaFormat) in (\(warTotals)) war "
                         }else{
                             userTotalWarLabel.text = "WAR WIN RATE: \(warWin!) (WWR)"
                         }
@@ -282,7 +272,7 @@ class ProfileSettViewController: UIViewController {
         ]
         let userStateParameters = UserStateUpdate(power: pow, defense: def, speed: spd, total_damage: totlDamge, gold: gld)
         
-      AF.request("http://yunusgunduz.site/wildbite/public/api/user-statu/\(myUserID!)",
+      AF.request("http://backhub.site/wildbite/public/api/user-statu/\(myUserID!)",
                  method: .put,
                  parameters: userStateParameters,
                  headers: headers)

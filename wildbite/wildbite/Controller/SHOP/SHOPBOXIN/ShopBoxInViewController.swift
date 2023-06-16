@@ -57,7 +57,7 @@ class ShopBoxInViewController: UIViewController,UITabBarDelegate,UITableViewData
             .accept("application/json")
             
         ]
-        AF.request("http://yunusgunduz.site/wildbite/public/api/item-shop-filter?shop=\(shopID)" , headers: headers )
+        AF.request("http://backhub.site/wildbite/public/api/item-shop-filter?shop=\(shopID)" , headers: headers )
             .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in
