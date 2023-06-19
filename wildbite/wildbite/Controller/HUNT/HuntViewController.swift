@@ -10,10 +10,14 @@ import Alamofire
 
 class HuntViewController: UIViewController {
     
+    @IBOutlet weak var enerjiLabel: UILabel!
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var mediumButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
     @IBOutlet weak var veryHardButton: UIButton!
+    
+    @IBOutlet weak var goldLabel: UILabel!
+    @IBOutlet weak var canLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,8 +51,8 @@ class HuntViewController: UIViewController {
     }
     fileprivate func loadPage() {
         
-        
         let huntType = UserDefaults.standard.value(forKey: "HuntType") as? Int
+       
         let myUserID = UserDefaults.standard.value(forKey: "userID")
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
         print("User Id: \(myUserID!)")
@@ -76,12 +80,17 @@ class HuntViewController: UIViewController {
                             
                             let profileModelresponse = try? JSONDecoder().decode(ProfileModel.self, from: response.data!)
                             debugPrint(profileModelresponse!)
-                            
+                            if(profileModelresponse == nil){break}
                             print(profileModelresponse!.user.name)
                             print("USER GOLD: \(profileModelresponse!.user.gold)")
                             print("USER ENERGY: \(profileModelresponse!.user.currentEnergy)")
                             print("USER HEALTH: \(profileModelresponse!.user.currentHealth)")
                             let userEnerji = Int(profileModelresponse!.user.currentEnergy)!
+                            
+                            goldLabel.text = "\(profileModelresponse!.user.gold)"
+                            enerjiLabel.text = "\(profileModelresponse!.user.currentEnergy)"
+                            canLabel.text = "\(profileModelresponse!.user.currentHealth)"
+                            
                             if(userEnerji < 5 ) {
                                 easyButton.isEnabled = false
                             }else{

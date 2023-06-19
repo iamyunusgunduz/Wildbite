@@ -188,34 +188,34 @@ class WarCaseViewController: UIViewController {
                 //MARK: api  start
                  
                 
-                let kazanilanCan =  (WarSavunanUserMaximumHealth * 30 ) / 100
-                let kazanilanAltin =  (WarSavunanUserGold * 5 ) / 100
-                var kazanilanExp = (WarSavunanUserLevel * 4)
+                let kazanilanCan = abs( (WarSavunanUserMaximumHealth * 30 ) / 100 )
+                let kazanilanAltin = abs(  (WarSavunanUserGold * 5 ) / 100)
+                let kazanilanExp = abs( (WarSavunanUserLevel * 4) )
                 kazananHealth.text = "\(WarSaldiranUserCurrentHealth+kazanilanCan)"
               
                 var userLV = WarSaldiranUserLevel
                 var userinLevelExpHesabi = WarSaldiranUserExp + kazanilanExp
-                if(userinLevelExpHesabi < 10){userLV = 1}
-                else if(userinLevelExpHesabi < 25){userLV = 2}
-                else if(userinLevelExpHesabi < 50){userLV = 3}
-                else if(userinLevelExpHesabi < 70){userLV = 4}
-                else if(userinLevelExpHesabi < 100){userLV = 5}
-                else if(userinLevelExpHesabi < 150){userLV = 6}
-                else if(userinLevelExpHesabi < 200){userLV = 7}
-                else if(userinLevelExpHesabi < 300){userLV = 8}
-                else  if(userinLevelExpHesabi < 450){userLV = 9}
-                else if(userinLevelExpHesabi < 700){userLV = 10}
-                else if(userinLevelExpHesabi < 900){userLV = 11}
-                else  if(userinLevelExpHesabi < 1200){userLV = 12}
-                else  if(userinLevelExpHesabi < 1600){userLV = 13}
-                else if(userinLevelExpHesabi < 2000){userLV = 14}
-                else  if(userinLevelExpHesabi < 2500){userLV = 15}
-                else  if(userinLevelExpHesabi < 3100){userLV = 16}
-                else  if(userinLevelExpHesabi < 3700){userLV = 17}
-                else if(userinLevelExpHesabi  < 4500){userLV = 14}
-                else  if(userinLevelExpHesabi < 5500){userLV = 15}
-                else  if(userinLevelExpHesabi < 7100){userLV = 16}
-                else  if(userinLevelExpHesabi < 9700){userLV = 17}
+                if(userinLevelExpHesabi < 50){userLV = 1}
+                else if(userinLevelExpHesabi < 125){userLV = 2}
+                else if(userinLevelExpHesabi < 250){userLV = 3}
+                else if(userinLevelExpHesabi < 370){userLV = 4}
+                else if(userinLevelExpHesabi < 500){userLV = 5}
+                else if(userinLevelExpHesabi < 750){userLV = 6}
+                else if(userinLevelExpHesabi < 1200){userLV = 7}
+                else if(userinLevelExpHesabi < 2300){userLV = 8}
+                else  if(userinLevelExpHesabi < 3450){userLV = 9}
+                else if(userinLevelExpHesabi < 4700){userLV = 10}
+                else if(userinLevelExpHesabi < 5900){userLV = 11}
+                else  if(userinLevelExpHesabi < 7200){userLV = 12}
+                else  if(userinLevelExpHesabi < 9600){userLV = 13}
+                else if(userinLevelExpHesabi <  12000){userLV = 14}
+                else  if(userinLevelExpHesabi < 13500){userLV = 15}
+                else  if(userinLevelExpHesabi < 14600){userLV = 16}
+                else  if(userinLevelExpHesabi < 19400){userLV = 17}
+                else if(userinLevelExpHesabi  < 24500){userLV = 14}
+                else  if(userinLevelExpHesabi < 35500){userLV = 15}
+                else  if(userinLevelExpHesabi < 47100){userLV = 16}
+                else  if(userinLevelExpHesabi < 59700){userLV = 17}
                 else{
                      userLV = WarSaldiranUserLevel
                 }
@@ -293,6 +293,33 @@ class WarCaseViewController: UIViewController {
                // kaybedenHealth.text = "\(WarSaldiranUserCurrentHealth - kaybedilenCan)"
                 kaybedenHealth.text = "\(WarSaldiranUserCurrentHealth - kaybedilenCan)"
                 let WarSaldiranUserLevel = UserDefaults.standard.integer(forKey: "WarSaldiranUserLevel")
+                var userLV = WarSaldiranUserLevel
+                let WarSaldiranUserExp = UserDefaults.standard.integer(forKey: "WarSaldiranUserExp")
+                var userinLevelExpHesabi = WarSaldiranUserExp
+                if(userinLevelExpHesabi < 50){userLV = 1}
+                else if(userinLevelExpHesabi < 125){userLV = 2}
+                else if(userinLevelExpHesabi < 250){userLV = 3}
+                else if(userinLevelExpHesabi < 370){userLV = 4}
+                else if(userinLevelExpHesabi < 500){userLV = 5}
+                else if(userinLevelExpHesabi < 750){userLV = 6}
+                else if(userinLevelExpHesabi < 1200){userLV = 7}
+                else if(userinLevelExpHesabi < 2300){userLV = 8}
+                else  if(userinLevelExpHesabi < 3450){userLV = 9}
+                else if(userinLevelExpHesabi < 4700){userLV = 10}
+                else if(userinLevelExpHesabi < 5900){userLV = 11}
+                else  if(userinLevelExpHesabi < 7200){userLV = 12}
+                else  if(userinLevelExpHesabi < 9600){userLV = 13}
+                else if(userinLevelExpHesabi <  12000){userLV = 14}
+                else  if(userinLevelExpHesabi < 13500){userLV = 15}
+                else  if(userinLevelExpHesabi < 14600){userLV = 16}
+                else  if(userinLevelExpHesabi < 19400){userLV = 17}
+                else if(userinLevelExpHesabi  < 24500){userLV = 14}
+                else  if(userinLevelExpHesabi < 35500){userLV = 15}
+                else  if(userinLevelExpHesabi < 47100){userLV = 16}
+                else  if(userinLevelExpHesabi < 59700){userLV = 17}
+                else{
+                     userLV = WarSaldiranUserLevel
+                }
                  
                        let warParameters = WarModelYapi(exp: 0, gold: -kaybedilenAltin, current_health: -kaybedilenCan, maximum_health: 0, current_energy: -10, maximum_energy: 0, level: WarSaldiranUserLevel, war_total: 1, war_total_win: 0, war_total_lose: 1, war_total_gold: 0)
                        
@@ -309,8 +336,8 @@ class WarCaseViewController: UIViewController {
                           let warResponse = try? JSONDecoder().decode(WarModel.self,  from: response.data!)
                           debugPrint(warResponse ?? "savaşırken bişey oldu")
                           expLabel.text = "+ 0"
-                          goldLabel.text = "- \(kaybedilenAltin)"
-                          canLabel.text = "+ 0"
+                          goldLabel.text = "\(kaybedilenAltin)"
+                          canLabel.text = "+0"
                           UserDefaults.standard.set(WarSaldiranUserCurrentEnergy - 10, forKey: "WarSaldiranUserCurrentEnergy")
                           UserDefaults.standard.set(WarSaldiranUserGold-kaybedilenAltin,forKey: "WarSaldiranUserGold")
                           UserDefaults.standard.set(WarSaldiranUserCurrentHealth-kaybedilenCan,forKey: "WarSaldiranUserCurrentHealth")
@@ -330,7 +357,7 @@ class WarCaseViewController: UIViewController {
         
         
        
-             
+     
         }
         
       

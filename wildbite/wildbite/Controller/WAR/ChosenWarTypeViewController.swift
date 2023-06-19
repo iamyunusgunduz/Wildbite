@@ -33,10 +33,15 @@ class ChosenWarTypeViewController: UIViewController {
     
     @IBOutlet weak var againButton: UIButton!
     
+    var powerDres = 0
+    var defDres = 0
+    var spdDres = 0
+    var hlthDres = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         
     }
     
     fileprivate func loadWarProfileEnemy() {
@@ -83,16 +88,15 @@ class ChosenWarTypeViewController: UIViewController {
                     }else{
                         
                         if let enemyID = chosenWar?.user.id{
-                            
+                          
                             if(myUserID as! Int == enemyID){
-                                viewWillAppear(true)
-                                
-                            }
-                         
+                                viewWillAppear(true)}
+                           
                         }
+                       
                         // enemy name
                         if let enemyNamem = chosenWar?.user.name{
-                          
+                            
                             enemynameLabel.text = "Name: \(enemyNamem)"
                         }
                      
@@ -107,29 +111,7 @@ class ChosenWarTypeViewController: UIViewController {
                             enemyDamage.text = "Damage: \(enemyDamagem)"
                         }
                         
-                        //enemy Power
-                        if let enemyPowerm = chosenWar?.user.power{
-                            
-                            enemyPower.text = "Power: \(enemyPowerm)"
-                        }
                         
-                        //enemy Defence
-                        if let enemyDefensem = chosenWar?.user.defense{
-                            
-                            enemyDefance.text = "Defense: \(enemyDefensem)"
-                        }
-                        
-                        //enemy Speed
-                        if let enemySpeedm = chosenWar?.user.speed{
-                            
-                            enemySpeed.text = "Speed: \(enemySpeedm)"
-                        }
-                        
-                        //enemy Health
-                        if let enemyHealthm = chosenWar?.user.maximumHealth{
-                            
-                            enemyHealth.text = "Health: \(enemyHealthm)"
-                        }
                         //enemy Health
                         if let enemyimagem = chosenWar?.user.image{
                             
@@ -162,26 +144,21 @@ class ChosenWarTypeViewController: UIViewController {
                        // dump("Api userrace: \(myChoosenWartype)")
                         dump("chosenWarApi userimage: \(chosenWar!.user.image)")
                        
-                        
+                         
                         UserDefaults.standard.set(chosenWar!.user.name, forKey: "WarSavunanUserName")
                         UserDefaults.standard.set(chosenWar!.user.role, forKey: "WarSavunanUserRole")
                         UserDefaults.standard.set(chosenWar!.user.exp, forKey: "WarSavunanUserExp")
                         UserDefaults.standard.set(chosenWar!.user.level, forKey: "WarSavunanUserLevel")
                         UserDefaults.standard.set(chosenWar!.user.gold, forKey: "WarSavunanUserGold")
-                        UserDefaults.standard.set(chosenWar!.user.currentHealth, forKey: "WarSavunanUserCurrentHealth")
-                        UserDefaults.standard.set(chosenWar!.user.maximumHealth, forKey: "WarSavunanUserMaximumHealth")
+                        UserDefaults.standard.set(chosenWar!.user.totalDamage, forKey: "WarSavunanUserTotalDamage")
                         UserDefaults.standard.set(chosenWar!.user.currentEnergy, forKey: "WarSavunanUserCurrentEnergy")
                         UserDefaults.standard.set(chosenWar!.user.maximumEnergy, forKey: "WarSavunanUserMaximumEnergy")
-                     
-                        UserDefaults.standard.set(chosenWar!.user.totalDamage, forKey: "WarSavunanUserTotalDamage")
-                        UserDefaults.standard.set(chosenWar!.user.power, forKey: "WarSavunanUserPower")
-                        UserDefaults.standard.set(chosenWar!.user.defense, forKey: "WarSavunanUserDefense")
-                        UserDefaults.standard.set(chosenWar!.user.speed, forKey: "WarSavunanUserSpeed")
+                        UserDefaults.standard.set(chosenWar!.user.maximumHealth, forKey: "WarSavunanUserMaximumHealth")
                   //      UserDefaults.standard.set(myChoosenWartype, forKey: "WarSavunanUserRacename")
                         UserDefaults.standard.set(chosenWar!.user.image, forKey: "WarSavunanUserImage")
                         
                         
-                        
+                        loadUserDressedItems(userssID:  (chosenWar?.user.id)! )
                         
                     }
                    
@@ -301,22 +278,7 @@ class ChosenWarTypeViewController: UIViewController {
                     
                     let profileModelresponse = try? JSONDecoder().decode(ProfileModel.self, from: response.data!)
                     debugPrint(profileModelresponse ?? "profil dönen mesajda hata oldu nil galiba")
-                        dump("Api username: \(profileModelresponse!.user.name)")
-                        dump("Api userrole: \(profileModelresponse!.user.role)")
-                        dump("Api userexp: \(profileModelresponse!.user.exp)")
-                        dump("Api userlevel: \(profileModelresponse!.user.level)")
-                        dump("Api usergold: \(profileModelresponse!.user.gold)")
-                        dump("Api usercurenthealth: \(profileModelresponse!.user.currentHealth)")
-                        dump("Api usermaxhealth: \(profileModelresponse!.user.maximumHealth)")
-                        dump("Api usercurentenergy: \(profileModelresponse!.user.currentEnergy)")
-                        dump("Api usermaxenergy: \(profileModelresponse!.user.maximumEnergy)")
-                        dump("Api nightmissionState: \(profileModelresponse!.user.night_mission_state)")
-                        dump("Api userdamaga: \(profileModelresponse!.user.totalDamage)")
-                        dump("Api userpower: \(profileModelresponse!.user.power)")
-                        dump("Api userdefense: \(profileModelresponse!.user.defense)")
-                        dump("Api userspeed: \(profileModelresponse!.user.speed)")
-                        dump("Api userrace: \(profileModelresponse!.race.raceName)")
-                        dump("Api userimage: \(profileModelresponse!.user.image)")
+                        if(profileModelresponse == nil){break}
                         UserDefaults.standard.set(profileModelresponse!.user.name, forKey: "WarSaldiranUserName")
                         UserDefaults.standard.set(profileModelresponse!.user.role, forKey: "WarSaldiranUserRole")
                         UserDefaults.standard.set(profileModelresponse!.user.exp, forKey: "WarSaldiranUserExp")
@@ -371,8 +333,88 @@ class ChosenWarTypeViewController: UIViewController {
             }
     }
     
+    
+    
+  fileprivate  func loadUserDressedItems(userssID:Int){
+      dump("-------------asdasd-----------\(userssID)")
+        let myUserToken = UserDefaults.standard.value(forKey: "userToken")
+       
+        
+        let token = "\(myUserToken!)"
+        
+        let headers: HTTPHeaders = [
+            
+            .authorization(bearerToken: token),
+            .accept("application/json")
+            
+        ]
+     
+        AF.request("http://backhub.site/wildbite/public/api/dressed-enemy/\(userssID)" , headers: headers )
+            .validate(statusCode: 200..<500)
+            .validate(contentType: ["application/json"])
+            .responseData { [self]   response in
+               
+                
+                switch response.result {
+                    case .success:
+                        print("DEBUG: dress list Successful ")
+                        
+                        let dressResponse = try? JSONDecoder().decode(UserDressedModel.self, from: response.data!)
+                        debugPrint(dressResponse ?? "dress list bisey oldu")
+                        if(dressResponse == nil){
+                           return loadWarProfileEnemy()
+                        }
+                        dump("Item + user pow\(dressResponse?.userPower ?? 0)")
+                        dump("Item + user health\(dressResponse?.userCurrentHealth  ?? 0)")
+                        dump("Item + user def\(dressResponse?.userDefense  ?? 0)")
+                        dump("Item + user speed\(dressResponse?.userSpeed  ?? 0)")
+                       
+                        dump("Only Item pow: \(dressResponse?.itemPower  ?? 0)")
+                        dump("Only Item health: \(dressResponse?.itemHealth  ?? 0)")
+                        dump("Only Item def: \(dressResponse?.itemDefense  ?? 0)")
+                        dump("Only Item speed: \(dressResponse?.itemSpeed  ?? 0)")
+                        //enemy Power
+                        if let enemyPowerm = dressResponse?.userPower{
+                            
+                            enemyPower.text = "Power: \(enemyPowerm)"
+                            
+                             UserDefaults.standard.set(enemyPowerm, forKey: "WarSavunanUserPower")
+                        }
+                        
+                        //enemy Defence
+                        if let enemyDefensem = dressResponse?.userDefense{
+                            UserDefaults.standard.set(enemyDefensem, forKey: "WarSavunanUserDefense")
+                            enemyDefance.text = "Defense: \(enemyDefensem)"
+                        }
+                        
+                        //enemy Speed
+                        if let enemySpeedm = dressResponse?.userSpeed{
+                            UserDefaults.standard.set(enemySpeedm, forKey: "WarSavunanUserSpeed")
+                            enemySpeed.text = "Speed: \(enemySpeedm)"
+                        }
+                     
+                        //enemy Health
+                        if let enemyHealthm = dressResponse?.userCurrentHealth{
+                           
+                          enemyHealth.text = "Health: \(enemyHealthm)"
+                            UserDefaults.standard.set(enemyHealthm, forKey: "WarSavunanUserCurrentHealth")
+                           
+                        }
+      
+                        
+                      
+                       
+                        
+                      
+                    case let .failure(error):
+                        print(error.errorDescription!)
+                        print("hata")
+                }
+            }
     }
-   
-    //   UserDefaults.standard.set(WarSaldiranUserCurrentEnergy, forKey: "WarSaldiranUserCurrentEnergy")
+     
 
+
+    
+    }
 

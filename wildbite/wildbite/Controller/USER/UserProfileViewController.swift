@@ -197,7 +197,7 @@ class UserProfileViewController: UIViewController {
                         userCanLabel.text = "\(profileModelresponse?.user.currentHealth ?? "none")/\(profileModelresponse?.user.maximumHealth ?? "none")"
                         userGoldLabel.text = "\(profileModelresponse?.user.gold ?? "none")"
                         userNameLabel.text = "\(profileModelresponse?.user.name ?? "none")"
-                        //userRankImage.image = UIImage(named: "LV\(profileModelresponse!.user.level).png")
+                        userRankImage.image = UIImage(named: "LV\(profileModelresponse!.user.level).png")
                        
                         let url = URL(string: "https://backhub.site/wildbite/image/user/idle/\(profileModelresponse!.user.image).gif")
                         let url2 = URL(string: "https://backhub.site/wildbite/image/user/idle/00.gif")!
@@ -239,7 +239,8 @@ class UserProfileViewController: UIViewController {
             
         ]
 
-        AF.request("http://backhub.site/wildbite/public/api/dressed-enemy/\(myUserID!))" , headers: headers )
+       AF.request("http://backhub.site/wildbite/public/api/dressed-enemy/\(myUserID!))" , headers: headers )
+        
             .validate(statusCode: 200..<500)
             .validate(contentType: ["application/json"])
             .responseData { [self] response in

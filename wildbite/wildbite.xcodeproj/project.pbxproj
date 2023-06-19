@@ -11,14 +11,16 @@
 		010859BF2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */; };
 		010859C12A22ACB100FAB693 /* ItemShopFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */; };
 		010C2F4E2A2FD27300CBF67A /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 010C2F4D2A2FD27300CBF67A /* SwiftyGif */; };
-		010C2F512A2FD52C00CBF67A /* gif.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010C2F502A2FD52C00CBF67A /* gif.storyboard */; };
-		010C2F532A2FD54200CBF67A /* gifyyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C2F522A2FD54200CBF67A /* gifyyViewController.swift */; };
 		012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */; };
-		012C76082A35D8730016BF24 /* Victory.gif in Resources */ = {isa = PBXBuildFile; fileRef = 012C76072A35D8730016BF24 /* Victory.gif */; };
-		012C760A2A35DB2F0016BF24 /* YouLose.gif in Resources */ = {isa = PBXBuildFile; fileRef = 012C76092A35DB2F0016BF24 /* YouLose.gif */; };
-		012C760C2A35F65E0016BF24 /* kicking.gif in Resources */ = {isa = PBXBuildFile; fileRef = 012C760B2A35F65D0016BF24 /* kicking.gif */; };
 		013361F22A29DA29002ED455 /* ItemGiyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013361F12A29DA29002ED455 /* ItemGiyModel.swift */; };
 		013383112A2FE9CE00783563 /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013383102A2FE9CE00783563 /* RegisterStepTwoViewController.swift */; };
+		0144D8772A40F1740018CF96 /* WarBetweenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144D8762A40F1740018CF96 /* WarBetweenViewController.swift */; };
+		0144D87C2A40F60A0018CF96 /* 00bekleyis.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0144D8782A40F6060018CF96 /* 00bekleyis.gif */; };
+		0144D87D2A40F60A0018CF96 /* 00olus.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0144D8792A40F6070018CF96 /* 00olus.gif */; };
+		0144D87E2A40F60A0018CF96 /* 00savun.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0144D87A2A40F6080018CF96 /* 00savun.gif */; };
+		0144D87F2A40F60A0018CF96 /* 00kick.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0144D87B2A40F6090018CF96 /* 00kick.gif */; };
+		0144D8822A410CFD0018CF96 /* YouLose.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0144D8802A410CFC0018CF96 /* YouLose.gif */; };
+		0144D8832A410CFD0018CF96 /* Victory.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0144D8812A410CFC0018CF96 /* Victory.gif */; };
 		0159D6672A19545100AB98F3 /* WarCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159D6662A19545100AB98F3 /* WarCaseViewController.swift */; };
 		015CFE882A1A7C4200C7B668 /* WarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CFE872A1A7C4200C7B668 /* WarModel.swift */; };
 		0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0176F6742A0D2D95009B5749 /* ShopItems.storyboard */; };
@@ -31,6 +33,8 @@
 		01936DDB2A05B11200780FB3 /* ChosenWarTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */; };
 		01936DDD2A05B18900780FB3 /* ChosenWarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */; };
 		01ACC2D72A23E4C50052BD59 /* ShopItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACC2D62A23E4C50052BD59 /* ShopItemDetailsViewController.swift */; };
+		01ACCC252A40CD15002BBBD4 /* JustWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACCC242A40CD15002BBBD4 /* JustWatchViewController.swift */; };
+		01ACCC272A40CF3F002BBBD4 /* 05.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01ACCC262A40CF3F002BBBD4 /* 05.gif */; };
 		880C567729DEF56400B3BB07 /* InventoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */; };
 		881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881513C329E46EB9001CD5CE /* Mission.storyboard */; };
 		881F3A8B29DDEDB3005579CE /* ProfileSettViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */; };
@@ -81,14 +85,16 @@
 		010859BC2A22ABE200FAB693 /* ShopBoxInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBoxInViewController.swift; sourceTree = "<group>"; };
 		010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBoxInTableViewCell.swift; sourceTree = "<group>"; };
 		010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShopFilterModel.swift; sourceTree = "<group>"; };
-		010C2F502A2FD52C00CBF67A /* gif.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = gif.storyboard; sourceTree = "<group>"; };
-		010C2F522A2FD54200CBF67A /* gifyyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifyyViewController.swift; sourceTree = "<group>"; };
 		012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRaceModel.swift; sourceTree = "<group>"; };
-		012C76072A35D8730016BF24 /* Victory.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Victory.gif; path = ../../../../../KARMA/Gif2/Victory.gif; sourceTree = "<group>"; };
-		012C76092A35DB2F0016BF24 /* YouLose.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = YouLose.gif; path = ../../../../../KARMA/Gif2/YouLose.gif; sourceTree = "<group>"; };
-		012C760B2A35F65D0016BF24 /* kicking.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = kicking.gif; path = ../../../../../kicking.gif; sourceTree = "<group>"; };
 		013361F12A29DA29002ED455 /* ItemGiyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGiyModel.swift; sourceTree = "<group>"; };
 		013383102A2FE9CE00783563 /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
+		0144D8762A40F1740018CF96 /* WarBetweenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarBetweenViewController.swift; sourceTree = "<group>"; };
+		0144D8782A40F6060018CF96 /* 00bekleyis.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 00bekleyis.gif; sourceTree = "<group>"; };
+		0144D8792A40F6070018CF96 /* 00olus.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 00olus.gif; sourceTree = "<group>"; };
+		0144D87A2A40F6080018CF96 /* 00savun.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 00savun.gif; sourceTree = "<group>"; };
+		0144D87B2A40F6090018CF96 /* 00kick.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 00kick.gif; sourceTree = "<group>"; };
+		0144D8802A410CFC0018CF96 /* YouLose.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = YouLose.gif; sourceTree = "<group>"; };
+		0144D8812A410CFC0018CF96 /* Victory.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Victory.gif; sourceTree = "<group>"; };
 		0159D6662A19545100AB98F3 /* WarCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarCaseViewController.swift; sourceTree = "<group>"; };
 		015CFE872A1A7C4200C7B668 /* WarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarModel.swift; sourceTree = "<group>"; };
 		0176F6742A0D2D95009B5749 /* ShopItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopItems.storyboard; sourceTree = "<group>"; };
@@ -101,6 +107,8 @@
 		01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarTypeViewController.swift; sourceTree = "<group>"; };
 		01936DDC2A05B18900780FB3 /* ChosenWarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenWarModel.swift; sourceTree = "<group>"; };
 		01ACC2D62A23E4C50052BD59 /* ShopItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemDetailsViewController.swift; sourceTree = "<group>"; };
+		01ACCC242A40CD15002BBBD4 /* JustWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustWatchViewController.swift; sourceTree = "<group>"; };
+		01ACCC262A40CF3F002BBBD4 /* 05.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 05.gif; sourceTree = "<group>"; };
 		880C567629DEF56400B3BB07 /* InventoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		881513C329E46EB9001CD5CE /* Mission.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mission.storyboard; sourceTree = "<group>"; };
 		881F3A8A29DDEDB3005579CE /* ProfileSettViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettViewController.swift; sourceTree = "<group>"; };
@@ -190,23 +198,18 @@
 			path = SHOPBOXIN;
 			sourceTree = "<group>";
 		};
-		010C2F4F2A2FD50600CBF67A /* GIFLEARN */ = {
+		010C2F4F2A2FD50600CBF67A /* GIF */ = {
 			isa = PBXGroup;
 			children = (
-				012C76072A35D8730016BF24 /* Victory.gif */,
-				012C760B2A35F65D0016BF24 /* kicking.gif */,
-				012C76092A35DB2F0016BF24 /* YouLose.gif */,
-				010C2F502A2FD52C00CBF67A /* gif.storyboard */,
-				010C2F522A2FD54200CBF67A /* gifyyViewController.swift */,
+				0144D8812A410CFC0018CF96 /* Victory.gif */,
+				0144D8802A410CFC0018CF96 /* YouLose.gif */,
+				0144D8782A40F6060018CF96 /* 00bekleyis.gif */,
+				0144D87B2A40F6090018CF96 /* 00kick.gif */,
+				0144D8792A40F6070018CF96 /* 00olus.gif */,
+				0144D87A2A40F6080018CF96 /* 00savun.gif */,
+				01ACCC262A40CF3F002BBBD4 /* 05.gif */,
 			);
-			path = GIFLEARN;
-			sourceTree = "<group>";
-		};
-		013361F32A29DF2E002ED455 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
+			path = GIF;
 			sourceTree = "<group>";
 		};
 		0176F6732A0D2D75009B5749 /*  SHOP ITEMS */ = {
@@ -236,9 +239,11 @@
 		01936DD42A0596FF00780FB3 /* WAR */ = {
 			isa = PBXGroup;
 			children = (
+				01ACCC232A40CCC1002BBBD4 /* justWar */,
 				01936DD52A05973100780FB3 /* WARViewController.swift */,
 				01936DDA2A05B11200780FB3 /* ChosenWarTypeViewController.swift */,
 				0159D6662A19545100AB98F3 /* WarCaseViewController.swift */,
+				0144D8762A40F1740018CF96 /* WarBetweenViewController.swift */,
 			);
 			path = WAR;
 			sourceTree = "<group>";
@@ -249,6 +254,14 @@
 				01ACC2D62A23E4C50052BD59 /* ShopItemDetailsViewController.swift */,
 			);
 			path = SHOPITEMDETAILS;
+			sourceTree = "<group>";
+		};
+		01ACCC232A40CCC1002BBBD4 /* justWar */ = {
+			isa = PBXGroup;
+			children = (
+				01ACCC242A40CD15002BBBD4 /* JustWatchViewController.swift */,
+			);
+			path = justWar;
 			sourceTree = "<group>";
 		};
 		881513C229E46EA7001CD5CE /* NIGHT MISSION */ = {
@@ -450,6 +463,7 @@
 		88E508C329D481E400E9E557 /* wildbite */ = {
 			isa = PBXGroup;
 			children = (
+				010C2F4F2A2FD50600CBF67A /* GIF */,
 				88E508DB29D484E900E9E557 /* Model */,
 				88E508DC29D4853800E9E557 /* View */,
 				88E508DD29D4853D00E9E557 /* Controller */,
@@ -487,7 +501,6 @@
 		88E508DC29D4853800E9E557 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				010C2F4F2A2FD50600CBF67A /* GIFLEARN */,
 				010859B92A22A76A00FAB693 /* SHOP */,
 				889B87BE29D646BC00E3DF4E /* ADMIN */,
 				889B87BD29D646B500E3DF4E /* MAIN */,
@@ -503,7 +516,6 @@
 		88E508DD29D4853D00E9E557 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				013361F32A29DF2E002ED455 /* New Group */,
 				010859BA2A22AB9800FAB693 /* SHOP */,
 				0184F09A2A2226AE00FD1F12 /* DRESSED */,
 				01936DD42A0596FF00780FB3 /* WAR */,
@@ -602,20 +614,23 @@
 				88CCB2AC29DF898100C9F1D8 /* Hunt.storyboard in Resources */,
 				0176F6752A0D2D95009B5749 /* ShopItems.storyboard in Resources */,
 				88E508D129D481E600E9E557 /* LaunchScreen.storyboard in Resources */,
-				010C2F512A2FD52C00CBF67A /* gif.storyboard in Resources */,
+				0144D8832A410CFD0018CF96 /* Victory.gif in Resources */,
+				0144D87F2A40F60A0018CF96 /* 00kick.gif in Resources */,
 				88E508CE29D481E600E9E557 /* Assets.xcassets in Resources */,
 				881513C429E46EB9001CD5CE /* Mission.storyboard in Resources */,
 				88C6803029E605CD00719CC0 /* ItemAdd.storyboard in Resources */,
+				01ACCC272A40CF3F002BBBD4 /* 05.gif in Resources */,
+				0144D8822A410CFD0018CF96 /* YouLose.gif in Resources */,
 				8873B37129E2D20F00F4FB89 /* Paper.storyboard in Resources */,
-				012C76082A35D8730016BF24 /* Victory.gif in Resources */,
+				0144D87D2A40F60A0018CF96 /* 00olus.gif in Resources */,
 				88DAF76929D62E40009B85C6 /* Login.storyboard in Resources */,
+				0144D87C2A40F60A0018CF96 /* 00bekleyis.gif in Resources */,
 				88E508CC29D481E400E9E557 /* Main.storyboard in Resources */,
 				889B87C029D646E600E3DF4E /* Admin.storyboard in Resources */,
+				0144D87E2A40F60A0018CF96 /* 00savun.gif in Resources */,
 				88C6802629E5F23600719CC0 /* ShopMenu.storyboard in Resources */,
 				88E508EB29D4914300E9E557 /* Register.storyboard in Resources */,
 				88CCB2AA29DF895B00C9F1D8 /* War.storyboard in Resources */,
-				012C760A2A35DB2F0016BF24 /* YouLose.gif in Resources */,
-				012C760C2A35F65E0016BF24 /* kicking.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,12 +677,13 @@
 				01857B492A16D00F0040564F /* NightMissionModel.swift in Sources */,
 				019237FA2A1FA54500D579E9 /* UserStateModel.swift in Sources */,
 				889B87C229D646FD00E3DF4E /* AdminViewController.swift in Sources */,
-				010C2F532A2FD54200CBF67A /* gifyyViewController.swift in Sources */,
+				01ACCC252A40CD15002BBBD4 /* JustWatchViewController.swift in Sources */,
 				012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */,
 				88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */,
 				887EC81F29E75CA30097D386 /* WEREWOLFRegisterViewController.swift in Sources */,
 				010859C12A22ACB100FAB693 /* ItemShopFilterModel.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
+				0144D8772A40F1740018CF96 /* WarBetweenViewController.swift in Sources */,
 				019237FC2A1FBB4900D579E9 /* UserDressedModel.swift in Sources */,
 				01936DD62A05973100780FB3 /* WARViewController.swift in Sources */,
 				88F488D629DCA4BB0067834F /* LoginViewController.swift in Sources */,
