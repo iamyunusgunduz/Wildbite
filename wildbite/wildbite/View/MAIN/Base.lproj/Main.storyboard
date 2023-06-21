@@ -161,7 +161,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" text="Enerji:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKm-Gm-9yh">
-                                        <rect key="frame" x="48" y="0.0" width="60" height="14"/>
+                                        <rect key="frame" x="28" y="0.0" width="60" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="IAK-qW-Xac"/>
                                         </constraints>
@@ -170,13 +170,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="rQX-8i-uVu">
-                                        <rect key="frame" x="141" y="0.0" width="15" height="14"/>
+                                        <rect key="frame" x="100.66666666666667" y="0.0" width="15" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="15" id="mRR-QL-RYI"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQD-Jr-vgM">
-                                        <rect key="frame" x="189" y="0.0" width="60" height="14"/>
+                                        <rect key="frame" x="128.66666666666666" y="0.0" width="60" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Sz7-U9-Sax"/>
                                         </constraints>
@@ -185,15 +185,30 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="Bik-0D-PmU">
-                                        <rect key="frame" x="282" y="0.0" width="15" height="14"/>
+                                        <rect key="frame" x="201.33333333333334" y="0.0" width="15" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="15" id="EkB-ro-eMe"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gold:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blZ-wm-i8A">
-                                        <rect key="frame" x="330" y="0.0" width="60" height="14"/>
+                                        <rect key="frame" x="229.33333333333337" y="0.0" width="60" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="vBs-ak-EDe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.9417574406" green="0.59494501349999995" blue="0.3450262845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crystal" translatesAutoresizingMaskIntoConstraints="NO" id="Kow-5L-grL">
+                                        <rect key="frame" x="302" y="0.0" width="15" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="Qeb-r5-D27"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diamond:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwc-0m-snh">
+                                        <rect key="frame" x="330" y="0.0" width="60" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="tWC-5l-dU5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.9417574406" green="0.59494501349999995" blue="0.3450262845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -471,6 +486,7 @@
                         <outlet property="silahImage" destination="blq-6f-Akv" id="go4-69-Q74"/>
                         <outlet property="takiImage" destination="ctx-fI-7nK" id="Zfu-lo-xwJ"/>
                         <outlet property="userCanLabel" destination="SQD-Jr-vgM" id="nVJ-4l-UyN"/>
+                        <outlet property="userDiamondLabel" destination="xwc-0m-snh" id="6Yh-dQ-1g8"/>
                         <outlet property="userEnerjiLabel" destination="NKm-Gm-9yh" id="Zee-7Q-LAH"/>
                         <outlet property="userGoldLabel" destination="blZ-wm-i8A" id="gLk-kp-xq5"/>
                         <outlet property="userNameLabel" destination="lz5-sq-O42" id="hfw-0I-gnF"/>
@@ -1025,6 +1041,7 @@
         <image name="UnitFrame_Dragon" width="227" height="229"/>
         <image name="ayakkabi" width="64" height="64"/>
         <image name="coin" width="13" height="14"/>
+        <image name="crystal" width="14" height="14"/>
         <image name="eldiven" width="64" height="64"/>
         <image name="feature" width="364" height="292"/>
         <image name="frame_main_bronze" width="726" height="726"/>

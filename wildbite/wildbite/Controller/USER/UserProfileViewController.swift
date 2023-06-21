@@ -44,6 +44,7 @@ class UserProfileViewController: UIViewController {
     // https://backhub.site/wildbite/image/race/148.png
  
 
+    @IBOutlet weak var userDiamondLabel: UILabel!
     
     @IBOutlet weak var userEnerjiLabel: UILabel!
     
@@ -197,6 +198,7 @@ class UserProfileViewController: UIViewController {
                         userCanLabel.text = "\(profileModelresponse?.user.currentHealth ?? "none")/\(profileModelresponse?.user.maximumHealth ?? "none")"
                         userGoldLabel.text = "\(profileModelresponse?.user.gold ?? "none")"
                         userNameLabel.text = "\(profileModelresponse?.user.name ?? "none")"
+                        userDiamondLabel.text = "\(profileModelresponse?.user.diamond ?? "none")"
                         userRankImage.image = UIImage(named: "LV\(profileModelresponse!.user.level).png")
                        
                         let url = URL(string: "https://backhub.site/wildbite/image/user/idle/\(profileModelresponse!.user.image).gif")

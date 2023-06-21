@@ -888,7 +888,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="mN7-uF-fOF">
                                 <rect key="frame" x="5" y="45" width="404" height="846"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KLANINI SEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-AV-Og7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KLANINI  RESMİNİ SEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-AV-Og7">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" red="0.75160050389999999" green="0.3455178142" blue="0.13258540630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -937,6 +937,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="MN0-AU-FIk" firstAttribute="leading" secondItem="IQh-CL-uog" secondAttribute="trailing" constant="38" id="gda-Cr-1Gl"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ubT-hO-lFz">
                                         <rect key="frame" x="0.0" y="376.66666666666669" width="404" height="225.00000000000006"/>
@@ -1141,7 +1144,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Ihx-y7-WHb"/>
         <segue reference="wXX-Ti-g1j"/>
-        <segue reference="Qih-hE-FKj"/>
+        <segue reference="nv1-AK-wH0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Button_Login" width="454" height="142"/>

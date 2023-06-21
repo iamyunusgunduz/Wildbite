@@ -11,6 +11,7 @@
 		010859BF2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */; };
 		010859C12A22ACB100FAB693 /* ItemShopFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */; };
 		010C2F4E2A2FD27300CBF67A /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 010C2F4D2A2FD27300CBF67A /* SwiftyGif */; };
+		01163E2E2A437DB600E5E23C /* MarketItemKategoriList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01163E2D2A437DB600E5E23C /* MarketItemKategoriList.swift */; };
 		012B0E112A0BFFE10048B8F4 /* RegisterRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */; };
 		013361F22A29DA29002ED455 /* ItemGiyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013361F12A29DA29002ED455 /* ItemGiyModel.swift */; };
 		013383112A2FE9CE00783563 /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013383102A2FE9CE00783563 /* RegisterStepTwoViewController.swift */; };
@@ -86,6 +87,7 @@
 		010859BC2A22ABE200FAB693 /* ShopBoxInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBoxInViewController.swift; sourceTree = "<group>"; };
 		010859BE2A22ABF600FAB693 /* ShopBoxInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBoxInTableViewCell.swift; sourceTree = "<group>"; };
 		010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShopFilterModel.swift; sourceTree = "<group>"; };
+		01163E2D2A437DB600E5E23C /* MarketItemKategoriList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketItemKategoriList.swift; sourceTree = "<group>"; };
 		012B0E102A0BFFE10048B8F4 /* RegisterRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRaceModel.swift; sourceTree = "<group>"; };
 		013361F12A29DA29002ED455 /* ItemGiyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGiyModel.swift; sourceTree = "<group>"; };
 		013383102A2FE9CE00783563 /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 				019237FB2A1FBB4900D579E9 /* UserDressedModel.swift */,
 				010859C02A22ACB100FAB693 /* ItemShopFilterModel.swift */,
 				013361F12A29DA29002ED455 /* ItemGiyModel.swift */,
+				01163E2D2A437DB600E5E23C /* MarketItemKategoriList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				88CCB2AF29DF91C900C9F1D8 /* HuntViewController.swift in Sources */,
 				887EC81F29E75CA30097D386 /* WEREWOLFRegisterViewController.swift in Sources */,
 				010859C12A22ACB100FAB693 /* ItemShopFilterModel.swift in Sources */,
+				01163E2E2A437DB600E5E23C /* MarketItemKategoriList.swift in Sources */,
 				88E508C729D481E400E9E557 /* SceneDelegate.swift in Sources */,
 				0144D8772A40F1740018CF96 /* WarBetweenViewController.swift in Sources */,
 				019237FC2A1FBB4900D579E9 /* UserDressedModel.swift in Sources */,

@@ -23,6 +23,11 @@ class ShopItemsViewController: UIViewController {
     @IBOutlet weak var userGoldLabel: UILabel!
    
     
+    @IBOutlet weak var goldLabel: UILabel!
+    
+    @IBOutlet weak var diamondLabel: UILabel!
+    
+    
     @IBOutlet weak var kasaImage: UIImageView!
     @IBOutlet weak var kasaAcButtonLabel: UIButton!
     @IBOutlet weak var itemGiyButtonLabel: UIButton!
@@ -31,7 +36,7 @@ class ShopItemsViewController: UIViewController {
     @IBOutlet weak var GoShopMenuPageButtonLabel: UIBarButtonItem!
     
     
-    var countdownSeconds = 12
+    var countdownSeconds = 3
        var timer: Timer?
     
     override func viewDidLoad() {
@@ -42,8 +47,14 @@ class ShopItemsViewController: UIViewController {
     
 
     override func viewWillAppear(_ animated: Bool) {
-       
-       
+        let shopAD = UserDefaults.standard.string(forKey: "ShopMenuAD")!
+        if(shopAD.contains("STANDART")){
+            kasaAcButtonLabel.setTitle("KASA AÇ (1000 GOLD)", for: .normal)
+        }
+        if(shopAD.contains("PREMIUM")){
+            kasaAcButtonLabel.setTitle("KASA AÇ (10 DIAMOND)", for: .normal)
+        }
+        
         loadUserProfile()
         veriCekShop()
        
@@ -80,7 +91,8 @@ class ShopItemsViewController: UIViewController {
                         
                         print("Debug: Race settings\(profileModelresponse!.race.raceName)")
                         print("Race: \(profileModelresponse!.race.raceName)")
-                       
+                        goldLabel.text = profileModelresponse!.user.gold
+                        diamondLabel.text = profileModelresponse!.user.diamond
                         if(  Int((profileModelresponse!.user.gold))! >= 1000) {
                             kasaAcButtonLabel.isEnabled = true
                             userGoldLabel.text = "User Gold: \(Int((profileModelresponse!.user.gold))!)"
@@ -185,8 +197,8 @@ class ShopItemsViewController: UIViewController {
         kasaAcButtonLabel.isEnabled = false
         GoMainPageButtonLabel.isEnabled = false
         GoShopMenuPageButtonLabel.isEnabled = false
-        let itemResimAdiUD = UserDefaults.standard.array(forKey: "itemCekilisiItemResimleri")
-        let itemItemAdiUD = UserDefaults.standard.array(forKey: "itemCekilisiItemAdi")
+        var itemResimAdiUD = UserDefaults.standard.array(forKey: "itemCekilisiItemResimleri")
+        var itemItemAdiUD = UserDefaults.standard.array(forKey: "itemCekilisiItemAdi")
       
         
         
@@ -213,6 +225,7 @@ class ShopItemsViewController: UIViewController {
             
                 switch shopAD{
                     case "STANDART Ayakkabı Kasası":
+                      
                         let urlImage = URL(string: "https://backhub.site/wildbite/image/Items/ayakkabi/AyakkabiGold/\(itemResimAdiUD![randomNumber]).png")
                         DispatchQueue.main.async{ [self] in  self.kasaImage.kf.setImage(with: urlImage)    }
                         
@@ -472,17 +485,30 @@ class ShopItemsViewController: UIViewController {
              itemGiyButtonLabel.isEnabled = true
             kasaAcButtonLabel.isEnabled = false
             kasaAcButtonLabel.setTitle("yeniden aç", for: .normal)
-            countdownSeconds = 12
+            countdownSeconds = 3
           
             loadUserProfile()
            
         }
     }
+    override func viewWillDisappear(_ animated: Bool) {
+     //   itemResimleri.removeAll()
+     //   UserDefaults.standard.removeObject(forKey: "itemCekilisiItemResimleri")
+    }
     @IBAction func kasaAc(_ sender: Any) {
         itemResimleri.removeAll()
         UserDefaults.standard.removeObject(forKey: "itemCekilisiItemResimleri")
+        let shopAD = UserDefaults.standard.string(forKey: "ShopMenuAD")!
+        if(shopAD.contains("STANDART")){
+          //  userStateArttir(pow: 0, def: 0, spd: 0, totlDamge: 0, gld: -1000)
+            viewWillAppear(true)
+        }
+        if(shopAD.contains("PREMIUM")){
+         //   userStateArttir(pow: 0, def: 0, spd: 0, totlDamge: 0, gld: -1000)
+            viewWillAppear(true)
+        }
         startCountdown()
-        userStateArttir(pow: 0, def: 0, spd: 0, totlDamge: 0, gld: -1000)
+        
     }
     
     func userStateArttir(pow:Int, def:Int, spd:Int, totlDamge:Int, gld:Int){

@@ -106,7 +106,14 @@ class ShopMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 myTableView.reloadData()
         }
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
+        shopListele()
+    }
+    
+    
+     func shopListele() {
         
         let myUserToken = UserDefaults.standard.value(forKey: "userToken")
         
